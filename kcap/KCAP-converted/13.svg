@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="620" height="320" viewBox="0 0 310 160">
+<defs>
+<g id="shape0">
+<path fill="#000000" d="M 16 5 L 16 16 L 5 16 L 5 5 Z M 0 0 L 0 5 L 0 16 L 0 21 L 21 21 L 21 16 L 21 5 L 21 0 Z"/>
+<path fill="#888888" d="M 19.707 1.293 L 16 5 L 16 16 L 5 16 L 1.293 19.707 C 1.474 19.888 1.724 20 2 20 L 19 20 C 19.553 20 20 19.553 20 19 L 20 16 L 20 5 L 20 2 C 20 1.724 19.888 1.474 19.707 1.293 Z"/>
+<path fill="#DDDDDD" d="M 2 1 C 1.448 1 1 1.448 1 2 L 1 5 L 1 16 L 1 19 C 1 19.276 1.112 19.526 1.293 19.707 L 5 16 L 5 16 L 5 5 L 16 5 L 16 5 L 19.707 1.293 C 19.526 1.112 19.276 1 19 1 Z"/>
+<path fill="#EEEEEE" d="M 3.5 3 C 3.224 3 3 3.224 3 3.5 L 3 5 L 3 16 L 3 17.5 C 3 17.639 3.056 17.764 3.146 17.854 L 5 16 L 5 16 L 5 5 L 16 5 L 16 5 L 17.854 3.146 C 17.764 3.056 17.639 3 17.5 3 Z"/>
+<path fill="#CCCCCC" d="M 17.854 3.146 L 17 4 L 4 4 L 4 5 L 4 16 L 4 17 L 3.146 17.854 C 3.237 17.944 3.362 18 3.5 18 L 16 18 L 16 18 L 16 18 C 17.104 18 18 17.104 18 16 L 18 16 L 18 5 L 18 3.5 C 18 3.362 17.944 3.237 17.854 3.146 Z"/>
+<path fill="#EEEEEE" d="M 18.586 1 L 16.293 3.293 L 17 4 L 19.707 1.293 C 19.526 1.112 19.276 1 19 1 Z M 1.756 1.049 C 1.405 1.14 1.14 1.405 1.049 1.756 L 3.646 4.353 L 4.354 3.646 L 1.756 1.049 Z M 3.646 16.646 L 1.049 19.244 C 1.14 19.595 1.405 19.86 1.756 19.951 L 4 17.707 L 4 17 L 3.646 16.646 Z"/>
+</g>
+<g id="shape1">
+<path fill="#000000" d="M 21 5 L 21 16 L 5 16 L 5 5 Z M 0 0 L 0 5 L 0 16 L 0 21 L 26 21 L 26 16 L 26 5 L 26 0 Z"/>
+<path fill="#888888" d="M 24.707 1.293 L 21 5 L 21 16 L 5 16 L 1.293 19.707 C 1.474 19.888 1.724 20 2 20 L 24 20 C 24.553 20 25 19.553 25 19 L 25 16 L 25 5 L 25 2 C 25 1.724 24.888 1.474 24.707 1.293 Z"/>
+<path fill="#DDDDDD" d="M 2 1 C 1.448 1 1 1.448 1 2 L 1 5 L 1 16 L 1 19 C 1 19.276 1.112 19.526 1.293 19.707 L 5 16 L 5 16 L 5 5 L 21 5 L 21 5 L 24.707 1.293 C 24.526 1.112 24.276 1 24 1 Z"/>
+<path fill="#EEEEEE" d="M 3.5 3 C 3.224 3 3 3.224 3 3.5 L 3 5 L 3 16 L 3 17.5 C 3 17.639 3.056 17.764 3.146 17.854 L 5 16 L 5 16 L 5 5 L 21 5 L 21 5 L 22.854 3.146 C 22.764 3.056 22.639 3 22.5 3 Z"/>
+<path fill="#CCCCCC" d="M 22.854 3.146 L 22 4 L 4 4 L 4 5 L 4 16 L 4 17 L 3.146 17.854 C 3.237 17.944 3.362 18 3.5 18 L 21 18 L 21 18 L 21 18 C 22.104 18 23 17.104 23 16 L 23 16 L 23 5 L 23 3.5 C 23 3.362 22.944 3.237 22.854 3.146 Z"/>
+<path fill="#EEEEEE" d="M 23.586 1 L 21.293 3.293 L 22 4 L 24.707 1.293 C 24.526 1.112 24.276 1 24 1 Z M 1.756 1.049 C 1.405 1.14 1.14 1.405 1.049 1.756 L 3.646 4.353 L 4.354 3.646 L 1.756 1.049 Z M 3.646 16.646 L 1.049 19.244 C 1.14 19.595 1.405 19.86 1.756 19.951 L 4 17.707 L 4 17 L 3.646 16.646 Z"/>
+</g>
+<g id="shape2">
+<path fill="#000000" d="M 0 0 L 0 5 L 0 16 L 0 21 L 26 21 L 26 16 L 5 16 L 5 5 L 26 5 L 26 0 Z M 26 0 L 26 5 L 26 16 L 26 21 L 31 21 L 31 16 L 31 5 L 31 0 Z"/>
+<path fill="#888888" d="M 5 16 L 1.293 19.707 C 1.474 19.888 1.724 20 2 20 L 26 20 L 26 16 Z M 29.707 1.293 L 26 5 L 26 16 L 26 20 L 29 20 C 29.553 20 30 19.553 30 19 L 30 16 L 30 5 L 30 2 C 30 1.724 29.888 1.474 29.707 1.293 Z"/>
+<path fill="#DDDDDD" d="M 26 1 L 26 5 L 29.707 1.293 C 29.526 1.112 29.276 1 29 1 Z M 2 1 C 1.448 1 1 1.448 1 2 L 1 5 L 1 16 L 1 19 C 1 19.276 1.112 19.526 1.293 19.707 L 5 16 L 5 16 L 5 5 L 26 5 L 26 1 Z"/>
+<path fill="#EEEEEE" d="M 26 3 L 26 5 L 27.854 3.146 C 27.764 3.056 27.639 3 27.5 3 Z M 3.5 3 C 3.224 3 3 3.224 3 3.5 L 3 5 L 3 16 L 3 17.5 C 3 17.639 3.056 17.764 3.146 17.854 L 5 16 L 5 16 L 5 5 L 26 5 L 26 3 Z"/>
+<path fill="#CCCCCC" d="M 27.854 3.146 L 27 4 L 26 4 L 26 5 L 26 5 L 26 4 L 4 4 L 4 5 L 4 16 L 4 17 L 3.146 17.854 C 3.237 17.944 3.362 18 3.5 18 L 26 18 L 26 16 L 26 16 L 26 18 C 27.104 18 28 17.104 28 16 L 28 16 L 28 5 L 28 3.5 C 28 3.362 27.944 3.237 27.854 3.146 Z"/>
+<path fill="#EEEEEE" d="M 28.586 1 L 26.293 3.293 L 27 4 L 29.707 1.293 C 29.526 1.112 29.276 1 29 1 Z M 1.756 1.049 C 1.405 1.14 1.14 1.405 1.049 1.756 L 3.646 4.353 L 4.354 3.646 L 1.756 1.049 Z M 3.646 16.646 L 1.049 19.244 C 1.14 19.595 1.405 19.86 1.756 19.951 L 4 17.707 L 4 17 L 3.646 16.646 Z"/>
+</g>
+<g id="shape3">
+<path fill="#000000" d="M 0 0 L 0 5 L 0 16 L 0 21 L 31 21 L 31 16 L 5 16 L 5 5 L 31 5 L 31 0 Z M 31 0 L 31 5 L 31 16 L 31 21 L 36 21 L 36 16 L 36 5 L 36 0 Z"/>
+<path fill="#888888" d="M 5 16 L 1.293 19.707 C 1.474 19.888 1.724 20 2 20 L 31 20 L 31 16 Z M 34.707 1.293 L 31 5 L 31 16 L 31 20 L 34 20 C 34.553 20 35 19.553 35 19 L 35 16 L 35 5 L 35 2 C 35 1.724 34.888 1.474 34.707 1.293 Z"/>
+<path fill="#DDDDDD" d="M 31 1 L 31 5 L 34.707 1.293 C 34.526 1.112 34.276 1 34 1 Z M 2 1 C 1.448 1 1 1.448 1 2 L 1 5 L 1 16 L 1 19 C 1 19.276 1.112 19.526 1.293 19.707 L 5 16 L 5 16 L 5 5 L 31 5 L 31 1 Z"/>
+<path fill="#EEEEEE" d="M 31 3 L 31 5 L 32.854 3.146 C 32.764 3.056 32.639 3 32.5 3 Z M 3.5 3 C 3.224 3 3 3.224 3 3.5 L 3 5 L 3 16 L 3 17.5 C 3 17.639 3.056 17.764 3.146 17.854 L 5 16 L 5 16 L 5 5 L 31 5 L 31 3 Z"/>
+<path fill="#CCCCCC" d="M 32.854 3.146 L 32 4 L 31 4 L 31 5 L 31 5 L 31 4 L 4 4 L 4 5 L 4 16 L 4 17 L 3.146 17.854 C 3.237 17.944 3.362 18 3.5 18 L 31 18 L 31 16 L 31 16 L 31 18 C 32.104 18 33 17.104 33 16 L 33 16 L 33 5 L 33 3.5 C 33 3.362 32.944 3.237 32.854 3.146 Z"/>
+<path fill="#EEEEEE" d="M 33.586 1 L 31.293 3.293 L 32 4 L 34.707 1.293 C 34.526 1.112 34.276 1 34 1 Z M 1.756 1.049 C 1.405 1.14 1.14 1.405 1.049 1.756 L 3.646 4.353 L 4.354 3.646 L 1.756 1.049 Z M 3.646 16.646 L 1.049 19.244 C 1.14 19.595 1.405 19.86 1.756 19.951 L 4 17.707 L 4 17 L 3.646 16.646 Z"/>
+</g>
+<g id="shape4">
+<path fill="#000000" d="M 111 5 L 111 16 L 5 16 L 5 5 Z M 0 0 L 0 5 L 0 16 L 0 21 L 116 21 L 116 16 L 116 5 L 116 0 Z"/>
+<path fill="#888888" d="M 114.707 1.293 L 111 5 L 111 16 L 5 16 L 1.293 19.707 C 1.474 19.888 1.724 20 2 20 L 114 20 C 114.553 20 115 19.553 115 19 L 115 16 L 115 5 L 115 2 C 115 1.724 114.888 1.474 114.707 1.293 Z"/>
+<path fill="#DDDDDD" d="M 2 1 C 1.448 1 1 1.448 1 2 L 1 5 L 1 16 L 1 19 C 1 19.276 1.112 19.526 1.293 19.707 L 5 16 L 5 16 L 5 5 L 111 5 L 111 5 L 114.707 1.293 C 114.526 1.112 114.276 1 114 1 Z"/>
+<path fill="#EEEEEE" d="M 3.5 3 C 3.224 3 3 3.224 3 3.5 L 3 5 L 3 16 L 3 17.5 C 3 17.639 3.056 17.764 3.146 17.854 L 5 16 L 5 16 L 5 5 L 111 5 L 111 5 L 112.854 3.146 C 112.764 3.056 112.639 3 112.5 3 Z"/>
+<path fill="#CCCCCC" d="M 112.854 3.146 L 112 4 L 4 4 L 4 5 L 4 16 L 4 17 L 3.146 17.854 C 3.237 17.944 3.362 18 3.5 18 L 111 18 L 111 18 L 111 18 C 112.104 18 113 17.104 113 16 L 113 16 L 113 5 L 113 3.5 C 113 3.362 112.944 3.237 112.854 3.146 Z"/>
+<path fill="#EEEEEE" d="M 113.586 1 L 111.293 3.293 L 112 4 L 114.707 1.293 C 114.526 1.112 114.276 1 114 1 Z M 1.756 1.049 C 1.405 1.14 1.14 1.405 1.049 1.756 L 3.646 4.353 L 4.354 3.646 L 1.756 1.049 Z M 3.646 16.646 L 1.049 19.244 C 1.14 19.595 1.405 19.86 1.756 19.951 L 4 17.707 L 4 17 L 3.646 16.646 Z"/>
+</g>
+<g id="shape5">
+<path fill="#000000" d="M 16 5 L 16 21 L 16 24 L 16 36 L 10 36 L 10 21 L 10 16 L 5 16 L 5 5 Z M 0 0 L 0 5 L 0 16 L 0 21 L 5 21 L 5 36 L 5 41 L 21 41 L 21 36 L 21 24 L 21 21 L 21 5 L 21 0 Z"/>
+<path fill="#888888" d="M 5 16 L 1.293 19.707 C 1.474 19.888 1.724 20 2 20 L 5.5 20 C 5.639 20 5.764 20.056 5.854 20.146 L 10 16 Z M 19.707 1.293 L 16 5 L 16 21 L 16 24 L 16 36 L 10 36 L 6.293 39.707 C 6.474 39.888 6.724 40 7 40 L 19 40 C 19.553 40 20 39.553 20 39 L 20 36 L 20 24 L 20 21 L 20 5 L 20 2 C 20 1.724 19.888 1.474 19.707 1.293 Z"/>
+<path fill="#DDDDDD" d="M 2 1 C 1.448 1 1 1.448 1 2 L 1 5 L 1 16 L 1 19 C 1 19.276 1.112 19.526 1.293 19.707 L 5 16 L 5 16 L 5 5 L 16 5 L 16 5 L 19.707 1.293 C 19.526 1.112 19.276 1 19 1 Z M 10 16 L 5.854 20.146 C 5.944 20.237 6 20.362 6 20.5 L 6 21 L 6 36 L 6 39 C 6 39.276 6.112 39.526 6.293 39.707 L 10 36 L 10 21 L 10 16 Z"/>
+<path fill="#EEEEEE" d="M 3.5 3 C 3.224 3 3 3.224 3 3.5 L 3 5 L 3 16 L 3 17.5 C 3 17.639 3.056 17.764 3.146 17.854 L 5 16 L 5 16 L 5 5 L 16 5 L 16 5 L 17.854 3.146 C 17.764 3.056 17.639 3 17.5 3 Z M 10 16 L 7.707 18.293 C 7.888 18.474 8 18.724 8 19 L 8 21 L 8 36 L 8 37.5 C 8 37.639 8.056 37.764 8.146 37.854 L 10 36 L 10 21 L 10 16 Z"/>
+<path fill="#CCCCCC" d="M 17.854 3.146 L 17 4 L 4 4 L 4 5 L 4 16 L 4 17 L 3.146 17.854 C 3.237 17.944 3.362 18 3.5 18 L 7 18 C 7.276 18 7.526 18.112 7.707 18.293 L 8.414 17.586 C 8.776 17.948 9 18.448 9 19 L 9 21 L 9 36 L 9 37 L 8.146 37.854 C 8.237 37.944 8.362 38 8.5 38 L 16 38 L 16 38 L 16 38 C 17.104 38 18 37.104 18 36 L 18 24 L 18 21 L 18 5 L 18 3.5 C 18 3.362 17.944 3.237 17.854 3.146 Z"/>
+<path fill="#EEEEEE" d="M 18.586 1 L 16.293 3.293 L 17 4 L 19.707 1.293 C 19.526 1.112 19.276 1 19 1 Z M 1.756 1.049 C 1.405 1.14 1.14 1.405 1.049 1.756 L 3.646 4.353 L 4.354 3.646 L 1.756 1.049 Z M 3.646 16.646 L 1.049 19.244 C 1.14 19.595 1.405 19.86 1.756 19.951 L 4 17.707 L 4 17 L 3.646 16.646 Z M 8.646 36.646 L 6.049 39.244 C 6.14 39.595 6.405 39.86 6.756 39.951 L 9 37.707 L 9 37 L 8.646 36.646 Z"/>
+</g>
+</defs>
+<path class="textarea" d="M 43.0 13.0 L 43.0 35.0 L 267.0 35.0 L 267.0 13.0 Z" fill="white" stroke="black" stroke-width="2"/>
+<text class="keyboardName" x="46" y="28" font-family="Arial" font-size="12">Macintosh PowerBook Keyboard, ISO</text><g class="keyboard keyboardId13">
+<g class="key keyCode10">
+<use xlink:href="#shape0" transform="translate(10 50)"/>
+<text x="20.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">&#177;</text>
+<text x="20.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">&#167;</text>
+</g>
+<g class="key keyCode18">
+<use xlink:href="#shape0" transform="translate(30 50)"/>
+<text x="40.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">!</text>
+<text x="40.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">1</text>
+</g>
+<g class="key keyCode19">
+<use xlink:href="#shape0" transform="translate(50 50)"/>
+<text x="60.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">@</text>
+<text x="60.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">2</text>
+</g>
+<g class="key keyCode20">
+<use xlink:href="#shape0" transform="translate(70 50)"/>
+<text x="80.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">#</text>
+<text x="80.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">3</text>
+</g>
+<g class="key keyCode21">
+<use xlink:href="#shape0" transform="translate(90 50)"/>
+<text x="100.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">$</text>
+<text x="100.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">4</text>
+</g>
+<g class="key keyCode23">
+<use xlink:href="#shape0" transform="translate(110 50)"/>
+<text x="120.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">%</text>
+<text x="120.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">5</text>
+</g>
+<g class="key keyCode22">
+<use xlink:href="#shape0" transform="translate(130 50)"/>
+<text x="140.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">^</text>
+<text x="140.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">6</text>
+</g>
+<g class="key keyCode26">
+<use xlink:href="#shape0" transform="translate(150 50)"/>
+<text x="160.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">&amp;</text>
+<text x="160.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">7</text>
+</g>
+<g class="key keyCode28">
+<use xlink:href="#shape0" transform="translate(170 50)"/>
+<text x="180.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">*</text>
+<text x="180.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">8</text>
+</g>
+<g class="key keyCode25">
+<use xlink:href="#shape0" transform="translate(190 50)"/>
+<text x="200.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">(</text>
+<text x="200.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">9</text>
+</g>
+<g class="key keyCode29">
+<use xlink:href="#shape0" transform="translate(210 50)"/>
+<text x="220.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">)</text>
+<text x="220.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">0</text>
+</g>
+<g class="key keyCode27">
+<use xlink:href="#shape0" transform="translate(230 50)"/>
+<text x="240.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">_</text>
+<text x="240.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">-</text>
+</g>
+<g class="key keyCode24">
+<use xlink:href="#shape0" transform="translate(250 50)"/>
+<text x="260.5" y="59.0" text-anchor="middle" font-family="Arial" font-size="6">+</text>
+<text x="260.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">=</text>
+</g>
+<g class="key keyCode30">
+<use xlink:href="#shape0" transform="translate(260 70)"/>
+<text x="270.5" y="79.0" text-anchor="middle" font-family="Arial" font-size="6">}</text>
+<text x="270.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">]</text>
+</g>
+<g class="key keyCode33">
+<use xlink:href="#shape0" transform="translate(240 70)"/>
+<text x="250.5" y="79.0" text-anchor="middle" font-family="Arial" font-size="6">{</text>
+<text x="250.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">[</text>
+</g>
+<g class="key keyCode35">
+<use xlink:href="#shape0" transform="translate(220 70)"/>
+<text x="230.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">P</text>
+</g>
+<g class="key keyCode31">
+<use xlink:href="#shape0" transform="translate(200 70)"/>
+<text x="210.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">O</text>
+</g>
+<g class="key keyCode34">
+<use xlink:href="#shape0" transform="translate(180 70)"/>
+<text x="190.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">I</text>
+</g>
+<g class="key keyCode32">
+<use xlink:href="#shape0" transform="translate(160 70)"/>
+<text x="170.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">U</text>
+</g>
+<g class="key keyCode16">
+<use xlink:href="#shape0" transform="translate(140 70)"/>
+<text x="150.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">Y</text>
+</g>
+<g class="key keyCode17">
+<use xlink:href="#shape0" transform="translate(120 70)"/>
+<text x="130.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">T</text>
+</g>
+<g class="key keyCode15">
+<use xlink:href="#shape0" transform="translate(100 70)"/>
+<text x="110.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">R</text>
+</g>
+<g class="key keyCode14">
+<use xlink:href="#shape0" transform="translate(80 70)"/>
+<text x="90.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">E</text>
+</g>
+<g class="key keyCode13">
+<use xlink:href="#shape0" transform="translate(60 70)"/>
+<text x="70.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">W</text>
+</g>
+<g class="key keyCode12">
+<use xlink:href="#shape0" transform="translate(40 70)"/>
+<text x="50.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">Q</text>
+</g>
+<g class="key keyCode0">
+<use xlink:href="#shape0" transform="translate(45 90)"/>
+<text x="55.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">A</text>
+</g>
+<g class="key keyCode1">
+<use xlink:href="#shape0" transform="translate(65 90)"/>
+<text x="75.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">S</text>
+</g>
+<g class="key keyCode2">
+<use xlink:href="#shape0" transform="translate(85 90)"/>
+<text x="95.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">D</text>
+</g>
+<g class="key keyCode3">
+<use xlink:href="#shape0" transform="translate(105 90)"/>
+<text x="115.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">F</text>
+</g>
+<g class="key keyCode5">
+<use xlink:href="#shape0" transform="translate(125 90)"/>
+<text x="135.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">G</text>
+</g>
+<g class="key keyCode4">
+<use xlink:href="#shape0" transform="translate(145 90)"/>
+<text x="155.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">H</text>
+</g>
+<g class="key keyCode38">
+<use xlink:href="#shape0" transform="translate(165 90)"/>
+<text x="175.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">J</text>
+</g>
+<g class="key keyCode40">
+<use xlink:href="#shape0" transform="translate(185 90)"/>
+<text x="195.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">K</text>
+</g>
+<g class="key keyCode37">
+<use xlink:href="#shape0" transform="translate(205 90)"/>
+<text x="215.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">L</text>
+</g>
+<g class="key keyCode41">
+<use xlink:href="#shape0" transform="translate(225 90)"/>
+<text x="235.5" y="99.0" text-anchor="middle" font-family="Arial" font-size="6">:</text>
+<text x="235.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">;</text>
+</g>
+<g class="key keyCode39">
+<use xlink:href="#shape0" transform="translate(245 90)"/>
+<text x="255.5" y="99.0" text-anchor="middle" font-family="Arial" font-size="6">"</text>
+<text x="255.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">'</text>
+</g>
+<g class="key keyCode42">
+<use xlink:href="#shape0" transform="translate(265 90)"/>
+<text x="275.5" y="99.0" text-anchor="middle" font-family="Arial" font-size="6">|</text>
+<text x="275.5" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">\</text>
+</g>
+<g class="key keyCode126">
+<use xlink:href="#shape0" transform="translate(280 110)"/>
+<text x="290.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">&#8593;</text>
+</g>
+<g class="key keyCode44">
+<use xlink:href="#shape0" transform="translate(235 110)"/>
+<text x="245.5" y="119.0" text-anchor="middle" font-family="Arial" font-size="6">?</text>
+<text x="245.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">/</text>
+</g>
+<g class="key keyCode47">
+<use xlink:href="#shape0" transform="translate(215 110)"/>
+<text x="225.5" y="119.0" text-anchor="middle" font-family="Arial" font-size="6">&gt;</text>
+<text x="225.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">.</text>
+</g>
+<g class="key keyCode43">
+<use xlink:href="#shape0" transform="translate(195 110)"/>
+<text x="205.5" y="119.0" text-anchor="middle" font-family="Arial" font-size="6">&lt;</text>
+<text x="205.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">,</text>
+</g>
+<g class="key keyCode46">
+<use xlink:href="#shape0" transform="translate(175 110)"/>
+<text x="185.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">M</text>
+</g>
+<g class="key keyCode45">
+<use xlink:href="#shape0" transform="translate(155 110)"/>
+<text x="165.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">N</text>
+</g>
+<g class="key keyCode11">
+<use xlink:href="#shape0" transform="translate(135 110)"/>
+<text x="145.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">B</text>
+</g>
+<g class="key keyCode9">
+<use xlink:href="#shape0" transform="translate(115 110)"/>
+<text x="125.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">V</text>
+</g>
+<g class="key keyCode8">
+<use xlink:href="#shape0" transform="translate(95 110)"/>
+<text x="105.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">C</text>
+</g>
+<g class="key keyCode7">
+<use xlink:href="#shape0" transform="translate(75 110)"/>
+<text x="85.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">X</text>
+</g>
+<g class="key keyCode6">
+<use xlink:href="#shape0" transform="translate(55 110)"/>
+<text x="65.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">Z</text>
+</g>
+<g class="key keyCode50">
+<use xlink:href="#shape0" transform="translate(35 110)"/>
+<text x="45.5" y="119.0" text-anchor="middle" font-family="Arial" font-size="6">~</text>
+<text x="45.5" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">`</text>
+</g>
+<g class="key keyCode59">
+<use xlink:href="#shape0" transform="translate(10 130)"/>
+<text x="20.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">control</text>
+</g>
+<g class="key keyCode58">
+<use xlink:href="#shape0" transform="translate(30 130)"/>
+<text x="40.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">option</text>
+</g>
+<g class="key keyCode53">
+<use xlink:href="#shape0" transform="translate(85 130)"/>
+<text x="95.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">esc</text>
+</g>
+<g class="key keyCode52">
+<use xlink:href="#shape0" transform="translate(220 130)"/>
+<text x="230.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">enter</text>
+</g>
+<g class="key keyCode123">
+<use xlink:href="#shape0" transform="translate(240 130)"/>
+<text x="250.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">&#8592;</text>
+</g>
+<g class="key keyCode124">
+<use xlink:href="#shape0" transform="translate(260 130)"/>
+<text x="270.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">&#8594;</text>
+</g>
+<g class="key keyCode125">
+<use xlink:href="#shape0" transform="translate(280 130)"/>
+<text x="290.5" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">&#8595;</text>
+</g>
+<g class="key keyCode56">
+<use xlink:href="#shape1" transform="translate(10 110)"/>
+<text x="23.0" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">shift</text>
+</g>
+<g class="key keyCode56">
+<use xlink:href="#shape1" transform="translate(255 110)"/>
+<text x="268.0" y="126.0" text-anchor="middle" font-family="Arial" font-size="6">shift</text>
+</g>
+<g class="key keyCode48">
+<use xlink:href="#shape2" transform="translate(10 70)"/>
+<text x="25.5" y="86.0" text-anchor="middle" font-family="Arial" font-size="6">tab</text>
+</g>
+<g class="key keyCode51">
+<use xlink:href="#shape2" transform="translate(270 50)"/>
+<text x="285.5" y="66.0" text-anchor="middle" font-family="Arial" font-size="6">delete</text>
+</g>
+<g class="key keyCode57">
+<use xlink:href="#shape3" transform="translate(10 90)"/>
+<text x="28.0" y="99.0" text-anchor="middle" font-family="Arial" font-size="6">caps</text>
+<text x="28.0" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">lock</text>
+</g>
+<g class="key keyCode55">
+<use xlink:href="#shape3" transform="translate(50 130)"/>
+<text x="68.0" y="146.0" text-anchor="middle" font-family="Arial" font-size="6">&#8984;</text>
+</g>
+<g class="key keyCode49">
+<use xlink:href="#shape4" transform="translate(105 130)"/>
+</g>
+<g class="key keyCode36">
+<use xlink:href="#shape5" transform="translate(280 70)"/>
+<text x="293.0" y="106.0" text-anchor="middle" font-family="Arial" font-size="6">return</text>
+</g>
+</g>
+</svg>
