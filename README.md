@@ -18,3 +18,12 @@
 
 ### Commodore 128
 ![](keyboards-svg/Commodore%20128.svg)
+
+### Famicom
+![](keyboards-svg/Famicom.svg)
+
+### NABU
+![](keyboards-svg/NABU.svg)
+
+### Space Cadet
+![](keyboards-svg/Space%20Cadet.svg)
