@@ -1,6 +1,8 @@
 package com.kreative.keycaps;
 
+import java.awt.Font;
 import java.awt.Shape;
+import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -131,14 +133,18 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 					String[] lines = tb.text.split("\r\n|\r|\n");
 					for (int i = 0, n = lines.length; i < n; i++) {
 						float y = tb.anchor.getY(tb.y, tb.lineHeight*n) + tb.lineHeight*i + tb.lineHeight*0.8f - k.getY(keyCapSize);
-						String t = xmlSpecialChars(lines[i]);
-						keyboard.append(
-							"<text x=\"" + ftoa(x, DECIMAL_PLACES) + "\" y=\"" +
-							ftoa(y, DECIMAL_PLACES) + "\" text-anchor=\"" + a +
-							"\" font-family=\"Arial\" font-size=\"" +
-							ftoa(tb.lineHeight, DECIMAL_PLACES) + "\" fill=\"" +
-							cs.getTextColor() + "\">" + t + "</text>\n"
-						);
+						keyboard.append("<text");
+						keyboard.append(" x=\"" + ftoa(x, DECIMAL_PLACES) + "\"");
+						keyboard.append(" y=\"" + ftoa(y, DECIMAL_PLACES) + "\"");
+						keyboard.append(" text-anchor=\"" + a + "\"");
+						keyboard.append(" font-family=\"Arial\"");
+						keyboard.append(" font-size=\"" + ftoa(tb.lineHeight, DECIMAL_PLACES) + "\"");
+						if (stringWidth(lines[i], "Arial", Font.PLAIN, tb.lineHeight) > tb.maxWidth) {
+							keyboard.append(" textLength=\"" + ftoa(tb.maxWidth, DECIMAL_PLACES) + "\"");
+							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
+						}
+						keyboard.append(" fill=\"" + cs.getTextColor() + "\"");
+						keyboard.append(">" + xmlSpecialChars(lines[i]) + "</text>\n");
 					}
 				}
 			}
@@ -264,6 +270,13 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 			i += Character.charCount(ch);
 		}
 		return sb.toString();
+	}
+	
+	private static float stringWidth(String s, String family, int style, float size) {
+		FontRenderContext ctx = new FontRenderContext(null, true, true);
+		Font font = new Font(family, style, 1);
+		size *= font.getStringBounds(s, ctx).getWidth();
+		return size;
 	}
 	
 	public static void main(String[] args) throws IOException {
