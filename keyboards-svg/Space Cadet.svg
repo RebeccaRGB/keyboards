@@ -103,55 +103,55 @@
 <g class="keyboard">
 <g class="key">
 <use xlink:href="#shape0" transform="translate(0 0)"/>
-<text x="36" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">hyper</text>
+<text x="36" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">HYPER</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(72 0)"/>
-<text x="108" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">super</text>
+<text x="108" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">SUPER</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(144 0)"/>
-<text x="180" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">meta</text>
+<text x="180" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">META</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(216 0)"/>
-<text x="258" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">ctrl</text>
+<text x="258" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">CTRL</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(324 0)"/>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(780 0)"/>
-<text x="822" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">ctrl</text>
+<text x="822" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">CTRL</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(936 0)"/>
-<text x="972" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">meta</text>
+<text x="972" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">META</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(1008 0)"/>
-<text x="1044" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">super</text>
+<text x="1044" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">SUPER</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(1080 0)"/>
-<text x="1116" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">hyper</text>
+<text x="1116" y="-20.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">HYPER</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(0 -48)"/>
-<text x="24" y="-74.267" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">caps</text>
-<text x="24" y="-62.933" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">lock</text>
+<text x="24" y="-74.267" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">CAPS</text>
+<text x="24" y="-62.933" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">LOCK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(48 -48)"/>
-<text x="84" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">top</text>
+<text x="84" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">TOP</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(120 -48)"/>
-<text x="156" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">Greek</text>
+<text x="156" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">GREEK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape4" transform="translate(192 -48)"/>
-<text x="246" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">shift</text>
+<text x="246" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">SHIFT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(300 -48)"/>
@@ -205,36 +205,36 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(780 -48)"/>
-<text x="828" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">shift</text>
+<text x="828" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">SHIFT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(876 -48)"/>
-<text x="912" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">Greek</text>
+<text x="912" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">GREEK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(960 -48)"/>
-<text x="996" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">top</text>
+<text x="996" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">TOP</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(1032 -48)"/>
-<text x="1068" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">repeat</text>
+<text x="1068" y="-68.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">REPEAT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(1104 -48)"/>
-<text x="1128" y="-74.267" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">alt</text>
-<text x="1128" y="-62.933" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">lock</text>
+<text x="1128" y="-74.267" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">ALT</text>
+<text x="1128" y="-62.933" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">LOCK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(0 -96)"/>
-<text x="48" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">mode lock</text>
+<text x="48" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">MODE LOCK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(96 -96)"/>
-<text x="144" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">alt mode</text>
+<text x="144" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">ALT MODE</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(192 -96)"/>
-<text x="234" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">rub out</text>
+<text x="234" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">RUB OUT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(276 -96)"/>
@@ -293,19 +293,19 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(804 -96)"/>
-<text x="852" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">return</text>
+<text x="852" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">RETURN</text>
 </g>
 <g class="key">
 <use xlink:href="#shape6" transform="translate(900 -96)"/>
-<text x="930" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">line</text>
+<text x="930" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">LINE</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(960 -96)"/>
-<text x="1008" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">end</text>
+<text x="1008" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">END</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(1056 -96)"/>
-<text x="1104" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">help</text>
+<text x="1104" y="-116.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">HELP</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(0 -144)"/>
@@ -317,11 +317,11 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(96 -144)"/>
-<text x="144" y="-164.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">network</text>
+<text x="144" y="-164.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">NETWORK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(192 -144)"/>
-<text x="228" y="-164.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">tab</text>
+<text x="228" y="-164.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">TAB</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(264 -144)"/>
@@ -395,7 +395,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(960 -144)"/>
-<text x="1008" y="-164.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">delete</text>
+<text x="1008" y="-164.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">DELETE</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(1056 -144)"/>
@@ -415,7 +415,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(96 -192)"/>
-<text x="144" y="-212.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">system</text>
+<text x="144" y="-212.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">SYSTEM</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(192 -192)"/>
@@ -494,7 +494,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(960 -192)"/>
-<text x="1008" y="-212.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">status</text>
+<text x="1008" y="-212.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">STATUS</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(1056 -192)"/>
@@ -506,81 +506,81 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(0 -240)"/>
-<text x="48" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">macro</text>
+<text x="48" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">MACRO</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(96 -240)"/>
-<text x="144" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">terminal</text>
+<text x="144" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">TERMINAL</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(192 -240)"/>
-<text x="240" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">quote</text>
+<text x="240" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">QUOTE</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(288 -240)"/>
-<text x="336" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">over strike</text>
+<text x="336" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">OVER STRIKE</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(384 -240)"/>
-<text x="432" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">clear input</text>
+<text x="432" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">CLEAR INPUT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(480 -240)"/>
-<text x="528" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">clear screen</text>
+<text x="528" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" textLength="82" lengthAdjust="spacingAndGlyphs" fill="#000000">CLEAR SCREEN</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(576 -240)"/>
-<text x="624" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">hold output</text>
+<text x="624" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">HOLD OUTPUT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(672 -240)"/>
-<text x="720" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">stop output</text>
+<text x="720" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">STOP OUTPUT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(768 -240)"/>
-<text x="816" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">abort</text>
+<text x="816" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">ABORT</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(864 -240)"/>
-<text x="912" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">break</text>
+<text x="912" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">BREAK</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(960 -240)"/>
-<text x="1008" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">resume</text>
+<text x="1008" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">RESUME</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(1056 -240)"/>
-<text x="1104" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">call</text>
+<text x="1104" y="-260.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">CALL</text>
 </g>
 </g>
 </svg>
 
 <!-- toString():
-@0,0u:1.5u['hyper'],1.5u['super'],1.5u['meta'],1.75u['ctrl'];
+@0,0u:1.5u['HYPER'],1.5u['SUPER'],1.5u['META'],1.75u['CTRL'];
 @6.75,0u:9u;
-@16.25,0u:1.75u['ctrl'];
-@19.5,0u:1.5u['meta'],1.5u['super'],1.5u['hyper'];
-@0,1u:['caps\nlock'],1.5u['top'],1.5u['Greek'],2.25u['shift'],['Z',$230A],['X',$2308],['C',$2260],['V',$2243],['B',$2261],['N',$2264],['M',$2265],[',','<'],['.','>'],['/','?'],2u['shift'],1.5u['Greek'];
-@20,1u:1.5u['top'],1.5u['repeat'],['alt\nlock'];
-@0,2u:2u['mode lock'],2u['alt mode'],1.75u['rub out'],['A',$22A5],['S',$22A4],['D',$22A2],['F',$22A3],['G',$2191],['H',$2193],['J',$2190],['K',$2192],['L',$2194],[';',':'],["'",'"'],2u['return'],1.25u['line'],2u['end'],2u['help'];
-@0,3u:[$2162],[$2163],2u['network'],1.5u['tab'],['Q',$2227],['W',$2228],['E',$2229],['R',$222A],['T',$2282],['Y',$2283],['U',$2200],['I',$221E],['O',$2203],['P',$2202],['(','['],[')',']'],['`','~'],1.5u['\\','|'],2u['delete'],[$261C],[$261E];
-@0,4u:[$2160],[$2161],2u['system'],[':',$00B1],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],1.5u['-','_'],1.5u['=','+'],['{','<'],['}','>'],2u['status'],[$1F44D],[$1F44E];
-@0,5u:2u['macro'],2u['terminal'],2u['quote'],2u['over strike'],2u['clear input'],2u['clear screen'],2u['hold output'],2u['stop output'],2u['abort'],2u['break'],2u['resume'],2u['call'];
+@16.25,0u:1.75u['CTRL'];
+@19.5,0u:1.5u['META'],1.5u['SUPER'],1.5u['HYPER'];
+@0,1u:['CAPS\nLOCK'],1.5u['TOP'],1.5u['GREEK'],2.25u['SHIFT'],['Z',$230A],['X',$2308],['C',$2260],['V',$2243],['B',$2261],['N',$2264],['M',$2265],[',','<'],['.','>'],['/','?'],2u['SHIFT'],1.5u['GREEK'];
+@20,1u:1.5u['TOP'],1.5u['REPEAT'],['ALT\nLOCK'];
+@0,2u:2u['MODE LOCK'],2u['ALT MODE'],1.75u['RUB OUT'],['A',$22A5],['S',$22A4],['D',$22A2],['F',$22A3],['G',$2191],['H',$2193],['J',$2190],['K',$2192],['L',$2194],[';',':'],["'",'"'],2u['RETURN'],1.25u['LINE'],2u['END'],2u['HELP'];
+@0,3u:[$2162],[$2163],2u['NETWORK'],1.5u['TAB'],['Q',$2227],['W',$2228],['E',$2229],['R',$222A],['T',$2282],['Y',$2283],['U',$2200],['I',$221E],['O',$2203],['P',$2202],['(','['],[')',']'],['`','~'],1.5u['\\','|'],2u['DELETE'],[$261C],[$261E];
+@0,4u:[$2160],[$2161],2u['SYSTEM'],[':',$00B1],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],1.5u['-','_'],1.5u['=','+'],['{','<'],['}','>'],2u['STATUS'],[$1F44D],[$1F44E];
+@0,5u:2u['MACRO'],2u['TERMINAL'],2u['QUOTE'],2u['OVER STRIKE'],2u['CLEAR INPUT'],2u['CLEAR SCREEN'],2u['HOLD OUTPUT'],2u['STOP OUTPUT'],2u['ABORT'],2u['BREAK'],2u['RESUME'],2u['CALL'];
 -->
 <!-- toNormalizedString():
-@0,0u:1.5+1+1.5+1u[F,'hyper'],1.5+1+1.5+1u[F,'super'],1.5+1+1.5+1u[F,'meta'],1.75+1+1.75+1u[F,'ctrl'];
+@0,0u:1.5+1+1.5+1u[F,'HYPER'],1.5+1+1.5+1u[F,'SUPER'],1.5+1+1.5+1u[F,'META'],1.75+1+1.75+1u[F,'CTRL'];
 @6.75,0u:9+1+9+1u[];
-@16.25,0u:1.75+1+1.75+1u[F,'ctrl'];
-@19.5,0u:1.5+1+1.5+1u[F,'meta'],1.5+1+1.5+1u[F,'super'],1.5+1+1.5+1u[F,'hyper'];
-@0,1u:1+1+1+1u[F,'caps\nlock'],1.5+1+1.5+1u[F,'top'],1.5+1+1.5+1u[F,'Greek'],2.25+1+2.25+1u[F,'shift'],1+1+1+1u[S,'Z',$230A],1+1+1+1u[S,'X',$2308],1+1+1+1u[S,'C',$2260],1+1+1+1u[S,'V',$2243],1+1+1+1u[S,'B',$2261],1+1+1+1u[S,'N',$2264],1+1+1+1u[S,'M',$2265],1+1+1+1u[S,',','<'],1+1+1+1u[S,'.','>'],1+1+1+1u[S,'/','?'],2+1+2+1u[F,'shift'],1.5+1+1.5+1u[F,'Greek'];
-@20,1u:1.5+1+1.5+1u[F,'top'],1.5+1+1.5+1u[F,'repeat'],1+1+1+1u[F,'alt\nlock'];
-@0,2u:2+1+2+1u[F,'mode lock'],2+1+2+1u[F,'alt mode'],1.75+1+1.75+1u[F,'rub out'],1+1+1+1u[S,'A',$22A5],1+1+1+1u[S,'S',$22A4],1+1+1+1u[S,'D',$22A2],1+1+1+1u[S,'F',$22A3],1+1+1+1u[S,'G',$2191],1+1+1+1u[S,'H',$2193],1+1+1+1u[S,'J',$2190],1+1+1+1u[S,'K',$2192],1+1+1+1u[S,'L',$2194],1+1+1+1u[S,';',':'],1+1+1+1u[S,"'",'"'],2+1+2+1u[F,'return'],1.25+1+1.25+1u[F,'line'],2+1+2+1u[F,'end'],2+1+2+1u[F,'help'];
-@0,3u:1+1+1+1u[L,$2162],1+1+1+1u[L,$2163],2+1+2+1u[F,'network'],1.5+1+1.5+1u[F,'tab'],1+1+1+1u[S,'Q',$2227],1+1+1+1u[S,'W',$2228],1+1+1+1u[S,'E',$2229],1+1+1+1u[S,'R',$222A],1+1+1+1u[S,'T',$2282],1+1+1+1u[S,'Y',$2283],1+1+1+1u[S,'U',$2200],1+1+1+1u[S,'I',$221E],1+1+1+1u[S,'O',$2203],1+1+1+1u[S,'P',$2202],1+1+1+1u[S,'(','['],1+1+1+1u[S,')',']'],1+1+1+1u[S,'`','~'],1.5+1+1.5+1u[S,'\\','|'],2+1+2+1u[F,'delete'],1+1+1+1u[L,$261C],1+1+1+1u[L,$261E];
-@0,4u:1+1+1+1u[L,$2160],1+1+1+1u[L,$2161],2+1+2+1u[F,'system'],1+1+1+1u[S,':',$00B1],1+1+1+1u[S,'1','!'],1+1+1+1u[S,'2','@'],1+1+1+1u[S,'3','#'],1+1+1+1u[S,'4','$'],1+1+1+1u[S,'5','%'],1+1+1+1u[S,'6','^'],1+1+1+1u[S,'7','&'],1+1+1+1u[S,'8','*'],1+1+1+1u[S,'9','('],1+1+1+1u[S,'0',')'],1.5+1+1.5+1u[S,'-','_'],1.5+1+1.5+1u[S,'=','+'],1+1+1+1u[S,'{','<'],1+1+1+1u[S,'}','>'],2+1+2+1u[F,'status'],1+1+1+1u[L,$1F44D],1+1+1+1u[L,$1F44E];
-@0,5u:2+1+2+1u[F,'macro'],2+1+2+1u[F,'terminal'],2+1+2+1u[F,'quote'],2+1+2+1u[F,'over strike'],2+1+2+1u[F,'clear input'],2+1+2+1u[F,'clear screen'],2+1+2+1u[F,'hold output'],2+1+2+1u[F,'stop output'],2+1+2+1u[F,'abort'],2+1+2+1u[F,'break'],2+1+2+1u[F,'resume'],2+1+2+1u[F,'call'];
+@16.25,0u:1.75+1+1.75+1u[F,'CTRL'];
+@19.5,0u:1.5+1+1.5+1u[F,'META'],1.5+1+1.5+1u[F,'SUPER'],1.5+1+1.5+1u[F,'HYPER'];
+@0,1u:1+1+1+1u[F,'CAPS\nLOCK'],1.5+1+1.5+1u[F,'TOP'],1.5+1+1.5+1u[F,'GREEK'],2.25+1+2.25+1u[F,'SHIFT'],1+1+1+1u[S,'Z',$230A],1+1+1+1u[S,'X',$2308],1+1+1+1u[S,'C',$2260],1+1+1+1u[S,'V',$2243],1+1+1+1u[S,'B',$2261],1+1+1+1u[S,'N',$2264],1+1+1+1u[S,'M',$2265],1+1+1+1u[S,',','<'],1+1+1+1u[S,'.','>'],1+1+1+1u[S,'/','?'],2+1+2+1u[F,'SHIFT'],1.5+1+1.5+1u[F,'GREEK'];
+@20,1u:1.5+1+1.5+1u[F,'TOP'],1.5+1+1.5+1u[F,'REPEAT'],1+1+1+1u[F,'ALT\nLOCK'];
+@0,2u:2+1+2+1u[F,'MODE LOCK'],2+1+2+1u[F,'ALT MODE'],1.75+1+1.75+1u[F,'RUB OUT'],1+1+1+1u[S,'A',$22A5],1+1+1+1u[S,'S',$22A4],1+1+1+1u[S,'D',$22A2],1+1+1+1u[S,'F',$22A3],1+1+1+1u[S,'G',$2191],1+1+1+1u[S,'H',$2193],1+1+1+1u[S,'J',$2190],1+1+1+1u[S,'K',$2192],1+1+1+1u[S,'L',$2194],1+1+1+1u[S,';',':'],1+1+1+1u[S,"'",'"'],2+1+2+1u[F,'RETURN'],1.25+1+1.25+1u[F,'LINE'],2+1+2+1u[F,'END'],2+1+2+1u[F,'HELP'];
+@0,3u:1+1+1+1u[L,$2162],1+1+1+1u[L,$2163],2+1+2+1u[F,'NETWORK'],1.5+1+1.5+1u[F,'TAB'],1+1+1+1u[S,'Q',$2227],1+1+1+1u[S,'W',$2228],1+1+1+1u[S,'E',$2229],1+1+1+1u[S,'R',$222A],1+1+1+1u[S,'T',$2282],1+1+1+1u[S,'Y',$2283],1+1+1+1u[S,'U',$2200],1+1+1+1u[S,'I',$221E],1+1+1+1u[S,'O',$2203],1+1+1+1u[S,'P',$2202],1+1+1+1u[S,'(','['],1+1+1+1u[S,')',']'],1+1+1+1u[S,'`','~'],1.5+1+1.5+1u[S,'\\','|'],2+1+2+1u[F,'DELETE'],1+1+1+1u[L,$261C],1+1+1+1u[L,$261E];
+@0,4u:1+1+1+1u[L,$2160],1+1+1+1u[L,$2161],2+1+2+1u[F,'SYSTEM'],1+1+1+1u[S,':',$00B1],1+1+1+1u[S,'1','!'],1+1+1+1u[S,'2','@'],1+1+1+1u[S,'3','#'],1+1+1+1u[S,'4','$'],1+1+1+1u[S,'5','%'],1+1+1+1u[S,'6','^'],1+1+1+1u[S,'7','&'],1+1+1+1u[S,'8','*'],1+1+1+1u[S,'9','('],1+1+1+1u[S,'0',')'],1.5+1+1.5+1u[S,'-','_'],1.5+1+1.5+1u[S,'=','+'],1+1+1+1u[S,'{','<'],1+1+1+1u[S,'}','>'],2+1+2+1u[F,'STATUS'],1+1+1+1u[L,$1F44D],1+1+1+1u[L,$1F44E];
+@0,5u:2+1+2+1u[F,'MACRO'],2+1+2+1u[F,'TERMINAL'],2+1+2+1u[F,'QUOTE'],2+1+2+1u[F,'OVER STRIKE'],2+1+2+1u[F,'CLEAR INPUT'],2+1+2+1u[F,'CLEAR SCREEN'],2+1+2+1u[F,'HOLD OUTPUT'],2+1+2+1u[F,'STOP OUTPUT'],2+1+2+1u[F,'ABORT'],2+1+2+1u[F,'BREAK'],2+1+2+1u[F,'RESUME'],2+1+2+1u[F,'CALL'];
 -->
 <!-- toMinimizedString():
-@0,0u:6v'hyper',6v'super',6v'meta',7v'ctrl';@27,0v:9u;@65,0v:7v'ctrl';@78,0v:6v'meta',6v'super',6v'hyper';@0,1u:'caps\nlock',6v'top',6v'Greek',9v'shift','Z'$230A,'X'$2308,'C'$2260,'V'$2243,'B'$2261,'N'$2264,'M'$2265,',''<','.''>','/''?',2u'shift',6v'Greek';@20,1u:6v'top',6v'repeat','alt\nlock';@0,2u:2u'mode lock',2u'alt mode',7v'rub out','A'$22A5,'S'$22A4,'D'$22A2,'F'$22A3,'G'$2191,'H'$2193,'J'$2190,'K'$2192,'L'$2194,';'':',"'"'"',2u'return',5v'line',2u'end',2u'help';@0,3u:$2162,$2163,2u'network',6v'tab','Q'$2227,'W'$2228,'E'$2229,'R'$222A,'T'$2282,'Y'$2283,'U'$2200,'I'$221E,'O'$2203,'P'$2202,'(''[',')'']','`''~',6v'\\''|',2u'delete',$261C,$261E;@0,4u:$2160,$2161,2u'system',':'$00B1,'1''!','2''@','3''#','4''$','5''%','6''^','7''&','8''*','9''(','0'')',6v'-''_',6v'=''+','{''<','}''>',2u'status',$1F44D,$1F44E;@0,5u:2u'macro',2u'terminal',2u'quote',2u'over strike',2u'clear input',2u'clear screen',2u'hold output',2u'stop output',2u'abort',2u'break',2u'resume',2u'call';
+@0,0u:6v'HYPER',6v'SUPER',6v'META',7v'CTRL';@27,0v:9u;@65,0v:7v'CTRL';@78,0v:6v'META',6v'SUPER',6v'HYPER';@0,1u:'CAPS\nLOCK',6v'TOP',6v'GREEK',9v'SHIFT','Z'$230A,'X'$2308,'C'$2260,'V'$2243,'B'$2261,'N'$2264,'M'$2265,',''<','.''>','/''?',2u'SHIFT',6v'GREEK';@20,1u:6v'TOP',6v'REPEAT','ALT\nLOCK';@0,2u:2u'MODE LOCK',2u'ALT MODE',7v'RUB OUT','A'$22A5,'S'$22A4,'D'$22A2,'F'$22A3,'G'$2191,'H'$2193,'J'$2190,'K'$2192,'L'$2194,';'':',"'"'"',2u'RETURN',5v'LINE',2u'END',2u'HELP';@0,3u:$2162,$2163,2u'NETWORK',6v'TAB','Q'$2227,'W'$2228,'E'$2229,'R'$222A,'T'$2282,'Y'$2283,'U'$2200,'I'$221E,'O'$2203,'P'$2202,'(''[',')'']','`''~',6v'\\''|',2u'DELETE',$261C,$261E;@0,4u:$2160,$2161,2u'SYSTEM',':'$00B1,'1''!','2''@','3''#','4''$','5''%','6''^','7''&','8''*','9''(','0'')',6v'-''_',6v'=''+','{''<','}''>',2u'STATUS',$1F44D,$1F44E;@0,5u:2u'MACRO',2u'TERMINAL',2u'QUOTE',2u'OVER STRIKE',2u'CLEAR INPUT',2u'CLEAR SCREEN',2u'HOLD OUTPUT',2u'STOP OUTPUT',2u'ABORT',2u'BREAK',2u'RESUME',2u'CALL';
 -->
 <!-- Tests:
 PASS
