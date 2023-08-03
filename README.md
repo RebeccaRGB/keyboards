@@ -198,6 +198,26 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ![](keyboards-svg/PowerBook%201999%20Keyboard,%20JIS.svg)
 
+## Sun Keyboards
+
+### Sun Type 5, ANSI
+![](keyboards-svg/Sun%20Type%205,%20ANSI.svg)
+
+### Sun Type 5, ISO
+![](keyboards-svg/Sun%20Type%205,%20ISO.svg)
+
+### Sun Type 6, ANSI
+![](keyboards-svg/Sun%20Type%206,%20ANSI.svg)
+
+### Sun Type 6, ISO
+![](keyboards-svg/Sun%20Type%206,%20ISO.svg)
+
+### Sun Type 7, ANSI
+![](keyboards-svg/Sun%20Type%207,%20ANSI.svg)
+
+### Sun Type 7, ISO
+![](keyboards-svg/Sun%20Type%207,%20ISO.svg)
+
 ## Other Keyboards
 
 ### Amiga
@@ -220,15 +240,3 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Space Cadet
 ![](keyboards-svg/Space%20Cadet.svg)
-
-### Sun Type 5, ANSI
-![](keyboards-svg/Sun%20Type%205,%20ANSI.svg)
-
-### Sun Type 5, ISO
-![](keyboards-svg/Sun%20Type%205,%20ISO.svg)
-
-### Sun Type 6, ANSI
-![](keyboards-svg/Sun%20Type%206,%20ANSI.svg)
-
-### Sun Type 6, ISO
-![](keyboards-svg/Sun%20Type%206,%20ISO.svg)
