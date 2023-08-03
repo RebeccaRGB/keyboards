@@ -54,7 +54,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(780 -24)"/>
-<text x="828" y="-42.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8595;</text>
+<text x="828" y="-44.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8595;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(0 -48)"/>
@@ -128,11 +128,11 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(732 -72)"/>
-<text x="780" y="-90.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8592;</text>
+<text x="780" y="-92.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8592;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(828 -72)"/>
-<text x="876" y="-90.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8594;</text>
+<text x="876" y="-92.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8594;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(24 -96)"/>
@@ -207,7 +207,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(780 -120)"/>
-<text x="828" y="-138.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8593;</text>
+<text x="828" y="-140.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8593;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(12 -144)"/>
@@ -362,7 +362,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(516 -192)"/>
-<text x="531.5" y="-203.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">-</text>
+<text x="531.5" y="-203.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8722;</text>
 <text x="531.5" y="-220.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">=</text>
 <text x="548.5" y="-203.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#12521;</text>
 </g>
@@ -429,11 +429,11 @@
 -->
 <!-- toNormalizedString():
 @3,0u:1+1+1+1u[F,'GRPH'],8+1+8+1u[];
-@16.25,0.5u:2+1+2+1u[L,$2193];
+@16.25,0.5u:2+1+2+1u[F,$2193];
 @0,1u:2+1+2+1u[F,'SHIFT'],1+1+1+1u[Q,'Z',$,$30BF,$],1+1+1+1u[Q,'X',$,$30C1,$],1+1+1+1u[Q,'C',$,$30C4,$30C3],1+1+1+1u[Q,'V',$,$30C6,$],1+1+1+1u[Q,'B',$,$30C8,$],1+1+1+1u[Q,'N',$,$30E4,$30E3],1+1+1+1u[Q,'M',$,$30E6,$30E5],1+1+1+1u[Q,',','<',$30E8,$30E7],1+1+1+1u[Q,'.','>',$30EF,$],1+1+1+1u[Q,'/','?',$30F2,$],1+1+1+1u[S,$30F3,'_'],2+1+2+1u[F,'SHIFT'];
-@15.25,1.5u:2+1+2+1u[L,$2190],2+1+2+1u[L,$2192];
+@15.25,1.5u:2+1+2+1u[F,$2190],2+1+2+1u[F,$2192];
 @0.5,2u:1+1+1+1u[F,'CTR'],1+1+1+1u[Q,'A',$,$30B5,$],1+1+1+1u[Q,'S',$,$30B7,$],1+1+1+1u[Q,'D',$,$30B9,$],1+1+1+1u[Q,'F',$,$30BB,$],1+1+1+1u[Q,'G',$,$30BD,$],1+1+1+1u[Q,'H',$,$30DE,$],1+1+1+1u[Q,'J',$,$30DF,$],1+1+1+1u[Q,'K',$,$30E0,$],1+1+1+1u[Q,'L',$,$30E1,$],1+1+1+1u[Q,';','+',$30E2,$],1+1+1+1u[Q,':','*',$30FC,$],1+1+1+1u[Q,']',$,$3002,$300D],1+1+1+1u[F,'カナ'];
-@16.25,2.5u:2+1+2+1u[L,$2191];
+@16.25,2.5u:2+1+2+1u[F,$2191];
 @0.25,3u:1+1+1+1u[F,'ESC'],1+1+1+1u[Q,'Q',$,$30AB,$],1+1+1+1u[Q,'W',$,$30AD,$],1+1+1+1u[Q,'E',$,$30AF,$],1+1+1+1u[Q,'R',$,$30B1,$],1+1+1+1u[Q,'T',$,$30B3,$],1+1+1+1u[Q,'Y',$,$30CF,$30D1],1+1+1+1u[Q,'U',$,$30D2,$30D4],1+1+1+1u[Q,'I',$,$30D5,$30D7],1+1+1+1u[Q,'O',$,$30D8,$30DA],1+1+1+1u[Q,'P',$,$30DB,$30DD],1+1+1+1u[Q,'@',$,$30EC,$],1+1+1+1u[Q,'[',$,$30ED,$300C],2+1+2+1u[F,'RETURN'];
 @15.75,3.5u:1+1+1+1u[G,'HOME','CLR'],1+1+1+1u[F,'INS'],1+1+1+1u[F,'DEL'];
 @0.75,4u:1+1+1+1u[Q,'1','!',$30A2,$30A1],1+1+1+1u[Q,'2','"',$30A4,$30A3],1+1+1+1u[Q,'3','#',$30A6,$30A5],1+1+1+1u[Q,'4','$',$30A8,$30A7],1+1+1+1u[Q,'5','%',$30AA,$30A9],1+1+1+1u[Q,'6','&',$30CA,$],1+1+1+1u[Q,'7',"'",$30CB,$],1+1+1+1u[Q,'8','(',$30CC,$],1+1+1+1u[Q,'9',')',$30CD,$],1+1+1+1u[Q,'0',$,$30CE,$],1+1+1+1u[Q,'-','=',$30E9,$],1+1+1+1u[Q,'^',$,$30EA,$],1+1+1+1u[Q,$00A5,$,$30EB,$],1+1+1+1u[F,'STOP'];

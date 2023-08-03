@@ -369,7 +369,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(528 -192)"/>
-<text x="552" y="-203.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">-</text>
+<text x="552" y="-203.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8722;</text>
 <text x="552" y="-220.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">_</text>
 </g>
 <g class="key">

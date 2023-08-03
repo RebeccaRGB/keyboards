@@ -306,7 +306,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(960 -144)"/>
-<text x="984" y="-162.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">-</text>
+<text x="984" y="-162.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8722;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -192)"/>
@@ -367,7 +367,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(576 -192)"/>
-<text x="600" y="-210.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">-</text>
+<text x="600" y="-210.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8722;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(624 -192)"/>
@@ -437,19 +437,19 @@
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(576 -264)"/>
-<text x="600" y="-282.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8593;</text>
+<text x="600" y="-284.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8593;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(624 -264)"/>
-<text x="648" y="-282.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8595;</text>
+<text x="648" y="-284.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8595;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(672 -264)"/>
-<text x="696" y="-282.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8592;</text>
+<text x="696" y="-284.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8592;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(720 -264)"/>
-<text x="744" y="-282.9" text-anchor="middle" font-family="Arial" font-size="17" fill="#000000">&#8594;</text>
+<text x="744" y="-284.6" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8594;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(816 -264)"/>
@@ -480,9 +480,9 @@
 @17,1u:2u['0'],['.'],1+2u['ENTER'];
 @0,2u:['STOP','RUN'],['SHIFT\nLOCK'],['A'],['S'],['D'],['F'],['G'],['H'],['J'],['K'],['L'],[':','['],[';',']'],['='],2u['RETURN'];
 @17,2u:['1'],['2'],['3'];
-@0,3u:1.5u['CTRL'],['Q'],['W'],['E'],['R'],['T'],['Y'],['U'],['I'],['O'],['P'],['@'],['*'],[$2191],1.5u['RESTORE'];
+@0,3u:1.5u['CTRL'],['Q'],['W'],['E'],['R'],['T'],['Y'],['U'],['I'],['O'],['P'],['@'],['*'],[L,$2191],1.5u['RESTORE'];
 @17,3u:['4'],['5'],['6'],['-'];
-@0,4u:[$2190],['1','!'],['2','"'],['3','#'],['4','$'],['5','%'],['6','&'],['7',"'"],['8','('],['9',')'],[S,'0'],['+'],['-'],[$00A3],['HOME','CLR'],['DEL','INST'];
+@0,4u:[L,$2190],['1','!'],['2','"'],['3','#'],['4','$'],['5','%'],['6','&'],['7',"'"],['8','('],['9',')'],[S,'0'],['+'],['-'],[$00A3],['HOME','CLR'],['DEL','INST'];
 @17,4u:['7'],['8'],['9'],['+'];
 @0,5.5u:['ESC'],['TAB'],['ALT'],['CAPS\nLOCK'];
 @6,5.5u:['HELP'],['LINE\nFEED'],['40/80\nDISPLAY'],['NO\nSCROLL'];
@@ -501,11 +501,11 @@
 @17,4u:1+1+1+1u[L,'7'],1+1+1+1u[L,'8'],1+1+1+1u[L,'9'],1+1+1+1u[L,'+'];
 @0,5.5u:1+1+1+1u[F,'ESC'],1+1+1+1u[F,'TAB'],1+1+1+1u[F,'ALT'],1+1+1+1u[F,'CAPS\nLOCK'];
 @6,5.5u:1+1+1+1u[F,'HELP'],1+1+1+1u[F,'LINE\nFEED'],1+1+1+1u[F,'40/80\nDISPLAY'],1+1+1+1u[F,'NO\nSCROLL'];
-@12,5.5u:1+1+1+1u[L,$2191],1+1+1+1u[L,$2193],1+1+1+1u[L,$2190],1+1+1+1u[L,$2192];
+@12,5.5u:1+1+1+1u[F,$2191],1+1+1+1u[F,$2193],1+1+1+1u[F,$2190],1+1+1+1u[F,$2192];
 @17,5.5u:1+1+1+1u[G,'F1','F2'],1+1+1+1u[G,'F3','F4'],1+1+1+1u[G,'F5','F6'],1+1+1+1u[G,'F7','F8'];
 -->
 <!-- toMinimizedString():
-@14,0v:9u;@0,1u:$F821,6v'SHIFT','Z','X','C','V','B','N','M',',''<','.''>','/''?',6v'SHIFT','⇑\nCRSR\n⇓','⇐\nCRSR\n⇒';@17,1u:2u'0','.',1+2u'ENTER';@0,2u:'STOP''RUN','SHIFT\nLOCK','A','S','D','F','G','H','J','K','L',':''[',';'']','=',2u'RETURN';@17,2u:'1','2','3';@0,3u:6v'CTRL','Q','W','E','R','T','Y','U','I','O','P','@','*',$2191,6v'RESTORE';@17,3u:'4','5','6','-';@0,4u:$2190,'1''!','2''"','3''#','4''$','5''%','6''&','7'"'",'8''(','9'')',[S'0'],'+','-',$00A3,'HOME''CLR','DEL''INST';@17,4u:'7','8','9','+';@0,22v:'ESC','TAB','ALT','CAPS\nLOCK';@24,22v:'HELP','LINE\nFEED','40/80\nDISPLAY','NO\nSCROLL';@48,22v:$2191,$2193,$2190,$2192;@68,22v:'F1''F2','F3''F4','F5''F6','F7''F8';
+@14,0v:9u;@0,1u:$F821,6v'SHIFT','Z','X','C','V','B','N','M',',''<','.''>','/''?',6v'SHIFT','⇑\nCRSR\n⇓','⇐\nCRSR\n⇒';@17,1u:2u'0','.',1+2u'ENTER';@0,2u:'STOP''RUN','SHIFT\nLOCK','A','S','D','F','G','H','J','K','L',':''[',';'']','=',2u'RETURN';@17,2u:'1','2','3';@0,3u:6v'CTRL','Q','W','E','R','T','Y','U','I','O','P','@','*',[L$2191],6v'RESTORE';@17,3u:'4','5','6','-';@0,4u:[L$2190],'1''!','2''"','3''#','4''$','5''%','6''&','7'"'",'8''(','9'')',[S'0'],'+','-',$00A3,'HOME''CLR','DEL''INST';@17,4u:'7','8','9','+';@0,22v:'ESC','TAB','ALT','CAPS\nLOCK';@24,22v:'HELP','LINE\nFEED','40/80\nDISPLAY','NO\nSCROLL';@48,22v:$2191,$2193,$2190,$2192;@68,22v:'F1''F2','F3''F4','F5''F6','F7''F8';
 -->
 <!-- Tests:
 PASS

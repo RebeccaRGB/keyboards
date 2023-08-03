@@ -113,8 +113,8 @@ public class KeyCapLegend {
 			switch (text.size()) {
 				case 4: type = Type.Q; break;
 				case 3: type = Type.T; break;
-				case 2: type = (isSingleCodePoint(0) && isSingleCodePoint(1)) ? Type.S : Type.G; break;
-				case 1: type = isSingleCodePoint(0) ? Type.L : Type.F; break;
+				case 2: type = (isImpliedLetterOrSymbol(0) && isImpliedLetterOrSymbol(1)) ? Type.S : Type.G; break;
+				case 1: type = isImpliedLetterOrSymbol(0) ? Type.L : Type.F; break;
 				default: type = Type.NONE;
 			}
 		}
@@ -159,6 +159,9 @@ public class KeyCapLegend {
 		if (i >= text.length || text[i] == null || text[i].length() == 0) return null;
 		if (text[i].codePointCount(0, text[i].length()) != 1) return text[i];
 		int ch = text[i].codePointAt(0);
+		// These characters are substituted with ones that look nicer.
+		if (ch == '-') return "\u2212"; // HYPHEN-MINUS to MINUS SIGN
+		// These private use characters are automatically converted to paths.
 		if (ch >= 0xF810 && ch <= 0xF813) return null;
 		if (ch >= 0xF820 && ch <= 0xF827) return null;
 		if (ch >= 0xFFC18 && ch <= 0xFFC1B) return null;
@@ -170,6 +173,7 @@ public class KeyCapLegend {
 		if (i < paths.length && paths[i] != null && paths[i].length() > 0) return paths[i];
 		if (i >= text.length || text[i] == null || text[i].length() == 0) return null;
 		if (text[i].codePointCount(0, text[i].length()) != 1) return null;
+		// These private use characters are automatically converted to paths.
 		switch (text[i].codePointAt(0)) {
 			case 0xF810: case 0xFFCE0: return PATH_WINDOWS;
 			case 0xF811: case 0xFFCE1: return PATH_CONTEXT_MENU;
@@ -253,20 +257,24 @@ public class KeyCapLegend {
 	private boolean canImplyType() {
 		int n = minParamCount();
 		return (
-			(type == Type.L && n == 1 && isSingleCodePoint(0)) ||
-			(type == Type.F && n == 1 && !isSingleCodePoint(0)) ||
-			(type == Type.S && n == 2 && (isSingleCodePoint(0) && isSingleCodePoint(1))) ||
-			(type == Type.G && n == 2 && !(isSingleCodePoint(0) && isSingleCodePoint(1))) ||
+			(type == Type.L && n == 1 && isImpliedLetterOrSymbol(0)) ||
+			(type == Type.F && n == 1 && !isImpliedLetterOrSymbol(0)) ||
+			(type == Type.S && n == 2 && (isImpliedLetterOrSymbol(0) && isImpliedLetterOrSymbol(1))) ||
+			(type == Type.G && n == 2 && !(isImpliedLetterOrSymbol(0) && isImpliedLetterOrSymbol(1))) ||
 			(type == Type.T && n == 3) ||
 			(type == Type.Q && n == 4)
 		);
 	}
 	
-	private boolean isSingleCodePoint(int i) {
+	private boolean isImpliedLetterOrSymbol(int i) {
 		if (i < paths.length && paths[i] != null && paths[i].length() > 0) return false;
 		if (i >= text.length || text[i] == null || text[i].length() == 0) return false;
 		if (text[i].codePointCount(0, text[i].length()) != 1) return false;
 		int ch = text[i].codePointAt(0);
+		// These ranges typically label function or modifier keys, not letter or symbol keys.
+		if (ch >= 0x2190 && ch <= 0x21FF) return false; // Arrows
+		if (ch >= 0x2300 && ch <= 0x23FF) return false; // Miscellaneous Technical
+		// These private use characters are automatically converted to paths.
 		if (ch >= 0xF810 && ch <= 0xF813) return false;
 		if (ch >= 0xF820 && ch <= 0xF827) return false;
 		if (ch >= 0xFFC18 && ch <= 0xFFC1B) return false;
