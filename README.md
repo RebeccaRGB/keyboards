@@ -226,3 +226,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Sun Type 5, ISO
 ![](keyboards-svg/Sun%20Type%205,%20ISO.svg)
+
+### Sun Type 6, ANSI
+![](keyboards-svg/Sun%20Type%206,%20ANSI.svg)
+
+### Sun Type 6, ISO
+![](keyboards-svg/Sun%20Type%206,%20ISO.svg)
