@@ -58,7 +58,7 @@ public abstract class KeyCapEngraver {
 		public TextBox[] makeBoxes(KeyCapStyle style, float styleScale, KeyCapShape shape, float keyCapSize, KeyCapLegend legend) {
 			float baseLineHeight = keyCapSize;
 			Rectangle2D.Float bbx = shape.getBounds(keyCapSize);
-			if (bbx.height > keyCapSize) {
+			if (!shape.isRectangular() || (bbx.height == keyCapSize*2 && bbx.width == keyCapSize)) {
 				if (bbx.width > shape.getAdvanceWidth(keyCapSize)) {
 					bbx.height /= 2;
 				} else {

@@ -79,6 +79,13 @@ public class KeyCapShape {
 		return new KeyCapShape(minimize(shape, strict, keyCapSize), keyCapSize);
 	}
 	
+	public boolean isRectangular() {
+		if (shape.length <= 2) return true;
+		if (shape.length == 3) return shape[0] == shape[2];
+		if (shape.length == 4) return shape[0] == shape[2] && shape[1] == shape[3];
+		return false;
+	}
+	
 	public Rectangle2D.Float getBounds(float keyCapSize) {
 		float[] shape = normalize(this.shape, false, this.keyCapSize);
 		return getBounds(shape, keyCapSize/this.keyCapSize);

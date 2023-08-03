@@ -33,6 +33,23 @@
 ### JIS 60%
 ![](keyboards-svg/JIS%2060%25.svg)
 
+## IBM Keyboards
+
+### IBM Model F XT
+![](keyboards-svg/IBM%20Model%20F%20XT.svg)
+
+### IBM Model F AT
+![](keyboards-svg/IBM%20Model%20F%20AT.svg)
+
+### IBM Model F 122-Key Terminal Keyboard
+![](keyboards-svg/IBM%20Model%20F%20122-Key%20Terminal%20Keyboard.svg)
+
+### IBM Model M
+![](keyboards-svg/IBM%20Model%20M.svg)
+
+### IBM Space Saving Model M
+![](keyboards-svg/IBM%20Space%20Saving%20Model%20M.svg)
+
 ## Apple Macintosh Keyboards
 
 ### Macintosh 512K Keyboard, ANSI
