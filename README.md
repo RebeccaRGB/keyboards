@@ -220,3 +220,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Space Cadet
 ![](keyboards-svg/Space%20Cadet.svg)
+
+### Sun Type 5, ANSI
+![](keyboards-svg/Sun%20Type%205,%20ANSI.svg)
+
+### Sun Type 5, ISO
+![](keyboards-svg/Sun%20Type%205,%20ISO.svg)
