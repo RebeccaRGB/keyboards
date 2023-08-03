@@ -36,6 +36,8 @@
 ## IBM Keyboards
 
 ### IBM Model F XT
+This is why we can't have ~~nice things~~ sensible scan codes for the 'print screen' and 'pause/break' keys.
+
 ![](keyboards-svg/IBM%20Model%20F%20XT.svg)
 
 ### IBM Model F AT
