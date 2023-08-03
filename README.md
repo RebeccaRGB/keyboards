@@ -125,6 +125,60 @@
 
 ![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20Keypad.svg)
 
+### PowerBook Extended Keyboard, ANSI
+* KbdType 24
+* Gestalt ID 24
+
+![](keyboards-svg/PowerBook%20Extended%20Keyboard,%20ANSI.svg)
+
+### PowerBook Extended Keyboard, ISO
+* KbdType 20
+* Gestalt ID 20
+
+![](keyboards-svg/PowerBook%20Extended%20Keyboard,%20ISO.svg)
+
+### PowerBook Subnote Keyboard, ANSI
+* KbdType 28
+* Gestalt ID 28
+
+![](keyboards-svg/PowerBook%20Subnote%20Keyboard,%20ANSI.svg)
+
+### PowerBook Subnote Keyboard, ISO
+* KbdType 29
+* Gestalt ID 29
+
+![](keyboards-svg/PowerBook%20Subnote%20Keyboard,%20ISO.svg)
+
+### PowerBook Subnote Keyboard, JIS
+* KbdType 30
+* Gestalt ID 30
+
+![](keyboards-svg/PowerBook%20Subnote%20Keyboard,%20JIS.svg)
+
+### PowerBook G3 Keyboard, ANSI
+* KbdType 195
+* Gestalt ID 195
+
+![](keyboards-svg/PowerBook%20G3%20Keyboard,%20ANSI.svg)
+
+### PowerBook G3 Keyboard, ISO
+* KbdType 196
+* Gestalt ID 196
+
+![](keyboards-svg/PowerBook%20G3%20Keyboard,%20ISO.svg)
+
+### PowerBook G3 Keyboard, JIS
+* KbdType 197
+* Gestalt ID 197
+
+![](keyboards-svg/PowerBook%20G3%20Keyboard,%20JIS.svg)
+
+### PowerBook 1999 Keyboard, JIS
+* KbdType 201
+* Gestalt ID 201
+
+![](keyboards-svg/PowerBook%201999%20Keyboard,%20JIS.svg)
+
 ## Other Keyboards
 
 ### Amiga
