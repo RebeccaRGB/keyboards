@@ -113,18 +113,21 @@ These SVGs have been generated from the KCAP resources used by the Key Caps desk
 ### PowerBook Subnote Keyboard, ANSI
 * KbdType 28
 * Gestalt ID 28
+* Whoever authored this resource did a bad job at sizing the F1-F12 keys.
 
 ![](28.svg)
 
 ### PowerBook Subnote Keyboard, ISO
 * KbdType 29
 * Gestalt ID 29
+* Whoever authored this resource did a bad job at sizing the F1-F12 keys.
 
 ![](29.svg)
 
 ### PowerBook Subnote Keyboard, JIS
 * KbdType 30
 * Gestalt ID 30
+* Whoever authored this resource did a bad job at sizing the F1-F12 keys.
 
 ![](30.svg)
 
