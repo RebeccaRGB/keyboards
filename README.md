@@ -33,6 +33,11 @@
 ### JIS 60%
 ![](keyboards-svg/JIS%2060%25.svg)
 
+## Keypads
+
+### Keypad
+![](keyboards-svg/Keypad.svg)
+
 ## IBM Keyboards
 
 ### IBM Model F XT
@@ -43,8 +48,8 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### IBM Model F AT
 ![](keyboards-svg/IBM%20Model%20F%20AT.svg)
 
-### IBM Model F 122-Key Terminal Keyboard
-![](keyboards-svg/IBM%20Model%20F%20122-Key%20Terminal%20Keyboard.svg)
+### IBM Model F122
+![](keyboards-svg/IBM%20Model%20F122.svg)
 
 ### IBM Model M
 ![](keyboards-svg/IBM%20Model%20M.svg)
