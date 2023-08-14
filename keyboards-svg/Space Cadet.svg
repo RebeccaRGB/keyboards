@@ -155,13 +155,13 @@
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(300 -48)"/>
-<text x="324" y="-60.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">Z</text>
-<text x="324" y="-77.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8970;</text>
+<text x="324" y="-59.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">Z</text>
+<text x="324" y="-76.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8970;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(348 -48)"/>
-<text x="372" y="-60.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">X</text>
-<text x="372" y="-77.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8968;</text>
+<text x="372" y="-59.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">X</text>
+<text x="372" y="-76.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8968;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(396 -48)"/>
@@ -258,28 +258,28 @@
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(468 -96)"/>
-<text x="492" y="-108.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">G</text>
-<text x="492" y="-125.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8593;</text>
+<text x="492" y="-107.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">G</text>
+<text x="492" y="-124.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8593;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(516 -96)"/>
-<text x="540" y="-108.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">H</text>
-<text x="540" y="-125.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8595;</text>
+<text x="540" y="-107.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">H</text>
+<text x="540" y="-124.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8595;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(564 -96)"/>
-<text x="588" y="-108.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">J</text>
-<text x="588" y="-125.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8592;</text>
+<text x="588" y="-107.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">J</text>
+<text x="588" y="-124.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8592;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(612 -96)"/>
-<text x="636" y="-108.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">K</text>
-<text x="636" y="-125.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8594;</text>
+<text x="636" y="-107.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">K</text>
+<text x="636" y="-124.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8594;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(660 -96)"/>
-<text x="684" y="-108.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">L</text>
-<text x="684" y="-125.1" text-anchor="middle" font-family="Arial" font-size="11.333" fill="#000000">&#8596;</text>
+<text x="684" y="-107.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">L</text>
+<text x="684" y="-124.42" text-anchor="middle" font-family="Arial" font-size="13.6" fill="#000000">&#8596;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(708 -96)"/>
@@ -560,9 +560,9 @@
 @6.75,0u:9u;
 @16.25,0u:1.75u['CTRL'];
 @19.5,0u:1.5u['META'],1.5u['SUPER'],1.5u['HYPER'];
-@0,1u:['CAPS\nLOCK'],1.5u['TOP'],1.5u['GREEK'],2.25u['SHIFT'],['Z',$230A],['X',$2308],['C',$2260],['V',$2243],['B',$2261],['N',$2264],['M',$2265],[',','<'],['.','>'],['/','?'],2u['SHIFT'],1.5u['GREEK'];
+@0,1u:['CAPS\nLOCK'],1.5u['TOP'],1.5u['GREEK'],2.25u['SHIFT'],[S,'Z',$230A],[S,'X',$2308],['C',$2260],['V',$2243],['B',$2261],['N',$2264],['M',$2265],[',','<'],['.','>'],['/','?'],2u['SHIFT'],1.5u['GREEK'];
 @20,1u:1.5u['TOP'],1.5u['REPEAT'],['ALT\nLOCK'];
-@0,2u:2u['MODE LOCK'],2u['ALT MODE'],1.75u['RUB OUT'],['A',$22A5],['S',$22A4],['D',$22A2],['F',$22A3],['G',$2191],['H',$2193],['J',$2190],['K',$2192],['L',$2194],[';',':'],["'",'"'],2u['RETURN'],1.25u['LINE'],2u['END'],2u['HELP'];
+@0,2u:2u['MODE LOCK'],2u['ALT MODE'],1.75u['RUB OUT'],['A',$22A5],['S',$22A4],['D',$22A2],['F',$22A3],[S,'G',$2191],[S,'H',$2193],[S,'J',$2190],[S,'K',$2192],[S,'L',$2194],[';',':'],["'",'"'],2u['RETURN'],1.25u['LINE'],2u['END'],2u['HELP'];
 @0,3u:[$2162],[$2163],2u['NETWORK'],1.5u['TAB'],['Q',$2227],['W',$2228],['E',$2229],['R',$222A],['T',$2282],['Y',$2283],['U',$2200],['I',$221E],['O',$2203],['P',$2202],['(','['],[')',']'],['`','~'],1.5u['\\','|'],2u['DELETE'],[$261C],[$261E];
 @0,4u:[$2160],[$2161],2u['SYSTEM'],[':',$00B1],['1','!'],['2','@'],['3','#'],['4','$'],['5','%'],['6','^'],['7','&'],['8','*'],['9','('],['0',')'],1.5u['-','_'],1.5u['=','+'],['{','<'],['}','>'],2u['STATUS'],[$1F44D],[$1F44E];
 @0,5u:2u['MACRO'],2u['TERMINAL'],2u['QUOTE'],2u['OVER STRIKE'],2u['CLEAR INPUT'],2u['CLEAR SCREEN'],2u['HOLD OUTPUT'],2u['STOP OUTPUT'],2u['ABORT'],2u['BREAK'],2u['RESUME'],2u['CALL'];
@@ -572,15 +572,15 @@
 @6.75,0u:9+1+9+1u[];
 @16.25,0u:1.75+1+1.75+1u[F,'CTRL'];
 @19.5,0u:1.5+1+1.5+1u[F,'META'],1.5+1+1.5+1u[F,'SUPER'],1.5+1+1.5+1u[F,'HYPER'];
-@0,1u:1+1+1+1u[F,'CAPS\nLOCK'],1.5+1+1.5+1u[F,'TOP'],1.5+1+1.5+1u[F,'GREEK'],2.25+1+2.25+1u[F,'SHIFT'],1+1+1+1u[G,'Z',$230A],1+1+1+1u[G,'X',$2308],1+1+1+1u[S,'C',$2260],1+1+1+1u[S,'V',$2243],1+1+1+1u[S,'B',$2261],1+1+1+1u[S,'N',$2264],1+1+1+1u[S,'M',$2265],1+1+1+1u[S,',','<'],1+1+1+1u[S,'.','>'],1+1+1+1u[S,'/','?'],2+1+2+1u[F,'SHIFT'],1.5+1+1.5+1u[F,'GREEK'];
+@0,1u:1+1+1+1u[F,'CAPS\nLOCK'],1.5+1+1.5+1u[F,'TOP'],1.5+1+1.5+1u[F,'GREEK'],2.25+1+2.25+1u[F,'SHIFT'],1+1+1+1u[S,'Z',$230A],1+1+1+1u[S,'X',$2308],1+1+1+1u[S,'C',$2260],1+1+1+1u[S,'V',$2243],1+1+1+1u[S,'B',$2261],1+1+1+1u[S,'N',$2264],1+1+1+1u[S,'M',$2265],1+1+1+1u[S,',','<'],1+1+1+1u[S,'.','>'],1+1+1+1u[S,'/','?'],2+1+2+1u[F,'SHIFT'],1.5+1+1.5+1u[F,'GREEK'];
 @20,1u:1.5+1+1.5+1u[F,'TOP'],1.5+1+1.5+1u[F,'REPEAT'],1+1+1+1u[F,'ALT\nLOCK'];
-@0,2u:2+1+2+1u[F,'MODE LOCK'],2+1+2+1u[F,'ALT MODE'],1.75+1+1.75+1u[F,'RUB OUT'],1+1+1+1u[S,'A',$22A5],1+1+1+1u[S,'S',$22A4],1+1+1+1u[S,'D',$22A2],1+1+1+1u[S,'F',$22A3],1+1+1+1u[G,'G',$2191],1+1+1+1u[G,'H',$2193],1+1+1+1u[G,'J',$2190],1+1+1+1u[G,'K',$2192],1+1+1+1u[G,'L',$2194],1+1+1+1u[S,';',':'],1+1+1+1u[S,"'",'"'],2+1+2+1u[F,'RETURN'],1.25+1+1.25+1u[F,'LINE'],2+1+2+1u[F,'END'],2+1+2+1u[F,'HELP'];
+@0,2u:2+1+2+1u[F,'MODE LOCK'],2+1+2+1u[F,'ALT MODE'],1.75+1+1.75+1u[F,'RUB OUT'],1+1+1+1u[S,'A',$22A5],1+1+1+1u[S,'S',$22A4],1+1+1+1u[S,'D',$22A2],1+1+1+1u[S,'F',$22A3],1+1+1+1u[S,'G',$2191],1+1+1+1u[S,'H',$2193],1+1+1+1u[S,'J',$2190],1+1+1+1u[S,'K',$2192],1+1+1+1u[S,'L',$2194],1+1+1+1u[S,';',':'],1+1+1+1u[S,"'",'"'],2+1+2+1u[F,'RETURN'],1.25+1+1.25+1u[F,'LINE'],2+1+2+1u[F,'END'],2+1+2+1u[F,'HELP'];
 @0,3u:1+1+1+1u[L,$2162],1+1+1+1u[L,$2163],2+1+2+1u[F,'NETWORK'],1.5+1+1.5+1u[F,'TAB'],1+1+1+1u[S,'Q',$2227],1+1+1+1u[S,'W',$2228],1+1+1+1u[S,'E',$2229],1+1+1+1u[S,'R',$222A],1+1+1+1u[S,'T',$2282],1+1+1+1u[S,'Y',$2283],1+1+1+1u[S,'U',$2200],1+1+1+1u[S,'I',$221E],1+1+1+1u[S,'O',$2203],1+1+1+1u[S,'P',$2202],1+1+1+1u[S,'(','['],1+1+1+1u[S,')',']'],1+1+1+1u[S,'`','~'],1.5+1+1.5+1u[S,'\\','|'],2+1+2+1u[F,'DELETE'],1+1+1+1u[L,$261C],1+1+1+1u[L,$261E];
 @0,4u:1+1+1+1u[L,$2160],1+1+1+1u[L,$2161],2+1+2+1u[F,'SYSTEM'],1+1+1+1u[S,':',$00B1],1+1+1+1u[S,'1','!'],1+1+1+1u[S,'2','@'],1+1+1+1u[S,'3','#'],1+1+1+1u[S,'4','$'],1+1+1+1u[S,'5','%'],1+1+1+1u[S,'6','^'],1+1+1+1u[S,'7','&'],1+1+1+1u[S,'8','*'],1+1+1+1u[S,'9','('],1+1+1+1u[S,'0',')'],1.5+1+1.5+1u[S,'-','_'],1.5+1+1.5+1u[S,'=','+'],1+1+1+1u[S,'{','<'],1+1+1+1u[S,'}','>'],2+1+2+1u[F,'STATUS'],1+1+1+1u[L,$1F44D],1+1+1+1u[L,$1F44E];
 @0,5u:2+1+2+1u[F,'MACRO'],2+1+2+1u[F,'TERMINAL'],2+1+2+1u[F,'QUOTE'],2+1+2+1u[F,'OVER STRIKE'],2+1+2+1u[F,'CLEAR INPUT'],2+1+2+1u[F,'CLEAR SCREEN'],2+1+2+1u[F,'HOLD OUTPUT'],2+1+2+1u[F,'STOP OUTPUT'],2+1+2+1u[F,'ABORT'],2+1+2+1u[F,'BREAK'],2+1+2+1u[F,'RESUME'],2+1+2+1u[F,'CALL'];
 -->
 <!-- toMinimizedString():
-@0,0u:6v'HYPER',6v'SUPER',6v'META',7v'CTRL';@27,0v:9u;@65,0v:7v'CTRL';@78,0v:6v'META',6v'SUPER',6v'HYPER';@0,1u:'CAPS\nLOCK',6v'TOP',6v'GREEK',9v'SHIFT','Z'$230A,'X'$2308,'C'$2260,'V'$2243,'B'$2261,'N'$2264,'M'$2265,',''<','.''>','/''?',2u'SHIFT',6v'GREEK';@20,1u:6v'TOP',6v'REPEAT','ALT\nLOCK';@0,2u:2u'MODE LOCK',2u'ALT MODE',7v'RUB OUT','A'$22A5,'S'$22A4,'D'$22A2,'F'$22A3,'G'$2191,'H'$2193,'J'$2190,'K'$2192,'L'$2194,';'':',"'"'"',2u'RETURN',5v'LINE',2u'END',2u'HELP';@0,3u:$2162,$2163,2u'NETWORK',6v'TAB','Q'$2227,'W'$2228,'E'$2229,'R'$222A,'T'$2282,'Y'$2283,'U'$2200,'I'$221E,'O'$2203,'P'$2202,'(''[',')'']','`''~',6v'\\''|',2u'DELETE',$261C,$261E;@0,4u:$2160,$2161,2u'SYSTEM',':'$00B1,'1''!','2''@','3''#','4''$','5''%','6''^','7''&','8''*','9''(','0'')',6v'-''_',6v'=''+','{''<','}''>',2u'STATUS',$1F44D,$1F44E;@0,5u:2u'MACRO',2u'TERMINAL',2u'QUOTE',2u'OVER STRIKE',2u'CLEAR INPUT',2u'CLEAR SCREEN',2u'HOLD OUTPUT',2u'STOP OUTPUT',2u'ABORT',2u'BREAK',2u'RESUME',2u'CALL';
+@0,0u:6v'HYPER',6v'SUPER',6v'META',7v'CTRL';@27,0v:9u;@65,0v:7v'CTRL';@78,0v:6v'META',6v'SUPER',6v'HYPER';@0,1u:'CAPS\nLOCK',6v'TOP',6v'GREEK',9v'SHIFT',[S'Z'$230A],[S'X'$2308],'C'$2260,'V'$2243,'B'$2261,'N'$2264,'M'$2265,',''<','.''>','/''?',2u'SHIFT',6v'GREEK';@20,1u:6v'TOP',6v'REPEAT','ALT\nLOCK';@0,2u:2u'MODE LOCK',2u'ALT MODE',7v'RUB OUT','A'$22A5,'S'$22A4,'D'$22A2,'F'$22A3,[S'G'$2191],[S'H'$2193],[S'J'$2190],[S'K'$2192],[S'L'$2194],';'':',"'"'"',2u'RETURN',5v'LINE',2u'END',2u'HELP';@0,3u:$2162,$2163,2u'NETWORK',6v'TAB','Q'$2227,'W'$2228,'E'$2229,'R'$222A,'T'$2282,'Y'$2283,'U'$2200,'I'$221E,'O'$2203,'P'$2202,'(''[',')'']','`''~',6v'\\''|',2u'DELETE',$261C,$261E;@0,4u:$2160,$2161,2u'SYSTEM',':'$00B1,'1''!','2''@','3''#','4''$','5''%','6''^','7''&','8''*','9''(','0'')',6v'-''_',6v'=''+','{''<','}''>',2u'STATUS',$1F44D,$1F44E;@0,5u:2u'MACRO',2u'TERMINAL',2u'QUOTE',2u'OVER STRIKE',2u'CLEAR INPUT',2u'CLEAR SCREEN',2u'HOLD OUTPUT',2u'STOP OUTPUT',2u'ABORT',2u'BREAK',2u'RESUME',2u'CALL';
 -->
 <!-- Tests:
 PASS
