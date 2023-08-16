@@ -4,15 +4,9 @@ import java.awt.Font;
 import java.awt.Shape;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -277,102 +271,5 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		Font font = new Font(family, style, 1);
 		size *= font.getStringBounds(s, ctx).getWidth();
 		return size;
-	}
-	
-	public static void main(String[] args) throws IOException {
-		KeyCapLayout kcl = new KeyCapLayout();
-		String outputPath = null;
-		boolean parseOutputPath = false;
-		boolean parseArg = false;
-		boolean parseFile = false;
-		for (String arg : args) {
-			if (parseOutputPath) {
-				outputPath = arg;
-				parseOutputPath = false;
-			} else if (parseArg) {
-				kcl.parse(arg);
-				parseArg = false;
-			} else if (parseFile) {
-				StringBuffer contents = new StringBuffer();
-				Scanner scanner = new Scanner(new File(arg), "UTF-8");
-				while (scanner.hasNextLine()) {
-					String line = scanner.nextLine().trim();
-					if (line.length() == 0 || line.startsWith("#")) continue;
-					contents.append(line + "\n");
-				}
-				scanner.close();
-				kcl.parse(contents.toString());
-				parseFile = false;
-			} else if (arg.startsWith("-")) {
-				if (arg.equals("-i")) {
-					StringBuffer contents = new StringBuffer();
-					Scanner scanner = new Scanner(System.in, "UTF-8");
-					while (scanner.hasNextLine()) {
-						String line = scanner.nextLine().trim();
-						if (line.length() == 0 || line.startsWith("#")) continue;
-						contents.append(line + "\n");
-					}
-					scanner.close();
-					kcl.parse(contents.toString());
-				} else if (arg.equals("-f")) {
-					parseFile = true;
-				} else if (arg.equals("-c")) {
-					parseArg = true;
-				} else if (arg.equals("-o")) {
-					parseOutputPath = true;
-				} else {
-					System.err.println("Unknown option: " + arg);
-					return;
-				}
-			} else {
-				kcl.parse(arg);
-			}
-		}
-		PrintWriter out;
-		if (outputPath != null) {
-			FileOutputStream os = new FileOutputStream(new File(outputPath));
-			out = new PrintWriter(new OutputStreamWriter(os, "UTF-8"), true);
-		} else {
-			out = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"), true);
-		}
-		out.println(kcl.toSVG(KeyCapStyle.KCAP_ICL8, 1, KeyCapEngraver.DEFAULT, 48));
-		out.println("<!-- toString():");
-		String s = kcl.toString();
-		out.println(s);
-		out.println("-->");
-		out.println("<!-- toNormalizedString():");
-		String n = kcl.toNormalizedString();
-		out.println(n);
-		out.println("-->");
-		out.println("<!-- toMinimizedString():");
-		String m = kcl.toMinimizedString();
-		out.println(m);
-		out.println("-->");
-		out.println("<!-- Tests:");
-		KeyCapLayout skcl = new KeyCapLayout(); skcl.parse(s);
-		check(out, skcl.toString(), s, "parse(s).toString() != s");
-		check(out, skcl.toNormalizedString(), n, "parse(s).toNormalizedString() != n");
-		check(out, skcl.toMinimizedString(), m, "parse(s).toMinimizedString() != m");
-		KeyCapLayout nkcl = new KeyCapLayout(); nkcl.parse(n);
-		check(out, nkcl.toNormalizedString(), n, "parse(n).toNormalizedString() != n");
-		check(out, nkcl.toMinimizedString(), m, "parse(n).toMinimizedString() != m");
-		KeyCapLayout mkcl = new KeyCapLayout(); mkcl.parse(m);
-		check(out, mkcl.toNormalizedString(), n, "parse(m).toNormalizedString() != n");
-		check(out, mkcl.toMinimizedString(), m, "parse(m).toMinimizedString() != m");
-		out.println("-->");
-		if (outputPath != null) out.close();
-	}
-	
-	private static void check(PrintWriter out, String actual, String expected, String failMsg) {
-		boolean passes = actual.equals(expected);
-		out.println(passes ? "PASS" : ("FAIL: " + failMsg));
-		if (!passes) {
-			for (String line : expected.split("\n")) {
-				out.println("-" + line);
-			}
-			for (String line : actual.split("\n")) {
-				out.println("+" + line);
-			}
-		}
 	}
 }
