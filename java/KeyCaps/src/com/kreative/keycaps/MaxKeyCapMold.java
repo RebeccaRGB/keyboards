@@ -63,8 +63,9 @@ public class MaxKeyCapMold extends KeyCapMold {
 	}
 	
 	public Shape createFrontTextArea(Shape shape) {
-		// TODO Auto-generated method stub
-		return null;
+		Shape se = translate(contract(shape, 8), 0, -6);
+		Shape ss = translate(contract(shape, 12), 0, 10);
+		return subtract(ss, se);
 	}
 	
 	public static void main(String[] args) {

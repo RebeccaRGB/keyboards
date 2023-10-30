@@ -7,6 +7,9 @@ import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.PathIterator;
 import java.awt.geom.Rectangle2D;
+import java.util.Comparator;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -87,6 +90,50 @@ public class ShapeUtilities {
 		if (shape == null || (dx == 0 && dy == 0)) return shape;
 		AffineTransform tx = AffineTransform.getTranslateInstance(dx, dy);
 		return tx.createTransformedShape(shape);
+	}
+	
+	public static Rectangle2D getWidestRect(Shape shape, AffineTransform tx) {
+		if (shape == null) return null;
+		SortedSet<Float> xCoords = new TreeSet<Float>();
+		SortedSet<Float> yCoords = new TreeSet<Float>();
+		float[] c = new float[6];
+		for (PathIterator i = shape.getPathIterator(tx); !i.isDone(); i.next()) {
+			switch (i.currentSegment(c)) {
+				case PathIterator.SEG_MOVETO:
+				case PathIterator.SEG_LINETO:
+					xCoords.add(c[0]);
+					yCoords.add(c[1]);
+					break;
+				case PathIterator.SEG_QUADTO:
+					xCoords.add(c[2]);
+					yCoords.add(c[3]);
+					break;
+				case PathIterator.SEG_CUBICTO:
+					xCoords.add(c[4]);
+					yCoords.add(c[5]);
+					break;
+			}
+		}
+		if (xCoords.size() < 2 || yCoords.size() < 2) return null;
+		SortedSet<Rectangle2D> rects = new TreeSet<Rectangle2D>(
+			new Comparator<Rectangle2D>() {
+				public int compare(Rectangle2D a, Rectangle2D b) {
+					if (a.getWidth() < b.getWidth()) return -1;
+					if (a.getWidth() > b.getWidth()) return 1;
+					if (a.getHeight() < b.getHeight()) return -1;
+					if (a.getHeight() > b.getHeight()) return 1;
+					return 0;
+				}
+			}
+		);
+		for (float y0 : yCoords) for (float y1 : yCoords) if (y1 > y0) {
+			for (float x0 : xCoords) for (float x1 : xCoords) if (x1 > x0) {
+				Rectangle2D r = new Rectangle2D.Float(x0, y0, x1 - x0, y1 - y0);
+				if (shape.contains(r)) rects.add(r);
+			}
+		}
+		if (rects.isEmpty()) return null;
+		return rects.last();
 	}
 	
 	private static String valueToString(float value, float rounding) {
