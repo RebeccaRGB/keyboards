@@ -2,17 +2,12 @@ package com.kreative.keycaps;
 
 import java.awt.BasicStroke;
 import java.awt.Insets;
-import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Area;
-import java.awt.geom.GeneralPath;
 import java.awt.geom.PathIterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class KeyCapStyle {
-	private static final Pattern PATH_TOKEN = Pattern.compile("([A-Za-z])|([+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)([Ee][+-]?[0-9]+)?)");
 	private static final float DECIMAL_PLACES = 1000;
 	
 	public static final KeyCapStyle KCAP_KBIT = new KeyCapStyle(5, 5, new String[][] {
@@ -280,7 +275,7 @@ public class KeyCapStyle {
 			for (int j = 0; j < layerShapes[i].length; j++) {
 				String path = layerPaths[i][j + 1];
 				if (path == null || path.length() == 0) continue;
-				layerShapes[i][j] = fromSVGPath(path);
+				layerShapes[i][j] = ShapeUtilities.fromSVGPath(path);
 			}
 		}
 		this.top = top;
@@ -421,7 +416,7 @@ public class KeyCapStyle {
 	}
 	
 	public Area[] layeredAreaFromSVGPath(Area[] areas, String path) {
-		return layeredAreaFromShape(areas, fromSVGPath(path));
+		return layeredAreaFromShape(areas, ShapeUtilities.fromSVGPath(path));
 	}
 	
 	public String layeredAreaToSVGPaths(Area[] areas) {
@@ -433,7 +428,7 @@ public class KeyCapStyle {
 			sb.append("<path fill=\"");
 			sb.append(layerColors[li]);
 			sb.append("\" d=\"");
-			sb.append(toSVGPath(shape, DECIMAL_PLACES));
+			sb.append(ShapeUtilities.toSVGPath(shape, null, DECIMAL_PLACES));
 			sb.append("\"/>\n");
 		}
 		return sb.toString();
@@ -447,135 +442,11 @@ public class KeyCapStyle {
 		return textColor;
 	}
 	
-	private static GeneralPath fromSVGPath(String d) {
-		float sx = 0, sy = 0;
-		float cx = 0, cy = 0;
-		float ccx = 0, ccy = 0;
-		float[] cc = new float[8];
-		int ci = 0, cn = 2;
-		char cm = 'M';
-		GeneralPath path = new GeneralPath();
-		Matcher m = PATH_TOKEN.matcher(d);
-		while (m.find()) {
-			if (m.group(1) != null && m.group(1).length() > 0) {
-				cm = m.group(1).charAt(0);
-				if (cm == 'Z' || cm == 'z') {
-					path.closePath();
-					ccx = cx = sx;
-					ccy = cy = sy;
-					cm -= 13;
-				}
-				cn = (
-					(cm == 'M' || cm == 'm') ? 2 :
-					(cm == 'L' || cm == 'l') ? 2 :
-					(cm == 'H' || cm == 'h') ? 1 :
-					(cm == 'V' || cm == 'v') ? 1 :
-					(cm == 'C' || cm == 'c') ? 6 :
-					(cm == 'S' || cm == 's') ? 4 :
-					(cm == 'Q' || cm == 'q') ? 4 :
-					(cm == 'T' || cm == 't') ? 2 :
-					(cm == 'A' || cm == 'a') ? 7 :
-					Integer.MAX_VALUE
-				);
-				ci = 0;
-			}
-			if (m.group(2) != null && m.group(2).length() > 0) {
-				cc[ci++] = Float.parseFloat(m.group(2));
-				if (ci >= cn) {
-					ci = 0;
-					switch (cm) {
-						case 'M': path.moveTo((sx = ccx = cx = cc[0]), (sy = ccy = cy = cc[1])); cm--; break;
-						case 'm': path.moveTo((sx = ccx = cx += cc[0]), (sy = ccy = cy += cc[1])); cm--; break;
-						case 'L': path.lineTo((ccx = cx = cc[0]), (ccy = cy = cc[1])); break;
-						case 'l': path.lineTo((ccx = cx += cc[0]), (ccy = cy += cc[1])); break;
-						case 'H': path.lineTo((ccx = cx = cc[0]), (ccy = cy)); break;
-						case 'h': path.lineTo((ccx = cx += cc[0]), (ccy = cy)); break;
-						case 'V': path.lineTo((ccx = cx), (ccy = cy = cc[0])); break;
-						case 'v': path.lineTo((ccx = cx), (ccy = cy += cc[0])); break;
-						case 'C':
-							path.curveTo(cc[0], cc[1], cc[2], cc[3], cc[4], cc[5]);
-							ccx = cc[2]; ccy = cc[3]; cx = cc[4]; cy = cc[5]; break;
-						case 'c':
-							path.curveTo(cc[0]+=cx, cc[1]+=cy, cc[2]+=cx, cc[3]+=cy, cc[4]+=cx, cc[5]+=cy);
-							ccx = cc[2]; ccy = cc[3]; cx = cc[4]; cy = cc[5]; break;
-						case 'S':
-							path.curveTo(cx*2-ccx, cy*2-ccy, cc[0], cc[1], cc[2], cc[3]);
-							ccx = cc[0]; ccy = cc[1]; cx = cc[2]; cy = cc[3]; break;
-						case 's':
-							path.curveTo(cx*2-ccx, cy*2-ccy, cc[0]+=cx, cc[1]+=cy, cc[2]+=cx, cc[3]+=cx);
-							ccx = cc[0]; ccy = cc[1]; cx = cc[2]; cy = cc[3]; break;
-						case 'Q':
-							path.quadTo(cc[0], cc[1], cc[2], cc[3]);
-							ccx = cc[0]; ccy = cc[1]; cx = cc[2]; cy = cc[3]; break;
-						case 'q':
-							path.quadTo(cc[0]+=cx, cc[1]+=cy, cc[2]+=cx, cc[3]+=cy);
-							ccx = cc[0]; ccy = cc[1]; cx = cc[2]; cy = cc[3]; break;
-						case 'T':
-							path.quadTo(cx*2-ccx, cy*2-ccy, cc[0], cc[1]);
-							ccx = cx*2-ccx; ccy = cy*2-ccy; cx = cc[0]; cy = cc[1]; break;
-						case 't':
-							path.quadTo(cx*2-ccx, cy*2-ccy, cc[0]+=cx, cc[1]+=cy);
-							ccx = cx*2-ccx; ccy = cy*2-ccy; cx = cc[0]; cy = cc[1]; break;
-					}
-				}
-			}
-		}
-		return path;
-	}
-	
-	private static String toSVGPath(Shape shape, float r) {
-		StringBuffer s = new StringBuffer();
-		float[] c = new float[6];
-		for (PathIterator i = shape.getPathIterator(null); !i.isDone(); i.next()) {
-			switch (i.currentSegment(c)) {
-				case PathIterator.SEG_MOVETO:
-					s.append(" M "); s.append(ftoa(c[0], r));
-					s.append(" "); s.append(ftoa(c[1], r));
-					break;
-				case PathIterator.SEG_LINETO:
-					s.append(" L "); s.append(ftoa(c[0], r));
-					s.append(" "); s.append(ftoa(c[1], r));
-					break;
-				case PathIterator.SEG_QUADTO:
-					s.append(" Q "); s.append(ftoa(c[0], r));
-					s.append(" "); s.append(ftoa(c[1], r));
-					s.append(" "); s.append(ftoa(c[2], r));
-					s.append(" "); s.append(ftoa(c[3], r));
-					break;
-				case PathIterator.SEG_CUBICTO:
-					s.append(" C "); s.append(ftoa(c[0], r));
-					s.append(" "); s.append(ftoa(c[1], r));
-					s.append(" "); s.append(ftoa(c[2], r));
-					s.append(" "); s.append(ftoa(c[3], r));
-					s.append(" "); s.append(ftoa(c[4], r));
-					s.append(" "); s.append(ftoa(c[5], r));
-					break;
-				case PathIterator.SEG_CLOSE:
-					s.append(" Z");
-					break;
-			}
-		}
-		return s.toString().trim();
-	}
-	
-	private static String ftoa(float v, float r) {
-		v = Math.round(v * r) / r;
-		if (v == (int)v) return Integer.toString((int)v);
-		return Float.toString(v);
-	}
-	
-	private static String viewBox(Rectangle r) {
-		return (
-			" width=\"" + r.width + "\" height=\"" + r.height + "\"" +
-			" viewBox=\"" + r.x + " " + r.y + " " + r.width + " " + r.height + "\""
-		);
-	}
-	
 	public static void main(String[] args) {
 		KeyCapStyle cs = KeyCapStyle.KCAP_KBIT;
 		for (String arg : args) {
-			Shape shape = fromSVGPath(arg);
-			String vbox = viewBox(shape.getBounds());
+			Shape shape = ShapeUtilities.fromSVGPath(arg);
+			String vbox = ShapeUtilities.toSVGViewBox(shape, 0, DECIMAL_PLACES);
 			Area[] area = cs.layeredAreaFromShape(null, shape);
 			String path = cs.layeredAreaToSVGPaths(area);
 			System.out.println("<?xml version=\"1.0\"?>");

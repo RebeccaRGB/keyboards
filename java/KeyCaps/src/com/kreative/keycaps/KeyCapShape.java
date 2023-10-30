@@ -347,19 +347,10 @@ public class KeyCapShape {
 		return Float.toString(v);
 	}
 	
-	private static String viewBox(Rectangle2D.Float bounds, float pad, float r) {
-		return (
-			" width=\"" + ftoa(bounds.width+pad+pad, r) + "\"" +
-			" height=\"" + ftoa(bounds.height+pad+pad, r) + "\"" +
-			" viewBox=\"" + ftoa(bounds.x-pad, r) + " " + ftoa(bounds.y-pad, r) +
-			" " + ftoa(bounds.width+pad+pad, r) + " " + ftoa(bounds.height+pad+pad, r) + "\""
-		);
-	}
-	
 	public static void main(String[] args) {
 		for (String arg : args) {
 			KeyCapShape shape = new KeyCapShape(arg, W);
-			String vbox = viewBox(shape.getBounds(W), 10, DECIMAL_PLACES);
+			String vbox = ShapeUtilities.toSVGViewBox(shape.getBounds(W), 10, DECIMAL_PLACES);
 			System.out.println("<?xml version=\"1.0\"?>");
 			System.out.println("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"" + vbox + ">");
 			System.out.println("<!-- input:      " + arg + " -->");
