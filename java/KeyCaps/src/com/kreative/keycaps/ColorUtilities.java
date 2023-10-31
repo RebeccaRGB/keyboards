@@ -65,19 +65,21 @@ public class ColorUtilities {
 	public static Float getPaletteOpacity(int i) {
 		// 32-bit
 		int a = (i >> 24) & 255;
-		if (a == 255) return null;
+		if (a == 255) return 1f;
 		if (a > 0) return a / 255f;
 		// 16-bit
 		a = (i >> 12) & 15;
-		if (a == 15) return null;
+		if (a == 15) return 1f;
 		if (a > 0) return a / 15f;
 		// 8-bit
 		a = (i >> 6) & 3;
-		if (a == 3) return null;
+		if (a == 3) return 1f;
 		if (a > 0) return a / 3f;
 		// 6-bit
-		if ((i & 32) == 0) return null;
-		if ((i & 31) > 0) return 0.5f;
-		return 0f;
+		if ((i & 32) == 0) {
+			return ((i & 31) == 0) ? null : 1f;
+		} else {
+			return ((i & 31) == 0) ? 0f : 0.5f;
+		}
 	}
 }
