@@ -42,12 +42,28 @@ public class ColorUtilities {
 		// 32-bit
 		int a = (i >> 24) & 255;
 		if (a > 0) return new Color(i);
+		// 24-bit
+		a = (i >> 18) & 63;
+		if (a > 0) {
+			float r = ((i >> 12) & 63) / 63f;
+			float g = ((i >>  6) & 63) / 63f;
+			float b = ((i >>  0) & 63) / 63f;
+			return new Color(r, g, b);
+		}
 		// 16-bit
 		a = (i >> 12) & 15;
 		if (a > 0) {
 			int r = ((i >> 8) & 15) * 17;
 			int g = ((i >> 4) & 15) * 17;
 			int b = ((i >> 0) & 15) * 17;
+			return new Color(r, g, b);
+		}
+		// 12-bit
+		a = (i >> 9) & 7;
+		if (a > 0) {
+			float r = ((i >> 6) & 7) / 7f;
+			float g = ((i >> 3) & 7) / 7f;
+			float b = ((i >> 0) & 7) / 7f;
 			return new Color(r, g, b);
 		}
 		// 8-bit
@@ -67,10 +83,18 @@ public class ColorUtilities {
 		int a = (i >> 24) & 255;
 		if (a == 255) return 1f;
 		if (a > 0) return a / 255f;
+		// 24-bit
+		a = (i >> 18) & 63;
+		if (a == 63) return 1f;
+		if (a > 0) return a / 63f;
 		// 16-bit
 		a = (i >> 12) & 15;
 		if (a == 15) return 1f;
 		if (a > 0) return a / 15f;
+		// 12-bit
+		a = (i >> 9) & 7;
+		if (a == 7) return 1f;
+		if (a > 0) return a / 7f;
 		// 8-bit
 		a = (i >> 6) & 3;
 		if (a == 3) return 1f;
