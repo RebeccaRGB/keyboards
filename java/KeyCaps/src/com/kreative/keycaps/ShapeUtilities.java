@@ -280,4 +280,29 @@ public class ShapeUtilities {
 		}
 		return path;
 	}
+	
+	public static Shape[] fromSVGPath(String[] d) {
+		Shape[] shapes = new Shape[d.length];
+		for (int i = 0; i < d.length; i++) {
+			if (d[i] != null) {
+				shapes[i] = fromSVGPath(d[i]);
+			}
+		}
+		return shapes;
+	}
+	
+	public static Shape[][] fromSVGPath(String[][] d) {
+		Shape[][] shapes = new Shape[d.length][];
+		for (int i = 0; i < d.length; i++) {
+			if (d[i] != null) {
+				shapes[i] = new Shape[d[i].length];
+				for (int j = 0; j < d[i].length; j++) {
+					if (d[i][j] != null) {
+						shapes[i][j] = fromSVGPath(d[i][j]);
+					}
+				}
+			}
+		}
+		return shapes;
+	}
 }

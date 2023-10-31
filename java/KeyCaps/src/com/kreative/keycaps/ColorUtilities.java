@@ -18,6 +18,18 @@ public class ColorUtilities {
 		return new Color(r, g, b);
 	}
 	
+	public static Color[] multiplyAdd(Color color, float[][] coeffs) {
+		Color[] colors = new Color[coeffs.length];
+		for (int i = 0; i < coeffs.length; i++) {
+			colors[i] = multiplyAdd(
+				color,
+				coeffs[i][0], coeffs[i][1], coeffs[i][2],
+				coeffs[i][3], coeffs[i][4], coeffs[i][5]
+			);
+		}
+		return colors;
+	}
+	
 	public static Color contrastingColor(Color color) {
 		int k = color.getRed() * 30 + color.getGreen() * 59 + color.getBlue() * 11;
 		return (k < 12750) ? Color.white : Color.black;
