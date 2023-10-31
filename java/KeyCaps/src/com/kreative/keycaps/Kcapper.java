@@ -18,13 +18,13 @@ public class Kcapper {
 			try { id = Integer.parseInt(file.getName().split("\\D")[0]); }
 			catch (Exception e) {}
 			InputStream in = new FileInputStream(file);
-			String svg = kcapToSVG(in, KeyCapStyle.KCAP_KBIT, 1, id);
+			String svg = kcapToSVG(in, new KbitKeyCapMold(), 1, id);
 			System.out.println(svg.trim());
 			in.close();
 		}
 	}
 	
-	public static String kcapToSVG(InputStream input, KeyCapStyle cs, float csScale, int id) throws IOException {
+	public static String kcapToSVG(InputStream input, KeyCapMold mold, float csScale, int id) throws IOException {
 		StringBuffer defs = new StringBuffer();
 		StringBuffer keyboard = new StringBuffer();
 		DataInputStream in = new DataInputStream(input);
@@ -46,14 +46,14 @@ public class Kcapper {
 				int x = in.readShort();
 				points.add(new Point(x, y));
 			}
-			if (cs == null) {
+			if (mold == null) {
 				String path = toSVGPath(makeKeyShape(points), 1);
 				defs.append("<path id=\"shape" + i + "\" d=\"" + path + "\" fill=\"white\" stroke=\"black\"/>\n");
 			} else {
 				AffineTransform tx = AffineTransform.getScaleInstance(1/csScale, 1/csScale);
 				Shape shape2 = tx.createTransformedShape(makeKeyShape(points));
 				defs.append("<g id=\"shape" + i + "\">\n");
-				defs.append(cs.layeredAreaToSVGPaths(cs.layeredAreaFromShape(null, shape2)));
+				defs.append(mold.createLayeredObject(shape2, null, null).toSVG("  ", "  "));
 				defs.append("</g>\n");
 			}
 			int kc = in.readShort() + 1;
@@ -67,7 +67,7 @@ public class Kcapper {
 				}
 				keyboard.append("<g class=\"key keyCode" + code + "\">\n");
 				String tx = "translate(" + points.get(0).x + " " + points.get(0).y + ")";
-				if (cs != null && csScale != 1) tx += " scale(" + csScale + " " + csScale + ")";
+				if (mold != null && csScale != 1) tx += " scale(" + csScale + " " + csScale + ")";
 				keyboard.append("<use xlink:href=\"#shape" + i + "\" transform=\"" + tx + "\"/>\n");
 				if (KEY_LABELS[code & 0x7F] != null) {
 					Shape shape = makeKeyShape(points);

@@ -103,7 +103,7 @@ public class LayoutToSVG {
 	
 	private static void write(OutputStream os, KeyCapLayout kcl, boolean test) throws IOException {
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(os, "UTF-8"), true);
-		out.println(kcl.toSVG(KeyCapStyle.KCAP_ICL8, 1, KeyCapEngraver.DEFAULT, 48));
+		out.println(kcl.toSVG(new IconKeyCapMold(), 1, KeyCapEngraver.DEFAULT, 48));
 		if (test) {
 			out.println("<!-- toString():");
 			String s = kcl.toString();

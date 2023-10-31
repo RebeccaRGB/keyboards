@@ -1,5 +1,6 @@
 package com.kreative.keycaps;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Shape;
 import java.awt.font.FontRenderContext;
@@ -81,7 +82,9 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		return new Rectangle2D.Float(minx, miny, maxx-minx, maxy-miny);
 	}
 	
-	public String toSVG(KeyCapStyle cs, float csScale, KeyCapEngraver ce, float keyCapSize) {
+	public String toSVG(KeyCapMold cs, float csScale, KeyCapEngraver ce, float keyCapSize) {
+		Color tc = cs.getDefaultLegendColor(cs.getDefaultKeyCapColor());
+		String tcs = "#" + Integer.toHexString(0xFF000000 | tc.getRGB()).substring(2);
 		String vbox = viewBox(getBounds(keyCapSize), 0, DECIMAL_PLACES);
 		StringBuffer shapeDefs = new StringBuffer();
 		StringBuffer pathDefs = new StringBuffer();
@@ -95,7 +98,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				shapes.put(k.getShape(), (shapeId = shapes.size()));
 				Shape shape = k.getShape().toAWTShape(keyCapSize / csScale);
 				shapeDefs.append("<g id=\"shape" + shapeId + "\">\n");
-				shapeDefs.append(cs.layeredAreaToSVGPaths(cs.layeredAreaFromShape(null, shape)));
+				shapeDefs.append(cs.createLayeredObject(shape, null, null).toSVG("  ", "  "));
 				shapeDefs.append("</g>\n");
 			}
 			keyboard.append("<g class=\"key\">\n");
@@ -119,7 +122,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 					);
 					keyboard.append(
 						"<use xlink:href=\"#path" + pathId + "\" transform=\"" +
-						tx + "\" fill=\"" + cs.getTextColor() + "\"/>\n"
+						tx + "\" fill=\"" + tcs + "\"/>\n"
 					);
 				} else if (tb.text != null && tb.text.length() > 0) {
 					float x = tb.x + k.getX(keyCapSize);
@@ -137,7 +140,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 							keyboard.append(" textLength=\"" + ftoa(tb.maxWidth, DECIMAL_PLACES) + "\"");
 							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
 						}
-						keyboard.append(" fill=\"" + cs.getTextColor() + "\"");
+						keyboard.append(" fill=\"" + tcs + "\"");
 						keyboard.append(">" + xmlSpecialChars(lines[i]) + "</text>\n");
 					}
 				}

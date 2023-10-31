@@ -1,6 +1,6 @@
 package com.kreative.keycaps;
 
-import java.awt.Insets;
+import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
@@ -52,65 +52,56 @@ public abstract class KeyCapEngraver {
 		}
 	}
 	
-	public abstract TextBox[] makeBoxes(KeyCapStyle style, float styleScale, KeyCapShape shape, float keyCapSize, KeyCapLegend legend);
+	public abstract TextBox[] makeBoxes(KeyCapMold mold, float styleScale, KeyCapShape shape, float keyCapSize, KeyCapLegend legend);
 	
 	public static final KeyCapEngraver DEFAULT = new KeyCapEngraver() {
-		public TextBox[] makeBoxes(KeyCapStyle style, float styleScale, KeyCapShape shape, float keyCapSize, KeyCapLegend legend) {
-			float baseLineHeight = keyCapSize;
-			Rectangle2D.Float bbx = shape.getBounds(keyCapSize);
-			if (!shape.isRectangular() || (bbx.height == keyCapSize*2 && bbx.width == keyCapSize)) {
-				if (bbx.width > shape.getAdvanceWidth(keyCapSize)) {
-					bbx.height /= 2;
-				} else {
-					bbx.y += bbx.height / 2;
-					bbx.height /= 2;
-				}
-			}
-			Insets insets = style.getInsets();
-			bbx.x += insets.left * styleScale;
-			bbx.y += insets.top * styleScale;
-			bbx.width -= (insets.left + insets.right) * styleScale;
-			bbx.height -= (insets.top + insets.bottom) * styleScale;
-			baseLineHeight -= (insets.top + insets.bottom) * styleScale;
+		public TextBox[] makeBoxes(KeyCapMold mold, float styleScale, KeyCapShape shape, float keyCapSize, KeyCapLegend legend) {
+			Shape cs = shape.toAWTShape(keyCapSize);
+			Shape ts = mold.createTopTextArea(cs);
+			Rectangle2D cbox = ShapeUtilities.getWidestRect(cs, null);
+			Rectangle2D tbox = ShapeUtilities.getWidestRect(ts, null);
+			float lh = keyCapSize - (float)(cbox.getHeight() - tbox.getHeight());
+			float x = (float)tbox.getX(), y = (float)tbox.getY();
+			float w = (float)tbox.getWidth(), h = (float)tbox.getHeight();
 			ArrayList<TextBox> boxes = new ArrayList<TextBox>();
 			switch (legend.getType()) {
 				case F:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.5f, bbx.width, baseLineHeight/3, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.5f, w, lh/3, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
 					break;
 				case G:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.75f, bbx.width, baseLineHeight/3, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.25f, bbx.width, baseLineHeight/3, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.75f, w, lh/3, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.25f, w, lh/3, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
 					break;
 				case L:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.5f, bbx.width, baseLineHeight/2, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.5f, w, lh/2, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
 					break;
 				case S:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.75f, bbx.width, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.25f, bbx.width, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.75f, w, lh/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.25f, w, lh/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
 					break;
 				case A:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.25f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.75f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.25f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.75f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
 					break;
 				case T:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.25f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.75f, bbx.y+bbx.height*0.75f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.75f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(2), legend.getPath(2)));
+					boxes.add(new TextBox(x+w*0.25f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.75f, y+h*0.75f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.75f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(2), legend.getPath(2)));
 					break;
 				case Z:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.25f, bbx.y+bbx.height*0.75f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.25f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.75f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(2), legend.getPath(2)));
+					boxes.add(new TextBox(x+w*0.25f, y+h*0.75f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.25f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.75f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(2), legend.getPath(2)));
 					break;
 				case Q:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.25f, bbx.y+bbx.height*0.75f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.25f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.75f, bbx.y+bbx.height*0.75f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(2), legend.getPath(2)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.75f, bbx.y+bbx.height*0.25f, bbx.width*0.5f, baseLineHeight/2.5f, Anchor.CENTER, legend.getText(3), legend.getPath(3)));
+					boxes.add(new TextBox(x+w*0.25f, y+h*0.75f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.25f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.75f, y+h*0.75f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(2), legend.getPath(2)));
+					boxes.add(new TextBox(x+w*0.75f, y+h*0.25f, w*0.5f, lh/2.5f, Anchor.CENTER, legend.getText(3), legend.getPath(3)));
 					break;
 				case N:
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.3f, bbx.width, baseLineHeight/2, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
-					boxes.add(new TextBox(bbx.x+bbx.width*0.5f, bbx.y+bbx.height*0.8f, bbx.width, baseLineHeight/3, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.3f, w, lh/2, Anchor.CENTER, legend.getText(0), legend.getPath(0)));
+					boxes.add(new TextBox(x+w*0.5f, y+h*0.8f, w, lh/3, Anchor.CENTER, legend.getText(1), legend.getPath(1)));
 					break;
 				case NONE:
 					break;
