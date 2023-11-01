@@ -1,13 +1,9 @@
 package com.kreative.keycaps;
 
-import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
-import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
 import static com.kreative.keycaps.ColorUtilities.multiplyAdd;
 import static com.kreative.keycaps.ShapeUtilities.contract;
-import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
 
 import java.awt.Color;
-import java.awt.Rectangle;
 import java.awt.Shape;
 import java.util.ArrayList;
 import java.util.List;
@@ -213,18 +209,5 @@ public class IconKeyCapMold extends KeyCapMold {
 	
 	public Shape createFrontTextArea(Shape shape) {
 		return null;
-	}
-	
-	public static void main(String[] args) {
-		IconKeyCapMold mold = new IconKeyCapMold();
-		String vbox = toSVGViewBox(new Rectangle(0, 0, 54*16, 54*16), 0, 1000);
-		System.out.println("<?xml version=\"1.0\"?>");
-		System.out.println("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"" + vbox + ">");
-		for (int i = 0; i < 256; i++) {
-			Rectangle r = new Rectangle((i & 15) * 54, (i >> 4) * 54, 54, 54);
-			LayeredObject o = mold.createLayeredObject(r, getPaletteColor(i), getPaletteOpacity(i));
-			System.out.println(o.toSVG("  ", "  "));
-		}
-		System.out.println("</svg>");
 	}
 }

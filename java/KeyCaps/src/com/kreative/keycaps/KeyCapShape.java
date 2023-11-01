@@ -14,7 +14,6 @@ public class KeyCapShape {
 	public static final String PATTERN_STRING = "(" + SHAPE_TOKEN_STR + "\\s*)*" + UNIT_TOKEN_STR;
 	private static final Pattern SHAPE_TOKEN = Pattern.compile(SHAPE_TOKEN_STR);
 	private static final Pattern UNIT_TOKEN = Pattern.compile(UNIT_TOKEN_STR + "\\s*$");
-	private static final float DECIMAL_PLACES = 1000;
 	
 	public static final float U = 1;
 	public static final float V = 4;
@@ -45,7 +44,7 @@ public class KeyCapShape {
 	}
 	
 	public float[] getShape(float keyCapSize) {
-		return clone(this.shape, keyCapSize/this.keyCapSize);
+		return clone(this.shape, keyCapSize / this.keyCapSize);
 	}
 	
 	public float getAdvanceWidth(float keyCapSize) {
@@ -79,32 +78,20 @@ public class KeyCapShape {
 		return new KeyCapShape(minimize(shape, strict, keyCapSize), keyCapSize);
 	}
 	
-	public boolean isRectangular() {
-		if (shape.length <= 2) return true;
-		if (shape.length == 3) return shape[0] == shape[2];
-		if (shape.length == 4) return shape[0] == shape[2] && shape[1] == shape[3];
-		return false;
-	}
-	
 	public Rectangle2D.Float getBounds(float keyCapSize) {
 		float[] shape = normalize(this.shape, false, this.keyCapSize);
-		return getBounds(shape, keyCapSize/this.keyCapSize);
+		return getBounds(shape, keyCapSize / this.keyCapSize);
 	}
 	
 	public Shape toAWTShape(float keyCapSize) {
 		float[] shape = normalize(this.shape, false, this.keyCapSize);
-		return toAWTShape(shape, keyCapSize/this.keyCapSize);
-	}
-	
-	public String toSVGPath(float keyCapSize) {
-		float[] shape = normalize(this.shape, false, this.keyCapSize);
-		return toSVGPath(shape, keyCapSize/this.keyCapSize, DECIMAL_PLACES);
+		return toAWTShape(shape, keyCapSize / this.keyCapSize);
 	}
 	
 	public String toString() {
-		String s = shapeToString(this.shape, null, DECIMAL_PLACES);
+		String s = shapeToString(this.shape, null, 1000);
 		if (s == null || s.length() == 0) return s;
-		return s + unitToString(this.keyCapSize, DECIMAL_PLACES);
+		return s + unitToString(this.keyCapSize, 1000);
 	}
 	
 	public String toNormalizedString() {
@@ -218,7 +205,8 @@ public class KeyCapShape {
 		} else {
 			float[] ext = complete(shape, strict, u);
 			if (ext == null) return shape;
-			float[] newShape = new float[shape.length + ext.length]; int i = 0;
+			float[] newShape = new float[shape.length + ext.length];
+			int i = 0;
 			for (float c : shape) newShape[i++] = c;
 			for (float c : ext) newShape[i++] = c;
 			return newShape;
@@ -254,6 +242,7 @@ public class KeyCapShape {
 	}
 	
 	private static Rectangle2D.Float getBounds(float[] shape, float scale) {
+		if (shape == null || shape.length == 0) return null;
 		float minx = 0, maxx = 0, miny = 0, maxy = 0;
 		float cx = 0, cy = 0; int dir = 0;
 		for (float c : shape) {
@@ -272,8 +261,8 @@ public class KeyCapShape {
 		return new Rectangle2D.Float(
 			minx * scale,
 			miny * scale,
-			(maxx-minx) * scale,
-			(maxy-miny) * scale
+			(maxx - minx) * scale,
+			(maxy - miny) * scale
 		);
 	}
 	
@@ -295,70 +284,36 @@ public class KeyCapShape {
 		return path;
 	}
 	
-	private static String toSVGPath(float[] shape, float scale, float r) {
-		if (shape == null || shape.length == 0) return "";
-		StringBuffer path = new StringBuffer("M 0 0");
-		float cx = 0, cy = 0; int dir = 0;
-		for (float c : shape) {
-			switch (dir & 3) {
-				case 0: cx += c; break;
-				case 1: cy += c; break;
-				case 2: cx -= c; break;
-				case 3: cy -= c; break;
-			}
-			path.append(((dir & 1) == 0) ? " h " : " v ");
-			path.append(ftoa((((dir & 2) == 0) ? c : -c) * scale, r));
-			dir += (c < 0) ? 1 : 3;
-		}
-		if (cx == 0 && cy == 0) path.append(" Z");
-		return path.toString();
-	}
-	
-	private static String shapeToString(float[] shape, String delimiter, float r) {
+	private static String shapeToString(float[] shape, String delimiter, float rounding) {
 		if (shape == null || shape.length == 0) return "";
 		StringBuffer sb = new StringBuffer();
 		boolean first = true;
 		for (float c : shape) {
 			if (first) {
-				sb.append(ftoa(c, r));
+				sb.append(valueToString(c, rounding));
 				first = false;
 			} else {
 				if (delimiter != null) sb.append(delimiter);
 				if (c >= 0) sb.append("+");
-				sb.append(ftoa(c, r));
+				sb.append(valueToString(c, rounding));
 			}
 		}
 		return sb.toString();
 	}
 	
-	public static String unitToString(float keyCapSize, float r) {
+	public static String unitToString(float keyCapSize, float rounding) {
 		if (keyCapSize == U) return "u";
 		if (keyCapSize == V) return "v";
 		if (keyCapSize == W) return "w";
 		if (keyCapSize == IN) return "in";
 		if (keyCapSize == MM) return "mm";
 		if (keyCapSize == PT) return "pt";
-		return "/" + ftoa(keyCapSize, r);
+		return "/" + valueToString(keyCapSize, rounding);
 	}
 	
-	private static String ftoa(float v, float r) {
-		v = Math.round(v * r) / r;
-		if (v == (int)v) return Integer.toString((int)v);
-		return Float.toString(v);
-	}
-	
-	public static void main(String[] args) {
-		for (String arg : args) {
-			KeyCapShape shape = new KeyCapShape(arg, W);
-			String vbox = ShapeUtilities.toSVGViewBox(shape.getBounds(W), 10, DECIMAL_PLACES);
-			System.out.println("<?xml version=\"1.0\"?>");
-			System.out.println("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"" + vbox + ">");
-			System.out.println("<!-- input:      " + arg + " -->");
-			System.out.println("<!-- as parsed:  " + shape.toString() + " -->");
-			System.out.println("<!-- normalized: " + shape.toNormalizedString() + " -->");
-			System.out.println("<!-- minimized:  " + shape.toMinimizedString() + " -->");
-			System.out.println("<path d=\"" + shape.toSVGPath(W) + "\" fill=\"white\" stroke=\"black\"/>");
-			System.out.println("</svg>");
-		}
+	private static String valueToString(float value, float rounding) {
+		value = Math.round(value * rounding) / rounding;
+		if (value == (int)value) return Integer.toString((int)value);
+		return Float.toString(value);
 	}
 }

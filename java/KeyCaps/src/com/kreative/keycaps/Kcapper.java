@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Reads the contents of a Mac OS Classic KCAP resource and renders the represented layout as an SVG file.
- * Using CapStyle.KCAP_KBIT, the resulting image will appear similar to the Key Caps desk accessory.
+ * Using KbitKeyCapMold, the resulting image will appear similar to the Key Caps desk accessory.
  */
 public class Kcapper {
 	public static void main(String[] args) throws IOException {
@@ -24,7 +24,7 @@ public class Kcapper {
 		}
 	}
 	
-	public static String kcapToSVG(InputStream input, KeyCapMold mold, float csScale, int id) throws IOException {
+	public static String kcapToSVG(InputStream input, KeyCapMold mold, float scale, int id) throws IOException {
 		StringBuffer defs = new StringBuffer();
 		StringBuffer keyboard = new StringBuffer();
 		DataInputStream in = new DataInputStream(input);
@@ -47,14 +47,14 @@ public class Kcapper {
 				points.add(new Point(x, y));
 			}
 			if (mold == null) {
-				String path = toSVGPath(makeKeyShape(points), 1);
+				Shape shape = ShapeUtilities.contract(makeKeyShape(points), 0.5f);
+				String path = ShapeUtilities.toSVGPath(shape, null, 1000);
 				defs.append("<path id=\"shape" + i + "\" d=\"" + path + "\" fill=\"white\" stroke=\"black\"/>\n");
 			} else {
-				AffineTransform tx = AffineTransform.getScaleInstance(1/csScale, 1/csScale);
-				Shape shape2 = tx.createTransformedShape(makeKeyShape(points));
-				defs.append("<g id=\"shape" + i + "\">\n");
-				defs.append(mold.createLayeredObject(shape2, null, null).toSVG("  ", "  "));
-				defs.append("</g>\n");
+				AffineTransform tx = AffineTransform.getScaleInstance(1/scale, 1/scale);
+				Shape shape = tx.createTransformedShape(makeKeyShape(points));
+				String paths = mold.createLayeredObject(shape, null, null).toSVG("", "");
+				defs.append("<g id=\"shape" + i + "\">\n" + paths + "\n</g>\n");
 			}
 			int kc = in.readShort() + 1;
 			for (int k = 0; k < kc; k++) {
@@ -67,7 +67,7 @@ public class Kcapper {
 				}
 				keyboard.append("<g class=\"key keyCode" + code + "\">\n");
 				String tx = "translate(" + points.get(0).x + " " + points.get(0).y + ")";
-				if (mold != null && csScale != 1) tx += " scale(" + csScale + " " + csScale + ")";
+				if (mold != null && scale != 1) tx += " scale(" + scale + " " + scale + ")";
 				keyboard.append("<use xlink:href=\"#shape" + i + "\" transform=\"" + tx + "\"/>\n");
 				if (KEY_LABELS[code & 0x7F] != null) {
 					Shape shape = makeKeyShape(points);
@@ -90,7 +90,9 @@ public class Kcapper {
 		svg.append("<defs>\n");
 		svg.append(defs.toString());
 		svg.append("</defs>\n");
-		svg.append("<path class=\"textarea\" d=\"" + toSVGPath(makeRect(tl, tt, tr, tb), 2) + "\" fill=\"white\" stroke=\"black\" stroke-width=\"2\"/>\n");
+		Shape textAreaShape = ShapeUtilities.contract(makeRect(tl, tt, tr, tb), 1);
+		String textAreaPath = ShapeUtilities.toSVGPath(textAreaShape, null, 1000);
+		svg.append("<path class=\"textarea\" d=\"" + textAreaPath + "\" fill=\"white\" stroke=\"black\" stroke-width=\"2\"/>\n");
 		String name = keyboardName(id);
 		if (name != null) {
 			svg.append("<text class=\"keyboardName\" x=\"" + (tl+4) + "\" y=\"" + ((tt+tb)/2+4) + "\" font-family=\"Arial\" font-size=\"12\">" + name + "</text>");
@@ -120,43 +122,6 @@ public class Kcapper {
 			a.add(new Area(r));
 		}
 		return a;
-	}
-	
-	private static String toSVGPath(Shape shape, int weight) {
-		StringBuffer s = new StringBuffer();
-		Shape ss = new BasicStroke(weight).createStrokedShape(shape);
-		Area a = new Area(shape); a.subtract(new Area(ss));
-		float[] c = new float[6];
-		for (PathIterator i = a.getPathIterator(null); !i.isDone(); i.next()) {
-			switch (i.currentSegment(c)) {
-				case PathIterator.SEG_MOVETO:
-					s.append(" M "); s.append(c[0]);
-					s.append(" "); s.append(c[1]);
-					break;
-				case PathIterator.SEG_LINETO:
-					s.append(" L "); s.append(c[0]);
-					s.append(" "); s.append(c[1]);
-					break;
-				case PathIterator.SEG_QUADTO:
-					s.append(" Q "); s.append(c[0]);
-					s.append(" "); s.append(c[1]);
-					s.append(" "); s.append(c[2]);
-					s.append(" "); s.append(c[3]);
-					break;
-				case PathIterator.SEG_CUBICTO:
-					s.append(" C "); s.append(c[0]);
-					s.append(" "); s.append(c[1]);
-					s.append(" "); s.append(c[2]);
-					s.append(" "); s.append(c[3]);
-					s.append(" "); s.append(c[4]);
-					s.append(" "); s.append(c[5]);
-					break;
-				case PathIterator.SEG_CLOSE:
-					s.append(" Z");
-					break;
-			}
-		}
-		return s.toString().trim();
 	}
 	
 	private static final String[] KEY_LABELS = {

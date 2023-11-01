@@ -14,4 +14,25 @@ public abstract class KeyCapMold {
 	public abstract LayeredObject createLayeredObject(Shape shape, Color color, Float opacity);
 	public abstract Shape createTopTextArea(Shape shape);
 	public abstract Shape createFrontTextArea(Shape shape);
+	
+	public static KeyCapMold forName(String name) {
+		try {
+			Class<?> cls = Class.forName(name);
+			return cls.asSubclass(KeyCapMold.class).getConstructor().newInstance();
+		} catch (Exception e) {}
+		try {
+			Class<?> cls = Class.forName("com.kreative.keycaps." + name);
+			return cls.asSubclass(KeyCapMold.class).getConstructor().newInstance();
+		} catch (Exception e) {}
+		try {
+			Class<?> cls = Class.forName("com.kreative.keycaps." + name + "KeyCapMold");
+			return cls.asSubclass(KeyCapMold.class).getConstructor().newInstance();
+		} catch (Exception e) {}
+		try {
+			name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+			Class<?> cls = Class.forName("com.kreative.keycaps." + name + "KeyCapMold");
+			return cls.asSubclass(KeyCapMold.class).getConstructor().newInstance();
+		} catch (Exception e) {}
+		return null;
+	}
 }
