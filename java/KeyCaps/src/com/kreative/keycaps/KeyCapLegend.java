@@ -2,7 +2,6 @@ package com.kreative.keycaps;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class KeyCapLegend {
 	public static enum Type {
@@ -26,12 +25,10 @@ public class KeyCapLegend {
 		}
 	}
 	
-	private static final String QUOTED_TOKEN_STR = "\'((\\\\.|[^\'])*)\'|\"((\\\\.|[^\"])*)\"|`((\\\\.|[^`])*)`";
-	private static final String CODED_TOKEN_STR = "[$]([0-9A-Fa-f]+([+][0-9A-Fa-f]+)*)?";
-	private static final String STRING_TOKEN_STR = "([A-Za-z]+)|" + QUOTED_TOKEN_STR + "|" + CODED_TOKEN_STR;
-	public static final String PATTERN_STRING = "\\[\\s*((" + STRING_TOKEN_STR + ")\\s*(,\\s*)?)*\\]|((" + STRING_TOKEN_STR + ")\\s*)*";
-	private static final Pattern STRING_TOKEN = Pattern.compile(STRING_TOKEN_STR);
-	private static final Pattern CODE_TOKEN = Pattern.compile("([$]|[0][Xx]|[Uu][+])?([0-9A-Fa-f]+)");
+	public static final String PATTERN_STRING = (
+		"\\[\\s*((" + LegendItem.PATTERN_STRING + ")\\s*(,\\s*)?)*\\]|" +
+		"((" + LegendItem.PATTERN_STRING + ")\\s*)*"
+	);
 	
 	public static final KeyCapLegend DEFAULT = new KeyCapLegend(Type.NONE, new String[0]);
 	
@@ -41,32 +38,17 @@ public class KeyCapLegend {
 	public KeyCapLegend(String s) {
 		Type type = null;
 		ArrayList<LegendItem> items = new ArrayList<LegendItem>();
-		Matcher m = STRING_TOKEN.matcher(s);
-		while (m.find()) {
-			if (m.group(1) != null && m.group(1).length() > 0) {
-				if (type == null) {
-					for (Type t : Type.values()) {
-						if (t.toString().equalsIgnoreCase(m.group(1))) {
-							type = t;
-						}
+		Matcher m = LegendItem.PATTERN.matcher(s);
+		itemLoop: while (m.find()) {
+			if (m.group(1) != null && m.group(1).length() > 0 && type == null) {
+				for (Type t : Type.values()) {
+					if (t.toString().equalsIgnoreCase(m.group(1))) {
+						type = t;
+						continue itemLoop;
 					}
-					if (type == null) {
-						items.add(LegendItem.text(m.group(1)));
-					}
-				} else {
-					items.add(LegendItem.text(m.group(1)));
 				}
-			} else if (m.group(2) != null && m.group(2).length() > 0) {
-				items.add(LegendItem.text(unescape(m.group(2))));
-			} else if (m.group(4) != null && m.group(4).length() > 0) {
-				items.add(LegendItem.text(unescape(m.group(4))));
-			} else if (m.group(6) != null && m.group(6).length() > 0) {
-				items.add(LegendItem.path(unescape(m.group(6))));
-			} else if (m.group(8) != null && m.group(8).length() > 0) {
-				items.add(LegendItem.text(fromCodes(m.group(8))));
-			} else {
-				items.add(null);
 			}
+			items.add(LegendItem.parse(m.group(), false));
 		}
 		this.items = items.toArray(new LegendItem[items.size()]);
 		if (type == null) {
@@ -183,46 +165,6 @@ public class KeyCapLegend {
 	
 	private String formatParameter(int i) {
 		return (i < items.length && items[i] != null) ? items[i].toString() : "$";
-	}
-	
-	private static String unescape(String s) {
-		StringBuffer sb = new StringBuffer();
-		boolean escaped = false;
-		for (char ch : s.toCharArray()) {
-			if (escaped) {
-				escaped = false;
-				switch (ch) {
-					case 'a': ch = 0x0007; break;
-					case 'b': ch = 0x0008; break;
-					case 't': ch = 0x0009; break;
-					case 'n': ch = 0x000A; break;
-					case 'v': ch = 0x000B; break;
-					case 'f': ch = 0x000C; break;
-					case 'r': ch = 0x000D; break;
-					case 'o': ch = 0x000E; break;
-					case 'i': ch = 0x000F; break;
-					case 'z': ch = 0x001A; break;
-					case 'e': ch = 0x001B; break;
-					case 'd': ch = 0x007F; break;
-				}
-				sb.append(ch);
-			} else if (ch == '\\') {
-				escaped = true;
-			} else {
-				sb.append(ch);
-			}
-		}
-		return sb.toString();
-	}
-	
-	private static String fromCodes(String s) {
-		StringBuffer sb = new StringBuffer();
-		Matcher m = CODE_TOKEN.matcher(s);
-		while (m.find()) {
-			int ch = Integer.parseInt(m.group(2), 16);
-			sb.append(Character.toChars(ch));
-		}
-		return sb.toString();
 	}
 	
 	public static void main(String[] args) {
