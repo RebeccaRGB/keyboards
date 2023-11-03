@@ -2,6 +2,7 @@ package com.kreative.keycaps;
 
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
+import static com.kreative.keycaps.ColorUtilities.parseColorIndex;
 import static com.kreative.keycaps.ShapeUtilities.toSVGPath;
 import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
 
@@ -9,8 +10,6 @@ import java.awt.Color;
 import java.awt.Shape;
 import java.io.*;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class ShapeDebug {
 	public static void main(String[] args) {
@@ -128,33 +127,5 @@ public class ShapeDebug {
 		System.err.println("  -p <num>      Specify padding; default 10");
 		System.err.println("  -o <path>     Specify output file");
 		System.err.println("  --            Specify standard output");
-	}
-	
-	private static final Pattern HEX_PATTERN = Pattern.compile("^#([0-9A-Fa-f]+)$");
-	
-	private static int parseColorIndex(String s) {
-		if (s == null || (s = s.trim()).length() == 0) return 0;
-		try {
-			Matcher m = HEX_PATTERN.matcher(s);
-			if (m.matches()) {
-				int v = (int)Long.parseLong(m.group(1), 16);
-				switch (m.group(1).length()) {
-					case 8: return ((v >> 24) == 0) ? 32 : v;
-					case 6: return 0xFF000000 | v;
-					case 4: return ((v >> 12) == 0) ? 32 : v;
-					case 3: return 0xF000 | v;
-					default: return 0;
-				}
-			}
-			if (s.startsWith("0X")) return (int)Long.parseLong(s.substring(2), 16);
-			if (s.startsWith("0x")) return (int)Long.parseLong(s.substring(2), 16);
-			if (s.startsWith("0O")) return (int)Long.parseLong(s.substring(2), 8);
-			if (s.startsWith("0o")) return (int)Long.parseLong(s.substring(2), 8);
-			if (s.startsWith("$")) return (int)Long.parseLong(s.substring(1), 16);
-			if (s.startsWith("0")) return (int)Long.parseLong(s.substring(1), 8);
-			return (int)Long.parseLong(s, 10);
-		} catch (NumberFormatException e) {
-			return 0;
-		}
 	}
 }

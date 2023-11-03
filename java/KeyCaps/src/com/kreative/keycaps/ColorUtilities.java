@@ -1,6 +1,8 @@
 package com.kreative.keycaps;
 
 import java.awt.Color;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ColorUtilities {
 	private static int clamp(int v) {
@@ -104,6 +106,34 @@ public class ColorUtilities {
 			return ((i & 31) == 0) ? null : 1f;
 		} else {
 			return ((i & 31) == 0) ? 0f : 0.5f;
+		}
+	}
+	
+	private static final Pattern HEX_PATTERN = Pattern.compile("^#([0-9A-Fa-f]+)$");
+	
+	public static int parseColorIndex(String s) {
+		if (s == null || (s = s.trim()).length() == 0) return 0;
+		try {
+			Matcher m = HEX_PATTERN.matcher(s);
+			if (m.matches()) {
+				int v = (int)Long.parseLong(m.group(1), 16);
+				switch (m.group(1).length()) {
+					case 8: return ((v >> 24) == 0) ? 32 : v;
+					case 6: return 0xFF000000 | v;
+					case 4: return ((v >> 12) == 0) ? 32 : v;
+					case 3: return 0xF000 | v;
+					default: return 0;
+				}
+			}
+			if (s.startsWith("0X")) return (int)Long.parseLong(s.substring(2), 16);
+			if (s.startsWith("0x")) return (int)Long.parseLong(s.substring(2), 16);
+			if (s.startsWith("0O")) return (int)Long.parseLong(s.substring(2), 8);
+			if (s.startsWith("0o")) return (int)Long.parseLong(s.substring(2), 8);
+			if (s.startsWith("$")) return (int)Long.parseLong(s.substring(1), 16);
+			if (s.startsWith("0")) return (int)Long.parseLong(s.substring(1), 8);
+			return (int)Long.parseLong(s, 10);
+		} catch (NumberFormatException e) {
+			return 0;
 		}
 	}
 }
