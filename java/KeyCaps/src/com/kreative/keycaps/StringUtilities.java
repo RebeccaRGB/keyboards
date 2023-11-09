@@ -8,7 +8,10 @@ public class StringUtilities {
 		StringBuffer sb = new StringBuffer();
 		sb.append(quote);
 		for (char ch : s.toCharArray()) {
-			switch (ch) {
+			if ((ch >= 0x20 && ch < 0x7F) || ch >= 0xA0) {
+				if (ch == quote || ch == '\\') sb.append('\\');
+				sb.append(ch);
+			} else switch (ch) {
 				case 0x0007: sb.append("\\a"); break;
 				case 0x0008: sb.append("\\b"); break;
 				case 0x0009: sb.append("\\t"); break;
@@ -22,14 +25,9 @@ public class StringUtilities {
 				case 0x001B: sb.append("\\e"); break;
 				case 0x007F: sb.append("\\d"); break;
 				default:
-					if (ch < 0x20 || (ch >= 0x7F && ch < 0xA0)) {
-						sb.append("\\x");
-						sb.append(Character.forDigit((ch >> 4) & 15, 16));
-						sb.append(Character.forDigit(ch & 15, 16));
-					} else {
-						if (ch == quote || ch == '\\') sb.append('\\');
-						sb.append(ch);
-					}
+					sb.append("\\x");
+					sb.append(Character.forDigit((ch >> 4) & 15, 16));
+					sb.append(Character.forDigit(ch & 15, 16));
 					break;
 			}
 		}
