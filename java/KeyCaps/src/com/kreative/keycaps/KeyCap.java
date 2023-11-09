@@ -20,6 +20,7 @@ public class KeyCap implements Comparable<KeyCap> {
 	private float keyCapSize;
 	private KeyCapShape shape;
 	private KeyCapLegend legend;
+	private final PropertyMap props;
 	
 	public KeyCap(float x, float y, float keyCapSize, KeyCapShape shape, KeyCapLegend legend) {
 		this.x = x;
@@ -27,6 +28,7 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.keyCapSize = keyCapSize;
 		this.shape = (shape != null) ? shape : KeyCapShape.DEFAULT;
 		this.legend = (legend != null) ? legend : new KeyCapLegend();
+		this.props = new PropertyMap();
 	}
 	
 	public KeyCap(float x, float y, float keyCapSize, String shape, String legend) {
@@ -35,6 +37,7 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.keyCapSize = keyCapSize;
 		this.shape = (shape != null) ? new KeyCapShape(shape, keyCapSize) : KeyCapShape.DEFAULT;
 		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
+		this.props = new PropertyMap();
 	}
 	
 	public KeyCap(float x, float y, float keyCapSize, String spec) {
@@ -51,6 +54,7 @@ public class KeyCap implements Comparable<KeyCap> {
 			this.shape = KeyCapShape.DEFAULT;
 			this.legend = new KeyCapLegend();
 		}
+		this.props = new PropertyMap();
 	}
 	
 	public float getX(float keyCapSize) {
@@ -124,6 +128,10 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
 	}
 	
+	public PropertyMap getPropertyMap() {
+		return this.props;
+	}
+	
 	public String toString() {
 		return shape.toString() + legend.toString();
 	}
@@ -151,15 +159,5 @@ public class KeyCap implements Comparable<KeyCap> {
 	private static boolean oopsAllInt(float... values) {
 		for (float v : values) if (v != (int)v) return false;
 		return true;
-	}
-	
-	public static void main(String[] args) {
-		for (String arg : args) {
-			KeyCap kc = new KeyCap(0, 0, 1, arg);
-			System.out.println(arg);
-			System.out.println(kc.toString());
-			System.out.println(kc.toNormalizedString());
-			System.out.println(kc.toMinimizedString());
-		}
 	}
 }

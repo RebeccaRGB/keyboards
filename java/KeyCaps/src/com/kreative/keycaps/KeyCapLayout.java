@@ -26,6 +26,9 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 	);
 	private static final float DECIMAL_PLACES = 1000;
 	
+	private final PropertyMap props = new PropertyMap();
+	public PropertyMap getPropertyMap() { return this.props; }
+	
 	public void parse(String s) {
 		float x = 0, y = 0, keyCapSize = 1;
 		Matcher m = ITEM_PATTERN.matcher(s);
