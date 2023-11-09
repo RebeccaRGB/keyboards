@@ -26,7 +26,7 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.y = y;
 		this.keyCapSize = keyCapSize;
 		this.shape = (shape != null) ? shape : KeyCapShape.DEFAULT;
-		this.legend = (legend != null) ? legend : KeyCapLegend.DEFAULT;
+		this.legend = (legend != null) ? legend : new KeyCapLegend();
 	}
 	
 	public KeyCap(float x, float y, float keyCapSize, String shape, String legend) {
@@ -34,7 +34,7 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.y = y;
 		this.keyCapSize = keyCapSize;
 		this.shape = (shape != null) ? new KeyCapShape(shape, keyCapSize) : KeyCapShape.DEFAULT;
-		this.legend = (legend != null) ? new KeyCapLegend(legend) : KeyCapLegend.DEFAULT;
+		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
 	}
 	
 	public KeyCap(float x, float y, float keyCapSize, String spec) {
@@ -46,10 +46,10 @@ public class KeyCap implements Comparable<KeyCap> {
 			String ss = m.group("s");
 			String ls = m.group("l");
 			this.shape = (ss != null && ss.length() > 0) ? new KeyCapShape(ss, keyCapSize) : KeyCapShape.DEFAULT;
-			this.legend = (ls != null && ls.length() > 0) ? new KeyCapLegend(ls): KeyCapLegend.DEFAULT;
+			this.legend = (ls != null && ls.length() > 0) ? KeyCapLegend.parse(ls): new KeyCapLegend();
 		} else {
 			this.shape = KeyCapShape.DEFAULT;
-			this.legend = KeyCapLegend.DEFAULT;
+			this.legend = new KeyCapLegend();
 		}
 	}
 	
@@ -117,11 +117,11 @@ public class KeyCap implements Comparable<KeyCap> {
 	}
 	
 	public void setKeyCapLegend(KeyCapLegend legend) {
-		this.legend = (legend != null) ? legend : KeyCapLegend.DEFAULT;
+		this.legend = (legend != null) ? legend : new KeyCapLegend();
 	}
 	
 	public void setKeyCapLegend(String legend) {
-		this.legend = (legend != null) ? new KeyCapLegend(legend) : KeyCapLegend.DEFAULT;
+		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
 	}
 	
 	public String toString() {

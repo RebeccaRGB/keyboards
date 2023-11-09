@@ -1,27 +1,26 @@
 package com.kreative.keycaps;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 
 public class KeyCapLegend {
 	public static enum Type {
-		F(1), // Function or modifier key
-		G(2), // Dual-function or marked modifier key
-		L(1), // Letter key
-		S(2), // Shifted/symbol key
-		A(2), // Letter key with letter alt
-		T(3), // Letter key with shifted/symbol alt
-		Z(3), // Shifted/symbol key with letter alt
-		Q(4), // Shifted/symbol key with shifted/symbol alt
-		N(2), // Numpad key with non-numlock function
-		SF(2), // Space Cadet function key with front
-		ST(3), // Space Cadet character key with top and front
-		SQ(4), // Space Cadet character key with top and shifted/symbol front
-		ZX(5), // ZX Spectrum key
-		NONE(0); // No legend
-		public final int paramCount;
-		private Type(int paramCount) {
-			this.paramCount = paramCount;
+		NONE(), // No legend
+		F("function"), // Function or modifier key
+		G("function", "altfunction"), // Dual-function or marked modifier key
+		L("letter"), // Letter key
+		A("letter", "altletter"), // Letter key with letter alt
+		T("letter", "altunshifted", "altshifted"), // Letter key with shifted/symbol alt
+		S("unshifted", "shifted"), // Shifted/symbol key
+		Z("unshifted", "shifted", "altletter"), // Shifted/symbol key with letter alt
+		Q("unshifted", "shifted", "altunshifted", "altshifted"), // Shifted/symbol key with shifted/symbol alt
+		N("numpad", "numpadfunction"); // Numpad key with non-numlock function
+		private final String[] paramKeys;
+		private Type(String... paramKeys) {
+			this.paramKeys = paramKeys;
 		}
 	}
 	
@@ -30,12 +29,7 @@ public class KeyCapLegend {
 		"((" + LegendItem.PATTERN_STRING + ")\\s*)*"
 	);
 	
-	public static final KeyCapLegend DEFAULT = new KeyCapLegend(Type.NONE, new String[0]);
-	
-	private final Type type;
-	private final LegendItem[] items;
-	
-	public KeyCapLegend(String s) {
+	public static KeyCapLegend parse(String s) {
 		Type type = null;
 		ArrayList<LegendItem> items = new ArrayList<LegendItem>();
 		Matcher m = LegendItem.PATTERN.matcher(s);
@@ -50,81 +44,112 @@ public class KeyCapLegend {
 			}
 			items.add(LegendItem.parse(m.group(), false));
 		}
-		this.items = items.toArray(new LegendItem[items.size()]);
 		if (type == null) {
 			switch (items.size()) {
-				case 4: type = Type.Q; break;
-				case 3: type = Type.T; break;
-				case 2: type = (isImpliedLetterOrSymbol(0) && isImpliedLetterOrSymbol(1)) ? Type.S : Type.G; break;
-				case 1: type = isImpliedLetterOrSymbol(0) ? Type.L : Type.F; break;
-				default: type = Type.NONE;
+				case 4:
+					type = Type.Q;
+					break;
+				case 3:
+					type = Type.T;
+					break;
+				case 2:
+					type = (
+						items.get(0) != null && items.get(0).isImpliedLetterOrSymbol() &&
+						items.get(1) != null && items.get(1).isImpliedLetterOrSymbol()
+					) ? Type.S : Type.G;
+					break;
+				case 1:
+					type = (
+						items.get(0) != null && items.get(0).isImpliedLetterOrSymbol()
+					) ? Type.L : Type.F;
+					break;
+				default:
+					type = Type.NONE;
+					break;
 			}
 		}
-		this.type = type;
+		KeyCapLegend legend = new KeyCapLegend();
+		for (int i = 0, n = Math.min(items.size(), type.paramKeys.length); i < n; i++) {
+			if (items.get(i) != null) legend.items.put(type.paramKeys[i], items.get(i));
+		}
+		return legend;
 	}
 	
-	public KeyCapLegend(Type type, String[] text) {
-		this.type = type;
-		this.items = new LegendItem[text.length];
-		for (int i = 0; i < text.length; i++) {
-			this.items[i] = LegendItem.text(text[i]);
-		}
-	}
+	private final PropertyMap props = new PropertyMap();
+	private final Map<String,LegendItem> items = new HashMap<String,LegendItem>();
+	
+	public PropertyMap getPropertyMap() { return this.props; }
+	public Map<String,LegendItem> getLegendItems() { return this.items; }
 	
 	public Type getType() {
-		return type;
-	}
-	
-	public int getParamCount() {
-		return type.paramCount;
+		for (Type type : Type.values()) {
+			if (Arrays.asList(type.paramKeys).containsAll(items.keySet())) {
+				return type;
+			}
+		}
+		return null;
 	}
 	
 	public String getText(int i) {
-		return (i < items.length && items[i] != null) ? items[i].getText() : null;
+		Type type = getType();
+		if (type == null) return null;
+		LegendItem item = items.get(type.paramKeys[i]);
+		if (item == null) return null;
+		return item.getText();
 	}
 	
 	public String getPath(int i) {
-		return (i < items.length && items[i] != null) ? items[i].getPath() : null;
+		Type type = getType();
+		if (type == null) return null;
+		LegendItem item = items.get(type.paramKeys[i]);
+		if (item == null) return null;
+		return item.getPath();
 	}
 	
 	public String toString() {
-		int n = minParamCount();
+		Type type = getType();
+		if (type == null) return "";
+		int n = minParamCount(type);
 		if (n == 0) return "";
+		boolean cit = canImplyType(type, n);
 		StringBuffer sb = new StringBuffer();
 		sb.append('[');
-		boolean cit = canImplyType();
 		if (!cit) sb.append(type);
 		for (int i = 0; i < n; i++) {
 			if (!cit || i > 0) sb.append(',');
-			sb.append(formatParameter(i));
+			sb.append(formatParameter(type, i));
 		}
 		sb.append(']');
 		return sb.toString();
 	}
 	
 	public String toNormalizedString() {
-		int n = type.paramCount;
+		Type type = getType();
+		if (type == null) return "[]";
+		int n = type.paramKeys.length;
 		if (n == 0) return "[]";
 		StringBuffer sb = new StringBuffer();
 		sb.append('[');
 		sb.append(type);
 		for (int i = 0; i < n; i++) {
 			sb.append(',');
-			sb.append(formatParameter(i));
+			sb.append(formatParameter(type, i));
 		}
 		sb.append(']');
 		return sb.toString();
 	}
 	
 	public String toMinimizedString() {
-		int n = minParamCount();
+		Type type = getType();
+		if (type == null) return "";
+		int n = minParamCount(type);
 		if (n == 0) return "";
+		boolean cit = canImplyType(type, n);
 		StringBuffer sb = new StringBuffer();
-		boolean cit = canImplyType();
 		if (!cit) sb.append('[');
 		if (!cit) sb.append(type);
 		for (int i = 0; i < n; i++) {
-			sb.append(formatParameter(i));
+			sb.append(formatParameter(type, i));
 		}
 		if (!cit) sb.append(']');
 		return sb.toString();
@@ -141,39 +166,32 @@ public class KeyCapLegend {
 		);
 	}
 	
-	private int minParamCount() {
-		int n = type.paramCount - 1;
-		while (n >= 0 && (n >= items.length || items[n] == null)) n--;
+	private int minParamCount(Type type) {
+		int n = type.paramKeys.length - 1;
+		while (n >= 0 && items.get(type.paramKeys[n]) == null) n--;
 		return n + 1;
 	}
 	
-	private boolean canImplyType() {
-		int n = minParamCount();
+	private boolean canImplyType(Type type, int n) {
 		return (
-			(type == Type.L && n == 1 && isImpliedLetterOrSymbol(0)) ||
-			(type == Type.F && n == 1 && !isImpliedLetterOrSymbol(0)) ||
-			(type == Type.S && n == 2 && (isImpliedLetterOrSymbol(0) && isImpliedLetterOrSymbol(1))) ||
-			(type == Type.G && n == 2 && !(isImpliedLetterOrSymbol(0) && isImpliedLetterOrSymbol(1))) ||
+			(type == Type.L && n == 1 && isImpliedLetterOrSymbol(type, 0)) ||
+			(type == Type.F && n == 1 && !isImpliedLetterOrSymbol(type, 0)) ||
+			(type == Type.S && n == 2 && (isImpliedLetterOrSymbol(type, 0) && isImpliedLetterOrSymbol(type, 1))) ||
+			(type == Type.G && n == 2 && !(isImpliedLetterOrSymbol(type, 0) && isImpliedLetterOrSymbol(type, 1))) ||
 			(type == Type.T && n == 3) ||
 			(type == Type.Q && n == 4)
 		);
 	}
 	
-	private boolean isImpliedLetterOrSymbol(int i) {
-		return (i < items.length && items[i] != null && items[i].isImpliedLetterOrSymbol());
+	private boolean isImpliedLetterOrSymbol(Type type, int i) {
+		LegendItem item = items.get(type.paramKeys[i]);
+		if (item == null) return false;
+		return item.isImpliedLetterOrSymbol();
 	}
 	
-	private String formatParameter(int i) {
-		return (i < items.length && items[i] != null) ? items[i].toString() : "$";
-	}
-	
-	public static void main(String[] args) {
-		for (String arg : args) {
-			KeyCapLegend kcl = new KeyCapLegend(arg);
-			System.out.println(arg);
-			System.out.println(kcl.toString());
-			System.out.println(kcl.toNormalizedString());
-			System.out.println(kcl.toMinimizedString());
-		}
+	private String formatParameter(Type type, int i) {
+		LegendItem item = items.get(type.paramKeys[i]);
+		if (item == null) return "$";
+		return item.toString();
 	}
 }

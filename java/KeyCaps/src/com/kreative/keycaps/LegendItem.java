@@ -91,18 +91,21 @@ public class LegendItem {
 		return new LegendItem(null, path, null, path.trim());
 	}
 	
+	private final PropertyMap props;
 	private final String rawText;
 	private final String rawPath;
 	private final String text;
 	private final String path;
 	
 	private LegendItem(String rawText, String rawPath, String text, String path) {
+		this.props = new PropertyMap();
 		this.rawText = rawText;
 		this.rawPath = rawPath;
 		this.text = text;
 		this.path = path;
 	}
 	
+	public PropertyMap getPropertyMap() { return this.props; }
 	public String getRawText() { return this.rawText; }
 	public String getRawPath() { return this.rawPath; }
 	public String getText() { return this.text; }
