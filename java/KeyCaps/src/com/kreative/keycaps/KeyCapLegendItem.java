@@ -8,7 +8,7 @@ import static com.kreative.keycaps.StringUtilities.unescape;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LegendItem {
+public class KeyCapLegendItem {
 	public static final String TEXT_WINDOWS = "\uF810";
 	public static final String TEXT_CONTEXT_MENU = "\uF811";
 	public static final String TEXT_OPEN_APPLE = "\uF812";
@@ -44,7 +44,7 @@ public class LegendItem {
 	public static final Pattern PATTERN = Pattern.compile(PATTERN_STRING);
 	private static final Pattern PATH_TAG = Pattern.compile("<path\\s+d\\s*=\\s*(\'[^\']*\'|\"[^\"]*\")\\s*/?>");
 	
-	public static LegendItem parse(String s, boolean fallback) {
+	public static KeyCapLegendItem parse(String s, boolean fallback) {
 		Matcher m = PATTERN.matcher(s.trim());
 		if (m.matches()) {
 			if (m.group(1) != null && m.group(1).length() > 0) return text(m.group(1));
@@ -57,38 +57,38 @@ public class LegendItem {
 		return fallback ? text(s) : null;
 	}
 	
-	public static LegendItem text(String text) {
+	public static KeyCapLegendItem text(String text) {
 		if (text == null || text.length() == 0) return null;
 		Matcher m = PATH_TAG.matcher(text);
 		if (m.matches()) {
 			String path = m.group(1).substring(1, m.group(1).length() - 1).trim();
-			return (path.length() == 0) ? null : new LegendItem(text, null, null, path);
+			return (path.length() == 0) ? null : new KeyCapLegendItem(text, null, null, path);
 		}
 		int cpc = text.codePointCount(0, text.length());
-		if (cpc != 1) return new LegendItem(text, null, text, null);
+		if (cpc != 1) return new KeyCapLegendItem(text, null, text, null);
 		switch (text.codePointAt(0)) {
 			// These characters are substituted with ones that look nicer.
-			case '-': return new LegendItem(text, null, "\u2212", null);
+			case '-': return new KeyCapLegendItem(text, null, "\u2212", null);
 			// These private use characters are automatically converted to paths.
-			case 0xF810: case 0xFFCE0: return new LegendItem(text, null, null, PATH_WINDOWS);
-			case 0xF811: case 0xFFCE1: return new LegendItem(text, null, null, PATH_CONTEXT_MENU);
-			case 0xF812: case 0xFFCE2: return new LegendItem(text, null, null, PATH_OPEN_APPLE);
-			case 0xF813: case 0xFFCE3: return new LegendItem(text, null, null, PATH_SOLID_APPLE);
-			case 0xF821: case 0xFFCE5: return new LegendItem(text, null, null, PATH_COMMODORE);
-			case 0xF822: case 0xFFCE6: return new LegendItem(text, null, null, PATH_SOLID_AMIGA);
-			case 0xF823: case 0xFFCE7: return new LegendItem(text, null, null, PATH_OPEN_AMIGA);
-			case 0xFFC18: return new LegendItem(text, null, null, PATH_LISA_LEFT);
-			case 0xFFC19: return new LegendItem(text, null, null, PATH_LISA_UP);
-			case 0xFFC1A: return new LegendItem(text, null, null, PATH_LISA_RIGHT);
-			case 0xFFC1B: return new LegendItem(text, null, null, PATH_LISA_DOWN);
+			case 0xF810: case 0xFFCE0: return new KeyCapLegendItem(text, null, null, PATH_WINDOWS);
+			case 0xF811: case 0xFFCE1: return new KeyCapLegendItem(text, null, null, PATH_CONTEXT_MENU);
+			case 0xF812: case 0xFFCE2: return new KeyCapLegendItem(text, null, null, PATH_OPEN_APPLE);
+			case 0xF813: case 0xFFCE3: return new KeyCapLegendItem(text, null, null, PATH_SOLID_APPLE);
+			case 0xF821: case 0xFFCE5: return new KeyCapLegendItem(text, null, null, PATH_COMMODORE);
+			case 0xF822: case 0xFFCE6: return new KeyCapLegendItem(text, null, null, PATH_SOLID_AMIGA);
+			case 0xF823: case 0xFFCE7: return new KeyCapLegendItem(text, null, null, PATH_OPEN_AMIGA);
+			case 0xFFC18: return new KeyCapLegendItem(text, null, null, PATH_LISA_LEFT);
+			case 0xFFC19: return new KeyCapLegendItem(text, null, null, PATH_LISA_UP);
+			case 0xFFC1A: return new KeyCapLegendItem(text, null, null, PATH_LISA_RIGHT);
+			case 0xFFC1B: return new KeyCapLegendItem(text, null, null, PATH_LISA_DOWN);
 			// All other characters are taken verbatim.
-			default: return new LegendItem(text, null, text, null);
+			default: return new KeyCapLegendItem(text, null, text, null);
 		}
 	}
 	
-	public static LegendItem path(String path) {
+	public static KeyCapLegendItem path(String path) {
 		if (path == null || path.trim().length() == 0) return null;
-		return new LegendItem(null, path, null, path.trim());
+		return new KeyCapLegendItem(null, path, null, path.trim());
 	}
 	
 	private final PropertyMap props;
@@ -97,7 +97,7 @@ public class LegendItem {
 	private final String text;
 	private final String path;
 	
-	private LegendItem(String rawText, String rawPath, String text, String path) {
+	private KeyCapLegendItem(String rawText, String rawPath, String text, String path) {
 		this.props = new PropertyMap();
 		this.rawText = rawText;
 		this.rawPath = rawPath;
@@ -119,11 +119,10 @@ public class LegendItem {
 		// These ranges typically label function or modifier keys, not letter or symbol keys.
 		if (ch >= 0x2190 && ch <= 0x21FF) return false; // Arrows
 		if (ch >= 0x2300 && ch <= 0x23FF) return false; // Miscellaneous Technical
-		// These private use characters are automatically converted to paths.
-		if (ch >= 0xF810 && ch <= 0xF813) return false;
-		if (ch >= 0xF820 && ch <= 0xF827) return false;
-		if (ch >= 0xFFC18 && ch <= 0xFFC1B) return false;
-		if (ch >= 0xFFCE0 && ch <= 0xFFCEF) return false;
+		if (ch >= 0xF810 && ch <= 0xF813) return false; // Linux PUA keyboard symbols
+		if (ch >= 0xF820 && ch <= 0xF827) return false; // Kreative PUA keyboard symbols
+		if (ch >= 0xFFC18 && ch <= 0xFFC1B) return false; // SLC Appendix keyboard symbols
+		if (ch >= 0xFFCE0 && ch <= 0xFFCEF) return false; // SLC Appendix keyboard symbols
 		return true;
 	}
 	

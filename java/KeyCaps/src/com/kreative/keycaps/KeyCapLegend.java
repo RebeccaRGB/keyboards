@@ -25,14 +25,14 @@ public class KeyCapLegend {
 	}
 	
 	public static final String PATTERN_STRING = (
-		"\\[\\s*((" + LegendItem.PATTERN_STRING + ")\\s*(,\\s*)?)*\\]|" +
-		"((" + LegendItem.PATTERN_STRING + ")\\s*)*"
+		"\\[\\s*((" + KeyCapLegendItem.PATTERN_STRING + ")\\s*(,\\s*)?)*\\]|" +
+		"((" + KeyCapLegendItem.PATTERN_STRING + ")\\s*)*"
 	);
 	
 	public static KeyCapLegend parse(String s) {
 		Type type = null;
-		ArrayList<LegendItem> items = new ArrayList<LegendItem>();
-		Matcher m = LegendItem.PATTERN.matcher(s);
+		ArrayList<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();
+		Matcher m = KeyCapLegendItem.PATTERN.matcher(s);
 		itemLoop: while (m.find()) {
 			if (m.group(1) != null && m.group(1).length() > 0 && type == null) {
 				for (Type t : Type.values()) {
@@ -42,7 +42,7 @@ public class KeyCapLegend {
 					}
 				}
 			}
-			items.add(LegendItem.parse(m.group(), false));
+			items.add(KeyCapLegendItem.parse(m.group(), false));
 		}
 		if (type == null) {
 			switch (items.size()) {
@@ -76,10 +76,10 @@ public class KeyCapLegend {
 	}
 	
 	private final PropertyMap props = new PropertyMap();
-	private final Map<String,LegendItem> items = new HashMap<String,LegendItem>();
+	private final Map<String,KeyCapLegendItem> items = new HashMap<String,KeyCapLegendItem>();
 	
 	public PropertyMap getPropertyMap() { return this.props; }
-	public Map<String,LegendItem> getLegendItems() { return this.items; }
+	public Map<String,KeyCapLegendItem> getLegendItems() { return this.items; }
 	
 	public Type getType() {
 		for (Type type : Type.values()) {
@@ -93,7 +93,7 @@ public class KeyCapLegend {
 	public String getText(int i) {
 		Type type = getType();
 		if (type == null) return null;
-		LegendItem item = items.get(type.paramKeys[i]);
+		KeyCapLegendItem item = items.get(type.paramKeys[i]);
 		if (item == null) return null;
 		return item.getText();
 	}
@@ -101,7 +101,7 @@ public class KeyCapLegend {
 	public String getPath(int i) {
 		Type type = getType();
 		if (type == null) return null;
-		LegendItem item = items.get(type.paramKeys[i]);
+		KeyCapLegendItem item = items.get(type.paramKeys[i]);
 		if (item == null) return null;
 		return item.getPath();
 	}
@@ -184,13 +184,13 @@ public class KeyCapLegend {
 	}
 	
 	private boolean isImpliedLetterOrSymbol(Type type, int i) {
-		LegendItem item = items.get(type.paramKeys[i]);
+		KeyCapLegendItem item = items.get(type.paramKeys[i]);
 		if (item == null) return false;
 		return item.isImpliedLetterOrSymbol();
 	}
 	
 	private String formatParameter(Type type, int i) {
-		LegendItem item = items.get(type.paramKeys[i]);
+		KeyCapLegendItem item = items.get(type.paramKeys[i]);
 		if (item == null) return "$";
 		return item.toString();
 	}
