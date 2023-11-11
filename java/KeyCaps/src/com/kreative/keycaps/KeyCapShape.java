@@ -5,15 +5,11 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class KeyCapShape {
 	private static final String SHAPE_TOKEN_STR = "[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)([Ee][+-]?[0-9]+)?";
 	private static final String UNIT_TOKEN_STR = "([A-Za-z]+|/\\s*(" + SHAPE_TOKEN_STR + "))";
 	public static final String PATTERN_STRING = "(" + SHAPE_TOKEN_STR + "\\s*)*" + UNIT_TOKEN_STR;
-	private static final Pattern SHAPE_TOKEN = Pattern.compile(SHAPE_TOKEN_STR);
-	private static final Pattern UNIT_TOKEN = Pattern.compile(UNIT_TOKEN_STR + "\\s*$");
 	
 	public static final float U = 1;
 	public static final float V = 4;
@@ -24,21 +20,30 @@ public class KeyCapShape {
 	
 	public static final KeyCapShape DEFAULT = new KeyCapShape(new float[0], U);
 	
+	public static KeyCapShape parse(KeyCapParser p, float keyCapSize) {
+		ArrayList<Float> dims = new ArrayList<Float>();
+		while (p.hasNextFloat()) dims.add(p.nextFloat());
+		if (p.hasNextUnit()) keyCapSize = p.nextUnit(keyCapSize);
+		Float[] shape = dims.toArray(new Float[dims.size()]);
+		return new KeyCapShape(shape, keyCapSize);
+	}
+	
+	public static KeyCapShape parse(String s, float keyCapSize) {
+		KeyCapParser p = new KeyCapParser(s);
+		KeyCapShape shape = parse(p, keyCapSize);
+		if (p.hasNext()) throw new NumberFormatException(s);
+		return shape;
+	}
+	
 	private final float[] shape;
 	private final float keyCapSize;
 	
-	public KeyCapShape(String shape, float keyCapSize) {
-		Matcher m = UNIT_TOKEN.matcher(shape);
-		if (m.find()) {
-			this.shape = parseShape(shape.substring(0, m.start()));
-			this.keyCapSize = parseUnit(m.group(), keyCapSize);
-		} else {
-			this.shape = parseShape(shape);
-			this.keyCapSize = keyCapSize;
-		}
+	public KeyCapShape(float[] shape, float keyCapSize) {
+		this.shape = clone(shape, 1);
+		this.keyCapSize = keyCapSize;
 	}
 	
-	public KeyCapShape(float[] shape, float keyCapSize) {
+	public KeyCapShape(Float[] shape, float keyCapSize) {
 		this.shape = clone(shape, 1);
 		this.keyCapSize = keyCapSize;
 	}
@@ -113,15 +118,6 @@ public class KeyCapShape {
 		);
 	}
 	
-	private static float[] parseShape(String s) {
-		ArrayList<Float> floats = new ArrayList<Float>();
-		Matcher m = SHAPE_TOKEN.matcher(s);
-		while (m.find()) floats.add(Float.parseFloat(m.group()));
-		float[] a = new float[floats.size()];
-		for (int i = 0; i < a.length; i++) a[i] = floats.get(i);
-		return a;
-	}
-	
 	public static float parseUnit(String s, Float def) {
 		if ((s = s.trim()).startsWith("/")) return Float.parseFloat(s.substring(1).trim());
 		if (s.equalsIgnoreCase("u")) return U;
@@ -136,8 +132,17 @@ public class KeyCapShape {
 	
 	private static float[] clone(float[] shape, float scale) {
 		if (shape == null) return null;
-		float[] clone = new float[shape.length];
-		for (int i = 0; i < shape.length; i++) clone[i] = shape[i] * scale;
+		int n = shape.length;
+		float[] clone = new float[n];
+		for (int i = 0; i < n; i++) clone[i] = shape[i] * scale;
+		return clone;
+	}
+	
+	private static float[] clone(Float[] shape, float scale) {
+		if (shape == null) return null;
+		int n = shape.length;
+		float[] clone = new float[n];
+		for (int i = 0; i < n; i++) clone[i] = shape[i] * scale;
 		return clone;
 	}
 	

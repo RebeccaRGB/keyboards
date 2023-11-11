@@ -32,7 +32,7 @@ public class ShapeDebug {
 				mold = KeyCapMold.forName(args[argi++]);
 			} else if (arg.equals("-s") && argi < args.length) {
 				shapeString = args[argi++];
-				try { shape = new KeyCapShape(shapeString, size); }
+				try { shape = KeyCapShape.parse(shapeString, size); }
 				catch (NumberFormatException e) {
 					System.err.println("Invalid shape: " + arg);
 					return;

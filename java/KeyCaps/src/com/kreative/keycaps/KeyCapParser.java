@@ -86,6 +86,7 @@ public class KeyCapParser {
 		int i4 = skipDigits(i3);
 		if (i4 == i3 && i2 == i1) return i;
 		int i5 = skipChar(i4, 'E', 'e');
+		if (i5 == i4) return i4;
 		int i6 = skipChar(i5, '+', '-');
 		int i7 = skipDigits(i6);
 		if (i7 == i6) return i4;
@@ -104,6 +105,17 @@ public class KeyCapParser {
 			if (i4 == i3) return i2;
 			i2 = i4;
 		}
+	}
+	
+	private int skipUnit(int i) {
+		int i1 = skipLetters(i);
+		if (i1 != i) return i1;
+		i1 = skipChar(i, '/');
+		if (i1 == i) return i;
+		int i2 = skipSpaces(i1);
+		int i3 = skipFloat(i2);
+		if (i3 == i2) return i;
+		return i3;
 	}
 	
 	public boolean hasNext() {
@@ -138,9 +150,53 @@ public class KeyCapParser {
 		return (j = skipCoded(i = skipSpaces(i))) != i;
 	}
 	
+	public boolean hasNextUnit() {
+		return (j = skipUnit(i = skipSpaces(i))) != i;
+	}
+	
 	public String next() {
 		String next = s.substring(i, j);
 		i = j;
 		return next;
+	}
+	
+	public int nextInt() {
+		return Integer.parseInt(next());
+	}
+	
+	public int nextInt(int radix) {
+		return Integer.parseInt(next(), radix);
+	}
+	
+	public String nextQuote(int quote) {
+		String s = next(), q = String.valueOf(Character.toChars(quote));
+		if (s.startsWith(q)) s = s.substring(q.length(), s.length());
+		if (s.endsWith(q)) s = s.substring(0, s.length() - q.length());
+		return StringUtilities.unescape(s);
+	}
+	
+	public float nextFloat() {
+		return Float.parseFloat(next());
+	}
+	
+	public double nextDouble() {
+		return Double.parseDouble(next());
+	}
+	
+	public String nextCoded() {
+		return StringUtilities.fromCodes(next());
+	}
+	
+	public float nextUnit(Float def) {
+		String s = next();
+		if (s.startsWith("/")) return Float.parseFloat(s.substring(1).trim());
+		if (s.equalsIgnoreCase("u")) return KeyCapShape.U;
+		if (s.equalsIgnoreCase("v")) return KeyCapShape.V;
+		if (s.equalsIgnoreCase("w")) return KeyCapShape.W;
+		if (s.equalsIgnoreCase("in")) return KeyCapShape.IN;
+		if (s.equalsIgnoreCase("mm")) return KeyCapShape.MM;
+		if (s.equalsIgnoreCase("pt")) return KeyCapShape.PT;
+		if (def != null) return def;
+		throw new NumberFormatException(s);
 	}
 }

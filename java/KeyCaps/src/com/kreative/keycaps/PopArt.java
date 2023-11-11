@@ -35,7 +35,7 @@ public class PopArt {
 				}
 			} else if (arg.equals("-s") && argi < args.length) {
 				arg = args[argi++];
-				try { shape = new KeyCapShape(arg, size); }
+				try { shape = KeyCapShape.parse(arg, size); }
 				catch (NumberFormatException e) {
 					System.err.println("Invalid shape: " + arg);
 					return;

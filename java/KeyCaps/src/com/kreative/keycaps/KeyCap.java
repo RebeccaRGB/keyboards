@@ -35,7 +35,7 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.x = x;
 		this.y = y;
 		this.keyCapSize = keyCapSize;
-		this.shape = (shape != null) ? new KeyCapShape(shape, keyCapSize) : KeyCapShape.DEFAULT;
+		this.shape = (shape != null) ? KeyCapShape.parse(shape, keyCapSize) : KeyCapShape.DEFAULT;
 		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
 		this.props = new PropertyMap();
 	}
@@ -48,7 +48,7 @@ public class KeyCap implements Comparable<KeyCap> {
 		if (m.matches()) {
 			String ss = m.group("s");
 			String ls = m.group("l");
-			this.shape = (ss != null && ss.length() > 0) ? new KeyCapShape(ss, keyCapSize) : KeyCapShape.DEFAULT;
+			this.shape = (ss != null && ss.length() > 0) ? KeyCapShape.parse(ss, keyCapSize) : KeyCapShape.DEFAULT;
 			this.legend = (ls != null && ls.length() > 0) ? KeyCapLegend.parse(ls): new KeyCapLegend();
 		} else {
 			this.shape = KeyCapShape.DEFAULT;
@@ -113,7 +113,7 @@ public class KeyCap implements Comparable<KeyCap> {
 	}
 	
 	public void setKeyCapShape(String shape) {
-		this.shape = (shape != null) ? new KeyCapShape(shape, keyCapSize) : KeyCapShape.DEFAULT;
+		this.shape = (shape != null) ? KeyCapShape.parse(shape, keyCapSize) : KeyCapShape.DEFAULT;
 	}
 	
 	public KeyCapLegend getLegend() {
