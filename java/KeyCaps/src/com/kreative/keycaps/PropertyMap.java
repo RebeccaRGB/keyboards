@@ -11,6 +11,48 @@ import java.util.HashMap;
 public class PropertyMap extends HashMap<String,Object> {
 	private static final long serialVersionUID = 1L;
 	
+	private String parseKey(KeyCapParser p) {
+		if (p.hasNextID()) return p.next();
+		if (p.hasNextQuote('\'')) return p.nextQuote('\'');
+		if (p.hasNextQuote('\"')) return p.nextQuote('\"');
+		if (p.hasNextQuote('`')) return p.nextQuote('`');
+		throw new IllegalArgumentException();
+	}
+	
+	private String parseValue(KeyCapParser p) {
+		if (p.hasNextID()) return p.next();
+		if (p.hasNextQuote('\'')) return p.nextQuote('\'');
+		if (p.hasNextQuote('\"')) return p.nextQuote('\"');
+		if (p.hasNextQuote('`')) return p.nextQuote('`');
+		if (p.hasNextCoded()) return p.nextCoded();
+		if (p.hasNextFloat()) return p.next();
+		throw new IllegalArgumentException();
+	}
+	
+	public void parse(KeyCapParser p) {
+		if (p.hasNextChar('{')) {
+			p.next();
+			while (true) {
+				if (p.hasNextChar('}')) { p.next(); return; }
+				String key = parseKey(p);
+				if (p.hasNextChar(':')) {
+					p.next();
+					put(key, parseValue(p));
+				} else {
+					put(key, null);
+				}
+				if (p.hasNextChar(',')) { p.next(); continue; }
+				if (p.hasNextChar('}')) { p.next(); return; }
+				throw new IllegalArgumentException();
+			}
+		}
+	}
+	
+	public void parse(String s) {
+		KeyCapParser p = new KeyCapParser(s); parse(p);
+		if (p.hasNext()) throw new IllegalArgumentException(s);
+	}
+	
 	public Object getAny(String... keys) {
 		for (String key : keys) {
 			if (containsKey(key)) {

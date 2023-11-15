@@ -1,9 +1,7 @@
 package com.kreative.keycaps;
 
-import static com.kreative.keycaps.StringUtilities.fromCodes;
 import static com.kreative.keycaps.StringUtilities.quote;
 import static com.kreative.keycaps.StringUtilities.toCodes;
-import static com.kreative.keycaps.StringUtilities.unescape;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -44,17 +42,18 @@ public class KeyCapLegendItem {
 	public static final Pattern PATTERN = Pattern.compile(PATTERN_STRING);
 	private static final Pattern PATH_TAG = Pattern.compile("<path\\s+d\\s*=\\s*(\'[^\']*\'|\"[^\"]*\")\\s*/?>");
 	
+	public static KeyCapLegendItem parse(KeyCapParser p) {
+		if (p.hasNextID()) return text(p.next());
+		if (p.hasNextQuote('\'')) return text(p.nextQuote('\''));
+		if (p.hasNextQuote('\"')) return text(p.nextQuote('\"'));
+		if (p.hasNextQuote('`')) return path(p.nextQuote('`'));
+		if (p.hasNextCoded()) return text(p.nextCoded());
+		return null;
+	}
+	
 	public static KeyCapLegendItem parse(String s, boolean fallback) {
-		Matcher m = PATTERN.matcher(s.trim());
-		if (m.matches()) {
-			if (m.group(1) != null && m.group(1).length() > 0) return text(m.group(1));
-			if (m.group(2) != null && m.group(2).length() > 0) return text(unescape(m.group(2)));
-			if (m.group(4) != null && m.group(4).length() > 0) return text(unescape(m.group(4)));
-			if (m.group(6) != null && m.group(6).length() > 0) return path(unescape(m.group(6)));
-			if (m.group(8) != null && m.group(8).length() > 0) return text(fromCodes(m.group(8)));
-			return null;
-		}
-		return fallback ? text(s) : null;
+		KeyCapParser p = new KeyCapParser(s); KeyCapLegendItem item = parse(p);
+		return (item == null || p.hasNext()) ? (fallback ? text(s) : null) : item;
 	}
 	
 	public static KeyCapLegendItem text(String text) {
