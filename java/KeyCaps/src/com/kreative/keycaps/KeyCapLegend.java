@@ -3,8 +3,8 @@ package com.kreative.keycaps;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
 
 public class KeyCapLegend {
 	public static enum Type {
@@ -22,6 +22,24 @@ public class KeyCapLegend {
 		private Type(String... paramKeys) {
 			this.paramKeys = paramKeys;
 		}
+		public static Type forName(String name) {
+			for (Type t : values()) {
+				if (t.toString().equalsIgnoreCase(name)) {
+					return t;
+				}
+			}
+			return null;
+		}
+		public static Type forItems(List<KeyCapLegendItem> i) {
+			switch (i.size()) {
+				case 4: return Q;
+				case 3: return T;
+				case 2: return (i.get(0) != null && i.get(0).isImpliedLetterOrSymbol() &&
+				                i.get(1) != null && i.get(1).isImpliedLetterOrSymbol()) ? S : G;
+				case 1: return (i.get(0) != null && i.get(0).isImpliedLetterOrSymbol()) ? L : F;
+				default: return NONE;
+			}
+		}
 	}
 	
 	public static final String PATTERN_STRING = (
@@ -29,49 +47,44 @@ public class KeyCapLegend {
 		"((" + KeyCapLegendItem.PATTERN_STRING + ")\\s*)*"
 	);
 	
-	public static KeyCapLegend parse(String s) {
+	public static KeyCapLegend parse(KeyCapParser p) {
 		Type type = null;
-		ArrayList<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();
-		Matcher m = KeyCapLegendItem.PATTERN.matcher(s);
-		itemLoop: while (m.find()) {
-			if (m.group(1) != null && m.group(1).length() > 0 && type == null) {
-				for (Type t : Type.values()) {
-					if (t.toString().equalsIgnoreCase(m.group(1))) {
-						type = t;
-						continue itemLoop;
-					}
-				}
+		List<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();
+		if (p.hasNextChar('[')) {
+			p.next();
+			if (p.hasNextID()) {
+				type = Type.forName(p.next());
+				if (p.hasNextChar(',')) p.next();
+				else throw new IllegalArgumentException();
 			}
-			items.add(KeyCapLegendItem.parse(m.group(), false));
-		}
-		if (type == null) {
-			switch (items.size()) {
-				case 4:
-					type = Type.Q;
-					break;
-				case 3:
-					type = Type.T;
-					break;
-				case 2:
-					type = (
-						items.get(0) != null && items.get(0).isImpliedLetterOrSymbol() &&
-						items.get(1) != null && items.get(1).isImpliedLetterOrSymbol()
-					) ? Type.S : Type.G;
-					break;
-				case 1:
-					type = (
-						items.get(0) != null && items.get(0).isImpliedLetterOrSymbol()
-					) ? Type.L : Type.F;
-					break;
-				default:
-					type = Type.NONE;
-					break;
+			while (true) {
+				if (p.hasNextChar(']')) { p.next(); break; }
+				items.add(KeyCapLegendItem.parse(p));
+				if (p.hasNextChar(',')) { p.next(); continue; }
+				if (p.hasNextChar(']')) { p.next(); break; }
+				throw new IllegalArgumentException();
+			}
+		} else {
+			if (p.hasNextID()) {
+				type = Type.forName(p.next());
+			}
+			while (true) {
+				try { items.add(KeyCapLegendItem.parse(p)); }
+				catch (IllegalArgumentException e) { break; }
 			}
 		}
+		if (type == null) type = Type.forItems(items);
 		KeyCapLegend legend = new KeyCapLegend();
 		for (int i = 0, n = Math.min(items.size(), type.paramKeys.length); i < n; i++) {
 			if (items.get(i) != null) legend.items.put(type.paramKeys[i], items.get(i));
 		}
+		return legend;
+	}
+	
+	public static KeyCapLegend parse(String s) {
+		KeyCapParser p = new KeyCapParser(s);
+		KeyCapLegend legend = parse(p);
+		if (p.hasNext()) throw new IllegalArgumentException(s);
 		return legend;
 	}
 	

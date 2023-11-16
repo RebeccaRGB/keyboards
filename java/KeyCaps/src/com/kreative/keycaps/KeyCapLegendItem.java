@@ -48,12 +48,18 @@ public class KeyCapLegendItem {
 		if (p.hasNextQuote('\"')) return text(p.nextQuote('\"'));
 		if (p.hasNextQuote('`')) return path(p.nextQuote('`'));
 		if (p.hasNextCoded()) return text(p.nextCoded());
-		return null;
+		throw new IllegalArgumentException();
 	}
 	
 	public static KeyCapLegendItem parse(String s, boolean fallback) {
-		KeyCapParser p = new KeyCapParser(s); KeyCapLegendItem item = parse(p);
-		return (item == null || p.hasNext()) ? (fallback ? text(s) : null) : item;
+		try {
+			KeyCapParser p = new KeyCapParser(s);
+			KeyCapLegendItem item = parse(p);
+			if (p.hasNext()) throw new IllegalArgumentException();
+			return item;
+		} catch (IllegalArgumentException e) {
+			return (fallback ? text(s) : null);
+		}
 	}
 	
 	public static KeyCapLegendItem text(String text) {

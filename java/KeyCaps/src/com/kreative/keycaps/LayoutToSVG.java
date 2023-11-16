@@ -87,7 +87,6 @@ public class LayoutToSVG {
 	}
 	
 	private static KeyCapLayout read(InputStream in) throws IOException {
-		KeyCapLayout kcl = new KeyCapLayout();
 		StringBuffer contents = new StringBuffer();
 		Scanner scanner = new Scanner(in, "UTF-8");
 		while (scanner.hasNextLine()) {
@@ -97,8 +96,16 @@ public class LayoutToSVG {
 			contents.append("\n");
 		}
 		scanner.close();
-		kcl.parse(contents.toString());
-		return kcl;
+		String s = contents.toString();
+		try {
+			KeyCapLayout kcl = new KeyCapLayout();
+			kcl.parse(s);
+			return kcl;
+		} catch (IllegalArgumentException e) {
+			System.err.println(e);
+			System.err.println(s);
+			throw new IOException(e);
+		}
 	}
 	
 	private static void write(OutputStream os, KeyCapLayout kcl, boolean test) throws IOException {
