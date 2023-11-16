@@ -55,14 +55,14 @@ public class KeyCapLegend {
 			if (p.hasNextID()) {
 				type = Type.forName(p.next());
 				if (p.hasNextChar(',')) p.next();
-				else throw new IllegalArgumentException();
+				else throw p.expected(",");
 			}
 			while (true) {
 				if (p.hasNextChar(']')) { p.next(); break; }
 				items.add(KeyCapLegendItem.parse(p));
 				if (p.hasNextChar(',')) { p.next(); continue; }
 				if (p.hasNextChar(']')) { p.next(); break; }
-				throw new IllegalArgumentException();
+				throw p.expected(", or ]");
 			}
 		} else {
 			if (p.hasNextID()) {
@@ -84,7 +84,7 @@ public class KeyCapLegend {
 	public static KeyCapLegend parse(String s) {
 		KeyCapParser p = new KeyCapParser(s);
 		KeyCapLegend legend = parse(p);
-		if (p.hasNext()) throw new IllegalArgumentException(s);
+		p.expectEnd();
 		return legend;
 	}
 	

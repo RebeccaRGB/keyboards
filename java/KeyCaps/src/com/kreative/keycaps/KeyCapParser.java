@@ -199,4 +199,14 @@ public class KeyCapParser {
 		if (def != null) return def;
 		throw new NumberFormatException(s);
 	}
+	
+	public KeyCapParserException expected(String e) {
+		String f = ((i < n) ? s.substring(i, i + 1) : "end of text");
+		String m = "Expected " + e + " but found " + f + " at " + i;
+		return new KeyCapParserException(m, s, i);
+	}
+	
+	public void expectEnd() {
+		if (hasNext()) throw expected("end of text");
+	}
 }

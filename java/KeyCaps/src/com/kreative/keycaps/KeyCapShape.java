@@ -31,7 +31,7 @@ public class KeyCapShape {
 	public static KeyCapShape parse(String s, float keyCapSize) {
 		KeyCapParser p = new KeyCapParser(s);
 		KeyCapShape shape = parse(p, keyCapSize);
-		if (p.hasNext()) throw new NumberFormatException(s);
+		p.expectEnd();
 		return shape;
 	}
 	

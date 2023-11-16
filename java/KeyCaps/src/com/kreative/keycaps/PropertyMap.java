@@ -16,7 +16,7 @@ public class PropertyMap extends HashMap<String,Object> {
 		if (p.hasNextQuote('\'')) return p.nextQuote('\'');
 		if (p.hasNextQuote('\"')) return p.nextQuote('\"');
 		if (p.hasNextQuote('`')) return p.nextQuote('`');
-		throw new IllegalArgumentException();
+		throw p.expected("property key");
 	}
 	
 	private String parseValue(KeyCapParser p) {
@@ -26,7 +26,7 @@ public class PropertyMap extends HashMap<String,Object> {
 		if (p.hasNextQuote('`')) return p.nextQuote('`');
 		if (p.hasNextCoded()) return p.nextCoded();
 		if (p.hasNextFloat()) return p.next();
-		throw new IllegalArgumentException();
+		throw p.expected("property value");
 	}
 	
 	public void parse(KeyCapParser p) {
@@ -43,14 +43,15 @@ public class PropertyMap extends HashMap<String,Object> {
 				}
 				if (p.hasNextChar(',')) { p.next(); continue; }
 				if (p.hasNextChar('}')) { p.next(); return; }
-				throw new IllegalArgumentException();
+				throw p.expected(", or }");
 			}
 		}
 	}
 	
 	public void parse(String s) {
-		KeyCapParser p = new KeyCapParser(s); parse(p);
-		if (p.hasNext()) throw new IllegalArgumentException(s);
+		KeyCapParser p = new KeyCapParser(s);
+		parse(p);
+		p.expectEnd();
 	}
 	
 	public Object getAny(String... keys) {
