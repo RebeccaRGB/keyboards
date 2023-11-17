@@ -4,57 +4,50 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Shape;
 import java.awt.font.FontRenderContext;
+import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class KeyCapLayout extends ArrayList<KeyCap> {
 	private static final long serialVersionUID = 1L;
-	
-	private static final String FLOAT_TOKEN_STR = "[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)([Ee][+-]?[0-9]+)?";
-	private static final String LOCATION_TOKEN_STR = (
-		"((?<x>" + FLOAT_TOKEN_STR + ")\\s*)?,\\s*" +
-		"((?<y>" + FLOAT_TOKEN_STR + ")\\s*)?" +
-		"(?<u>([A-Za-z]+|/\\s*(" + FLOAT_TOKEN_STR + ")))?"
-	);
-	private static final Pattern ITEM_PATTERN = Pattern.compile(
-		"(?<loc>(^|[@;])\\s*" + LOCATION_TOKEN_STR + ")|" +
-		"(?<key>[:,]\\s*(?<k>" + KeyCap.SPEC_PATTERN_STRING + "))"
-	);
 	private static final float DECIMAL_PLACES = 1000;
 	
 	private final PropertyMap props = new PropertyMap();
 	public PropertyMap getPropertyMap() { return this.props; }
 	
-	public void parse(String s) {
-		float x = 0, y = 0, keyCapSize = 1;
-		Matcher m = ITEM_PATTERN.matcher(s);
-		while (m.find()) {
-			String loc = m.group("loc");
-			if (loc != null && loc.length() > 0) {
-				String xs = m.group("x");
-				String ys = m.group("y");
-				String us = m.group("u");
-				if (us != null && us.length() > 0) {
-					float u = KeyCapUnits.parseUnit(us, KeyCapUnits.U);
-					x *= u / keyCapSize;
-					y *= u / keyCapSize;
+	public void parse(KeyCapParser p) {
+		Point2D.Float loc = new Point2D.Float();
+		float keyCapSize = KeyCapUnits.U;
+		while (p.hasNext()) {
+			if (p.hasNextChar('@')) p.next();
+			if (p.hasNextPoint()) {
+				loc = p.nextPoint(loc);
+				if (p.hasNextUnit()) {
+					float u = p.nextUnit(keyCapSize);
+					loc.x *= u / keyCapSize;
+					loc.y *= u / keyCapSize;
 					keyCapSize = u;
 				}
-				if (ys != null && ys.length() > 0) y = Float.parseFloat(ys);
-				if (xs != null && xs.length() > 0) x = Float.parseFloat(xs);
 			}
-			String key = m.group("key");
-			if (key != null && key.length() > 0) {
-				String ks = m.group("k");
-				KeyCap k = new KeyCap(x, y, keyCapSize, ks);
-				x += k.getShape().getAdvanceWidth(keyCapSize);
+			if (p.hasNextChar(':')) p.next();
+			while (p.hasNext()) {
+				if (p.hasNextChar(';')) { p.next(); break; }
+				KeyCap k = KeyCap.parse(p, loc.x, loc.y, keyCapSize);
+				loc.x += k.getShape().getAdvanceWidth(keyCapSize);
 				add(k);
+				if (p.hasNextChar(',')) { p.next(); continue; }
+				if (p.hasNextChar(';')) { p.next(); break; }
+				throw p.expected(", or ;");
 			}
 		}
+	}
+	
+	public void parse(String s) {
+		KeyCapParser p = new KeyCapParser(s);
+		parse(p);
+		p.expectEnd();
 	}
 	
 	public Rectangle2D.Float getBounds(float keyCapSize) {

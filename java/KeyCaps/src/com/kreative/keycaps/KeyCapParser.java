@@ -1,5 +1,7 @@
 package com.kreative.keycaps;
 
+import java.awt.geom.Point2D;
+
 public class KeyCapParser {
 	private final String s;
 	private final int n;
@@ -118,6 +120,18 @@ public class KeyCapParser {
 		return i3;
 	}
 	
+	private int skipPoint(int i) {
+		int i1 = skipFloat(i);
+		if (i1 == i) return i;
+		int i2 = skipSpaces(i1);
+		int i3 = skipChar(i2, ',');
+		if (i3 == i2) return i;
+		int i4 = skipSpaces(i3);
+		int i5 = skipFloat(i4);
+		if (i5 == i4) return i;
+		return i5;
+	}
+	
 	public boolean hasNext() {
 		return (j = i = skipSpaces(i)) < n;
 	}
@@ -152,6 +166,10 @@ public class KeyCapParser {
 	
 	public boolean hasNextUnit() {
 		return (j = skipUnit(i = skipSpaces(i))) != i;
+	}
+	
+	public boolean hasNextPoint() {
+		return (j = skipPoint(i = skipSpaces(i))) != i;
 	}
 	
 	public String next() {
@@ -189,6 +207,24 @@ public class KeyCapParser {
 	
 	public float nextUnit(float def) {
 		return KeyCapUnits.parseUnit(next(), def);
+	}
+	
+	public Point2D.Float nextPoint(Point2D.Float p) {
+		String s = next(); String[] pieces = s.split(",");
+		if (pieces.length != 2) throw new NumberFormatException(s);
+		float x = Float.parseFloat(pieces[0].trim());
+		float y = Float.parseFloat(pieces[1].trim());
+		if (p == null) return new Point2D.Float(x, y);
+		p.x = x; p.y = y; return p;
+	}
+	
+	public Point2D.Double nextPoint(Point2D.Double p) {
+		String s = next(); String[] pieces = s.split(",");
+		if (pieces.length != 2) throw new NumberFormatException(s);
+		double x = Double.parseDouble(pieces[0].trim());
+		double y = Double.parseDouble(pieces[1].trim());
+		if (p == null) return new Point2D.Double(x, y);
+		p.x = x; p.y = y; return p;
 	}
 	
 	public KeyCapParserException expected(String e) {

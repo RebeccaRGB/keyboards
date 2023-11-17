@@ -1,18 +1,25 @@
 package com.kreative.keycaps;
 
 import java.awt.geom.Point2D;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class KeyCap implements Comparable<KeyCap> {
-	private static final Pattern SPEC_PATTERN = Pattern.compile(
-		"(?<s>" + KeyCapShape.PATTERN_STRING + "\\s*)?" +
-		"(?<l>" + KeyCapLegend.PATTERN_STRING + ")?"
-	);
 	public static final String SPEC_PATTERN_STRING = (
 		"(" + KeyCapShape.PATTERN_STRING + "\\s*)?" +
 		"(" + KeyCapLegend.PATTERN_STRING + ")?"
 	);
+	
+	public static KeyCap parse(KeyCapParser p, float x, float y, float keyCapSize) {
+		KeyCapShape shape = KeyCapShape.parse(p, keyCapSize);
+		KeyCapLegend legend = KeyCapLegend.parse(p);
+		return new KeyCap(x, y, keyCapSize, shape, legend);
+	}
+	
+	public static KeyCap parse(String s, float x, float y, float keyCapSize) {
+		KeyCapParser p = new KeyCapParser(s);
+		KeyCap k = parse(p, x, y, keyCapSize);
+		p.expectEnd();
+		return k;
+	}
 	
 	private KeyCapPosition position;
 	private KeyCapShape shape;
@@ -23,28 +30,6 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.position = new KeyCapPosition(x, y, keyCapSize);
 		this.shape = (shape != null) ? shape : KeyCapShape.DEFAULT;
 		this.legend = (legend != null) ? legend : new KeyCapLegend();
-		this.props = new PropertyMap();
-	}
-	
-	public KeyCap(float x, float y, float keyCapSize, String shape, String legend) {
-		this.position = new KeyCapPosition(x, y, keyCapSize);
-		this.shape = (shape != null) ? KeyCapShape.parse(shape, keyCapSize) : KeyCapShape.DEFAULT;
-		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
-		this.props = new PropertyMap();
-	}
-	
-	public KeyCap(float x, float y, float keyCapSize, String spec) {
-		this.position = new KeyCapPosition(x, y, keyCapSize);
-		Matcher m = SPEC_PATTERN.matcher(spec);
-		if (m.matches()) {
-			String ss = m.group("s");
-			String ls = m.group("l");
-			this.shape = (ss != null && ss.length() > 0) ? KeyCapShape.parse(ss, keyCapSize) : KeyCapShape.DEFAULT;
-			this.legend = (ls != null && ls.length() > 0) ? KeyCapLegend.parse(ls): new KeyCapLegend();
-		} else {
-			this.shape = KeyCapShape.DEFAULT;
-			this.legend = new KeyCapLegend();
-		}
 		this.props = new PropertyMap();
 	}
 	
