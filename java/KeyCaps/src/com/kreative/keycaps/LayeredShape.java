@@ -19,8 +19,8 @@ public class LayeredShape extends LayeredObject {
 		sb.append("<path d=\"");
 		sb.append(ShapeUtilities.toSVGPath(shape, null, rounding));
 		if (color != null) {
-			sb.append("\" fill=\"#");
-			sb.append(Integer.toHexString(0xFF000000 | color.getRGB()).substring(2));
+			sb.append("\" fill=\"");
+			sb.append(ColorUtilities.colorToString(color, null));
 		}
 		if (opacity != null) {
 			sb.append("\" opacity=\"");

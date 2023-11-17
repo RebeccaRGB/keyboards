@@ -20,8 +20,8 @@ public class LayeredGroup extends LayeredObject {
 		StringBuffer sb = new StringBuffer(prefix);
 		sb.append("<g");
 		if (color != null) {
-			sb.append(" fill=\"#");
-			sb.append(Integer.toHexString(0xFF000000 | color.getRGB()).substring(2));
+			sb.append(" fill=\"");
+			sb.append(ColorUtilities.colorToString(color, null));
 			sb.append("\"");
 		}
 		if (opacity != null) {

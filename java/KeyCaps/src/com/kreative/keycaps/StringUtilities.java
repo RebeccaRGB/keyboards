@@ -1,5 +1,7 @@
 package com.kreative.keycaps;
 
+import java.awt.Font;
+import java.awt.font.FontRenderContext;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -162,6 +164,34 @@ public final class StringUtilities {
 			}
 		}
 		return sb.toString();
+	}
+	
+	public static String xmlSpecialChars(String s) {
+		StringBuffer sb = new StringBuffer();
+		int i = 0, n = s.length();
+		while (i < n) {
+			int ch = s.codePointAt(i);
+			switch (ch) {
+				case '&': sb.append("&amp;"); break;
+				case '<': sb.append("&lt;"); break;
+				case '>': sb.append("&gt;"); break;
+				case '\"': sb.append("&#34;"); break;
+				case '\'': sb.append("&#39;"); break;
+				default:
+					if (ch >= 0x20 && ch < 0x7F) sb.append((char)ch);
+					else sb.append("&#" + ch + ";");
+					break;
+			}
+			i += Character.charCount(ch);
+		}
+		return sb.toString();
+	}
+	
+	public static float stringWidth(String s, String family, int style, float size) {
+		FontRenderContext ctx = new FontRenderContext(null, true, true);
+		Font font = new Font(family, style, 1);
+		size *= font.getStringBounds(s, ctx).getWidth();
+		return size;
 	}
 	
 	private StringUtilities() {}

@@ -1,5 +1,6 @@
 package com.kreative.keycaps;
 
+import static com.kreative.keycaps.ColorUtilities.colorToString;
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
 import static com.kreative.keycaps.ColorUtilities.parseColorIndex;
@@ -83,10 +84,7 @@ public final class ShapeDebug {
 		svg.add("-->");
 		if (mold == null) {
 			String path = toSVGPath(awtShape, null, ROUNDING);
-			String fill = (
-				(color == null) ? "white" :
-				("#" + Integer.toHexString(0xFF000000 | color.getRGB()).substring(2))
-			);
+			String fill = colorToString(color, "white");
 			if (opacity == null || opacity >= 1) {
 				svg.add("<path d=\"" + path + "\" fill=\"" + fill + "\" stroke=\"black\"/>");
 			} else if (opacity <= 0) {

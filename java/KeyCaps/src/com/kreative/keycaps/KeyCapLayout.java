@@ -1,14 +1,15 @@
 package com.kreative.keycaps;
 
+import static com.kreative.keycaps.ColorUtilities.colorToString;
 import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
 import static com.kreative.keycaps.KeyCapUnits.unitToString;
 import static com.kreative.keycaps.KeyCapUnits.valueToString;
 import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
+import static com.kreative.keycaps.StringUtilities.stringWidth;
+import static com.kreative.keycaps.StringUtilities.xmlSpecialChars;
 
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.Shape;
-import java.awt.font.FontRenderContext;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
@@ -83,8 +84,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 	}
 	
 	public String toSVG(KeyCapMold cs, float csScale, KeyCapEngraver ce, float keyCapSize) {
-		Color tc = cs.getDefaultLegendColor(cs.getDefaultKeyCapColor());
-		String tcs = "#" + Integer.toHexString(0xFF000000 | tc.getRGB()).substring(2);
+		String tcs = colorToString(cs.getDefaultLegendColor(cs.getDefaultKeyCapColor()), "black");
 		String vbox = toSVGViewBox(getBounds(keyCapSize), 0, ROUNDING);
 		StringBuffer shapeDefs = new StringBuffer();
 		StringBuffer pathDefs = new StringBuffer();
@@ -231,33 +231,5 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		}
 		if (sb.length() > 0) sb.append(";");
 		return sb.toString();
-	}
-	
-	private static String xmlSpecialChars(String s) {
-		StringBuffer sb = new StringBuffer();
-		int i = 0, n = s.length();
-		while (i < n) {
-			int ch = s.codePointAt(i);
-			switch (ch) {
-				case '&': sb.append("&amp;"); break;
-				case '<': sb.append("&lt;"); break;
-				case '>': sb.append("&gt;"); break;
-				case '\"': sb.append("&#34;"); break;
-				case '\'': sb.append("&#39;"); break;
-				default:
-					if (ch >= 0x20 && ch < 0x7F) sb.append((char)ch);
-					else sb.append("&#" + ch + ";");
-					break;
-			}
-			i += Character.charCount(ch);
-		}
-		return sb.toString();
-	}
-	
-	private static float stringWidth(String s, String family, int style, float size) {
-		FontRenderContext ctx = new FontRenderContext(null, true, true);
-		Font font = new Font(family, style, 1);
-		size *= font.getStringBounds(s, ctx).getWidth();
-		return size;
 	}
 }

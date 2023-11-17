@@ -25,6 +25,11 @@ public final class ColorUtilities {
 		return (k < 12750) ? Color.white : Color.black;
 	}
 	
+	public static String colorToString(Color color, String def) {
+		if (color == null) return def;
+		return "#" + Integer.toHexString(0xFF000000 | color.getRGB()).substring(2);
+	}
+	
 	private static final Color[] PALETTE_COLORS = {
 		null,
 		new Color(0x1a1a1a), // black
