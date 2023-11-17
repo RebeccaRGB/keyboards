@@ -16,7 +16,7 @@ public class LayeredGroup extends LayeredObject {
 		this.opacity = opacity;
 	}
 	
-	public String toSVG(String prefix, String indent) {
+	public String toSVG(String prefix, String indent, float rounding) {
 		StringBuffer sb = new StringBuffer(prefix);
 		sb.append("<g");
 		if (color != null) {
@@ -31,7 +31,7 @@ public class LayeredGroup extends LayeredObject {
 		}
 		sb.append(">\n");
 		for (LayeredObject o : contents) {
-			sb.append(o.toSVG(prefix + indent, indent));
+			sb.append(o.toSVG(prefix + indent, indent, rounding));
 			sb.append("\n");
 		}
 		sb.append(prefix);

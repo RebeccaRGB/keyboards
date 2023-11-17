@@ -3,10 +3,7 @@ package com.kreative.keycaps;
 import java.awt.geom.Point2D;
 
 public class KeyCap implements Comparable<KeyCap> {
-	public static final String SPEC_PATTERN_STRING = (
-		"(" + KeyCapShape.PATTERN_STRING + "\\s*)?" +
-		"(" + KeyCapLegend.PATTERN_STRING + ")?"
-	);
+	private static final float CMP_ROUNDING = 1000000;
 	
 	public static KeyCap parse(KeyCapParser p, float x, float y, float keyCapSize) {
 		KeyCapShape shape = KeyCapShape.parse(p, keyCapSize);
@@ -91,14 +88,14 @@ public class KeyCap implements Comparable<KeyCap> {
 	}
 	
 	public boolean isAt(float x, float y, float keyCapSize) {
-		int cx = Math.round((this.getX(keyCapSize) - x) * 1000000);
-		int cy = Math.round((this.getY(keyCapSize) - y) * 1000000);
+		int cx = Math.round((this.getX(keyCapSize) - x) * CMP_ROUNDING);
+		int cy = Math.round((this.getY(keyCapSize) - y) * CMP_ROUNDING);
 		return cx == 0 && cy == 0;
 	}
 	
 	public int compareTo(KeyCap o) {
-		int cx = Math.round(this.getX(1000000) - o.getX(1000000));
-		int cy = Math.round(this.getY(1000000) - o.getY(1000000));
+		int cx = Math.round(this.getX(CMP_ROUNDING) - o.getX(CMP_ROUNDING));
+		int cy = Math.round(this.getY(CMP_ROUNDING) - o.getY(CMP_ROUNDING));
 		return (cy != 0) ? cy : (cx != 0) ? cx : 0;
 	}
 }

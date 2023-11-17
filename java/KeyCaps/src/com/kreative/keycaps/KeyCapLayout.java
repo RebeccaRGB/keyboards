@@ -1,5 +1,10 @@
 package com.kreative.keycaps;
 
+import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
+import static com.kreative.keycaps.KeyCapUnits.unitToString;
+import static com.kreative.keycaps.KeyCapUnits.valueToString;
+import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Shape;
@@ -12,7 +17,6 @@ import java.util.HashMap;
 
 public class KeyCapLayout extends ArrayList<KeyCap> {
 	private static final long serialVersionUID = 1L;
-	private static final float DECIMAL_PLACES = 1000;
 	
 	private final PropertyMap props = new PropertyMap();
 	public PropertyMap getPropertyMap() { return this.props; }
@@ -81,7 +85,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 	public String toSVG(KeyCapMold cs, float csScale, KeyCapEngraver ce, float keyCapSize) {
 		Color tc = cs.getDefaultLegendColor(cs.getDefaultKeyCapColor());
 		String tcs = "#" + Integer.toHexString(0xFF000000 | tc.getRGB()).substring(2);
-		String vbox = viewBox(getBounds(keyCapSize), 0, DECIMAL_PLACES);
+		String vbox = toSVGViewBox(getBounds(keyCapSize), 0, ROUNDING);
 		StringBuffer shapeDefs = new StringBuffer();
 		StringBuffer pathDefs = new StringBuffer();
 		StringBuffer keyboard = new StringBuffer();
@@ -94,12 +98,12 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				shapes.put(k.getShape(), (shapeId = shapes.size()));
 				Shape shape = k.getShape().toAWTShape(keyCapSize / csScale);
 				shapeDefs.append("<g id=\"shape" + shapeId + "\">\n");
-				shapeDefs.append(cs.createLayeredObject(shape, null, null).toSVG("  ", "  "));
+				shapeDefs.append(cs.createLayeredObject(shape, null, null).toSVG("  ", "  ", ROUNDING));
 				shapeDefs.append("</g>\n");
 			}
 			keyboard.append("<g class=\"key\">\n");
-			String tx = "translate(" + ftoa(+k.getX(keyCapSize), DECIMAL_PLACES) + " " + ftoa(-k.getY(keyCapSize), DECIMAL_PLACES) + ")";
-			if (csScale != 1) tx += " scale(" + ftoa(csScale, DECIMAL_PLACES) + " " + ftoa(csScale, DECIMAL_PLACES) + ")";
+			String tx = "translate(" + valueToString(+k.getX(keyCapSize)) + " " + valueToString(-k.getY(keyCapSize)) + ")";
+			if (csScale != 1) tx += " scale(" + valueToString(csScale) + " " + valueToString(csScale) + ")";
 			keyboard.append("<use xlink:href=\"#shape" + shapeId + "\" transform=\"" + tx + "\"/>\n");
 			for (KeyCapEngraver.TextBox tb : ce.makeBoxes(cs, csScale, k.getShape(), keyCapSize, k.getLegend())) {
 				if (tb.path != null && tb.path.length() > 0) {
@@ -111,10 +115,10 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 					float x = tb.anchor.getX(tb.x, tb.lineHeight) + k.getX(keyCapSize);
 					float y = tb.anchor.getY(tb.y, tb.lineHeight) - k.getY(keyCapSize);
 					tx = (
-						"translate(" + ftoa(x, DECIMAL_PLACES) + " " +
-						ftoa(y, DECIMAL_PLACES) + ") scale(" +
-						ftoa(tb.lineHeight, DECIMAL_PLACES) + " " +
-						ftoa(tb.lineHeight, DECIMAL_PLACES) + ")"
+						"translate(" + valueToString(x) + " " +
+						valueToString(y) + ") scale(" +
+						valueToString(tb.lineHeight) + " " +
+						valueToString(tb.lineHeight) + ")"
 					);
 					keyboard.append(
 						"<use xlink:href=\"#path" + pathId + "\" transform=\"" +
@@ -127,13 +131,13 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 					for (int i = 0, n = lines.length; i < n; i++) {
 						float y = tb.anchor.getY(tb.y, tb.lineHeight*n) + tb.lineHeight*i + tb.lineHeight*0.8f - k.getY(keyCapSize);
 						keyboard.append("<text");
-						keyboard.append(" x=\"" + ftoa(x, DECIMAL_PLACES) + "\"");
-						keyboard.append(" y=\"" + ftoa(y, DECIMAL_PLACES) + "\"");
+						keyboard.append(" x=\"" + valueToString(x) + "\"");
+						keyboard.append(" y=\"" + valueToString(y) + "\"");
 						keyboard.append(" text-anchor=\"" + a + "\"");
 						keyboard.append(" font-family=\"Arial\"");
-						keyboard.append(" font-size=\"" + ftoa(tb.lineHeight, DECIMAL_PLACES) + "\"");
+						keyboard.append(" font-size=\"" + valueToString(tb.lineHeight) + "\"");
 						if (stringWidth(lines[i], "Arial", Font.PLAIN, tb.lineHeight) > tb.maxWidth) {
-							keyboard.append(" textLength=\"" + ftoa(tb.maxWidth, DECIMAL_PLACES) + "\"");
+							keyboard.append(" textLength=\"" + valueToString(tb.maxWidth) + "\"");
 							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
 						}
 						keyboard.append(" fill=\"" + tcs + "\"");
@@ -166,10 +170,10 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				if (sb.length() > 0) sb.append(";\n");
 				keyCapSize = k.getKeyCapSize();
 				sb.append('@');
-				sb.append(ftoa((x = k.getX(keyCapSize)), DECIMAL_PLACES));
+				sb.append(valueToString(x = k.getX(keyCapSize)));
 				sb.append(',');
-				sb.append(ftoa((y = k.getY(keyCapSize)), DECIMAL_PLACES));
-				sb.append(KeyCapUnits.unitToString(keyCapSize, DECIMAL_PLACES));
+				sb.append(valueToString(y = k.getY(keyCapSize)));
+				sb.append(unitToString(keyCapSize));
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -190,10 +194,10 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				if (sb.length() > 0) sb.append(";\n");
 				// keyCapSize = k.getKeyCapSize();
 				sb.append('@');
-				sb.append(ftoa((x = k.getX(keyCapSize)), DECIMAL_PLACES));
+				sb.append(valueToString(x = k.getX(keyCapSize)));
 				sb.append(',');
-				sb.append(ftoa((y = k.getY(keyCapSize)), DECIMAL_PLACES));
-				sb.append(KeyCapUnits.unitToString(keyCapSize, DECIMAL_PLACES));
+				sb.append(valueToString(y = k.getY(keyCapSize)));
+				sb.append(unitToString(keyCapSize));
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -214,10 +218,10 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				if (sb.length() > 0) sb.append(";");
 				keyCapSize = k.getMinimalKeyCapSize();
 				sb.append('@');
-				sb.append(ftoa((x = k.getX(keyCapSize)), DECIMAL_PLACES));
+				sb.append(valueToString(x = k.getX(keyCapSize)));
 				sb.append(',');
-				sb.append(ftoa((y = k.getY(keyCapSize)), DECIMAL_PLACES));
-				sb.append(KeyCapUnits.unitToString(keyCapSize, DECIMAL_PLACES));
+				sb.append(valueToString(y = k.getY(keyCapSize)));
+				sb.append(unitToString(keyCapSize));
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -227,21 +231,6 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		}
 		if (sb.length() > 0) sb.append(";");
 		return sb.toString();
-	}
-	
-	private static String ftoa(float v, float r) {
-		v = Math.round(v * r) / r;
-		if (v == (int)v) return Integer.toString((int)v);
-		return Float.toString(v);
-	}
-	
-	private static String viewBox(Rectangle2D.Float bounds, float pad, float r) {
-		return (
-			" width=\"" + ftoa(bounds.width+pad+pad, r) + "\"" +
-			" height=\"" + ftoa(bounds.height+pad+pad, r) + "\"" +
-			" viewBox=\"" + ftoa(bounds.x-pad, r) + " " + ftoa(bounds.y-pad, r) +
-			" " + ftoa(bounds.width+pad+pad, r) + " " + ftoa(bounds.height+pad+pad, r) + "\""
-		);
 	}
 	
 	private static String xmlSpecialChars(String s) {

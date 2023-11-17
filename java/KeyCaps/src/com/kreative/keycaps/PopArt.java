@@ -2,6 +2,7 @@ package com.kreative.keycaps;
 
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
+import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
 import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
 import static com.kreative.keycaps.ShapeUtilities.translate;
 
@@ -85,7 +86,7 @@ public final class PopArt {
 			bounds.getX(), bounds.getY(),
 			bounds.getWidth() * columns,
 			bounds.getHeight() * rows
-		), 0, 1000);
+		), 0, ROUNDING);
 		
 		List<String> svg = new ArrayList<String>();
 		svg.add("<?xml version=\"1.0\"?>");
@@ -98,7 +99,7 @@ public final class PopArt {
 				Color color = getPaletteColor(i);
 				Float opacity = getPaletteOpacity(i);
 				LayeredObject o = mold.createLayeredObject(s, color, opacity);
-				svg.add(o.toSVG("", ""));
+				svg.add(o.toSVG("", "", ROUNDING));
 			}
 		}
 		svg.add("</svg>");

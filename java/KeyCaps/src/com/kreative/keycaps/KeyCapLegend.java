@@ -42,11 +42,6 @@ public class KeyCapLegend {
 		}
 	}
 	
-	public static final String PATTERN_STRING = (
-		"\\[\\s*((" + KeyCapLegendItem.PATTERN_STRING + ")\\s*(,\\s*)?)*\\]|" +
-		"((" + KeyCapLegendItem.PATTERN_STRING + ")\\s*)*"
-	);
-	
 	public static KeyCapLegend parse(KeyCapParser p) {
 		Type type = null;
 		List<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();

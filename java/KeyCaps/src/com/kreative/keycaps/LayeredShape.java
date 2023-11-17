@@ -14,10 +14,10 @@ public class LayeredShape extends LayeredObject {
 		this.opacity = opacity;
 	}
 	
-	public String toSVG(String prefix, String indent) {
+	public String toSVG(String prefix, String indent, float rounding) {
 		StringBuffer sb = new StringBuffer(prefix);
 		sb.append("<path d=\"");
-		sb.append(ShapeUtilities.toSVGPath(shape, null, 1000));
+		sb.append(ShapeUtilities.toSVGPath(shape, null, rounding));
 		if (color != null) {
 			sb.append("\" fill=\"#");
 			sb.append(Integer.toHexString(0xFF000000 | color.getRGB()).substring(2));

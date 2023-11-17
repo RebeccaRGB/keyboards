@@ -53,8 +53,8 @@ public class KeyCapPosition {
 	}
 	
 	public String toString() {
-		String s = KeyCapUnits.valuesToString(",", 1000, this.x, this.y);
-		return s + KeyCapUnits.unitToString(this.keyCapSize, 1000);
+		String s = KeyCapUnits.valuesToString(",", this.x, this.y);
+		return s + KeyCapUnits.unitToString(this.keyCapSize);
 	}
 	
 	public String toNormalizedString() {

@@ -36,12 +36,6 @@ public class KeyCapLegendItem {
 	public static final String PATH_LISA_RIGHT = "M 1 0.188 v 0.156 c 0 0.018 -0.015 0.033 -0.033 0.033 c -0.018 0 -0.032 -0.015 -0.032 -0.033 V 0.222 H 0.065 v 0.557 h 0.869 V 0.656 c 0 -0.018 0.015 -0.033 0.032 -0.033 C 0.985 0.623 1 0.638 1 0.656 v 0.156 C 1 0.83 0.985 0.844 0.967 0.844 H 0.033 C 0.015 0.844 0 0.83 0 0.812 V 0.188 C 0 0.17 0.015 0.156 0.033 0.156 h 0.934 C 0.985 0.156 1 0.17 1 0.188 z M 0.405 0.313 c -0.011 -0.002 -0.021 0 -0.029 0.006 C 0.368 0.324 0.363 0.334 0.363 0.344 v 0.312 c 0 0.01 0.005 0.02 0.013 0.026 c 0.006 0.004 0.013 0.007 0.021 0.007 c 0.003 0 0.006 0 0.009 -0.001 l 0.57 -0.156 C 0.99 0.528 1 0.515 1 0.5 S 0.99 0.472 0.976 0.468 L 0.405 0.313 z";
 	public static final String PATH_LISA_DOWN = "M 1 0.188 v 0.623 c 0 0.018 -0.015 0.033 -0.033 0.033 H 0.655 c -0.018 0 -0.032 -0.016 -0.032 -0.033 c 0 -0.019 0.015 -0.033 0.032 -0.033 h 0.279 V 0.222 H 0.065 v 0.557 h 0.279 c 0.018 0 0.032 0.015 0.032 0.033 c 0 0.018 -0.015 0.033 -0.032 0.033 H 0.033 C 0.015 0.845 0 0.829 0 0.812 V 0.188 c 0 -0.018 0.015 -0.033 0.033 -0.033 h 0.934 C 0.985 0.155 1 0.171 1 0.188 z M 0.683 0.325 C 0.676 0.316 0.666 0.312 0.655 0.312 H 0.345 c -0.011 0 -0.021 0.005 -0.027 0.014 C 0.312 0.334 0.31 0.345 0.313 0.354 l 0.155 0.468 C 0.474 0.835 0.486 0.845 0.5 0.845 s 0.026 -0.01 0.031 -0.022 l 0.155 -0.468 C 0.69 0.345 0.688 0.334 0.683 0.325 z";
 	
-	private static final String QUOTED_TOKEN_STR = "\'((\\\\.|[^\'])*)\'|\"((\\\\.|[^\"])*)\"|`((\\\\.|[^`])*)`";
-	private static final String CODED_TOKEN_STR = "[$]([0-9A-Fa-f]+([+][0-9A-Fa-f]+)*)?";
-	public static final String PATTERN_STRING = "([A-Za-z]+)|" + QUOTED_TOKEN_STR + "|" + CODED_TOKEN_STR;
-	public static final Pattern PATTERN = Pattern.compile(PATTERN_STRING);
-	private static final Pattern PATH_TAG = Pattern.compile("<path\\s+d\\s*=\\s*(\'[^\']*\'|\"[^\"]*\")\\s*/?>");
-	
 	public static KeyCapLegendItem parse(KeyCapParser p) {
 		if (p.hasNextID()) return text(p.next());
 		if (p.hasNextQuote('\'')) return text(p.nextQuote('\''));
@@ -61,6 +55,8 @@ public class KeyCapLegendItem {
 			return (fallback ? text(s) : null);
 		}
 	}
+	
+	private static final Pattern PATH_TAG = Pattern.compile("<path\\s+d\\s*=\\s*(\'[^\']*\'|\"[^\"]*\")\\s*/?>");
 	
 	public static KeyCapLegendItem text(String text) {
 		if (text == null || text.length() == 0) return null;

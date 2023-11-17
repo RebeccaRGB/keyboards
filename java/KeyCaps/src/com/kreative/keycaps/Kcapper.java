@@ -11,6 +11,8 @@ import java.util.List;
  * Using KbitKeyCapMold, the resulting image will appear similar to the Key Caps desk accessory.
  */
 public final class Kcapper {
+	private static final float ROUNDING = 1000;
+	
 	public static void main(String[] args) throws IOException {
 		for (String arg : args) {
 			File file = new File(arg);
@@ -48,12 +50,12 @@ public final class Kcapper {
 			}
 			if (mold == null) {
 				Shape shape = ShapeUtilities.contract(makeKeyShape(points), 0.5f);
-				String path = ShapeUtilities.toSVGPath(shape, null, 1000);
+				String path = ShapeUtilities.toSVGPath(shape, null, ROUNDING);
 				defs.append("<path id=\"shape" + i + "\" d=\"" + path + "\" fill=\"white\" stroke=\"black\"/>\n");
 			} else {
 				AffineTransform tx = AffineTransform.getScaleInstance(1/scale, 1/scale);
 				Shape shape = tx.createTransformedShape(makeKeyShape(points));
-				String paths = mold.createLayeredObject(shape, null, null).toSVG("", "");
+				String paths = mold.createLayeredObject(shape, null, null).toSVG("", "", ROUNDING);
 				defs.append("<g id=\"shape" + i + "\">\n" + paths + "\n</g>\n");
 			}
 			int kc = in.readShort() + 1;
@@ -91,7 +93,7 @@ public final class Kcapper {
 		svg.append(defs.toString());
 		svg.append("</defs>\n");
 		Shape textAreaShape = ShapeUtilities.contract(makeRect(tl, tt, tr, tb), 1);
-		String textAreaPath = ShapeUtilities.toSVGPath(textAreaShape, null, 1000);
+		String textAreaPath = ShapeUtilities.toSVGPath(textAreaShape, null, ROUNDING);
 		svg.append("<path class=\"textarea\" d=\"" + textAreaPath + "\" fill=\"white\" stroke=\"black\" stroke-width=\"2\"/>\n");
 		String name = keyboardName(id);
 		if (name != null) {

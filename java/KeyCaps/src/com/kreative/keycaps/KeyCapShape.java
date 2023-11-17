@@ -8,10 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class KeyCapShape {
-	private static final String SHAPE_TOKEN_STR = "[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)([Ee][+-]?[0-9]+)?";
-	private static final String UNIT_TOKEN_STR = "([A-Za-z]+|/\\s*(" + SHAPE_TOKEN_STR + "))";
-	public static final String PATTERN_STRING = "(" + SHAPE_TOKEN_STR + "\\s*)*" + UNIT_TOKEN_STR;
-	
 	public static final KeyCapShape DEFAULT = new KeyCapShape(new float[0], KeyCapUnits.U);
 	
 	public static KeyCapShape parse(KeyCapParser p, float keyCapSize) {
@@ -87,8 +83,8 @@ public class KeyCapShape {
 	
 	public String toString() {
 		if (this.shape == null || this.shape.length == 0) return "";
-		String s = KeyCapUnits.valuesToString(null, 1000, this.shape);
-		return s + KeyCapUnits.unitToString(this.keyCapSize, 1000);
+		String s = KeyCapUnits.valuesToString(null, this.shape);
+		return s + KeyCapUnits.unitToString(this.keyCapSize);
 	}
 	
 	public String toNormalizedString() {

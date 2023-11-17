@@ -1,6 +1,8 @@
 package com.kreative.keycaps;
 
 public final class KeyCapUnits {
+	public static final float ROUNDING = 1000;
+	
 	public static final float U = 1;
 	public static final float V = 4;
 	public static final float W = 20;
@@ -41,34 +43,34 @@ public final class KeyCapUnits {
 		return true;
 	}
 	
-	public static String unitToString(float keyCapSize, float rounding) {
+	public static String unitToString(float keyCapSize) {
 		if (keyCapSize == U) return "u";
 		if (keyCapSize == V) return "v";
 		if (keyCapSize == W) return "w";
 		if (keyCapSize == IN) return "in";
 		if (keyCapSize == MM) return "mm";
 		if (keyCapSize == PT) return "pt";
-		return "/" + valueToString(keyCapSize, rounding);
+		return "/" + valueToString(keyCapSize);
 	}
 	
-	public static String valueToString(float value, float rounding) {
-		value = Math.round(value * rounding) / rounding;
+	public static String valueToString(float value) {
+		value = Math.round(value * ROUNDING) / ROUNDING;
 		if (value == (int)value) return Integer.toString((int)value);
 		return Float.toString(value);
 	}
 	
-	public static String valuesToString(String delimiter, float rounding, float... values) {
+	public static String valuesToString(String delimiter, float... values) {
 		if (values == null || values.length == 0) return "";
 		StringBuffer sb = new StringBuffer();
 		boolean first = true;
 		for (float v : values) {
 			if (first) {
-				sb.append(valueToString(v, rounding));
+				sb.append(valueToString(v));
 				first = false;
 			} else {
 				if (delimiter != null) sb.append(delimiter);
 				else if (v >= 0) sb.append("+");
-				sb.append(valueToString(v, rounding));
+				sb.append(valueToString(v));
 			}
 		}
 		return sb.toString();

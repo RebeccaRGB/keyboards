@@ -3,6 +3,7 @@ package com.kreative.keycaps;
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
 import static com.kreative.keycaps.ColorUtilities.parseColorIndex;
+import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
 import static com.kreative.keycaps.ShapeUtilities.toSVGPath;
 import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
 
@@ -69,7 +70,7 @@ public final class ShapeDebug {
 		}
 		
 		Shape awtShape = shape.toAWTShape(size);
-		String vbox = toSVGViewBox(awtShape, padding, 1000);
+		String vbox = toSVGViewBox(awtShape, padding, ROUNDING);
 		
 		List<String> svg = new ArrayList<String>();
 		svg.add("<?xml version=\"1.0\"?>");
@@ -81,7 +82,7 @@ public final class ShapeDebug {
 		svg.add("Minimized:  " + shape.toMinimizedString());
 		svg.add("-->");
 		if (mold == null) {
-			String path = toSVGPath(awtShape, null, 1000);
+			String path = toSVGPath(awtShape, null, ROUNDING);
 			String fill = (
 				(color == null) ? "white" :
 				("#" + Integer.toHexString(0xFF000000 | color.getRGB()).substring(2))
@@ -96,7 +97,7 @@ public final class ShapeDebug {
 			}
 		} else {
 			LayeredObject o = mold.createLayeredObject(awtShape, color, opacity);
-			svg.add(o.toSVG("", ""));
+			svg.add(o.toSVG("", "", ROUNDING));
 		}
 		svg.add("</svg>");
 		
