@@ -10,7 +10,7 @@ import java.util.List;
  * Reads the contents of a Mac OS Classic KCAP resource and renders the represented layout as an SVG file.
  * Using KbitKeyCapMold, the resulting image will appear similar to the Key Caps desk accessory.
  */
-public class Kcapper {
+public final class Kcapper {
 	public static void main(String[] args) throws IOException {
 		for (String arg : args) {
 			File file = new File(arg);
@@ -196,4 +196,6 @@ public class Kcapper {
 			default: return null;
 		}
 	}
+	
+	private Kcapper() {}
 }

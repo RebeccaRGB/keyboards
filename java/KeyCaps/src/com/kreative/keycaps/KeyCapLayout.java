@@ -39,7 +39,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				String ys = m.group("y");
 				String us = m.group("u");
 				if (us != null && us.length() > 0) {
-					float u = KeyCapShape.parseUnit(us, KeyCapShape.U);
+					float u = KeyCapUnits.parseUnit(us, KeyCapUnits.U);
 					x *= u / keyCapSize;
 					y *= u / keyCapSize;
 					keyCapSize = u;
@@ -176,7 +176,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				sb.append(ftoa((x = k.getX(keyCapSize)), DECIMAL_PLACES));
 				sb.append(',');
 				sb.append(ftoa((y = k.getY(keyCapSize)), DECIMAL_PLACES));
-				sb.append(KeyCapShape.unitToString(keyCapSize, DECIMAL_PLACES));
+				sb.append(KeyCapUnits.unitToString(keyCapSize, DECIMAL_PLACES));
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -200,7 +200,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				sb.append(ftoa((x = k.getX(keyCapSize)), DECIMAL_PLACES));
 				sb.append(',');
 				sb.append(ftoa((y = k.getY(keyCapSize)), DECIMAL_PLACES));
-				sb.append(KeyCapShape.unitToString(keyCapSize, DECIMAL_PLACES));
+				sb.append(KeyCapUnits.unitToString(keyCapSize, DECIMAL_PLACES));
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -224,7 +224,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				sb.append(ftoa((x = k.getX(keyCapSize)), DECIMAL_PLACES));
 				sb.append(',');
 				sb.append(ftoa((y = k.getY(keyCapSize)), DECIMAL_PLACES));
-				sb.append(KeyCapShape.unitToString(keyCapSize, DECIMAL_PLACES));
+				sb.append(KeyCapUnits.unitToString(keyCapSize, DECIMAL_PLACES));
 				sb.append(':');
 			} else {
 				sb.append(',');

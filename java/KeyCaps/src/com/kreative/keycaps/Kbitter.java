@@ -11,7 +11,7 @@ import javax.imageio.ImageIO;
 /**
  * Reads the contents of a kbit resource from the Key Caps desk accessory and converts it to a PNG image.
  */
-public class Kbitter {
+public final class Kbitter {
 	public static void main(String[] args) throws IOException {
 		for (String arg : args) {
 			File file = new File(arg);
@@ -46,4 +46,6 @@ public class Kbitter {
 		}
 		return img;
 	}
+	
+	private Kbitter() {}
 }

@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ColorUtilities {
+public final class ColorUtilities {
 	private static int clamp(int v) {
 		return (v <= 0) ? 0 : (v >= 255) ? 255 : v;
 	}
@@ -136,4 +136,6 @@ public class ColorUtilities {
 			return 0;
 		}
 	}
+	
+	private ColorUtilities() {}
 }

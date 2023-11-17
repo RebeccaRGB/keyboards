@@ -11,7 +11,7 @@ import java.awt.Shape;
 import java.io.*;
 import java.util.*;
 
-public class ShapeDebug {
+public final class ShapeDebug {
 	public static void main(String[] args) {
 		KeyCapMold mold = null;
 		String shapeString = "";
@@ -128,4 +128,6 @@ public class ShapeDebug {
 		System.err.println("  -o <path>     Specify output file");
 		System.err.println("  --            Specify standard output");
 	}
+	
+	private ShapeDebug() {}
 }

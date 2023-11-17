@@ -187,17 +187,8 @@ public class KeyCapParser {
 		return StringUtilities.fromCodes(next());
 	}
 	
-	public float nextUnit(Float def) {
-		String s = next();
-		if (s.startsWith("/")) return Float.parseFloat(s.substring(1).trim());
-		if (s.equalsIgnoreCase("u")) return KeyCapShape.U;
-		if (s.equalsIgnoreCase("v")) return KeyCapShape.V;
-		if (s.equalsIgnoreCase("w")) return KeyCapShape.W;
-		if (s.equalsIgnoreCase("in")) return KeyCapShape.IN;
-		if (s.equalsIgnoreCase("mm")) return KeyCapShape.MM;
-		if (s.equalsIgnoreCase("pt")) return KeyCapShape.PT;
-		if (def != null) return def;
-		throw new NumberFormatException(s);
+	public float nextUnit(float def) {
+		return KeyCapUnits.parseUnit(next(), def);
 	}
 	
 	public KeyCapParserException expected(String e) {

@@ -12,7 +12,7 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ShapeUtilities {
+public final class ShapeUtilities {
 	public static Shape add(Shape base, Shape... args) {
 		Area area = new Area(base);
 		for (Shape arg : args) area.add(new Area(arg));
@@ -280,4 +280,6 @@ public class ShapeUtilities {
 		}
 		return path;
 	}
+	
+	private ShapeUtilities() {}
 }

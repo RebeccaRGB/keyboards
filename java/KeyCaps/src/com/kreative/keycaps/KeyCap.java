@@ -13,37 +13,28 @@ public class KeyCap implements Comparable<KeyCap> {
 		"(" + KeyCapShape.PATTERN_STRING + "\\s*)?" +
 		"(" + KeyCapLegend.PATTERN_STRING + ")?"
 	);
-	private static final float DECIMAL_PLACES = 1000;
 	
-	private float x;
-	private float y;
-	private float keyCapSize;
+	private KeyCapPosition position;
 	private KeyCapShape shape;
 	private KeyCapLegend legend;
 	private final PropertyMap props;
 	
 	public KeyCap(float x, float y, float keyCapSize, KeyCapShape shape, KeyCapLegend legend) {
-		this.x = x;
-		this.y = y;
-		this.keyCapSize = keyCapSize;
+		this.position = new KeyCapPosition(x, y, keyCapSize);
 		this.shape = (shape != null) ? shape : KeyCapShape.DEFAULT;
 		this.legend = (legend != null) ? legend : new KeyCapLegend();
 		this.props = new PropertyMap();
 	}
 	
 	public KeyCap(float x, float y, float keyCapSize, String shape, String legend) {
-		this.x = x;
-		this.y = y;
-		this.keyCapSize = keyCapSize;
+		this.position = new KeyCapPosition(x, y, keyCapSize);
 		this.shape = (shape != null) ? KeyCapShape.parse(shape, keyCapSize) : KeyCapShape.DEFAULT;
 		this.legend = (legend != null) ? KeyCapLegend.parse(legend) : new KeyCapLegend();
 		this.props = new PropertyMap();
 	}
 	
 	public KeyCap(float x, float y, float keyCapSize, String spec) {
-		this.x = x;
-		this.y = y;
-		this.keyCapSize = keyCapSize;
+		this.position = new KeyCapPosition(x, y, keyCapSize);
 		Matcher m = SPEC_PATTERN.matcher(spec);
 		if (m.matches()) {
 			String ss = m.group("s");
@@ -57,51 +48,21 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.props = new PropertyMap();
 	}
 	
-	public float getX(float keyCapSize) {
-		return this.x * keyCapSize / this.keyCapSize;
+	public float getX(float keyCapSize) { return position.getX(keyCapSize); }
+	public float getY(float keyCapSize) { return position.getY(keyCapSize); }
+	public Point2D.Float getLocation(float keyCapSize) { return position.getLocation(keyCapSize); }
+	public void setLocation(float x, float y, float keyCapSize) { position = new KeyCapPosition(x, y, keyCapSize); }
+	public void setLocation(Point2D p, float keyCapSize) { position = new KeyCapPosition(p, keyCapSize); }
+	public float getKeyCapSize() { return position.getKeyCapSize(); }
+	public float getMinimalKeyCapSize() { return position.getMinimalKeyCapSize(); }
+	public void setKeyCapSize(float keyCapSize) { position = position.setKeyCapSize(keyCapSize); }
+	
+	public KeyCapPosition getPosition() {
+		return this.position;
 	}
 	
-	public float getY(float keyCapSize) {
-		return this.y * keyCapSize / this.keyCapSize;
-	}
-	
-	public Point2D.Float getLocation(float keyCapSize) {
-		return new Point2D.Float(
-			this.x * keyCapSize / this.keyCapSize,
-			this.y * keyCapSize / this.keyCapSize
-		);
-	}
-	
-	public void setLocation(float x, float y, float keyCapSize) {
-		this.x = x;
-		this.y = y;
-		this.keyCapSize = keyCapSize;
-	}
-	
-	public void setLocation(Point2D p, float keyCapSize) {
-		this.x = (float)p.getX();
-		this.y = (float)p.getY();
-		this.keyCapSize = keyCapSize;
-	}
-	
-	public float getKeyCapSize() {
-		return this.keyCapSize;
-	}
-	
-	public float getMinimalKeyCapSize() {
-		if (oopsAllInt(getX(KeyCapShape.U), getY(KeyCapShape.U))) return KeyCapShape.U;
-		if (oopsAllInt(getX(KeyCapShape.V), getY(KeyCapShape.V))) return KeyCapShape.V;
-		if (oopsAllInt(getX(KeyCapShape.W), getY(KeyCapShape.W))) return KeyCapShape.W;
-		if (oopsAllInt(getX(KeyCapShape.IN), getY(KeyCapShape.IN))) return KeyCapShape.IN;
-		if (oopsAllInt(getX(KeyCapShape.MM), getY(KeyCapShape.MM))) return KeyCapShape.MM;
-		if (oopsAllInt(getX(KeyCapShape.PT), getY(KeyCapShape.PT))) return KeyCapShape.PT;
-		return this.keyCapSize;
-	}
-	
-	public void setKeyCapSize(float keyCapSize) {
-		this.x *= keyCapSize / this.keyCapSize;
-		this.y *= keyCapSize / this.keyCapSize;
-		this.keyCapSize = keyCapSize;
+	public void setPosition(KeyCapPosition position) {
+		this.position = (position != null) ? position : KeyCapPosition.DEFAULT;
 	}
 	
 	public KeyCapShape getShape() {
@@ -113,7 +74,7 @@ public class KeyCap implements Comparable<KeyCap> {
 	}
 	
 	public void setKeyCapShape(String shape) {
-		this.shape = (shape != null) ? KeyCapShape.parse(shape, keyCapSize) : KeyCapShape.DEFAULT;
+		this.shape = (shape != null) ? KeyCapShape.parse(shape, position.getKeyCapSize()) : KeyCapShape.DEFAULT;
 	}
 	
 	public KeyCapLegend getLegend() {
@@ -145,19 +106,14 @@ public class KeyCap implements Comparable<KeyCap> {
 	}
 	
 	public boolean isAt(float x, float y, float keyCapSize) {
-		int cx = Math.round((this.getX(keyCapSize) - x) * DECIMAL_PLACES);
-		int cy = Math.round((this.getY(keyCapSize) - y) * DECIMAL_PLACES);
+		int cx = Math.round((this.getX(keyCapSize) - x) * 1000000);
+		int cy = Math.round((this.getY(keyCapSize) - y) * 1000000);
 		return cx == 0 && cy == 0;
 	}
 	
 	public int compareTo(KeyCap o) {
-		int cx = Math.round(this.getX(DECIMAL_PLACES) - o.getX(DECIMAL_PLACES));
-		int cy = Math.round(this.getY(DECIMAL_PLACES) - o.getY(DECIMAL_PLACES));
+		int cx = Math.round(this.getX(1000000) - o.getX(1000000));
+		int cy = Math.round(this.getY(1000000) - o.getY(1000000));
 		return (cy != 0) ? cy : (cx != 0) ? cx : 0;
-	}
-	
-	private static boolean oopsAllInt(float... values) {
-		for (float v : values) if (v != (int)v) return false;
-		return true;
 	}
 }

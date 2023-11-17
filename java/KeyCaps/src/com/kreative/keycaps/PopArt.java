@@ -11,7 +11,7 @@ import java.awt.geom.Rectangle2D;
 import java.io.*;
 import java.util.*;
 
-public class PopArt {
+public final class PopArt {
 	public static void main(String[] args) {
 		KeyCapMold mold = new MaxKeyCapMold();
 		KeyCapShape shape = KeyCapShape.DEFAULT;
@@ -132,4 +132,6 @@ public class PopArt {
 		System.err.println("  -o <path>     Specify output file");
 		System.err.println("  --            Specify standard output");
 	}
+	
+	private PopArt() {}
 }

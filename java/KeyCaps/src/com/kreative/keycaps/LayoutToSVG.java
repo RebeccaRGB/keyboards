@@ -10,7 +10,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class LayoutToSVG {
+public final class LayoutToSVG {
 	public static void main(String[] args) throws IOException {
 		boolean parseOpts = true;
 		File outputFile = null;
@@ -151,4 +151,6 @@ public class LayoutToSVG {
 			}
 		}
 	}
+	
+	private LayoutToSVG() {}
 }

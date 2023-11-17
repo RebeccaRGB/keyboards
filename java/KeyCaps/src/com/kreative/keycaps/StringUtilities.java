@@ -3,7 +3,7 @@ package com.kreative.keycaps;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StringUtilities {
+public final class StringUtilities {
 	public static String quote(String s, char quote) {
 		StringBuffer sb = new StringBuffer();
 		sb.append(quote);
@@ -163,4 +163,6 @@ public class StringUtilities {
 		}
 		return sb.toString();
 	}
+	
+	private StringUtilities() {}
 }

@@ -5,26 +5,19 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class KeyCapShape {
 	private static final String SHAPE_TOKEN_STR = "[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)([Ee][+-]?[0-9]+)?";
 	private static final String UNIT_TOKEN_STR = "([A-Za-z]+|/\\s*(" + SHAPE_TOKEN_STR + "))";
 	public static final String PATTERN_STRING = "(" + SHAPE_TOKEN_STR + "\\s*)*" + UNIT_TOKEN_STR;
 	
-	public static final float U = 1;
-	public static final float V = 4;
-	public static final float W = 20;
-	public static final float IN = 0.75f;
-	public static final float MM = 19.05f;
-	public static final float PT = 54;
-	
-	public static final KeyCapShape DEFAULT = new KeyCapShape(new float[0], U);
+	public static final KeyCapShape DEFAULT = new KeyCapShape(new float[0], KeyCapUnits.U);
 	
 	public static KeyCapShape parse(KeyCapParser p, float keyCapSize) {
-		ArrayList<Float> dims = new ArrayList<Float>();
-		while (p.hasNextFloat()) dims.add(p.nextFloat());
+		List<Float> shape = new ArrayList<Float>();
+		while (p.hasNextFloat()) shape.add(p.nextFloat());
 		if (p.hasNextUnit()) keyCapSize = p.nextUnit(keyCapSize);
-		Float[] shape = dims.toArray(new Float[dims.size()]);
 		return new KeyCapShape(shape, keyCapSize);
 	}
 	
@@ -48,6 +41,11 @@ public class KeyCapShape {
 		this.keyCapSize = keyCapSize;
 	}
 	
+	public KeyCapShape(List<Float> shape, float keyCapSize) {
+		this.shape = clone(shape, 1);
+		this.keyCapSize = keyCapSize;
+	}
+	
 	public float[] getShape(float keyCapSize) {
 		return clone(this.shape, keyCapSize / this.keyCapSize);
 	}
@@ -62,13 +60,7 @@ public class KeyCapShape {
 	}
 	
 	public float getMinimalKeyCapSize() {
-		if (oopsAllInt(getShape(U))) return U;
-		if (oopsAllInt(getShape(V))) return V;
-		if (oopsAllInt(getShape(W))) return W;
-		if (oopsAllInt(getShape(IN))) return IN;
-		if (oopsAllInt(getShape(MM))) return MM;
-		if (oopsAllInt(getShape(PT))) return PT;
-		return this.keyCapSize;
+		return KeyCapUnits.minimalUnit(keyCapSize, shape);
 	}
 	
 	public KeyCapShape setKeyCapSize(float keyCapSize) {
@@ -94,13 +86,13 @@ public class KeyCapShape {
 	}
 	
 	public String toString() {
-		String s = shapeToString(this.shape, null, 1000);
-		if (s == null || s.length() == 0) return s;
-		return s + unitToString(this.keyCapSize, 1000);
+		if (this.shape == null || this.shape.length == 0) return "";
+		String s = KeyCapUnits.valuesToString(null, 1000, this.shape);
+		return s + KeyCapUnits.unitToString(this.keyCapSize, 1000);
 	}
 	
 	public String toNormalizedString() {
-		return normalize(false).setKeyCapSize(U).toString();
+		return normalize(false).setKeyCapSize(KeyCapUnits.U).toString();
 	}
 	
 	public String toMinimizedString() {
@@ -116,18 +108,6 @@ public class KeyCapShape {
 			(o instanceof KeyCapShape) &&
 			this.toNormalizedString().equals(((KeyCapShape)o).toNormalizedString())
 		);
-	}
-	
-	public static float parseUnit(String s, Float def) {
-		if ((s = s.trim()).startsWith("/")) return Float.parseFloat(s.substring(1).trim());
-		if (s.equalsIgnoreCase("u")) return U;
-		if (s.equalsIgnoreCase("v")) return V;
-		if (s.equalsIgnoreCase("w")) return W;
-		if (s.equalsIgnoreCase("in")) return IN;
-		if (s.equalsIgnoreCase("mm")) return MM;
-		if (s.equalsIgnoreCase("pt")) return PT;
-		if (def != null) return def;
-		throw new NumberFormatException(s);
 	}
 	
 	private static float[] clone(float[] shape, float scale) {
@@ -146,9 +126,12 @@ public class KeyCapShape {
 		return clone;
 	}
 	
-	private static boolean oopsAllInt(float[] shape) {
-		for (float c : shape) if (c != (int)c) return false;
-		return true;
+	private static float[] clone(List<Float> shape, float scale) {
+		if (shape == null) return null;
+		int n = shape.size();
+		float[] clone = new float[n];
+		for (int i = 0; i < n; i++) clone[i] = shape.get(i) * scale;
+		return clone;
 	}
 	
 	private static float[] complete(float[] shape, boolean strict, float u) {
@@ -287,38 +270,5 @@ public class KeyCapShape {
 		}
 		if (cx == 0 && cy == 0) path.closePath();
 		return path;
-	}
-	
-	private static String shapeToString(float[] shape, String delimiter, float rounding) {
-		if (shape == null || shape.length == 0) return "";
-		StringBuffer sb = new StringBuffer();
-		boolean first = true;
-		for (float c : shape) {
-			if (first) {
-				sb.append(valueToString(c, rounding));
-				first = false;
-			} else {
-				if (delimiter != null) sb.append(delimiter);
-				if (c >= 0) sb.append("+");
-				sb.append(valueToString(c, rounding));
-			}
-		}
-		return sb.toString();
-	}
-	
-	public static String unitToString(float keyCapSize, float rounding) {
-		if (keyCapSize == U) return "u";
-		if (keyCapSize == V) return "v";
-		if (keyCapSize == W) return "w";
-		if (keyCapSize == IN) return "in";
-		if (keyCapSize == MM) return "mm";
-		if (keyCapSize == PT) return "pt";
-		return "/" + valueToString(keyCapSize, rounding);
-	}
-	
-	private static String valueToString(float value, float rounding) {
-		value = Math.round(value * rounding) / rounding;
-		if (value == (int)value) return Integer.toString((int)value);
-		return Float.toString(value);
 	}
 }
