@@ -3,9 +3,11 @@ package com.kreative.keycaps;
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
 import static com.kreative.keycaps.ColorUtilities.parseColorIndex;
+import static com.kreative.keycaps.StringUtilities.quote;
 
 import java.awt.Color;
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class PropertyMap extends HashMap<String,Object> {
@@ -145,5 +147,65 @@ public class PropertyMap extends HashMap<String,Object> {
 		if (value instanceof BigDecimal) return ((BigDecimal)value).floatValue();
 		if (value instanceof Number) return getPaletteOpacity(((Number)value).intValue());
 		return getPaletteOpacity(parseColorIndex(value.toString()));
+	}
+	
+	public String toString() {
+		if (isEmpty()) return "";
+		StringBuffer sb = new StringBuffer();
+		sb.append("{");
+		boolean first = true;
+		String[] keys = keySet().toArray(new String[size()]);
+		Arrays.sort(keys);
+		for (String key : keys) {
+			if (first) first = false;
+			else sb.append(",");
+			sb.append(formatKey(key));
+			Object value = get(key);
+			if (value == null) continue;
+			sb.append(":");
+			sb.append(formatValue(value));
+		}
+		sb.append("}");
+		return sb.toString();
+	}
+	
+	private static boolean isID(String s) {
+		int i = 0, n = s.length();
+		while (i < n) {
+			int ch = s.codePointAt(i);
+			if (!Character.isLetter(ch)) return false;
+			i += Character.charCount(ch);
+		}
+		return true;
+	}
+	
+	private static String formatKey(String s) {
+		if (isID(s)) return s;
+		if (!s.contains("\'")) return quote(s, '\'');
+		if (!s.contains("\"")) return quote(s, '\"');
+		if (!s.contains("`")) return quote(s, '`');
+		return quote(s, '\'');
+	}
+	
+	private static boolean isNumber(Object o) {
+		try {
+			double d = (
+				(o instanceof Number) ?
+				((Number)o).doubleValue() :
+				Double.parseDouble(o.toString())
+			);
+			return !(Double.isNaN(d) || Double.isInfinite(d));
+		} catch (NumberFormatException e) {
+			return false;
+		}
+	}
+	
+	private static String formatValue(Object o) {
+		String s = o.toString();
+		if (isNumber(o)) return s;
+		if (!s.contains("\'")) return quote(s, '\'');
+		if (!s.contains("\"")) return quote(s, '\"');
+		if (!s.contains("`")) return quote(s, '`');
+		return quote(s, '\'');
 	}
 }

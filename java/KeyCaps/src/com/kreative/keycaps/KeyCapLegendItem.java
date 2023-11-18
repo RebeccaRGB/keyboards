@@ -140,7 +140,8 @@ public class KeyCapLegendItem {
 				return toCodes(text);
 			}
 		}
-		char q = text.contains("\"") ? '\'' : text.contains("\'") ? '\"' : '\'';
-		return quote(text, q);
+		if (!text.contains("\'")) return quote(text, '\'');
+		if (!text.contains("\"")) return quote(text, '\"');
+		return quote(text, '\'');
 	}
 }
