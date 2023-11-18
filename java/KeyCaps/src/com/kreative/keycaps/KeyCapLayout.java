@@ -25,6 +25,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 	public void parse(KeyCapParser p) {
 		Point2D.Float loc = new Point2D.Float();
 		float keyCapSize = KeyCapUnits.U;
+		this.props.parse(p);
 		while (p.hasNext()) {
 			if (p.hasNextChar('@')) p.next();
 			if (p.hasNextPoint()) {
@@ -41,7 +42,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				if (p.hasNextChar(';')) { p.next(); break; }
 				KeyCap k = KeyCap.parse(p, loc.x, loc.y, keyCapSize);
 				loc.x += k.getShape().getAdvanceWidth(keyCapSize);
-				add(k);
+				this.add(k);
 				if (p.hasNextChar(',')) { p.next(); continue; }
 				if (p.hasNextChar(';')) { p.next(); break; }
 				throw p.expected(", or ;");

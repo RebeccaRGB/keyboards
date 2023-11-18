@@ -2,6 +2,7 @@ package com.kreative.keycaps;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,21 +41,58 @@ public class KeyCapLegend {
 				default: return NONE;
 			}
 		}
+		public static Type forKeys(Collection<String> keys) {
+			for (Type t : values()) {
+				if (Arrays.asList(t.paramKeys).containsAll(keys)) {
+					return t;
+				}
+			}
+			return null;
+		}
+	}
+	
+	private static String parseKey(KeyCapParser p) {
+		if (p.hasNextID()) return p.next();
+		if (p.hasNextQuote('\'')) return p.nextQuote('\'');
+		if (p.hasNextQuote('\"')) return p.nextQuote('\"');
+		if (p.hasNextQuote('`')) return p.nextQuote('`');
+		return null;
 	}
 	
 	public static KeyCapLegend parse(KeyCapParser p) {
+		PropertyMap props = new PropertyMap();
 		Type type = null;
 		List<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();
+		Map<String,KeyCapLegendItem> kwitems = new HashMap<String,KeyCapLegendItem>();
 		if (p.hasNextChar('[')) {
 			p.next();
+			props.parse(p);
+			int tm = p.mark();
 			if (p.hasNextID()) {
-				type = Type.forName(p.next());
-				if (p.hasNextChar(',')) p.next();
-				else throw p.expected(",");
+				String t = p.next();
+				if (p.hasNextChar(',')) {
+					p.next();
+					type = Type.forName(t);
+				} else {
+					p.reset(tm);
+				}
 			}
 			while (true) {
 				if (p.hasNextChar(']')) { p.next(); break; }
-				items.add(KeyCapLegendItem.parse(p));
+				int km = p.mark();
+				String key = parseKey(p);
+				if (key != null) {
+					if (p.hasNextChar(':')) {
+						p.next();
+					} else {
+						key = null;
+						p.reset(km);
+					}
+				}
+				KeyCapLegendItem item = KeyCapLegendItem.parse(p);
+				((item != null) ? item.getPropertyMap() : new PropertyMap()).parse(p);
+				if (key != null) kwitems.put(key, item);
+				else items.add(item);
 				if (p.hasNextChar(',')) { p.next(); continue; }
 				if (p.hasNextChar(']')) { p.next(); break; }
 				throw p.expected(", or ]");
@@ -68,11 +106,13 @@ public class KeyCapLegend {
 				catch (IllegalArgumentException e) { break; }
 			}
 		}
-		if (type == null) type = Type.forItems(items);
 		KeyCapLegend legend = new KeyCapLegend();
+		legend.props.putAll(props);
+		if (type == null) type = Type.forItems(items);
 		for (int i = 0, n = Math.min(items.size(), type.paramKeys.length); i < n; i++) {
 			if (items.get(i) != null) legend.items.put(type.paramKeys[i], items.get(i));
 		}
+		legend.items.putAll(kwitems);
 		return legend;
 	}
 	
@@ -90,12 +130,7 @@ public class KeyCapLegend {
 	public Map<String,KeyCapLegendItem> getLegendItems() { return this.items; }
 	
 	public Type getType() {
-		for (Type type : Type.values()) {
-			if (Arrays.asList(type.paramKeys).containsAll(items.keySet())) {
-				return type;
-			}
-		}
-		return null;
+		return Type.forKeys(items.keySet());
 	}
 	
 	public String getText(int i) {

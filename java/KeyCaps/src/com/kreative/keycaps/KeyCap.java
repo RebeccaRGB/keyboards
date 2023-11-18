@@ -8,7 +8,9 @@ public class KeyCap implements Comparable<KeyCap> {
 	public static KeyCap parse(KeyCapParser p, float x, float y, float keyCapSize) {
 		KeyCapShape shape = KeyCapShape.parse(p, keyCapSize);
 		KeyCapLegend legend = KeyCapLegend.parse(p);
-		return new KeyCap(x, y, keyCapSize, shape, legend);
+		KeyCap k = new KeyCap(x, y, keyCapSize, shape, legend);
+		k.props.parse(p);
+		return k;
 	}
 	
 	public static KeyCap parse(String s, float x, float y, float keyCapSize) {

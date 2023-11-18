@@ -13,6 +13,14 @@ public class KeyCapParser {
 		this.i = this.j = 0;
 	}
 	
+	public int mark() {
+		return this.i;
+	}
+	
+	public void reset(int mark) {
+		this.i = this.j = mark;
+	}
+	
 	private int skipSpaces(int i) {
 		while (i < n) {
 			int ch = s.codePointAt(i);
