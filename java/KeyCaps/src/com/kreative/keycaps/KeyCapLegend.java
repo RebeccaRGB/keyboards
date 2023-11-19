@@ -1,5 +1,7 @@
 package com.kreative.keycaps;
 
+import static com.kreative.keycaps.StringUtilities.quote;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -151,32 +153,47 @@ public class KeyCapLegend {
 	
 	public String toString() {
 		Type type = getType();
-		if (type == null) return "";
+		if (type == null) return toNormalizedString();
+		if (hasProperties()) return toNormalizedString();
 		int n = minParamCount(type);
 		if (n == 0) return "";
-		boolean cit = canImplyType(type, n);
 		StringBuffer sb = new StringBuffer();
 		sb.append('[');
-		if (!cit) sb.append(type);
-		for (int i = 0; i < n; i++) {
-			if (!cit || i > 0) sb.append(',');
-			sb.append(formatParameter(type, i));
+		if (canImplyType(type, n)) {
+			for (int i = 0; i < n; i++) {
+				if (i > 0) sb.append(',');
+				sb.append(formatParameter(type, i));
+			}
+		} else {
+			sb.append(type);
+			for (int i = 0; i < n; i++) {
+				sb.append(',');
+				sb.append(formatParameter(type, i));
+			}
 		}
 		sb.append(']');
 		return sb.toString();
 	}
 	
 	public String toNormalizedString() {
-		Type type = getType();
-		if (type == null) return "[]";
-		int n = type.paramKeys.length;
-		if (n == 0) return "[]";
 		StringBuffer sb = new StringBuffer();
 		sb.append('[');
-		sb.append(type);
-		for (int i = 0; i < n; i++) {
-			sb.append(',');
-			sb.append(formatParameter(type, i));
+		sb.append(props.toString());
+		boolean first = true;
+		String[] keys = items.keySet().toArray(new String[items.size()]);
+		Arrays.sort(keys);
+		for (String key : keys) {
+			if (first) first = false;
+			else sb.append(",");
+			sb.append(formatKey(key));
+			sb.append(":");
+			KeyCapLegendItem value = items.get(key);
+			if (value == null) {
+				sb.append("$");
+			} else {
+				sb.append(value.toString());
+				sb.append(value.getPropertyMap().toString());
+			}
 		}
 		sb.append(']');
 		return sb.toString();
@@ -184,17 +201,24 @@ public class KeyCapLegend {
 	
 	public String toMinimizedString() {
 		Type type = getType();
-		if (type == null) return "";
+		if (type == null) return toNormalizedString();
+		if (hasProperties()) return toNormalizedString();
 		int n = minParamCount(type);
 		if (n == 0) return "";
-		boolean cit = canImplyType(type, n);
 		StringBuffer sb = new StringBuffer();
-		if (!cit) sb.append('[');
-		if (!cit) sb.append(type);
-		for (int i = 0; i < n; i++) {
-			sb.append(formatParameter(type, i));
+		if (canImplyType(type, n)) {
+			for (int i = 0; i < n; i++) {
+				sb.append(formatParameter(type, i));
+			}
+		} else {
+			sb.append('[');
+			sb.append(type);
+			for (int i = 0; i < n; i++) {
+				sb.append(',');
+				sb.append(formatParameter(type, i));
+			}
+			sb.append(']');
 		}
-		if (!cit) sb.append(']');
 		return sb.toString();
 	}
 	
@@ -207,6 +231,16 @@ public class KeyCapLegend {
 			(o instanceof KeyCapLegend) &&
 			this.toNormalizedString().equals(((KeyCapLegend)o).toNormalizedString())
 		);
+	}
+	
+	private boolean hasProperties() {
+		if (!props.isEmpty()) return true;
+		for (KeyCapLegendItem item : items.values()) {
+			if (item != null && !item.getPropertyMap().isEmpty()) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	private int minParamCount(Type type) {
@@ -236,5 +270,23 @@ public class KeyCapLegend {
 		KeyCapLegendItem item = items.get(type.paramKeys[i]);
 		if (item == null) return "$";
 		return item.toString();
+	}
+	
+	private static boolean isID(String s) {
+		int i = 0, n = s.length();
+		while (i < n) {
+			int ch = s.codePointAt(i);
+			if (!Character.isLetter(ch)) return false;
+			i += Character.charCount(ch);
+		}
+		return true;
+	}
+	
+	private static String formatKey(String s) {
+		if (isID(s)) return s;
+		if (!s.contains("\'")) return quote(s, '\'');
+		if (!s.contains("\"")) return quote(s, '\"');
+		if (!s.contains("`")) return quote(s, '`');
+		return quote(s, '\'');
 	}
 }

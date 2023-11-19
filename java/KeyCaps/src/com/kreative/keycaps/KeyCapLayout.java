@@ -2,7 +2,6 @@ package com.kreative.keycaps;
 
 import static com.kreative.keycaps.ColorUtilities.colorToString;
 import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
-import static com.kreative.keycaps.KeyCapUnits.unitToString;
 import static com.kreative.keycaps.KeyCapUnits.valueToString;
 import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
 import static com.kreative.keycaps.StringUtilities.stringWidth;
@@ -64,8 +63,8 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		float maxy = 0;
 		for (KeyCap k : this) {
 			Rectangle2D.Float kb = k.getShape().getBounds(keyCapSize);
-			float kminx = kb.x + k.getX(keyCapSize);
-			float kminy = kb.y - k.getY(keyCapSize);
+			float kminx = kb.x + k.getPosition().getX(keyCapSize);
+			float kminy = kb.y - k.getPosition().getY(keyCapSize);
 			float kmaxx = kminx + kb.width;
 			float kmaxy = kminy + kb.height;
 			if (first) {
@@ -103,7 +102,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 				shapeDefs.append("</g>\n");
 			}
 			keyboard.append("<g class=\"key\">\n");
-			String tx = "translate(" + valueToString(+k.getX(keyCapSize)) + " " + valueToString(-k.getY(keyCapSize)) + ")";
+			String tx = "translate(" + valueToString(+k.getPosition().getX(keyCapSize)) + " " + valueToString(-k.getPosition().getY(keyCapSize)) + ")";
 			if (csScale != 1) tx += " scale(" + valueToString(csScale) + " " + valueToString(csScale) + ")";
 			keyboard.append("<use xlink:href=\"#shape" + shapeId + "\" transform=\"" + tx + "\"/>\n");
 			for (KeyCapEngraver.TextBox tb : ce.makeBoxes(cs, csScale, k.getShape(), keyCapSize, k.getLegend())) {
@@ -113,8 +112,8 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 						paths.put(tb.path, (pathId = paths.size()));
 						pathDefs.append("<path id=\"path" + pathId + "\" d=\"" + tb.path + "\"/>\n");
 					}
-					float x = tb.anchor.getX(tb.x, tb.lineHeight) + k.getX(keyCapSize);
-					float y = tb.anchor.getY(tb.y, tb.lineHeight) - k.getY(keyCapSize);
+					float x = tb.anchor.getX(tb.x, tb.lineHeight) + k.getPosition().getX(keyCapSize);
+					float y = tb.anchor.getY(tb.y, tb.lineHeight) - k.getPosition().getY(keyCapSize);
 					tx = (
 						"translate(" + valueToString(x) + " " +
 						valueToString(y) + ") scale(" +
@@ -126,11 +125,11 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 						tx + "\" fill=\"" + tcs + "\"/>\n"
 					);
 				} else if (tb.text != null && tb.text.length() > 0) {
-					float x = tb.x + k.getX(keyCapSize);
+					float x = tb.x + k.getPosition().getX(keyCapSize);
 					String a = tb.anchor.getTextAnchor();
 					String[] lines = tb.text.split("\r\n|\r|\n");
 					for (int i = 0, n = lines.length; i < n; i++) {
-						float y = tb.anchor.getY(tb.y, tb.lineHeight*n) + tb.lineHeight*i + tb.lineHeight*0.8f - k.getY(keyCapSize);
+						float y = tb.anchor.getY(tb.y, tb.lineHeight*n) + tb.lineHeight*i + tb.lineHeight*0.8f - k.getPosition().getY(keyCapSize);
 						keyboard.append("<text");
 						keyboard.append(" x=\"" + valueToString(x) + "\"");
 						keyboard.append(" y=\"" + valueToString(y) + "\"");
@@ -169,12 +168,12 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		for (KeyCap k : this) {
 			if (sb.length() == 0 || !k.isAt(x, y, keyCapSize)) {
 				if (sb.length() > 0) sb.append(";\n");
-				keyCapSize = k.getKeyCapSize();
+				KeyCapPosition p = k.getPosition();
+				keyCapSize = p.getKeyCapSize();
+				x = p.getX(keyCapSize);
+				y = p.getY(keyCapSize);
 				sb.append('@');
-				sb.append(valueToString(x = k.getX(keyCapSize)));
-				sb.append(',');
-				sb.append(valueToString(y = k.getY(keyCapSize)));
-				sb.append(unitToString(keyCapSize));
+				sb.append(p.toString());
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -183,7 +182,9 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 			x += k.getShape().getAdvanceWidth(keyCapSize);
 		}
 		if (sb.length() > 0) sb.append(";");
-		return sb.toString();
+		else return props.toString();
+		if (props.isEmpty()) return sb.toString();
+		return props.toString() + "\n" + sb.toString();
 	}
 	
 	public String toNormalizedString() {
@@ -193,12 +194,11 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		for (KeyCap k : this) {
 			if (sb.length() == 0 || !k.isAt(x, y, keyCapSize)) {
 				if (sb.length() > 0) sb.append(";\n");
-				// keyCapSize = k.getKeyCapSize();
+				KeyCapPosition p = k.getPosition();
+				x = p.getX(keyCapSize);
+				y = p.getY(keyCapSize);
 				sb.append('@');
-				sb.append(valueToString(x = k.getX(keyCapSize)));
-				sb.append(',');
-				sb.append(valueToString(y = k.getY(keyCapSize)));
-				sb.append(unitToString(keyCapSize));
+				sb.append(p.toNormalizedString());
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -207,7 +207,9 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 			x += k.getShape().getAdvanceWidth(keyCapSize);
 		}
 		if (sb.length() > 0) sb.append(";");
-		return sb.toString();
+		else return props.toString();
+		if (props.isEmpty()) return sb.toString();
+		return props.toString() + "\n" + sb.toString();
 	}
 	
 	public String toMinimizedString() {
@@ -217,12 +219,12 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 		for (KeyCap k : this) {
 			if (sb.length() == 0 || !k.isAt(x, y, keyCapSize)) {
 				if (sb.length() > 0) sb.append(";");
-				keyCapSize = k.getMinimalKeyCapSize();
+				KeyCapPosition p = k.getPosition();
+				keyCapSize = p.getMinimalKeyCapSize();
+				x = p.getX(keyCapSize);
+				y = p.getY(keyCapSize);
 				sb.append('@');
-				sb.append(valueToString(x = k.getX(keyCapSize)));
-				sb.append(',');
-				sb.append(valueToString(y = k.getY(keyCapSize)));
-				sb.append(unitToString(keyCapSize));
+				sb.append(p.toMinimizedString());
 				sb.append(':');
 			} else {
 				sb.append(',');
@@ -231,6 +233,8 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 			x += k.getShape().getAdvanceWidth(keyCapSize);
 		}
 		if (sb.length() > 0) sb.append(";");
-		return sb.toString();
+		else return props.toString();
+		if (props.isEmpty()) return sb.toString();
+		return props.toString() + "\n" + sb.toString();
 	}
 }
