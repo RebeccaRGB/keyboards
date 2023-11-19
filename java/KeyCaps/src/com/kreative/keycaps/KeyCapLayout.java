@@ -8,12 +8,10 @@ import static com.kreative.keycaps.StringUtilities.stringWidth;
 import static com.kreative.keycaps.StringUtilities.xmlSpecialChars;
 
 import java.awt.Font;
-import java.awt.Shape;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 public class KeyCapLayout extends ArrayList<KeyCap> {
 	private static final long serialVersionUID = 1L;
@@ -86,32 +84,19 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 	public String toSVG(KeyCapMold cs, float csScale, KeyCapEngraver ce, float keyCapSize) {
 		String tcs = colorToString(cs.getDefaultLegendColor(cs.getDefaultKeyCapColor()), "black");
 		String vbox = toSVGViewBox(getBounds(keyCapSize), 0, ROUNDING);
-		StringBuffer shapeDefs = new StringBuffer();
-		StringBuffer pathDefs = new StringBuffer();
+		SVGShapeDefs shapeDefs = new SVGShapeDefs(cs, csScale, keyCapSize);
+		SVGPathDefs pathDefs = new SVGPathDefs();
 		StringBuffer keyboard = new StringBuffer();
-		HashMap<KeyCapShape,Integer> shapes = new HashMap<KeyCapShape,Integer>();
-		HashMap<String,Integer> paths = new HashMap<String,Integer>();
 		Collections.sort(this);
 		for (KeyCap k : this) {
-			Integer shapeId = shapes.get(k.getShape());
-			if (shapeId == null) {
-				shapes.put(k.getShape(), (shapeId = shapes.size()));
-				Shape shape = k.getShape().toAWTShape(keyCapSize / csScale);
-				shapeDefs.append("<g id=\"shape" + shapeId + "\">\n");
-				shapeDefs.append(cs.createLayeredObject(shape, null, null).toSVG("  ", "  ", ROUNDING));
-				shapeDefs.append("</g>\n");
-			}
+			String shapeID = shapeDefs.getShapeID(k.getShape(), null, null);
 			keyboard.append("<g class=\"key\">\n");
 			String tx = "translate(" + valueToString(+k.getPosition().getX(keyCapSize)) + " " + valueToString(-k.getPosition().getY(keyCapSize)) + ")";
 			if (csScale != 1) tx += " scale(" + valueToString(csScale) + " " + valueToString(csScale) + ")";
-			keyboard.append("<use xlink:href=\"#shape" + shapeId + "\" transform=\"" + tx + "\"/>\n");
+			keyboard.append("<use xlink:href=\"#" + shapeID + "\" transform=\"" + tx + "\"/>\n");
 			for (KeyCapEngraver.TextBox tb : ce.makeBoxes(cs, csScale, k.getShape(), keyCapSize, k.getLegend())) {
 				if (tb.path != null && tb.path.length() > 0) {
-					Integer pathId = paths.get(tb.path);
-					if (pathId == null) {
-						paths.put(tb.path, (pathId = paths.size()));
-						pathDefs.append("<path id=\"path" + pathId + "\" d=\"" + tb.path + "\"/>\n");
-					}
+					String pathID = pathDefs.getPathID(tb.path);
 					float x = tb.anchor.getX(tb.x, tb.lineHeight) + k.getPosition().getX(keyCapSize);
 					float y = tb.anchor.getY(tb.y, tb.lineHeight) - k.getPosition().getY(keyCapSize);
 					tx = (
@@ -121,7 +106,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 						valueToString(tb.lineHeight) + ")"
 					);
 					keyboard.append(
-						"<use xlink:href=\"#path" + pathId + "\" transform=\"" +
+						"<use xlink:href=\"#" + pathID + "\" transform=\"" +
 						tx + "\" fill=\"" + tcs + "\"/>\n"
 					);
 				} else if (tb.text != null && tb.text.length() > 0) {
