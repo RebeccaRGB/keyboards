@@ -56,6 +56,15 @@ public class PropertyMap extends HashMap<String,Object> {
 		p.expectEnd();
 	}
 	
+	public boolean containsAny(String... keys) {
+		for (String key : keys) {
+			if (containsKey(key)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public Object getAny(String... keys) {
 		for (String key : keys) {
 			if (containsKey(key)) {

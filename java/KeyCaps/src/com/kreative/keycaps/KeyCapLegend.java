@@ -135,20 +135,10 @@ public class KeyCapLegend {
 		return Type.forKeys(items.keySet());
 	}
 	
-	public String getText(int i) {
+	public KeyCapLegendItem getItem(int i) {
 		Type type = getType();
 		if (type == null) return null;
-		KeyCapLegendItem item = items.get(type.paramKeys[i]);
-		if (item == null) return null;
-		return item.getText();
-	}
-	
-	public String getPath(int i) {
-		Type type = getType();
-		if (type == null) return null;
-		KeyCapLegendItem item = items.get(type.paramKeys[i]);
-		if (item == null) return null;
-		return item.getPath();
+		return items.get(type.paramKeys[i]);
 	}
 	
 	public String toString() {

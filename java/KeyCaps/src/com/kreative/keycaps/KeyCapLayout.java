@@ -1,13 +1,5 @@
 package com.kreative.keycaps;
 
-import static com.kreative.keycaps.ColorUtilities.colorToString;
-import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
-import static com.kreative.keycaps.KeyCapUnits.valueToString;
-import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
-import static com.kreative.keycaps.StringUtilities.stringWidth;
-import static com.kreative.keycaps.StringUtilities.xmlSpecialChars;
-
-import java.awt.Font;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
@@ -79,71 +71,6 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 			}
 		}
 		return new Rectangle2D.Float(minx, miny, maxx-minx, maxy-miny);
-	}
-	
-	public String toSVG(KeyCapMold cs, float csScale, KeyCapEngraver ce, float keyCapSize) {
-		String tcs = colorToString(cs.getDefaultLegendColor(cs.getDefaultKeyCapColor()), "black");
-		String vbox = toSVGViewBox(getBounds(keyCapSize), 0, ROUNDING);
-		SVGShapeDefs shapeDefs = new SVGShapeDefs(cs, csScale, keyCapSize);
-		SVGPathDefs pathDefs = new SVGPathDefs();
-		StringBuffer keyboard = new StringBuffer();
-		Collections.sort(this);
-		for (KeyCap k : this) {
-			String shapeID = shapeDefs.getShapeID(k.getShape(), null, null);
-			keyboard.append("<g class=\"key\">\n");
-			String tx = "translate(" + valueToString(+k.getPosition().getX(keyCapSize)) + " " + valueToString(-k.getPosition().getY(keyCapSize)) + ")";
-			if (csScale != 1) tx += " scale(" + valueToString(csScale) + " " + valueToString(csScale) + ")";
-			keyboard.append("<use xlink:href=\"#" + shapeID + "\" transform=\"" + tx + "\"/>\n");
-			for (KeyCapEngraver.TextBox tb : ce.makeBoxes(cs, csScale, k.getShape(), keyCapSize, k.getLegend())) {
-				if (tb.path != null && tb.path.length() > 0) {
-					String pathID = pathDefs.getPathID(tb.path);
-					float x = tb.anchor.getX(tb.x, tb.lineHeight) + k.getPosition().getX(keyCapSize);
-					float y = tb.anchor.getY(tb.y, tb.lineHeight) - k.getPosition().getY(keyCapSize);
-					tx = (
-						"translate(" + valueToString(x) + " " +
-						valueToString(y) + ") scale(" +
-						valueToString(tb.lineHeight) + " " +
-						valueToString(tb.lineHeight) + ")"
-					);
-					keyboard.append(
-						"<use xlink:href=\"#" + pathID + "\" transform=\"" +
-						tx + "\" fill=\"" + tcs + "\"/>\n"
-					);
-				} else if (tb.text != null && tb.text.length() > 0) {
-					float x = tb.x + k.getPosition().getX(keyCapSize);
-					String a = tb.anchor.getTextAnchor();
-					String[] lines = tb.text.split("\r\n|\r|\n");
-					for (int i = 0, n = lines.length; i < n; i++) {
-						float y = tb.anchor.getY(tb.y, tb.lineHeight*n) + tb.lineHeight*i + tb.lineHeight*0.8f - k.getPosition().getY(keyCapSize);
-						keyboard.append("<text");
-						keyboard.append(" x=\"" + valueToString(x) + "\"");
-						keyboard.append(" y=\"" + valueToString(y) + "\"");
-						keyboard.append(" text-anchor=\"" + a + "\"");
-						keyboard.append(" font-family=\"Arial\"");
-						keyboard.append(" font-size=\"" + valueToString(tb.lineHeight) + "\"");
-						if (stringWidth(lines[i], "Arial", Font.PLAIN, tb.lineHeight) > tb.maxWidth) {
-							keyboard.append(" textLength=\"" + valueToString(tb.maxWidth) + "\"");
-							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
-						}
-						keyboard.append(" fill=\"" + tcs + "\"");
-						keyboard.append(">" + xmlSpecialChars(lines[i]) + "</text>\n");
-					}
-				}
-			}
-			keyboard.append("</g>\n");
-		}
-		StringBuffer svg = new StringBuffer();
-		svg.append("<?xml version=\"1.0\"?>\n");
-		svg.append("<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\"" + vbox + ">\n");
-		svg.append("<defs>\n");
-		svg.append(shapeDefs.toString());
-		svg.append(pathDefs.toString());
-		svg.append("</defs>\n");
-		svg.append("<g class=\"keyboard\">\n");
-		svg.append(keyboard.toString());
-		svg.append("</g>\n");
-		svg.append("</svg>\n");
-		return svg.toString();
 	}
 	
 	public String toString() {
