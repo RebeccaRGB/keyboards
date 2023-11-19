@@ -52,8 +52,12 @@ public class SVGShapeDefs {
 			shapeIDs.put(key, (id = "shape" + shapeIDs.size()));
 			Shape sh = shape.toAWTShape(keyCapSize / moldScale);
 			LayeredObject lo = mold.createLayeredObject(sh, color, opacity);
-			String svg = lo.toSVG("  ", "  ", KeyCapUnits.ROUNDING);
-			defs.append("<g id=\"" + id + "\">\n" + svg + "</g>\n");
+			String svg = lo.toSVG("", "", KeyCapUnits.ROUNDING).trim();
+			if (svg.startsWith("<g>")) {
+				defs.append("<g id=\"" + id + "\">" + svg.substring(3) + "\n");
+			} else {
+				defs.append("<g id=\"" + id + "\">\n" + svg + "\n</g>\n");
+			}
 		}
 		return id;
 	}
