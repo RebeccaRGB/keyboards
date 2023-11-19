@@ -145,13 +145,13 @@ public class SVGRenderer {
 		svg.append(pathDefs.toString());
 		svg.append("</defs>\n");
 		svg.append(keyboard.toString());
-		svg.append("</svg>\n");
+		svg.append("</svg>");
 		return svg.toString();
 	}
 	
 	private String textColorString(Color itemColor, Color capColor) {
-		if (itemColor != null) return colorToString(itemColor, "black");
-		if (capColor != null) return colorToString(mold.getDefaultLegendColor(capColor), "black");
-		return colorToString(mold.getDefaultLegendColor(mold.getDefaultKeyCapColor()), "black");
+		if (itemColor != null) return colorToString(itemColor, null);
+		if (capColor != null) return colorToString(mold.getDefaultLegendColor(capColor), null);
+		return colorToString(mold.getDefaultLegendColor(mold.getDefaultKeyCapColor()), null);
 	}
 }
