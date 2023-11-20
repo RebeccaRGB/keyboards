@@ -17,13 +17,13 @@ public class SVGRenderer {
 	private final KeyCapMold mold;
 	private final float moldScale;
 	private final float keyCapSize;
-	private final KeyCapEngraver e;
+	private final KeyCapEngraver engraver;
 	
 	public SVGRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e) {
 		this.mold = mold;
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
-		this.e = e;
+		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
 	}
 	
 	public String render(KeyCapLayout layout) {
@@ -80,7 +80,7 @@ public class SVGRenderer {
 			Anchor jha = jp.containsAny("ha", "a") ? jp.getAnchor("ha", "a") : kha;
 			Anchor jva = jp.containsAny("va", "a") ? jp.getAnchor("va", "a") : kva;
 			
-			for (KeyCapEngraver.TextBox tb : e.makeBoxes(mold, moldScale, shape, keyCapSize, legend)) {
+			for (KeyCapEngraver.TextBox tb : engraver.makeBoxes(shape, legend)) {
 				if (tb == null || tb.item == null) continue;
 				PropertyMap ip = tb.item.getPropertyMap();
 				Color ilc = ip.containsAny("lc") ? ip.getColor("lc") : jlc;
@@ -96,8 +96,8 @@ public class SVGRenderer {
 				
 				if (tb.path != null && tb.path.length() > 0) {
 					String pathID = pathDefs.getPathID(tb.path);
-					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.lineHeight) + pos.x;
-					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.lineHeight) - pos.y;
+					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.width, tb.lineHeight) + pos.x;
+					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, tb.lineHeight) - pos.y;
 					float w = tb.lineHeight;
 					float h = tb.lineHeight;
 					tx = "translate(" + valuesToString(" ", x, y) + ") scale(" + valuesToString(" ", w, h) + ")";
@@ -108,9 +108,9 @@ public class SVGRenderer {
 					String[] lines = tb.text.split("\r\n|\r|\n");
 					float th = tb.lineHeight * lines.length;
 					float ta = tb.lineHeight * 0.8f - pos.y;
-					float x = tb.x + pos.x;
-					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, th) + ta;
 					String a = ((iha != null) ? iha : tb.anchor).getTextAnchor();
+					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.width, 0) + pos.x;
+					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, th) + ta;
 					for (int i = 0; i < lines.length; i++) {
 						keyboard.append("<text");
 						keyboard.append(" x=\"" + valueToString(x) + "\"");
@@ -118,8 +118,8 @@ public class SVGRenderer {
 						keyboard.append(" text-anchor=\"" + a + "\"");
 						keyboard.append(" font-family=\"Arial\"");
 						keyboard.append(" font-size=\"" + valueToString(tb.lineHeight) + "\"");
-						if (stringWidth(lines[i], "Arial", Font.PLAIN, tb.lineHeight) > tb.maxWidth) {
-							keyboard.append(" textLength=\"" + valueToString(tb.maxWidth) + "\"");
+						if (stringWidth(lines[i], "Arial", Font.PLAIN, tb.lineHeight) > tb.width) {
+							keyboard.append(" textLength=\"" + valueToString(tb.width) + "\"");
 							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
 						}
 						keyboard.append(tas);

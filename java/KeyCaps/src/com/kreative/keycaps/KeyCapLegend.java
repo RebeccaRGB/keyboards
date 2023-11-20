@@ -8,19 +8,42 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
-public class KeyCapLegend {
+public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
+	public static final String KEY_FUNCTION = "F";
+	public static final String KEY_ALT_FUNCTION = "AF";
+	public static final String KEY_LETTER = "L";
+	public static final String KEY_UNSHIFTED = "U";
+	public static final String KEY_SHIFTED = "S";
+	public static final String KEY_ALT_LETTER = "AL";
+	public static final String KEY_ALT_UNSHIFTED = "AU";
+	public static final String KEY_ALT_SHIFTED = "AS";
+	public static final String KEY_NUMPAD = "N";
+	public static final String KEY_NUMPAD_FUNCTION = "NF";
+	
+	public static final String KEY_FRONT_FUNCTION = "FF";
+	public static final String KEY_FRONT_ALT_FUNCTION = "FAF";
+	public static final String KEY_FRONT_LETTER = "FL";
+	public static final String KEY_FRONT_UNSHIFTED = "FU";
+	public static final String KEY_FRONT_SHIFTED = "FS";
+	public static final String KEY_FRONT_ALT_LETTER = "FAL";
+	public static final String KEY_FRONT_ALT_UNSHIFTED = "FAU";
+	public static final String KEY_FRONT_ALT_SHIFTED = "FAS";
+	public static final String KEY_FRONT_NUMPAD = "FN";
+	public static final String KEY_FRONT_NUMPAD_FUNCTION = "FNF";
+	
 	public static enum Type {
-		NONE(), // No legend
-		F("function"), // Function or modifier key
-		G("function", "altfunction"), // Dual-function or marked modifier key
-		L("letter"), // Letter key
-		A("letter", "altletter"), // Letter key with letter alt
-		T("letter", "altunshifted", "altshifted"), // Letter key with shifted/symbol alt
-		S("unshifted", "shifted"), // Shifted/symbol key
-		Z("unshifted", "shifted", "altletter"), // Shifted/symbol key with letter alt
-		Q("unshifted", "shifted", "altunshifted", "altshifted"), // Shifted/symbol key with shifted/symbol alt
-		N("numpad", "numpadfunction"); // Numpad key with non-numlock function
+		NONE(),
+		F(KEY_FUNCTION),
+		G(KEY_FUNCTION, KEY_ALT_FUNCTION),
+		L(KEY_LETTER),
+		A(KEY_LETTER, KEY_ALT_LETTER),
+		T(KEY_LETTER, KEY_ALT_UNSHIFTED, KEY_ALT_SHIFTED),
+		S(KEY_UNSHIFTED, KEY_SHIFTED),
+		Z(KEY_UNSHIFTED, KEY_SHIFTED, KEY_ALT_LETTER),
+		Q(KEY_UNSHIFTED, KEY_SHIFTED, KEY_ALT_UNSHIFTED, KEY_ALT_SHIFTED),
+		N(KEY_NUMPAD, KEY_NUMPAD_FUNCTION);
 		private final String[] paramKeys;
 		private Type(String... paramKeys) {
 			this.paramKeys = paramKeys;
@@ -131,18 +154,30 @@ public class KeyCapLegend {
 	public PropertyMap getPropertyMap() { return this.props; }
 	public Map<String,KeyCapLegendItem> getLegendItems() { return this.items; }
 	
-	public Type getType() {
-		return Type.forKeys(items.keySet());
+	public boolean containsAny(String... keys) {
+		for (String key : keys) {
+			if (items.containsKey(key)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
-	public KeyCapLegendItem getItem(int i) {
-		Type type = getType();
-		if (type == null) return null;
-		return items.get(type.paramKeys[i]);
-	}
+	public void clear() { items.clear(); }
+	public boolean containsKey(Object key) { return items.containsKey(key); }
+	public boolean containsValue(Object item) { return items.containsValue(item); }
+	public Set<Map.Entry<String,KeyCapLegendItem>> entrySet() { return items.entrySet(); }
+	public KeyCapLegendItem get(Object key) { return items.get(key); }
+	public boolean isEmpty() { return items.isEmpty(); }
+	public Set<String> keySet() { return items.keySet(); }
+	public KeyCapLegendItem put(String key, KeyCapLegendItem item) { return items.put(key, item); }
+	public void putAll(Map<? extends String, ? extends KeyCapLegendItem> map) { items.putAll(map); }
+	public KeyCapLegendItem remove(Object key) { return items.remove(key); }
+	public int size() { return items.size(); }
+	public Collection<KeyCapLegendItem> values() { return items.values(); }
 	
 	public String toString() {
-		Type type = getType();
+		Type type = Type.forKeys(items.keySet());
 		if (type == null) return toNormalizedString();
 		if (hasProperties()) return toNormalizedString();
 		int n = minParamCount(type);
@@ -190,7 +225,7 @@ public class KeyCapLegend {
 	}
 	
 	public String toMinimizedString() {
-		Type type = getType();
+		Type type = Type.forKeys(items.keySet());
 		if (type == null) return toNormalizedString();
 		if (hasProperties()) return toNormalizedString();
 		int n = minParamCount(type);

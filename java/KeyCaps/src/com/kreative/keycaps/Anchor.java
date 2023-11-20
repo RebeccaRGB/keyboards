@@ -1,5 +1,6 @@
 package com.kreative.keycaps;
 
+import java.awt.geom.Rectangle2D;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,29 +34,36 @@ public enum Anchor {
 		return map.get(name.trim().toLowerCase());
 	}
 	
-	public final float getX(float x, float width) {
+	public final float getX(float bx, float bw, float cw) {
 		switch (this) {
-			case NORTHWEST: case WEST: case SOUTHWEST: return x;
-			case NORTH: case CENTER: case SOUTH: return x - width / 2;
-			case NORTHEAST: case EAST: case SOUTHEAST: return x - width;
+			case NORTHWEST: case WEST: case SOUTHWEST: return bx;
+			case NORTH: case CENTER: case SOUTH: return bx + (bw - cw) / 2;
+			case NORTHEAST: case EAST: case SOUTHEAST: return bx + (bw - cw);
 			default: throw new IllegalStateException();
 		}
 	}
 	
-	public final float getY(float y, float height) {
+	public final float getY(float by, float bh, float ch) {
 		switch (this) {
-			case NORTHWEST: case NORTH: case NORTHEAST: return y;
-			case WEST: case CENTER: case EAST: return y - height / 2;
-			case SOUTHWEST: case SOUTH: case SOUTHEAST: return y - height;
+			case NORTHWEST: case NORTH: case NORTHEAST: return by;
+			case WEST: case CENTER: case EAST: return by + (bh - ch) / 2;
+			case SOUTHWEST: case SOUTH: case SOUTHEAST: return by + (bh - ch);
 			default: throw new IllegalStateException();
 		}
+	}
+	
+	public final Rectangle2D.Float divide(Rectangle2D r, float sw, float sh) {
+		if (r == null) return null;
+		float x = getX((float)r.getX(), (float)r.getWidth(), sw *= r.getWidth());
+		float y = getY((float)r.getY(), (float)r.getHeight(), sh *= r.getHeight());
+		return new Rectangle2D.Float(x, y, sw, sh);
 	}
 	
 	public final String getTextAnchor() {
 		switch (this) {
-			case NORTHWEST: case WEST: case SOUTHWEST: return "left";
+			case NORTHWEST: case WEST: case SOUTHWEST: return "start";
 			case NORTH: case CENTER: case SOUTH: return "middle";
-			case NORTHEAST: case EAST: case SOUTHEAST: return "right";
+			case NORTHEAST: case EAST: case SOUTHEAST: return "end";
 			default: throw new IllegalStateException();
 		}
 	}
