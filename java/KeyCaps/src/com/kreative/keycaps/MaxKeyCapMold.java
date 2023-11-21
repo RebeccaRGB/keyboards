@@ -9,6 +9,7 @@ import static com.kreative.keycaps.ShapeUtilities.translate;
 
 import java.awt.Color;
 import java.awt.Shape;
+import java.awt.geom.Rectangle2D;
 import java.util.Arrays;
 
 public class MaxKeyCapMold extends KeyCapMold {
@@ -16,13 +17,21 @@ public class MaxKeyCapMold extends KeyCapMold {
 		return getPaletteColor(31);
 	}
 	
+	private float maxBorder(Shape shape) {
+		Rectangle2D bounds = shape.getBounds2D();
+		double size = Math.min(bounds.getWidth(), bounds.getHeight());
+		float border = Math.round(size / 4);
+		return (border < 6) ? 6 : (border > 12) ? 12 : border;
+	}
+	
 	public LayeredObject createLayeredObject(Shape shape, Color color, Float opacity) {
+		float b = maxBorder(shape);
 		Shape s0 = roundCorners(shape, 6);
 		Shape s1 = roundCorners(contract(shape, 1), 5);
 		Shape s2 = roundCorners(contract(shape, 2), 4);
-		Shape s3 = translate(roundCorners(contract(shape, 9), 3), 0, -6);
-		Shape s4 = translate(roundCorners(contract(shape, 10), 2), 0, -6);
-		Shape s5 = translate(roundCorners(contract(shape, 11), 1), 0, -6);
+		Shape s3 = translate(roundCorners(contract(shape, b-3), 3), 0, 6-b);
+		Shape s4 = translate(roundCorners(contract(shape, b-2), 2), 0, 6-b);
+		Shape s5 = translate(roundCorners(contract(shape, b-1), 1), 0, 6-b);
 		Color c0 = (color != null) ? color : getDefaultKeyCapColor();
 		Color c1 = multiplyAdd(c0, 0.9f, 0.9f, 0.9f, 0, 0, 0);
 		Color c2 = multiplyAdd(c0, 1.09f, 1.09f, 1.09f, 19.5f, 19.5f, 19.5f);
@@ -56,12 +65,14 @@ public class MaxKeyCapMold extends KeyCapMold {
 	}
 	
 	public Shape createTopTextArea(Shape shape) {
-		return translate(contract(shape, 12), 0, -6);
+		float b = maxBorder(shape);
+		return translate(contract(shape, b), 0, 6-b);
 	}
 	
 	public Shape createFrontTextArea(Shape shape) {
-		Shape se = translate(contract(shape, 8), 0, -6);
-		Shape ss = translate(contract(shape, 12), 0, 10);
+		float b = maxBorder(shape);
+		Shape se = translate(contract(shape, b-4), 0, 6-b);
+		Shape ss = translate(contract(shape, b), 0, b-2);
 		return subtract(ss, se);
 	}
 }

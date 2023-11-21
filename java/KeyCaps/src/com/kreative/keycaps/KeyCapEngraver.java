@@ -34,7 +34,7 @@ public class KeyCapEngraver {
 		}
 	}
 	
-	protected static class TextBoxGen {
+	protected class TextBoxGen {
 		private final Set<String> keys;
 		private final String[] mustNotContain;
 		private final String[] mustContain;
@@ -69,7 +69,7 @@ public class KeyCapEngraver {
 			this.ta = ta;
 		}
 		protected TextBox makeBox(
-			Rectangle2D cbox, Rectangle2D tbox, Rectangle2D fbox, float tlh, float flh,
+			Rectangle2D cbox, Rectangle2D tbox, Rectangle2D fbox,
 			KeyCapLegend legend, String key, KeyCapLegendItem item
 		) {
 			if (item == null) return null;
@@ -79,19 +79,32 @@ public class KeyCapEngraver {
 			Rectangle2D box = (front ? fbox : tbox);
 			if (box == null) return null;
 			if (da != null) box = da.divide(box, dsw, dsh);
-			return new TextBox(box, (front ? flh : tlh) / lhd, ta, item);
+			float lh = (float)Math.min(defTopBox.getHeight() / lhd, box.getHeight());
+			return new TextBox(box, lh, ta, item);
 		}
 	}
 	
 	protected final KeyCapMold mold;
 	protected final float moldScale;
 	protected final float keyCapSize;
+	protected final Shape defCapShape;
+	protected final Shape defTopShape;
+	protected final Shape defFrontShape;
+	protected final Rectangle2D defCapBox;
+	protected final Rectangle2D defTopBox;
+	protected final Rectangle2D defFrontBox;
 	protected final List<TextBoxGen> gens;
 	
 	public KeyCapEngraver(KeyCapMold mold, float moldScale, float keyCapSize) {
 		this.mold = mold;
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
+		this.defCapShape = KeyCapShape.DEFAULT.toAWTShape(keyCapSize);
+		this.defTopShape = mold.createTopTextArea(this.defCapShape);
+		this.defFrontShape = mold.createFrontTextArea(this.defCapShape);
+		this.defCapBox = ShapeUtilities.getWidestRect(this.defCapShape, null);
+		this.defTopBox = ShapeUtilities.getWidestRect(this.defTopShape, null);
+		this.defFrontBox = ShapeUtilities.getWidestRect(this.defFrontShape, null);
 		this.gens = new ArrayList<TextBoxGen>();
 		this.makeGens();
 	}
@@ -172,8 +185,6 @@ public class KeyCapEngraver {
 		Rectangle2D cbox = ShapeUtilities.getWidestRect(cs, null);
 		Rectangle2D tbox = ShapeUtilities.getWidestRect(ts, null);
 		Rectangle2D fbox = ShapeUtilities.getWidestRect(fs, null);
-		float tlh = (tbox != null) ? (keyCapSize - (float)(cbox.getHeight()-tbox.getHeight())) : 0;
-		float flh = (fbox != null) ? ((float)fbox.getHeight()) : 0;
 		ArrayList<TextBox> boxes = new ArrayList<TextBox>();
 		String[] keys = legend.keySet().toArray(new String[legend.size()]);
 		Arrays.sort(keys, KEY_COMPARATOR);
@@ -181,7 +192,7 @@ public class KeyCapEngraver {
 			KeyCapLegendItem item = legend.get(key);
 			if (item == null) continue;
 			for (TextBoxGen gen : gens) {
-				TextBox box = gen.makeBox(cbox, tbox, fbox, tlh, flh, legend, key, item);
+				TextBox box = gen.makeBox(cbox, tbox, fbox, legend, key, item);
 				if (box != null) boxes.add(box);
 			}
 		}
