@@ -303,9 +303,9 @@
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(769.5 -216)"/>
-<text x="796.5" y="-256" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffcc00">TV</text>
-<text x="796.5" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffcc00">&#8661;</text>
-<text x="796.5" y="-236" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffcc00">NABU</text>
+<text x="796.5" y="-256" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffff00">TV</text>
+<text x="796.5" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffff00">&#8661;</text>
+<text x="796.5" y="-236" text-anchor="middle" font-family="Arial" font-size="10" fill="#ffff00">NABU</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(877.5 -216)"/>
