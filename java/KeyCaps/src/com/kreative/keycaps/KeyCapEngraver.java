@@ -100,8 +100,8 @@ public class KeyCapEngraver {
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
 		this.defCapShape = KeyCapShape.DEFAULT.toAWTShape(keyCapSize);
-		this.defTopShape = mold.createTopTextArea(this.defCapShape);
-		this.defFrontShape = mold.createFrontTextArea(this.defCapShape);
+		this.defTopShape = mold.createTopTextArea(this.defCapShape, null);
+		this.defFrontShape = mold.createFrontTextArea(this.defCapShape, null);
 		this.defCapBox = ShapeUtilities.getWidestRect(this.defCapShape, null);
 		this.defTopBox = ShapeUtilities.getWidestRect(this.defTopShape, null);
 		this.defFrontBox = ShapeUtilities.getWidestRect(this.defFrontShape, null);
@@ -178,10 +178,10 @@ public class KeyCapEngraver {
 		F   (KeyCapLegend.KEY_FRONT_NUMPAD_FUNCTION,   Anchor.SOUTH,     1,    0.4f, 3,    Anchor.CENTER);
 	}
 	
-	public TextBox[] makeBoxes(KeyCapShape shape, KeyCapLegend legend) {
+	public TextBox[] makeBoxes(KeyCapShape shape, String vs, KeyCapLegend legend) {
 		Shape cs = shape.toAWTShape(keyCapSize);
-		Shape ts = mold.createTopTextArea(cs);
-		Shape fs = mold.createFrontTextArea(cs);
+		Shape ts = mold.createTopTextArea(cs, vs);
+		Shape fs = mold.createFrontTextArea(cs, vs);
 		Rectangle2D cbox = ShapeUtilities.getWidestRect(cs, null);
 		Rectangle2D tbox = ShapeUtilities.getWidestRect(ts, null);
 		Rectangle2D fbox = ShapeUtilities.getWidestRect(fs, null);

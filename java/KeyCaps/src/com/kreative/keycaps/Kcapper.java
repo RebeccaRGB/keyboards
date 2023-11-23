@@ -55,7 +55,7 @@ public final class Kcapper {
 			} else {
 				AffineTransform tx = AffineTransform.getScaleInstance(1/scale, 1/scale);
 				Shape shape = tx.createTransformedShape(makeKeyShape(points));
-				String paths = mold.createLayeredObject(shape, null, null).toSVG("", "", ROUNDING);
+				String paths = mold.createLayeredObject(shape, null, null, null).toSVG("", "", ROUNDING);
 				defs.append("<g id=\"shape" + i + "\">\n" + paths + "\n</g>\n");
 			}
 			int kc = in.readShort() + 1;

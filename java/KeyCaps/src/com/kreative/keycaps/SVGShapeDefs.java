@@ -10,15 +10,17 @@ import java.util.Map;
 public class SVGShapeDefs {
 	private static final class Key {
 		private final KeyCapShape shape;
+		private final String vs;
 		private final Color color;
 		private final Float opacity;
-		private Key(KeyCapShape shape, Color color, Float opacity) {
+		private Key(KeyCapShape shape, String vs, Color color, Float opacity) {
 			this.shape = shape;
+			this.vs = vs;
 			this.color = color;
 			this.opacity = opacity;
 		}
 		private List<Object> asList() {
-			return Arrays.asList(shape, color, opacity);
+			return Arrays.asList(shape, vs, color, opacity);
 		}
 		public int hashCode() {
 			return asList().hashCode();
@@ -45,13 +47,13 @@ public class SVGShapeDefs {
 		this.defs = new StringBuffer();
 	}
 	
-	public String getShapeID(KeyCapShape shape, Color color, Float opacity) {
-		Key key = new Key(shape, color, opacity);
+	public String getShapeID(KeyCapShape shape, String vs, Color color, Float opacity) {
+		Key key = new Key(shape, vs, color, opacity);
 		String id = shapeIDs.get(key);
 		if (id == null) {
 			shapeIDs.put(key, (id = "shape" + shapeIDs.size()));
 			Shape sh = shape.toAWTShape(keyCapSize / moldScale);
-			LayeredObject lo = mold.createLayeredObject(sh, color, opacity);
+			LayeredObject lo = mold.createLayeredObject(sh, vs, color, opacity);
 			String svg = lo.toSVG("", "", KeyCapUnits.ROUNDING).trim();
 			if (svg.startsWith("<g>")) {
 				defs.append("<g id=\"" + id + "\">" + svg.substring(3) + "\n");

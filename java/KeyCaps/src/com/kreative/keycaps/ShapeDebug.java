@@ -19,6 +19,7 @@ public final class ShapeDebug {
 		String shapeString = "";
 		KeyCapShape shape = KeyCapShape.DEFAULT;
 		float size = 20;
+		String vs = null;
 		Color color = null;
 		Float opacity = null;
 		float padding = 10;
@@ -46,6 +47,8 @@ public final class ShapeDebug {
 					System.err.println("Invalid size: " + arg);
 					return;
 				}
+			} else if (arg.equals("-v") && argi < args.length) {
+				vs = args[argi++];
 			} else if (arg.equals("-c") && argi < args.length) {
 				int i = parseColorIndex(args[argi++]);
 				color = getPaletteColor(i);
@@ -94,7 +97,7 @@ public final class ShapeDebug {
 				svg.add("<path d=\"" + path + "\" fill=\"none\" stroke=\"black\"/>");
 			}
 		} else {
-			LayeredObject o = mold.createLayeredObject(awtShape, color, opacity);
+			LayeredObject o = mold.createLayeredObject(awtShape, vs, color, opacity);
 			svg.add(o.toSVG("", "", ROUNDING));
 		}
 		svg.add("</svg>");
@@ -121,6 +124,7 @@ public final class ShapeDebug {
 		System.err.println("  -m <str>      Specify mold; default null");
 		System.err.println("  -s <str>      Specify shape; default 1u");
 		System.err.println("  -u <num>      Specify size; default 20");
+		System.err.println("  -v <str>      Specify variant selector");
 		System.err.println("  -c <color>    Specify color");
 		System.err.println("  -a <num>      Specify opacity (0.0 - 1.0)");
 		System.err.println("  -p <num>      Specify padding; default 10");

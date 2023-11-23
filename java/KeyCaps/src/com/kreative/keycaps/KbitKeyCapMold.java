@@ -112,7 +112,7 @@ public class KbitKeyCapMold extends KeyCapMold {
 		return defaultColor;
 	}
 	
-	public LayeredObject createLayeredObject(Shape shape, Color color, Float opacity) {
+	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
 		if (color == null) color = getDefaultKeyCapColor();
 		List<LayeredObject> layers = new ArrayList<LayeredObject>();
 		for (int li = 0; li < layerCount; li++) {
@@ -125,11 +125,11 @@ public class KbitKeyCapMold extends KeyCapMold {
 		return new LayeredGroup(layers, null, null);
 	}
 	
-	public Shape createTopTextArea(Shape shape) {
+	public Shape createTopTextArea(Shape shape, String vs) {
 		return contract(shape, pathInset);
 	}
 	
-	public Shape createFrontTextArea(Shape shape) {
+	public Shape createFrontTextArea(Shape shape, String vs) {
 		return null;
 	}
 }

@@ -24,11 +24,23 @@ public class MaxKeyCapMold extends KeyCapMold {
 		return (border < 6) ? 6 : (border > 12) ? 12 : border;
 	}
 	
-	public LayeredObject createLayeredObject(Shape shape, Color color, Float opacity) {
+	private boolean squareTop(String vs) {
+		if (vs == null || (vs = vs.trim()).length() == 0) return false;
+		return Arrays.asList(vs.split("\\s+")).contains("s");
+	}
+	
+	private Shape squareTop(Shape shape) {
+		Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
+		double s = Math.min(r.getWidth(), r.getHeight());
+		return new Rectangle2D.Double(r.getCenterX() - s/2, r.getCenterY() - s/2, s, s);
+	}
+	
+	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
 		float b = maxBorder(shape);
 		Shape s0 = roundCorners(shape, 6);
 		Shape s1 = roundCorners(contract(shape, 1), 5);
 		Shape s2 = roundCorners(contract(shape, 2), 4);
+		if (squareTop(vs)) shape = squareTop(shape);
 		Shape s3 = translate(roundCorners(contract(shape, b-3), 3), 0, 6-b);
 		Shape s4 = translate(roundCorners(contract(shape, b-2), 2), 0, 6-b);
 		Shape s5 = translate(roundCorners(contract(shape, b-1), 1), 0, 6-b);
@@ -64,13 +76,15 @@ public class MaxKeyCapMold extends KeyCapMold {
 		}
 	}
 	
-	public Shape createTopTextArea(Shape shape) {
+	public Shape createTopTextArea(Shape shape, String vs) {
 		float b = maxBorder(shape);
+		if (squareTop(vs)) shape = squareTop(shape);
 		return translate(contract(shape, b), 0, 6-b);
 	}
 	
-	public Shape createFrontTextArea(Shape shape) {
+	public Shape createFrontTextArea(Shape shape, String vs) {
 		float b = maxBorder(shape);
+		if (squareTop(vs)) shape = squareTop(shape);
 		Shape se = translate(contract(shape, b-4), 0, 6-b);
 		Shape ss = translate(contract(shape, b), 0, b-2);
 		return subtract(ss, se);

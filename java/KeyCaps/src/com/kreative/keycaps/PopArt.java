@@ -17,6 +17,7 @@ public final class PopArt {
 		KeyCapMold mold = new MaxKeyCapMold();
 		KeyCapShape shape = KeyCapShape.DEFAULT;
 		float size = 54;
+		String vs = null;
 		int columns = 16;
 		int rows = 16;
 		File output = null;
@@ -48,6 +49,8 @@ public final class PopArt {
 					System.err.println("Invalid size: " + arg);
 					return;
 				}
+			} else if (arg.equals("-v") && argi < args.length) {
+				vs = args[argi++];
 			} else if (arg.equals("-6")) {
 				columns = rows = 8;
 			} else if (arg.equals("-8")) {
@@ -98,7 +101,7 @@ public final class PopArt {
 				Shape s = translate(awtShape, fx, fy);
 				Color color = getPaletteColor(i);
 				Float opacity = getPaletteOpacity(i);
-				LayeredObject o = mold.createLayeredObject(s, color, opacity);
+				LayeredObject o = mold.createLayeredObject(s, vs, color, opacity);
 				svg.add(o.toSVG("", "", ROUNDING));
 			}
 		}
@@ -126,6 +129,7 @@ public final class PopArt {
 		System.err.println("  -m <str>      Specify mold; default MaxKeyCapMold");
 		System.err.println("  -s <str>      Specify shape; default 1u");
 		System.err.println("  -u <num>      Specify size; default 54");
+		System.err.println("  -v <str>      Specify variant selector");
 		System.err.println("  -6            Specify 8 rows and 8 columns");
 		System.err.println("  -8            Specify 16 rows and 16 columns");
 		System.err.println("  -c <int>      Specify column count");

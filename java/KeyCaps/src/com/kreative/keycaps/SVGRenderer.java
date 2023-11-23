@@ -35,6 +35,7 @@ public class SVGRenderer {
 		PropertyMap lp = layout.getPropertyMap();
 		String lclass = lp.containsAny("class") ? lp.getString("class") : null;
 		String lid = lp.containsAny("id") ? lp.getString("id") : null;
+		String lvs = lp.containsAny("vs") ? lp.getString("vs") : null;
 		Color lcc = lp.containsAny("cc") ? lp.getColor("cc") : null;
 		Float lco = lp.containsAny("co") ? lp.getOpacity("co") : null;
 		Color llc = lp.containsAny("lc") ? lp.getColor("lc") : null;
@@ -53,6 +54,7 @@ public class SVGRenderer {
 			PropertyMap kp = k.getPropertyMap();
 			String kclass = kp.containsAny("class") ? kp.getString("class") : null;
 			String kid = kp.containsAny("id") ? kp.getString("id") : null;
+			String kvs = kp.containsAny("vs") ? kp.getString("vs") : lvs;
 			Color kcc = kp.containsAny("cc") ? kp.getColor("cc") : lcc;
 			Float kco = kp.containsAny("co") ? kp.getOpacity("co") : lco;
 			Color klc = kp.containsAny("lc") ? kp.getColor("lc") : llc;
@@ -67,7 +69,7 @@ public class SVGRenderer {
 			keyboard.append(">\n");
 			
 			KeyCapShape shape = k.getShape();
-			String shapeID = shapeDefs.getShapeID(shape, kcc, kco);
+			String shapeID = shapeDefs.getShapeID(shape, kvs, kcc, kco);
 			Point2D.Float pos = k.getPosition().getLocation(keyCapSize);
 			String tx = "translate(" + valuesToString(" ", +pos.x, -pos.y) + ")";
 			if (moldScale != 1) tx += " scale(" + valuesToString(" ", moldScale, moldScale) + ")";
@@ -80,7 +82,7 @@ public class SVGRenderer {
 			Anchor jha = jp.containsAny("ha", "a") ? jp.getAnchor("ha", "a") : kha;
 			Anchor jva = jp.containsAny("va", "a") ? jp.getAnchor("va", "a") : kva;
 			
-			for (KeyCapEngraver.TextBox tb : engraver.makeBoxes(shape, legend)) {
+			for (KeyCapEngraver.TextBox tb : engraver.makeBoxes(shape, kvs, legend)) {
 				if (tb == null || tb.item == null) continue;
 				PropertyMap ip = tb.item.getPropertyMap();
 				Color ilc = ip.containsAny("lc") ? ip.getColor("lc") : jlc;
