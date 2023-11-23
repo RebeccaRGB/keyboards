@@ -40,13 +40,16 @@
 
 ## IBM Keyboards
 
-### IBM Model F XT
+### IBM Model F XT, US
 This is why we can't have ~~nice things~~ sensible scan codes for the 'print screen' and 'pause/break' keys.
 
-![](keyboards-svg/IBM%20Model%20F%20XT.svg)
+![](keyboards-svg/IBM%20Model%20F%20XT,%20US.svg)
 
-### IBM Model F AT
-![](keyboards-svg/IBM%20Model%20F%20AT.svg)
+### IBM Model F XT, DE
+![](keyboards-svg/IBM%20Model%20F%20XT,%20DE.svg)
+
+### IBM Model F AT, US
+![](keyboards-svg/IBM%20Model%20F%20AT,%20US.svg)
 
 ### IBM Model F122
 ![](keyboards-svg/IBM%20Model%20F122.svg)
