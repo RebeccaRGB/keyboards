@@ -2,6 +2,7 @@ package com.kreative.keycaps;
 
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.multiplyAdd;
+import static com.kreative.keycaps.ShapeUtilities.add;
 import static com.kreative.keycaps.ShapeUtilities.contract;
 import static com.kreative.keycaps.ShapeUtilities.roundCorners;
 import static com.kreative.keycaps.ShapeUtilities.subtract;
@@ -40,10 +41,27 @@ public class MaxKeyCapMold extends KeyCapMold {
 		Shape s0 = roundCorners(shape, 6);
 		Shape s1 = roundCorners(contract(shape, 1), 5);
 		Shape s2 = roundCorners(contract(shape, 2), 4);
-		if (squareTop(vs)) shape = squareTop(shape);
-		Shape s3 = translate(roundCorners(contract(shape, b-3), 3), 0, 6-b);
-		Shape s4 = translate(roundCorners(contract(shape, b-2), 2), 0, 6-b);
-		Shape s5 = translate(roundCorners(contract(shape, b-1), 1), 0, 6-b);
+		Shape s3, s4, s5;
+		if (squareTop(vs)) {
+			float a = (6 + b) / 2;
+			Shape s3a = translate(roundCorners(contract(shape, a-3), 3), 0, 6-a);
+			Shape s4a = translate(roundCorners(contract(shape, a-2), 2), 0, 6-a);
+			Shape s5a = translate(roundCorners(contract(shape, a-1), 1), 0, 6-a);
+			shape = squareTop(shape);
+			Shape s3b = translate(roundCorners(contract(shape, b-3), 3), 0, 6-b);
+			Shape s4b = translate(roundCorners(contract(shape, b-2), 2), 0, 6-b);
+			Shape s5b = translate(roundCorners(contract(shape, b-1), 1), 0, 6-b);
+			Shape s3c = translate(roundCorners(contract(shape, b-a+2), 4), 0, 6-a);
+			Shape s4c = translate(roundCorners(contract(shape, b-a+1), 5), 0, 6-a);
+			Shape s5c = translate(roundCorners(contract(shape, b-a+0), 6), 0, 6-a);
+			s3 = add(s3b, subtract(s3a, s3c));
+			s4 = add(s4b, subtract(s4a, s4c));
+			s5 = add(s5b, subtract(s5a, s5c));
+		} else {
+			s3 = translate(roundCorners(contract(shape, b-3), 3), 0, 6-b);
+			s4 = translate(roundCorners(contract(shape, b-2), 2), 0, 6-b);
+			s5 = translate(roundCorners(contract(shape, b-1), 1), 0, 6-b);
+		}
 		Color c0 = (color != null) ? color : getDefaultKeyCapColor();
 		Color c1 = multiplyAdd(c0, 0.9f, 0.9f, 0.9f, 0, 0, 0);
 		Color c2 = multiplyAdd(c0, 1.09f, 1.09f, 1.09f, 19.5f, 19.5f, 19.5f);

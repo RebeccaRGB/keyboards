@@ -37,9 +37,9 @@ public class SVGRenderer {
 		String lid = lp.containsAny("id") ? lp.getString("id") : null;
 		String lvs = lp.containsAny("vs") ? lp.getString("vs") : null;
 		Color lcc = lp.containsAny("cc") ? lp.getColor("cc") : null;
-		Float lco = lp.containsAny("co") ? lp.getOpacity("co") : null;
+		Float lco = lp.containsAny("co", "cc") ? lp.getOpacity("co", "cc") : null;
 		Color llc = lp.containsAny("lc") ? lp.getColor("lc") : null;
-		Float llo = lp.containsAny("lo") ? lp.getOpacity("lo") : null;
+		Float llo = lp.containsAny("lo", "lc") ? lp.getOpacity("lo", "lc") : null;
 		Anchor lha = lp.containsAny("ha", "a") ? lp.getAnchor("ha", "a") : null;
 		Anchor lva = lp.containsAny("va", "a") ? lp.getAnchor("va", "a") : null;
 		
@@ -56,9 +56,9 @@ public class SVGRenderer {
 			String kid = kp.containsAny("id") ? kp.getString("id") : null;
 			String kvs = kp.containsAny("vs") ? kp.getString("vs") : lvs;
 			Color kcc = kp.containsAny("cc") ? kp.getColor("cc") : lcc;
-			Float kco = kp.containsAny("co") ? kp.getOpacity("co") : lco;
+			Float kco = kp.containsAny("co", "cc") ? kp.getOpacity("co", "cc") : lco;
 			Color klc = kp.containsAny("lc") ? kp.getColor("lc") : llc;
-			Float klo = kp.containsAny("lo") ? kp.getOpacity("lo") : llo;
+			Float klo = kp.containsAny("lo", "lc") ? kp.getOpacity("lo", "lc") : llo;
 			Anchor kha = kp.containsAny("ha", "a") ? kp.getAnchor("ha", "a") : lha;
 			Anchor kva = kp.containsAny("va", "a") ? kp.getAnchor("va", "a") : lva;
 			
@@ -78,7 +78,7 @@ public class SVGRenderer {
 			KeyCapLegend legend = k.getLegend();
 			PropertyMap jp = legend.getPropertyMap();
 			Color jlc = jp.containsAny("lc") ? jp.getColor("lc") : klc;
-			Float jlo = jp.containsAny("lo") ? jp.getOpacity("lo") : klo;
+			Float jlo = jp.containsAny("lo", "lc") ? jp.getOpacity("lo", "lc") : klo;
 			Anchor jha = jp.containsAny("ha", "a") ? jp.getAnchor("ha", "a") : kha;
 			Anchor jva = jp.containsAny("va", "a") ? jp.getAnchor("va", "a") : kva;
 			
@@ -86,7 +86,7 @@ public class SVGRenderer {
 				if (tb == null || tb.item == null) continue;
 				PropertyMap ip = tb.item.getPropertyMap();
 				Color ilc = ip.containsAny("lc") ? ip.getColor("lc") : jlc;
-				Float ilo = ip.containsAny("lo") ? ip.getOpacity("lo") : jlo;
+				Float ilo = ip.containsAny("lo", "lc") ? ip.getOpacity("lo", "lc") : jlo;
 				Anchor iha = ip.containsAny("ha", "a") ? ip.getAnchor("ha", "a") : jha;
 				Anchor iva = ip.containsAny("va", "a") ? ip.getAnchor("va", "a") : jva;
 				
