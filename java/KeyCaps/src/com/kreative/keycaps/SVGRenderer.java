@@ -93,7 +93,7 @@ public class SVGRenderer {
 				StringBuffer tas = new StringBuffer();
 				String tcs = textColorString(ilc, kcc);
 				if (tcs != null) tas.append(" fill=\"" + tcs + "\"");
-				String tos = (ilo != null) ? valueToString(ilo) : null;
+				String tos = (ilo != null && ilo < 1) ? valueToString(ilo) : null;
 				if (tos != null) tas.append(" opacity=\"" + tos + "\"");
 				
 				if (tb.path != null && tb.path.length() > 0) {
