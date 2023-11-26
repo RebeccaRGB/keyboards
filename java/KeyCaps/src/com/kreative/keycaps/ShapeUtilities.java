@@ -7,6 +7,7 @@ import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.PathIterator;
 import java.awt.geom.Rectangle2D;
+import java.util.Comparator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
@@ -91,7 +92,35 @@ public final class ShapeUtilities {
 		return tx.createTransformedShape(shape);
 	}
 	
+	public static final Comparator<Rectangle2D> WIDEST = new Comparator<Rectangle2D>() {
+		public int compare(Rectangle2D a, Rectangle2D b) {
+			if (a.getWidth() > b.getWidth()) return 1;
+			if (a.getWidth() < b.getWidth()) return -1;
+			if (a.getHeight() > b.getHeight()) return 1;
+			if (a.getHeight() < b.getHeight()) return -1;
+			return 0;
+		}
+	};
+	
+	public static final Comparator<Rectangle2D> TALLEST = new Comparator<Rectangle2D>() {
+		public int compare(Rectangle2D a, Rectangle2D b) {
+			if (a.getHeight() > b.getHeight()) return 1;
+			if (a.getHeight() < b.getHeight()) return -1;
+			if (a.getWidth() > b.getWidth()) return 1;
+			if (a.getWidth() < b.getWidth()) return -1;
+			return 0;
+		}
+	};
+	
 	public static Rectangle2D getWidestRect(Shape shape, AffineTransform tx) {
+		return getMaxRect(shape, tx, WIDEST);
+	}
+	
+	public static Rectangle2D getTallestRect(Shape shape, AffineTransform tx) {
+		return getMaxRect(shape, tx, TALLEST);
+	}
+	
+	public static Rectangle2D getMaxRect(Shape shape, AffineTransform tx, Comparator<Rectangle2D> cmp) {
 		if (shape == null) return null;
 		SortedSet<Float> xCoords = new TreeSet<Float>();
 		SortedSet<Float> yCoords = new TreeSet<Float>();
@@ -118,11 +147,7 @@ public final class ShapeUtilities {
 			for (float x0 : xCoords) for (float x1 : xCoords) if (x1 > x0) {
 				Rectangle2D r = new Rectangle2D.Float(x0, y0, x1 - x0, y1 - y0);
 				if (shape.contains(r)) {
-					if (maxRect == null || r.getWidth() > maxRect.getWidth()) {
-						maxRect = r;
-					} else if (r.getWidth() < maxRect.getWidth()) {
-						continue;
-					} else if (r.getHeight() > maxRect.getHeight()) {
+					if (maxRect == null || cmp.compare(r, maxRect) > 0) {
 						maxRect = r;
 					}
 				}

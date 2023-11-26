@@ -40,6 +40,7 @@ public class SVGRenderer {
 		Float lco = lp.containsAny("co", "cc") ? lp.getOpacity("co", "cc") : null;
 		Color llc = lp.containsAny("lc") ? lp.getColor("lc") : null;
 		Float llo = lp.containsAny("lo", "lc") ? lp.getOpacity("lo", "lc") : null;
+		Float llh = lp.containsAny("lh") ? lp.getFloat("lh") : null;
 		Anchor lha = lp.containsAny("ha", "a") ? lp.getAnchor("ha", "a") : null;
 		Anchor lva = lp.containsAny("va", "a") ? lp.getAnchor("va", "a") : null;
 		
@@ -59,6 +60,7 @@ public class SVGRenderer {
 			Float kco = kp.containsAny("co", "cc") ? kp.getOpacity("co", "cc") : lco;
 			Color klc = kp.containsAny("lc") ? kp.getColor("lc") : llc;
 			Float klo = kp.containsAny("lo", "lc") ? kp.getOpacity("lo", "lc") : llo;
+			Float klh = kp.containsAny("lh") ? kp.getFloat("lh") : llh;
 			Anchor kha = kp.containsAny("ha", "a") ? kp.getAnchor("ha", "a") : lha;
 			Anchor kva = kp.containsAny("va", "a") ? kp.getAnchor("va", "a") : lva;
 			
@@ -79,6 +81,7 @@ public class SVGRenderer {
 			PropertyMap jp = legend.getPropertyMap();
 			Color jlc = jp.containsAny("lc") ? jp.getColor("lc") : klc;
 			Float jlo = jp.containsAny("lo", "lc") ? jp.getOpacity("lo", "lc") : klo;
+			Float jlh = jp.containsAny("lh") ? jp.getFloat("lh") : klh;
 			Anchor jha = jp.containsAny("ha", "a") ? jp.getAnchor("ha", "a") : kha;
 			Anchor jva = jp.containsAny("va", "a") ? jp.getAnchor("va", "a") : kva;
 			
@@ -87,6 +90,7 @@ public class SVGRenderer {
 				PropertyMap ip = tb.item.getPropertyMap();
 				Color ilc = ip.containsAny("lc") ? ip.getColor("lc") : jlc;
 				Float ilo = ip.containsAny("lo", "lc") ? ip.getOpacity("lo", "lc") : jlo;
+				Float ilh = ip.containsAny("lh") ? ip.getFloat("lh") : jlh;
 				Anchor iha = ip.containsAny("ha", "a") ? ip.getAnchor("ha", "a") : jha;
 				Anchor iva = ip.containsAny("va", "a") ? ip.getAnchor("va", "a") : jva;
 				
@@ -98,29 +102,29 @@ public class SVGRenderer {
 				
 				if (tb.path != null && tb.path.length() > 0) {
 					String pathID = pathDefs.getPathID(tb.path);
-					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.width, tb.lineHeight) + pos.x;
-					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, tb.lineHeight) - pos.y;
-					float w = tb.lineHeight;
-					float h = tb.lineHeight;
-					tx = "translate(" + valuesToString(" ", x, y) + ") scale(" + valuesToString(" ", w, h) + ")";
+					float lh = (ilh != null) ? (tb.height * ilh) : tb.lineHeight;
+					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.width, lh) + pos.x;
+					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, lh) - pos.y;
+					tx = "translate(" + valuesToString(" ", x, y) + ") scale(" + valuesToString(" ", lh, lh) + ")";
 					keyboard.append("<use xlink:href=\"#" + pathID + "\" transform=\"" + tx + "\"" + tas + "/>\n");
 				}
 				
 				if (tb.text != null && tb.text.length() > 0) {
 					String[] lines = tb.text.split("\r\n|\r|\n");
-					float th = tb.lineHeight * lines.length;
-					float ta = tb.lineHeight * 0.8f - pos.y;
+					float lh = (ilh != null) ? (tb.height * ilh) : tb.lineHeight;
+					float th = lh * lines.length;
+					float ta = lh * 0.8f - pos.y;
 					String a = ((iha != null) ? iha : tb.anchor).getTextAnchor();
 					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.width, 0) + pos.x;
 					float y = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, th) + ta;
 					for (int i = 0; i < lines.length; i++) {
 						keyboard.append("<text");
 						keyboard.append(" x=\"" + valueToString(x) + "\"");
-						keyboard.append(" y=\"" + valueToString(y + tb.lineHeight * i) + "\"");
+						keyboard.append(" y=\"" + valueToString(y + lh * i) + "\"");
 						keyboard.append(" text-anchor=\"" + a + "\"");
 						keyboard.append(" font-family=\"Arial\"");
-						keyboard.append(" font-size=\"" + valueToString(tb.lineHeight) + "\"");
-						if (stringWidth(lines[i], "Arial", Font.PLAIN, tb.lineHeight) > tb.width) {
+						keyboard.append(" font-size=\"" + valueToString(lh) + "\"");
+						if (stringWidth(lines[i], "Arial", Font.PLAIN, lh) > tb.width) {
 							keyboard.append(" textLength=\"" + valueToString(tb.width) + "\"");
 							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
 						}

@@ -49,7 +49,7 @@ public class MaxKeyCapMold extends KeyCapMold {
 		}
 		if (vss.contains("se")) {
 			// Stepped Enter
-			return ShapeUtilities.getWidestRect(shape, null);
+			return ShapeUtilities.getTallestRect(shape, null);
 		}
 		return shape;
 	}
