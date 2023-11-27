@@ -54,11 +54,11 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### IBM Model F122
 ![](keyboards-svg/IBM%20Model%20F122.svg)
 
-### IBM Model M
-![](keyboards-svg/IBM%20Model%20M.svg)
+### IBM Model M, US
+![](keyboards-svg/IBM%20Model%20M,%20US.svg)
 
-### IBM Space Saving Model M
-![](keyboards-svg/IBM%20Space%20Saving%20Model%20M.svg)
+### IBM Model M, Space Saving, US
+![](keyboards-svg/IBM%20Model%20M,%20Space%20Saving,%20US.svg)
 
 ## Apple Macintosh Keyboards
 
