@@ -3,24 +3,24 @@
 <defs>
 <g id="shape0">
 <path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108 -2.686 108 -6 L 108 -48 C 108 -51.314 105.314 -54 102 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 102 -1 C 104.761 -1 107 -3.239 107 -6 L 107 -48 C 107 -50.761 104.761 -53 102 -53 Z" fill="#dadada"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 102 -2 C 104.209 -2 106 -3.791 106 -6 L 106 -48 C 106 -50.209 104.209 -52 102 -52 Z" fill="#f2f2f2"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 96 -15 C 97.657 -15 99 -16.343 99 -18 L 99 -48 C 99 -49.657 97.657 -51 96 -51 Z" fill="#dadada"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 96 -16 C 97.105 -16 98 -16.895 98 -18 L 98 -48 C 98 -49.105 97.105 -50 96 -50 Z" fill="#ffffff"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 102 -1 C 104.761 -1 107 -3.239 107 -6 L 107 -48 C 107 -50.761 104.761 -53 102 -53 Z" fill="#99998a"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 102 -2 C 104.209 -2 106 -3.791 106 -6 L 106 -48 C 106 -50.209 104.209 -52 102 -52 Z" fill="#aaaa99"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 96 -15 C 97.657 -15 99 -16.343 99 -18 L 99 -48 C 99 -49.657 97.657 -51 96 -51 Z" fill="#99998a"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 96 -16 C 97.105 -16 98 -16.895 98 -18 L 98 -48 C 98 -49.105 97.105 -50 96 -50 Z" fill="#cdcdba"/>
 </g>
 <g id="shape1">
 <path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#dadada"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#f2f2f2"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#dadada"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#ffffff"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#99998a"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#aaaa99"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#99998a"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#cdcdba"/>
 </g>
 <g id="shape2">
 <path d="M 6 -108 C 2.686 -108 0 -105.314 0 -102 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -102 C 54 -105.314 51.314 -108 48 -108 Z" fill="#000000"/>
-<path d="M 6 -107 C 3.239 -107 1 -104.761 1 -102 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -102 C 53 -104.761 50.761 -107 48 -107 Z" fill="#dadada"/>
-<path d="M 6 -106 C 3.791 -106 2 -104.209 2 -102 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -102 C 52 -104.209 50.209 -106 48 -106 Z" fill="#f2f2f2"/>
-<path d="M 12 -105 C 10.343 -105 9 -103.657 9 -102 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -102 C 45 -103.657 43.657 -105 42 -105 Z" fill="#dadada"/>
-<path d="M 12 -104 C 10.895 -104 10 -103.105 10 -102 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -102 C 44 -103.105 43.105 -104 42 -104 Z" fill="#ffffff"/>
+<path d="M 6 -107 C 3.239 -107 1 -104.761 1 -102 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -102 C 53 -104.761 50.761 -107 48 -107 Z" fill="#99998a"/>
+<path d="M 6 -106 C 3.791 -106 2 -104.209 2 -102 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -102 C 52 -104.209 50.209 -106 48 -106 Z" fill="#aaaa99"/>
+<path d="M 12 -105 C 10.343 -105 9 -103.657 9 -102 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -102 C 45 -103.657 43.657 -105 42 -105 Z" fill="#99998a"/>
+<path d="M 12 -104 C 10.895 -104 10 -103.105 10 -102 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -102 C 44 -103.105 43.105 -104 42 -104 Z" fill="#cdcdba"/>
 </g>
 <path id="path0" d="M 1 0.188 v 0.623 c 0 0.018 -0.015 0.033 -0.033 0.033 H 0.655 c -0.018 0 -0.032 -0.016 -0.032 -0.033 c 0 -0.019 0.015 -0.033 0.032 -0.033 h 0.279 V 0.222 H 0.065 v 0.557 h 0.279 c 0.018 0 0.032 0.015 0.032 0.033 c 0 0.018 -0.015 0.033 -0.032 0.033 H 0.033 C 0.015 0.845 0 0.829 0 0.812 V 0.188 c 0 -0.018 0.015 -0.033 0.033 -0.033 h 0.934 C 0.985 0.155 1 0.171 1 0.188 z M 0.683 0.325 C 0.676 0.316 0.666 0.312 0.655 0.312 H 0.345 c -0.011 0 -0.021 0.005 -0.027 0.014 C 0.312 0.334 0.31 0.345 0.313 0.354 l 0.155 0.468 C 0.474 0.835 0.486 0.845 0.5 0.845 s 0.026 -0.01 0.031 -0.022 l 0.155 -0.468 C 0.69 0.345 0.688 0.334 0.683 0.325 z"/>
 <path id="path1" d="M 1 0.188 v 0.623 c 0 0.018 -0.015 0.033 -0.033 0.033 H 0.033 C 0.015 0.845 0 0.829 0 0.812 V 0.188 c 0 -0.018 0.015 -0.033 0.033 -0.033 h 0.312 c 0.018 0 0.033 0.016 0.033 0.033 c 0 0.019 -0.015 0.033 -0.033 0.033 H 0.066 v 0.557 h 0.868 V 0.222 H 0.656 c -0.018 0 -0.033 -0.015 -0.033 -0.033 c 0 -0.018 0.015 -0.033 0.033 -0.033 h 0.312 C 0.985 0.155 1 0.171 1 0.188 z M 0.317 0.675 c 0.006 0.009 0.016 0.014 0.027 0.014 h 0.312 h 0 c 0.018 0 0.033 -0.015 0.033 -0.033 c 0 -0.005 -0.001 -0.011 -0.004 -0.015 L 0.531 0.178 C 0.527 0.165 0.514 0.155 0.5 0.155 s -0.027 0.01 -0.031 0.022 L 0.313 0.646 C 0.31 0.655 0.312 0.666 0.317 0.675 z"/>
@@ -30,79 +30,79 @@
 <g class="keyboard">
 <g class="key">
 <use xlink:href="#shape0" transform="translate(0 0)"/>
-<text x="54" y="-28.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">0</text>
+<text x="12" y="-36" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">0</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(108 0)"/>
-<text x="135" y="-28.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">.</text>
+<text x="120" y="-36" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">.</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(162 0)"/>
-<text x="189" y="-57" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">enter</text>
+<text x="174" y="-94" text-anchor="start" font-family="Arial" font-size="10" fill="#1a1a1a">&#8996;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -54)"/>
-<text x="27" y="-82.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">1</text>
+<text x="12" y="-90" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">1</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(54 -54)"/>
-<text x="81" y="-82.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">2</text>
+<text x="66" y="-90" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">2</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(108 -54)"/>
-<text x="135" y="-82.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">3</text>
+<text x="120" y="-90" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">3</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -108)"/>
-<text x="27" y="-136.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">4</text>
+<text x="12" y="-144" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">4</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(54 -108)"/>
-<text x="81" y="-136.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">5</text>
+<text x="66" y="-144" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">5</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(108 -108)"/>
-<text x="135" y="-136.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">6</text>
+<text x="120" y="-144" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">6</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(162 -108)"/>
-<text x="189" y="-142.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">,</text>
-<use xlink:href="#path0" transform="translate(184 -137) scale(10 10)" fill="#000000"/>
+<text x="174" y="-144" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">,</text>
+<use xlink:href="#path0" transform="translate(174 -138) scale(10 10)" fill="#1a1a1a"/>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -162)"/>
-<text x="27" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">7</text>
+<text x="12" y="-198" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">7</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(54 -162)"/>
-<text x="81" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">8</text>
+<text x="66" y="-198" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">8</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(108 -162)"/>
-<text x="135" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">9</text>
+<text x="120" y="-198" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">9</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(162 -162)"/>
-<text x="189" y="-196.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">/</text>
-<use xlink:href="#path1" transform="translate(184 -191) scale(10 10)" fill="#000000"/>
+<text x="174" y="-198" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">/</text>
+<use xlink:href="#path1" transform="translate(174 -192) scale(10 10)" fill="#1a1a1a"/>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -216)"/>
-<text x="27" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">clear</text>
+<text x="12" y="-256" text-anchor="start" font-family="Arial" font-size="10" fill="#1a1a1a">&#8999;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(54 -216)"/>
-<text x="81" y="-250.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">&#8722;</text>
+<text x="66" y="-252" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">&#8722;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(108 -216)"/>
-<text x="135" y="-250.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">+</text>
-<use xlink:href="#path2" transform="translate(130 -245) scale(10 10)" fill="#000000"/>
+<text x="120" y="-252" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">+</text>
+<use xlink:href="#path2" transform="translate(120 -246) scale(10 10)" fill="#1a1a1a"/>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(162 -216)"/>
-<text x="189" y="-250.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">*</text>
-<use xlink:href="#path3" transform="translate(184 -245) scale(10 10)" fill="#000000"/>
+<text x="174" y="-252" text-anchor="start" font-family="Arial" font-size="15" fill="#1a1a1a">*</text>
+<use xlink:href="#path3" transform="translate(174 -246) scale(10 10)" fill="#1a1a1a"/>
 </g>
 </g>
 </svg>

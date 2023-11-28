@@ -74,17 +74,29 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ![](keyboards-svg/Macintosh%20512K%20Keyboard,%20ISO.svg)
 
-### Macintosh 512K Keyboard, Keypad
+### Macintosh 512K Keypad, ANSI
 * KbdType 3
 * Gestalt ID 2
 
-![](keyboards-svg/Macintosh%20512K%20Keyboard,%20Keypad.svg)
+![](keyboards-svg/Macintosh%20512K%20Keypad,%20ANSI.svg)
 
-### Macintosh Plus Keyboard
+### Macintosh 512K Keypad, ISO
+* KbdType 3
+* Gestalt ID 2
+
+![](keyboards-svg/Macintosh%20512K%20Keypad,%20ISO.svg)
+
+### Macintosh Plus Keyboard, ANSI
 * KbdType 11
 * Gestalt ID 3
 
-![](keyboards-svg/Macintosh%20Plus%20Keyboard.svg)
+![](keyboards-svg/Macintosh%20Plus%20Keyboard,%20ANSI.svg)
+
+### Macintosh Plus Keyboard, ISO
+* KbdType 11
+* Gestalt ID 3
+
+![](keyboards-svg/Macintosh%20Plus%20Keyboard,%20ISO.svg)
 
 ### Apple Standard Keyboard, ANSI
 * KbdType 1

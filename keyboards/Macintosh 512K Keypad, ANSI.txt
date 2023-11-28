@@ -1,0 +1,10 @@
+# Macintosh 512K Keypad, ANSI
+# Model Number M0120
+# KbdType 3
+# Gestalt ID 2
+{name:'Macintosh 512K Keypad, ANSI',kbdType:3,gestalt:2,cc:8,lc:1,a:nw}
+0,4:['Clear'],[N,'-',$],[N,'+',$FFC18],[N,'*',$FFC1A];
+0,3:['7'],['8'],['9'],[N,'/',$FFC19];
+0,2:['4'],['5'],['6'],[N,',',$FFC1B];
+0,1:['1'],['2'],['3'];
+0,0:2u['0'],['.'],1+2u['Enter'];
