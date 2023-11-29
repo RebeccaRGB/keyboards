@@ -328,7 +328,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(837 -162)"/>
-<text x="864" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Del</text>
+<text x="864" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Delete</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(891 -162)"/>
@@ -336,7 +336,8 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(945 -162)"/>
-<text x="972" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">PgDn</text>
+<text x="972" y="-197" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Page</text>
+<text x="972" y="-187" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Down</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(1026 -162)"/>
@@ -424,7 +425,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(837 -216)"/>
-<text x="864" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Ins</text>
+<text x="864" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Insert</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(891 -216)"/>
@@ -432,11 +433,13 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(945 -216)"/>
-<text x="972" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">PgUp</text>
+<text x="972" y="-251" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Page</text>
+<text x="972" y="-241" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Up</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(1026 -216)"/>
-<text x="1053" y="-246" text-anchor="middle" font-family="Arial" font-size="10" textLength="30" lengthAdjust="spacingAndGlyphs" fill="#000000">NumLk</text>
+<text x="1053" y="-251" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Num</text>
+<text x="1053" y="-241" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Lock</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(1080 -216)"/>
@@ -509,7 +512,8 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(891 -297)"/>
-<text x="918" y="-327" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">ScrLk</text>
+<text x="918" y="-332" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Scroll</text>
+<text x="918" y="-322" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Lock</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(945 -297)"/>
