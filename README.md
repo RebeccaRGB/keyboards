@@ -5,8 +5,11 @@
 ### ANSI
 ![](keyboards-svg/ANSI.svg)
 
-### ISO
-![](keyboards-svg/ISO.svg)
+### ISO US
+![](keyboards-svg/ISO%20US.svg)
+
+### ISO UK
+![](keyboards-svg/ISO%20UK.svg)
 
 ### JIS
 ![](keyboards-svg/JIS.svg)
@@ -16,8 +19,11 @@
 ### ANSI TKL
 ![](keyboards-svg/ANSI%20TKL.svg)
 
-### ISO TKL
-![](keyboards-svg/ISO%20TKL.svg)
+### ISO US TKL
+![](keyboards-svg/ISO%20US%20TKL.svg)
+
+### ISO UK TKL
+![](keyboards-svg/ISO%20UK%20TKL.svg)
 
 ### JIS TKL
 ![](keyboards-svg/JIS%20TKL.svg)
@@ -27,8 +33,11 @@
 ### ANSI 60%
 ![](keyboards-svg/ANSI%2060%25.svg)
 
-### ISO 60%
-![](keyboards-svg/ISO%2060%25.svg)
+### ISO US 60%
+![](keyboards-svg/ISO%20US%2060%25.svg)
+
+### ISO UK 60%
+![](keyboards-svg/ISO%20UK%2060%25.svg)
 
 ### JIS 60%
 ![](keyboards-svg/JIS%2060%25.svg)
@@ -254,6 +263,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Famicom
 ![](keyboards-svg/Famicom.svg)
+
+### [K130](https://github.com/RebeccaRGB/K130)
+![](keyboards-svg/K130.svg)
 
 ### NABU
 ![](keyboards-svg/NABU.svg)

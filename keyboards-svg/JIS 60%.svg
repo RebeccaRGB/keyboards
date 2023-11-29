@@ -56,7 +56,7 @@
 <g class="keyboard">
 <g class="key">
 <use xlink:href="#shape0" transform="translate(0 0)"/>
-<text x="40.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">ctrl</text>
+<text x="40.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Ctrl</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(81 0)"/>
@@ -64,7 +64,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(148.5 0)"/>
-<text x="182.25" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">alt</text>
+<text x="182.25" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Alt</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(216 0)"/>
@@ -85,7 +85,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(580.5 0)"/>
-<text x="607.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">alt</text>
+<text x="607.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Alt</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(634.5 0)"/>
@@ -97,11 +97,11 @@
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(742.5 0)"/>
-<text x="776.25" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">ctrl</text>
+<text x="776.25" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Ctrl</text>
 </g>
 <g class="key">
 <use xlink:href="#shape4" transform="translate(0 -54)"/>
-<text x="60.75" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">shift</text>
+<text x="60.75" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Shift</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(121.5 -54)"/>
@@ -168,11 +168,11 @@
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(715.5 -54)"/>
-<text x="762.75" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">shift</text>
+<text x="762.75" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Shift</text>
 </g>
 <g class="key">
 <use xlink:href="#shape5" transform="translate(0 -108)"/>
-<text x="47.25" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">caps lock</text>
+<text x="47.25" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Caps Lock</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(94.5 -108)"/>
@@ -240,11 +240,11 @@
 </g>
 <g class="key">
 <use xlink:href="#shape6" transform="translate(742.5 -108)"/>
-<text x="769.5" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">enter</text>
+<text x="769.5" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Enter</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(0 -162)"/>
-<text x="40.5" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">tab</text>
+<text x="40.5" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Tab</text>
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(81 -162)"/>
@@ -401,7 +401,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape3" transform="translate(756 -216)"/>
-<text x="783" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">bksp</text>
+<text x="783" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">Bksp</text>
 </g>
 </g>
 </svg>
