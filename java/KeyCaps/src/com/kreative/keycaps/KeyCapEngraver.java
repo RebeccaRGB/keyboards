@@ -150,6 +150,8 @@ public class KeyCapEngraver {
 		TMNC(KeyCapLegend.KEY_FUNCTION, altFn, null,             1,    1,    3,    Anchor.CENTER);
 		TMC (KeyCapLegend.KEY_FUNCTION, altFn, Anchor.SOUTH,     1,    0.5f, 3,    Anchor.CENTER);
 		T   (KeyCapLegend.KEY_ALT_FUNCTION,    Anchor.NORTH,     1,    0.5f, 3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_LEFT_FUNCTION,   Anchor.WEST,      0.5f, 1,    3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_RIGHT_FUNCTION,  Anchor.EAST,      0.5f, 1,    3,    Anchor.CENTER);
 		TMNC(KeyCapLegend.KEY_LETTER,     alt, null,             1,    1,    2,    Anchor.CENTER);
 		TMC (KeyCapLegend.KEY_LETTER,     alt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
 		T   (KeyCapLegend.KEY_ALT_LETTER,      Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
@@ -165,6 +167,8 @@ public class KeyCapEngraver {
 		FMNC(KeyCapLegend.KEY_FRONT_FUNCTION, frAltFn, null,             1,    1,    3,    Anchor.CENTER);
 		FMC (KeyCapLegend.KEY_FRONT_FUNCTION, frAltFn, Anchor.SOUTH,     1,    0.5f, 3,    Anchor.CENTER);
 		F   (KeyCapLegend.KEY_FRONT_ALT_FUNCTION,      Anchor.NORTH,     1,    0.5f, 3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_FRONT_LEFT_FUNCTION,     Anchor.WEST,      0.5f, 1,    3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_FRONT_RIGHT_FUNCTION,    Anchor.EAST,      0.5f, 1,    3,    Anchor.CENTER);
 		FMNC(KeyCapLegend.KEY_FRONT_LETTER,     frAlt, null,             1,    1,    2,    Anchor.CENTER);
 		FMC (KeyCapLegend.KEY_FRONT_LETTER,     frAlt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
 		F   (KeyCapLegend.KEY_FRONT_ALT_LETTER,        Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);

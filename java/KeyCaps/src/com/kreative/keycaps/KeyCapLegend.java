@@ -13,6 +13,8 @@ import java.util.Set;
 public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 	public static final String KEY_FUNCTION = "F";
 	public static final String KEY_ALT_FUNCTION = "AF";
+	public static final String KEY_LEFT_FUNCTION = "LF";
+	public static final String KEY_RIGHT_FUNCTION = "RF";
 	public static final String KEY_LETTER = "L";
 	public static final String KEY_UNSHIFTED = "U";
 	public static final String KEY_SHIFTED = "S";
@@ -24,6 +26,8 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 	
 	public static final String KEY_FRONT_FUNCTION = "FF";
 	public static final String KEY_FRONT_ALT_FUNCTION = "FAF";
+	public static final String KEY_FRONT_LEFT_FUNCTION = "FLF";
+	public static final String KEY_FRONT_RIGHT_FUNCTION = "FRF";
 	public static final String KEY_FRONT_LETTER = "FL";
 	public static final String KEY_FRONT_UNSHIFTED = "FU";
 	public static final String KEY_FRONT_SHIFTED = "FS";
@@ -37,6 +41,7 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 		NONE(),
 		F(KEY_FUNCTION),
 		G(KEY_FUNCTION, KEY_ALT_FUNCTION),
+		H(KEY_LEFT_FUNCTION, KEY_RIGHT_FUNCTION),
 		L(KEY_LETTER),
 		A(KEY_LETTER, KEY_ALT_LETTER),
 		T(KEY_LETTER, KEY_ALT_UNSHIFTED, KEY_ALT_SHIFTED),

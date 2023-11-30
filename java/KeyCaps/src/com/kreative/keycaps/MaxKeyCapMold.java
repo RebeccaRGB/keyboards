@@ -26,37 +26,41 @@ public class MaxKeyCapMold extends KeyCapMold {
 		return (border < 6) ? 6 : (border > 12) ? 12 : border;
 	}
 	
-	private Shape topShape(Shape shape, String vs) {
-		if (vs == null || (vs = vs.trim()).length() == 0) return shape;
-		List<String> vss = Arrays.asList(vs.split("\\s+"));
-		if (vss.contains("s")) {
+	private List<String> vss(String vs) {
+		if (vs == null || (vs = vs.trim()).length() == 0) return Arrays.<String>asList();
+		return Arrays.asList(vs.split("\\s+"));
+	}
+	
+	private Shape topShape(Shape shape, List<String> vss) {
+		if (vss.isEmpty()) {
+			return shape;
+		} else if (vss.contains("s")) {
 			// Stepped
 			Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
 			double s = Math.min(r.getWidth(), r.getHeight());
 			return new Rectangle2D.Double(r.getCenterX() - s/2, r.getCenterY() - s/2, s, s);
-		}
-		if (vss.contains("sc")) {
+		} else if (vss.contains("sc")) {
 			// Stepped Caps / Ctrl
 			Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
 			double s = Math.min(r.getWidth(), r.getHeight());
 			return new Rectangle2D.Double(r.getX(), r.getY(), r.getWidth() - s/2, r.getHeight());
-		}
-		if (vss.contains("sb")) {
+		} else if (vss.contains("sb")) {
 			// Stepped Backspace
 			Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
 			double s = Math.min(r.getWidth(), r.getHeight());
 			return new Rectangle2D.Double(r.getX() + s/2, r.getY(), r.getWidth() - s/2, r.getHeight());
-		}
-		if (vss.contains("se")) {
+		} else if (vss.contains("se")) {
 			// Stepped Enter
 			return ShapeUtilities.getTallestRect(shape, null);
+		} else {
+			return shape;
 		}
-		return shape;
 	}
 	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
 		float b = maxBorder(shape);
-		Shape top = topShape(shape, vs);
+		List<String> vss = vss(vs);
+		Shape top = topShape(shape, vss);
 		Shape s0 = roundCorners(shape, 6);
 		Shape s1 = roundCorners(contract(shape, 1), 5);
 		Shape s2 = roundCorners(contract(shape, 2), 4);
@@ -76,9 +80,10 @@ public class MaxKeyCapMold extends KeyCapMold {
 			s4 = add(s4b, subtract(s4a, s4c));
 			s5 = add(s5b, subtract(s5a, s5c));
 		} else {
-			s3 = translate(roundCorners(contract(shape, b-3), 3), 0, 6-b);
-			s4 = translate(roundCorners(contract(shape, b-2), 2), 0, 6-b);
-			s5 = translate(roundCorners(contract(shape, b-1), 1), 0, 6-b);
+			float a = vss.contains("r") ? ((6 + b) / 2) : b; // Recessed
+			s3 = translate(roundCorners(contract(shape, a-3), 3), 0, 6-a);
+			s4 = translate(roundCorners(contract(shape, a-2), 2), 0, 6-a);
+			s5 = translate(roundCorners(contract(shape, a-1), 1), 0, 6-a);
 		}
 		Color c0 = (color != null) ? color : getDefaultKeyCapColor();
 		Color c1 = multiplyAdd(c0, 0.9f, 0.9f, 0.9f, 0, 0, 0);
@@ -114,13 +119,15 @@ public class MaxKeyCapMold extends KeyCapMold {
 	
 	public Shape createTopTextArea(Shape shape, String vs) {
 		float b = maxBorder(shape);
-		Shape top = topShape(shape, vs);
+		List<String> vss = vss(vs);
+		Shape top = topShape(shape, vss);
 		return translate(contract(top, b), 0, 6-b);
 	}
 	
 	public Shape createFrontTextArea(Shape shape, String vs) {
 		float b = maxBorder(shape);
-		Shape top = topShape(shape, vs);
+		List<String> vss = vss(vs);
+		Shape top = topShape(shape, vss);
 		Shape se = translate(contract(top, b-4), 0, 6-b);
 		Shape ss = translate(contract(top, b), 0, b-2);
 		return subtract(ss, se);
