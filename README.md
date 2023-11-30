@@ -143,6 +143,12 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ![](keyboards-svg/Apple%20Keyboard%20II,%20ISO.svg)
 
+### Apple Keyboard II, ISO IT
+* KbdType 9
+* Gestalt ID 11
+
+![](keyboards-svg/Apple%20Keyboard%20II,%20ISO%20IT.svg)
+
 ### Macintosh PowerBook Keyboard, ANSI
 * KbdType 12
 * Gestalt ID 12
