@@ -69,7 +69,10 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### IBM Model M, Space Saving, US
 ![](keyboards-svg/IBM%20Model%20M,%20Space%20Saving,%20US.svg)
 
-## Apple Macintosh Keyboards
+## Apple Keyboards
+
+### Apple Lisa, US
+![](keyboards-svg/Apple%20Lisa,%20US.svg)
 
 ### Macintosh 512K Keyboard, ANSI
 * KbdType 3
@@ -137,11 +140,11 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ![](keyboards-svg/Apple%20Keyboard%20II,%20ANSI.svg)
 
-### Apple Keyboard II, ISO
+### Apple Keyboard II, ISO US
 * KbdType 9
 * Gestalt ID 11
 
-![](keyboards-svg/Apple%20Keyboard%20II,%20ISO.svg)
+![](keyboards-svg/Apple%20Keyboard%20II,%20ISO%20US.svg)
 
 ### Apple Keyboard II, ISO IT
 * KbdType 9
@@ -167,17 +170,41 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20ANSI.svg)
 
-### Apple Adjustable Keyboard, ISO
+### Apple Adjustable Keyboard, ISO US
 * KbdType 17
 * Gestalt ID 16
 
-![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20ISO.svg)
+![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20ISO%20US.svg)
 
-### Apple Adjustable Keyboard, Keypad
+### Apple Adjustable Keyboard, ISO DE
+* KbdType 17
+* Gestalt ID 16
+
+![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20ISO%20DE.svg)
+
+### Apple Adjustable Keyboard, Keypad, ANSI
 * KbdType 14
 * Gestalt ID 14
 
-![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20Keypad.svg)
+![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20Keypad,%20ANSI.svg)
+
+### Apple Adjustable Keyboard, Keypad, ISO
+* KbdType 14
+* Gestalt ID 14
+
+![](keyboards-svg/Apple%20Adjustable%20Keyboard,%20Keypad,%20ISO.svg)
+
+### Apple Newton Keyboard, ANSI US
+![](keyboards-svg/Apple%20Newton%20Keyboard,%20ANSI%20US.svg)
+
+### Apple Newton Keyboard, ANSI UK
+![](keyboards-svg/Apple%20Newton%20Keyboard,%20ANSI%20UK.svg)
+
+### Apple Newton Keyboard, ISO US
+![](keyboards-svg/Apple%20Newton%20Keyboard,%20ISO%20US.svg)
+
+### Apple Newton Keyboard, ISO DE
+![](keyboards-svg/Apple%20Newton%20Keyboard,%20ISO%20DE.svg)
 
 ### PowerBook Extended Keyboard, ANSI
 * KbdType 24
@@ -257,9 +284,6 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Amiga
 ![](keyboards-svg/Amiga.svg)
-
-### Apple Lisa, US
-![](keyboards-svg/Apple%20Lisa,%20US.svg)
 
 ### Commodore 64
 ![](keyboards-svg/Commodore%2064.svg)
