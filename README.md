@@ -280,16 +280,18 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Sun Type 7, ISO
 ![](keyboards-svg/Sun%20Type%207,%20ISO.svg)
 
-## Other Keyboards
-
-### Amiga
-![](keyboards-svg/Amiga.svg)
+## Commodore Keyboards
 
 ### Commodore 64
 ![](keyboards-svg/Commodore%2064.svg)
 
 ### Commodore 128
 ![](keyboards-svg/Commodore%20128.svg)
+
+### Commodore Amiga 500, US
+![](keyboards-svg/Commodore%20Amiga%20500,%20US.svg)
+
+## Other Keyboards
 
 ### Famicom
 ![](keyboards-svg/Famicom.svg)
