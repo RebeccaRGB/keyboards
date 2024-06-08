@@ -302,5 +302,8 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### NABU
 ![](keyboards-svg/NABU.svg)
 
+### Osborne Vixen
+![](keyboards-svg/Osborne%20Vixen.svg)
+
 ### Space Cadet
 ![](keyboards-svg/Space%20Cadet.svg)
