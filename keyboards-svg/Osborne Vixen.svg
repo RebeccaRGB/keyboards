@@ -33,22 +33,22 @@
 <g class="keyboard">
 <g class="key">
 <use xlink:href="#shape0" transform="translate(81 0)"/>
-<text x="108" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">&#8679;</text>
+<text x="108" y="-27.6" text-anchor="middle" font-family="Arial" font-size="18" fill="#1a1a1a">&#8679;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(135 0)"/>
-<text x="162" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">&#8681;</text>
+<text x="162" y="-27.6" text-anchor="middle" font-family="Arial" font-size="18" fill="#1a1a1a">&#8681;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(189 0)"/>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(621 0)"/>
-<text x="648" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">&#8678;</text>
+<text x="648" y="-27.6" text-anchor="middle" font-family="Arial" font-size="18" fill="#1a1a1a">&#8678;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(675 0)"/>
-<text x="702" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">&#8680;</text>
+<text x="702" y="-27.6" text-anchor="middle" font-family="Arial" font-size="18" fill="#1a1a1a">&#8680;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(54 -54)"/>
