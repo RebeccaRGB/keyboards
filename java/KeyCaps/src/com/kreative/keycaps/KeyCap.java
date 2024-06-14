@@ -30,6 +30,13 @@ public class KeyCap implements Comparable<KeyCap> {
 		this.props = new PropertyMap();
 	}
 	
+	public KeyCap(KeyCapPosition position, KeyCapShape shape, KeyCapLegend legend) {
+		this.position = (position != null) ? position : KeyCapPosition.DEFAULT;
+		this.shape = (shape != null) ? shape : KeyCapShape.DEFAULT;
+		this.legend = (legend != null) ? legend : new KeyCapLegend();
+		this.props = new PropertyMap();
+	}
+	
 	public KeyCapPosition getPosition() {
 		return this.position;
 	}
@@ -59,15 +66,18 @@ public class KeyCap implements Comparable<KeyCap> {
 	}
 	
 	public String toString() {
-		return shape.toString() + legend.toString() + props.toString();
+		String s = shape.toString() + legend.toString() + props.toString();
+		return (s.length() > 0) ? s : "[]";
 	}
 	
 	public String toNormalizedString() {
-		return shape.toNormalizedString() + legend.toNormalizedString() + props.toString();
+		String s = shape.toNormalizedString() + legend.toNormalizedString() + props.toString();
+		return (s.length() > 0) ? s : "[]";
 	}
 	
 	public String toMinimizedString() {
-		return shape.toMinimizedString() + legend.toMinimizedString() + props.toString();
+		String s = shape.toMinimizedString() + legend.toMinimizedString() + props.toString();
+		return (s.length() > 0) ? s : "[]";
 	}
 	
 	public boolean isAt(float x, float y, float keyCapSize) {

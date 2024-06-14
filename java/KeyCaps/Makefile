@@ -1,4 +1,5 @@
 SRCFILES := $(shell find src -name \*.java)
+RESFILES := $(shell find src -type f \! -name .\* \! -name \*.java | sed s/^src\\///)
 PACKAGES := $(shell find src -name \*.java | sed -E s/^src\\/\|\\/[^\\/]+$$//g | grep -v \\.java$$ | sort | uniq | tr / .)
 
 all: clean bin doc keycaps.jar
@@ -19,6 +20,7 @@ ifeq ($(origin JAVACFLAGS), undefined)
 	$(eval JAVACFLAGS = $(shell dep/minJavaVerOpts))
 endif
 	javac $(JAVACFLAGS) -sourcepath src $(SRCFILES) -d bin
+	$(foreach res,$(RESFILES),cp src/$(res) bin/$(res);)
 
 doc: src
 	mkdir -p doc

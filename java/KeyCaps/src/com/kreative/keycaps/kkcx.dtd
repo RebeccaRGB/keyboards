@@ -1,0 +1,45 @@
+<!--
+	Date: 2024/06/12 13:10:00 PDT
+	Author: Rebecca Bettencourt <support@kreativekorp.com>
+-->
+
+<!ELEMENT keyCapLayout (k|p)*>
+<!ATTLIST keyCapLayout
+  name CDATA #IMPLIED
+  kbdType CDATA #IMPLIED
+  gestalt CDATA #IMPLIED
+  vs CDATA #IMPLIED
+  cc CDATA #IMPLIED
+  lc CDATA #IMPLIED
+  lh CDATA #IMPLIED
+  a CDATA #IMPLIED
+>
+
+<!ELEMENT k (#PCDATA|l|p)*>
+<!ATTLIST k
+  x CDATA #IMPLIED
+  y CDATA #IMPLIED
+  shape CDATA #IMPLIED
+  type CDATA #IMPLIED
+  usb CDATA #IMPLIED
+  vs CDATA #IMPLIED
+  cc CDATA #IMPLIED
+  lc CDATA #IMPLIED
+  lh CDATA #IMPLIED
+  a CDATA #IMPLIED
+>
+
+<!ELEMENT l (#PCDATA|p)*>
+<!ATTLIST l
+  type CDATA #IMPLIED
+  path CDATA #IMPLIED
+  lc CDATA #IMPLIED
+  lh CDATA #IMPLIED
+  a CDATA #IMPLIED
+>
+
+<!ELEMENT p EMPTY>
+<!ATTLIST p
+  k CDATA #REQUIRED
+  v CDATA #REQUIRED
+>

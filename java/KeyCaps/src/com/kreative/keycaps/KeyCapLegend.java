@@ -138,11 +138,8 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 		}
 		KeyCapLegend legend = new KeyCapLegend();
 		legend.props.putAll(props);
-		if (type == null) type = Type.forItems(items);
-		for (int i = 0, n = Math.min(items.size(), type.paramKeys.length); i < n; i++) {
-			if (items.get(i) != null) legend.items.put(type.paramKeys[i], items.get(i));
-		}
-		legend.items.putAll(kwitems);
+		legend.addAll(type, items);
+		legend.putAll(kwitems);
 		return legend;
 	}
 	
@@ -158,6 +155,13 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 	
 	public PropertyMap getPropertyMap() { return this.props; }
 	public Map<String,KeyCapLegendItem> getLegendItems() { return this.items; }
+	
+	public void addAll(Type type, List<KeyCapLegendItem> items) {
+		if (type == null) type = Type.forItems(items);
+		for (int i = 0, n = Math.min(items.size(), type.paramKeys.length); i < n; i++) {
+			if (items.get(i) != null) this.items.put(type.paramKeys[i], items.get(i));
+		}
+	}
 	
 	public boolean containsAny(String... keys) {
 		for (String key : keys) {
@@ -250,6 +254,26 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 			sb.append(']');
 		}
 		return sb.toString();
+	}
+	
+	public Type getExplicitType() {
+		Type type = Type.forKeys(items.keySet());
+		if (type == null) return null;
+		int n = minParamCount(type);
+		if (n == 0) return null;
+		if (canImplyType(type, n)) return null;
+		return type;
+	}
+	
+	public List<KeyCapLegendItem> getItemList() {
+		Type type = Type.forKeys(items.keySet());
+		if (type == null) return null;
+		int n = minParamCount(type);
+		if (n == 0) return null;
+		if (!canImplyType(type, n)) return null;
+		List<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();
+		for (String key : type.paramKeys) items.add(this.items.get(key));
+		return items;
 	}
 	
 	public int hashCode() {

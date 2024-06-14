@@ -20,10 +20,7 @@ public class KeyCapLayout extends ArrayList<KeyCap> {
 			if (p.hasNextPoint()) {
 				loc = p.nextPoint(loc);
 				if (p.hasNextUnit()) {
-					float u = p.nextUnit(keyCapSize);
-					loc.x *= u / keyCapSize;
-					loc.y *= u / keyCapSize;
-					keyCapSize = u;
+					keyCapSize = p.nextUnit(keyCapSize);
 				}
 			}
 			if (p.hasNextChar(':')) p.next();

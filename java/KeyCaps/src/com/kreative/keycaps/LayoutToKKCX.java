@@ -8,12 +8,9 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
-public final class LayoutToSVG {
+public final class LayoutToKKCX {
 	public static void main(String[] args) throws IOException {
 		boolean parseOpts = true;
-		KeyCapMold mold = new IconKeyCapMold();
-		float moldScale = 1;
-		float size = 48;
 		File output = null;
 		int argi = 0;
 		while (argi < args.length) {
@@ -24,40 +21,17 @@ public final class LayoutToSVG {
 				} else if (arg.equals("--help")) {
 					help();
 					return;
-				} else if (arg.equals("-m") && argi < args.length) {
-					arg = args[argi++];
-					mold = KeyCapMold.forName(arg);
-					if (mold == null) {
-						System.err.println("Unknown mold: " + arg);
-						return;
-					}
-				} else if (arg.equals("-s") && argi < args.length) {
-					arg = args[argi++];
-					try { moldScale = Float.parseFloat(arg); }
-					catch (NumberFormatException e) {
-						System.err.println("Invalid scale: " + arg);
-						return;
-					}
-				} else if (arg.equals("-u") && argi < args.length) {
-					arg = args[argi++];
-					try { size = Float.parseFloat(arg); }
-					catch (NumberFormatException e) {
-						System.err.println("Invalid size: " + arg);
-						return;
-					}
 				} else if (arg.equals("-i")) {
 					KeyCapLayout layout = read(System.in);
 					if (layout == null) return;
-					SVGRenderer svg = new SVGRenderer(mold, moldScale, size, null);
-					int res = write(null, output, svg, layout);
+					int res = write(null, output, layout);
 					if (res == 0xE) return;
 					if (res == 0xF) output = null;
 				} else if (arg.equals("-f") && argi < args.length) {
 					File input = new File(args[argi++]);
 					KeyCapLayout layout = read(input);
 					if (layout == null) return;
-					SVGRenderer svg = new SVGRenderer(mold, moldScale, size, null);
-					int res = write(input, output, svg, layout);
+					int res = write(input, output, layout);
 					if (res == 0xE) return;
 					if (res == 0xF) output = null;
 				} else if (arg.equals("-o") && argi < args.length) {
@@ -72,8 +46,7 @@ public final class LayoutToSVG {
 				File input = new File(arg);
 				KeyCapLayout layout = read(input);
 				if (layout == null) return;
-				SVGRenderer svg = new SVGRenderer(mold, moldScale, size, null);
-				int res = write(input, output, svg, layout);
+				int res = write(input, output, layout);
 				if (res == 0xE) return;
 				if (res == 0xF) output = null;
 			}
@@ -107,20 +80,20 @@ public final class LayoutToSVG {
 		return inputName.substring(0, offset) + extension;
 	}
 	
-	private static int write(File input, File output, SVGRenderer svg, KeyCapLayout layout) {
+	private static int write(File input, File output, KeyCapLayout layout) {
 		try {
 			if (output == null) {
-				write(System.out, svg, layout);
+				write(System.out, layout);
 				return 0x5;
 			} else if (output.isDirectory()) {
-				String name = outputFileName(input, ".svg");
+				String name = outputFileName(input, ".kkcx");
 				OutputStream out = new FileOutputStream(new File(output, name));
-				write(out, svg, layout);
+				write(out, layout);
 				out.close();
 				return 0xD;
 			} else {
 				OutputStream out = new FileOutputStream(output);
-				write(out, svg, layout);
+				write(out, layout);
 				out.close();
 				return 0xF;
 			}
@@ -130,15 +103,12 @@ public final class LayoutToSVG {
 		}
 	}
 	
-	private static void write(OutputStream os, SVGRenderer svg, KeyCapLayout layout) throws IOException {
+	private static void write(OutputStream os, KeyCapLayout layout) throws IOException {
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(os, "UTF-8"), true);
-		out.println(svg.render(layout));
+		KKCXWriter.write(out, layout);
 	}
 	
 	public static void help() {
-		System.err.println("  -m <str>      Specify mold; default IconKeyCapMold");
-		System.err.println("  -s <num>      Specify mold scaling; default 1");
-		System.err.println("  -u <num>      Specify size; default 48");
 		System.err.println("  -i            Specify standard input");
 		System.err.println("  -f <path>     Specify input file");
 		System.err.println("  -o <path>     Specify output file");
@@ -146,5 +116,5 @@ public final class LayoutToSVG {
 		System.err.println("  --            Treat remaining arguments as input files");
 	}
 	
-	private LayoutToSVG() {}
+	private LayoutToKKCX() {}
 }
