@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 
 public class KKCXWriter {
 	public static final String XML_DECLARATION = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
@@ -95,8 +95,8 @@ public class KKCXWriter {
 					}
 				}
 			} else {
-				for (Map.Entry<String,KeyCapLegendItem> e : legend.entrySet()) {
-					writeLegendItem(out, null, e.getKey(), e.getValue());
+				for (String key : sorted(legend.keySet())) {
+					writeLegendItem(out, null, key, legend.get(key));
 				}
 			}
 			out.println("</k>");
@@ -110,8 +110,8 @@ public class KKCXWriter {
 					writeLegendItem(out, cprefix, null, item);
 				}
 			} else {
-				for (Map.Entry<String,KeyCapLegendItem> e : legend.entrySet()) {
-					writeLegendItem(out, cprefix, e.getKey(), e.getValue());
+				for (String key : sorted(legend.keySet())) {
+					writeLegendItem(out, cprefix, key, legend.get(key));
 				}
 			}
 			out.print(prefix);
@@ -216,7 +216,7 @@ public class KKCXWriter {
 	
 	private static void writeProperties(PrintWriter out, String prefix, PropertyMap props, String... keys) {
 		List<String> attributeKeys = Arrays.asList(keys);
-		for (String key : props.keySet()) {
+		for (String key : sorted(props.keySet())) {
 			if (attributeKeys.contains(key)) continue;
 			String value = props.getString(key);
 			if (value != null) {
@@ -229,6 +229,12 @@ public class KKCXWriter {
 				if (prefix != null) out.println();
 			}
 		}
+	}
+	
+	private static String[] sorted(Collection<String> c) {
+		String[] a = c.toArray(new String[c.size()]);
+		Arrays.sort(a);
+		return a;
 	}
 	
 	private KKCXWriter() {}

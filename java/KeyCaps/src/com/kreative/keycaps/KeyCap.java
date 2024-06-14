@@ -89,6 +89,6 @@ public class KeyCap implements Comparable<KeyCap> {
 	public int compareTo(KeyCap o) {
 		int cx = Math.round(position.getX(CMP_ROUNDING) - o.position.getX(CMP_ROUNDING));
 		int cy = Math.round(position.getY(CMP_ROUNDING) - o.position.getY(CMP_ROUNDING));
-		return (cy != 0) ? cy : (cx != 0) ? cx : 0;
+		return (cy != 0) ? -cy : (cx != 0) ? cx : 0;
 	}
 }
