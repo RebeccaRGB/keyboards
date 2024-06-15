@@ -2,591 +2,591 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1296" height="324" viewBox="0 -324 1296 324">
 <defs>
 <g id="shape0">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 75 0 C 78.314 0 81 -2.686 81 -6 L 81 -48 C 81 -51.314 78.314 -54 75 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 75 -1 C 77.761 -1 80 -3.239 80 -6 L 80 -48 C 80 -50.761 77.761 -53 75 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 75 -2 C 77.209 -2 79 -3.791 79 -6 L 79 -48 C 79 -50.209 77.209 -52 75 -52 Z" fill="#0077ff"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 69 -15 C 70.657 -15 72 -16.343 72 -18 L 72 -48 C 72 -49.657 70.657 -51 69 -51 Z" fill="#006be6"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 69 -16 C 70.105 -16 71 -16.895 71 -18 L 71 -48 C 71 -49.105 70.105 -50 69 -50 Z" fill="#1495ff"/>
-</g>
-<g id="shape1">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 88.5 0 C 91.814 0 94.5 -2.686 94.5 -6 L 94.5 -48 C 94.5 -51.314 91.814 -54 88.5 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 88.5 -1 C 91.261 -1 93.5 -3.239 93.5 -6 L 93.5 -48 C 93.5 -50.761 91.261 -53 88.5 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 88.5 -2 C 90.709 -2 92.5 -3.791 92.5 -6 L 92.5 -48 C 92.5 -50.209 90.709 -52 88.5 -52 Z" fill="#0077ff"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 82.5 -15 C 84.157 -15 85.5 -16.343 85.5 -18 L 85.5 -48 C 85.5 -49.657 84.157 -51 82.5 -51 Z" fill="#006be6"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 82.5 -16 C 83.605 -16 84.5 -16.895 84.5 -18 L 84.5 -48 C 84.5 -49.105 83.605 -50 82.5 -50 Z" fill="#1495ff"/>
-</g>
-<g id="shape2">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 480 0 C 483.314 0 486 -2.686 486 -6 L 486 -48 C 486 -51.314 483.314 -54 480 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 480 -1 C 482.761 -1 485 -3.239 485 -6 L 485 -48 C 485 -50.761 482.761 -53 480 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 480 -2 C 482.209 -2 484 -3.791 484 -6 L 484 -48 C 484 -50.209 482.209 -52 480 -52 Z" fill="#0077ff"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 474 -15 C 475.657 -15 477 -16.343 477 -18 L 477 -48 C 477 -49.657 475.657 -51 474 -51 Z" fill="#006be6"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 474 -16 C 475.105 -16 476 -16.895 476 -18 L 476 -48 C 476 -49.105 475.105 -50 474 -50 Z" fill="#1495ff"/>
-</g>
-<g id="shape3">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#0077ff"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#006be6"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#1495ff"/>
-</g>
-<g id="shape4">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 115.5 0 C 118.814 0 121.5 -2.686 121.5 -6 L 121.5 -48 C 121.5 -51.314 118.814 -54 115.5 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 115.5 -1 C 118.261 -1 120.5 -3.239 120.5 -6 L 120.5 -48 C 120.5 -50.761 118.261 -53 115.5 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 115.5 -2 C 117.709 -2 119.5 -3.791 119.5 -6 L 119.5 -48 C 119.5 -50.209 117.709 -52 115.5 -52 Z" fill="#0077ff"/>
-<path d="M 45.75 -51 C 44.093 -51 42.75 -49.657 42.75 -48 L 42.75 -18 C 42.75 -16.343 44.093 -15 45.75 -15 L 75.75 -15 C 77.407 -15 78.75 -16.343 78.75 -18 L 78.75 -48 C 78.75 -49.657 77.407 -51 75.75 -51 Z M 9 -51 C 7.343 -51 6 -49.657 6 -48 L 6 -12 C 6 -10.343 7.343 -9 9 -9 L 40.104 -9 C 39.274 -9.733 38.75 -10.805 38.75 -12 L 38.75 -48 C 38.75 -49.195 39.274 -50.267 40.104 -51 Z M 81.396 -51 C 82.226 -50.267 82.75 -49.195 82.75 -48 L 82.75 -12 C 82.75 -10.805 82.226 -9.733 81.396 -9 L 112.5 -9 C 114.157 -9 115.5 -10.343 115.5 -12 L 115.5 -48 C 115.5 -49.657 114.157 -51 112.5 -51 Z" fill="#006be6"/>
-<path d="M 45.75 -50 C 44.645 -50 43.75 -49.105 43.75 -48 L 43.75 -18 C 43.75 -16.895 44.645 -16 45.75 -16 L 75.75 -16 C 76.855 -16 77.75 -16.895 77.75 -18 L 77.75 -48 C 77.75 -49.105 76.855 -50 75.75 -50 Z M 9 -50 C 7.895 -50 7 -49.105 7 -48 L 7 -12 C 7 -10.895 7.895 -10 9 -10 L 38.166 -10 C 37.898 -10.612 37.75 -11.289 37.75 -12 L 37.75 -48 C 37.75 -48.711 37.898 -49.388 38.166 -50 Z M 83.334 -50 C 83.602 -49.388 83.75 -48.711 83.75 -48 L 83.75 -12 C 83.75 -11.289 83.602 -10.612 83.334 -10 L 112.5 -10 C 113.605 -10 114.5 -10.895 114.5 -12 L 114.5 -48 C 114.5 -49.105 113.605 -50 112.5 -50 Z" fill="#1495ff"/>
-</g>
-<g id="shape5">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#6b6b6b"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#777777"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#6b6b6b"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#959595"/>
-</g>
-<g id="shape6">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108 -2.686 108 -6 L 108 -48 C 108 -51.314 105.314 -54 102 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 102 -1 C 104.761 -1 107 -3.239 107 -6 L 107 -48 C 107 -50.761 104.761 -53 102 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 102 -2 C 104.209 -2 106 -3.791 106 -6 L 106 -48 C 106 -50.209 104.209 -52 102 -52 Z" fill="#0077ff"/>
-<path d="M 39 -51 C 37.343 -51 36 -49.657 36 -48 L 36 -18 C 36 -16.343 37.343 -15 39 -15 L 69 -15 C 70.657 -15 72 -16.343 72 -18 L 72 -48 C 72 -49.657 70.657 -51 69 -51 Z M 9 -51 C 7.343 -51 6 -49.657 6 -48 L 6 -12 C 6 -10.343 7.343 -9 9 -9 L 33.354 -9 C 32.524 -9.733 32 -10.805 32 -12 L 32 -48 C 32 -49.195 32.524 -50.267 33.354 -51 Z M 74.646 -51 C 75.476 -50.267 76 -49.195 76 -48 L 76 -12 C 76 -10.805 75.476 -9.733 74.646 -9 L 99 -9 C 100.657 -9 102 -10.343 102 -12 L 102 -48 C 102 -49.657 100.657 -51 99 -51 Z" fill="#006be6"/>
-<path d="M 39 -50 C 37.895 -50 37 -49.105 37 -48 L 37 -18 C 37 -16.895 37.895 -16 39 -16 L 69 -16 C 70.105 -16 71 -16.895 71 -18 L 71 -48 C 71 -49.105 70.105 -50 69 -50 Z M 9 -50 C 7.895 -50 7 -49.105 7 -48 L 7 -12 C 7 -10.895 7.895 -10 9 -10 L 31.416 -10 C 31.148 -10.612 31 -11.289 31 -12 L 31 -48 C 31 -48.711 31.148 -49.388 31.416 -50 Z M 76.584 -50 C 76.852 -49.388 77 -48.711 77 -48 L 77 -12 C 77 -11.289 76.852 -10.612 76.584 -10 L 99 -10 C 100.105 -10 101 -10.895 101 -12 L 101 -48 C 101 -49.105 100.105 -50 99 -50 Z" fill="#1495ff"/>
-</g>
-<g id="shape7">
 <path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108 -2.686 108 -6 L 108 -48 C 108 -51.314 105.314 -54 102 -54 Z" fill="#000000"/>
 <path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 102 -1 C 104.761 -1 107 -3.239 107 -6 L 107 -48 C 107 -50.761 104.761 -53 102 -53 Z" fill="#006be6"/>
 <path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 102 -2 C 104.209 -2 106 -3.791 106 -6 L 106 -48 C 106 -50.209 104.209 -52 102 -52 Z" fill="#0077ff"/>
 <path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 96 -15 C 97.657 -15 99 -16.343 99 -18 L 99 -48 C 99 -49.657 97.657 -51 96 -51 Z" fill="#006be6"/>
 <path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 96 -16 C 97.105 -16 98 -16.895 98 -18 L 98 -48 C 98 -49.105 97.105 -50 96 -50 Z" fill="#1495ff"/>
 </g>
-<g id="shape8">
-<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 61.5 0 C 64.814 0 67.5 -2.686 67.5 -6 L 67.5 -48 C 67.5 -51.314 64.814 -54 61.5 -54 Z" fill="#000000"/>
-<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 61.5 -1 C 64.261 -1 66.5 -3.239 66.5 -6 L 66.5 -48 C 66.5 -50.761 64.261 -53 61.5 -53 Z" fill="#006be6"/>
-<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 61.5 -2 C 63.709 -2 65.5 -3.791 65.5 -6 L 65.5 -48 C 65.5 -50.209 63.709 -52 61.5 -52 Z" fill="#0077ff"/>
-<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 55.5 -15 C 57.157 -15 58.5 -16.343 58.5 -18 L 58.5 -48 C 58.5 -49.657 57.157 -51 55.5 -51 Z" fill="#006be6"/>
-<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 55.5 -16 C 56.605 -16 57.5 -16.895 57.5 -18 L 57.5 -48 C 57.5 -49.105 56.605 -50 55.5 -50 Z" fill="#1495ff"/>
+<g id="shape1">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#6b6b6b"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#777777"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#6b6b6b"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#959595"/>
 </g>
-<g id="shape9">
+<g id="shape2">
 <path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 75 0 C 78.314 0 81 -2.686 81 -6 L 81 -48 C 81 -51.314 78.314 -54 75 -54 Z" fill="#000000"/>
 <path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 75 -1 C 77.761 -1 80 -3.239 80 -6 L 80 -48 C 80 -50.761 77.761 -53 75 -53 Z" fill="#6b6b6b"/>
 <path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 75 -2 C 77.209 -2 79 -3.791 79 -6 L 79 -48 C 79 -50.209 77.209 -52 75 -52 Z" fill="#777777"/>
 <path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 69 -15 C 70.657 -15 72 -16.343 72 -18 L 72 -48 C 72 -49.657 70.657 -51 69 -51 Z" fill="#6b6b6b"/>
 <path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 69 -16 C 70.105 -16 71 -16.895 71 -18 L 71 -48 C 71 -49.105 70.105 -50 69 -50 Z" fill="#959595"/>
 </g>
+<g id="shape3">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 75 0 C 78.314 0 81 -2.686 81 -6 L 81 -48 C 81 -51.314 78.314 -54 75 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 75 -1 C 77.761 -1 80 -3.239 80 -6 L 80 -48 C 80 -50.761 77.761 -53 75 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 75 -2 C 77.209 -2 79 -3.791 79 -6 L 79 -48 C 79 -50.209 77.209 -52 75 -52 Z" fill="#0077ff"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 69 -15 C 70.657 -15 72 -16.343 72 -18 L 72 -48 C 72 -49.657 70.657 -51 69 -51 Z" fill="#006be6"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 69 -16 C 70.105 -16 71 -16.895 71 -18 L 71 -48 C 71 -49.105 70.105 -50 69 -50 Z" fill="#1495ff"/>
+</g>
+<g id="shape4">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 88.5 0 C 91.814 0 94.5 -2.686 94.5 -6 L 94.5 -48 C 94.5 -51.314 91.814 -54 88.5 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 88.5 -1 C 91.261 -1 93.5 -3.239 93.5 -6 L 93.5 -48 C 93.5 -50.761 91.261 -53 88.5 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 88.5 -2 C 90.709 -2 92.5 -3.791 92.5 -6 L 92.5 -48 C 92.5 -50.209 90.709 -52 88.5 -52 Z" fill="#0077ff"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 82.5 -15 C 84.157 -15 85.5 -16.343 85.5 -18 L 85.5 -48 C 85.5 -49.657 84.157 -51 82.5 -51 Z" fill="#006be6"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 82.5 -16 C 83.605 -16 84.5 -16.895 84.5 -18 L 84.5 -48 C 84.5 -49.105 83.605 -50 82.5 -50 Z" fill="#1495ff"/>
+</g>
+<g id="shape5">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 61.5 0 C 64.814 0 67.5 -2.686 67.5 -6 L 67.5 -48 C 67.5 -51.314 64.814 -54 61.5 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 61.5 -1 C 64.261 -1 66.5 -3.239 66.5 -6 L 66.5 -48 C 66.5 -50.761 64.261 -53 61.5 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 61.5 -2 C 63.709 -2 65.5 -3.791 65.5 -6 L 65.5 -48 C 65.5 -50.209 63.709 -52 61.5 -52 Z" fill="#0077ff"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 55.5 -15 C 57.157 -15 58.5 -16.343 58.5 -18 L 58.5 -48 C 58.5 -49.657 57.157 -51 55.5 -51 Z" fill="#006be6"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 55.5 -16 C 56.605 -16 57.5 -16.895 57.5 -18 L 57.5 -48 C 57.5 -49.105 56.605 -50 55.5 -50 Z" fill="#1495ff"/>
+</g>
+<g id="shape6">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#0077ff"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#006be6"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#1495ff"/>
+</g>
+<g id="shape7">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 115.5 0 C 118.814 0 121.5 -2.686 121.5 -6 L 121.5 -48 C 121.5 -51.314 118.814 -54 115.5 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 115.5 -1 C 118.261 -1 120.5 -3.239 120.5 -6 L 120.5 -48 C 120.5 -50.761 118.261 -53 115.5 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 115.5 -2 C 117.709 -2 119.5 -3.791 119.5 -6 L 119.5 -48 C 119.5 -50.209 117.709 -52 115.5 -52 Z" fill="#0077ff"/>
+<path d="M 45.75 -51 C 44.093 -51 42.75 -49.657 42.75 -48 L 42.75 -18 C 42.75 -16.343 44.093 -15 45.75 -15 L 75.75 -15 C 77.407 -15 78.75 -16.343 78.75 -18 L 78.75 -48 C 78.75 -49.657 77.407 -51 75.75 -51 Z M 9 -51 C 7.343 -51 6 -49.657 6 -48 L 6 -12 C 6 -10.343 7.343 -9 9 -9 L 40.104 -9 C 39.274 -9.733 38.75 -10.805 38.75 -12 L 38.75 -48 C 38.75 -49.195 39.274 -50.267 40.104 -51 Z M 81.396 -51 C 82.226 -50.267 82.75 -49.195 82.75 -48 L 82.75 -12 C 82.75 -10.805 82.226 -9.733 81.396 -9 L 112.5 -9 C 114.157 -9 115.5 -10.343 115.5 -12 L 115.5 -48 C 115.5 -49.657 114.157 -51 112.5 -51 Z" fill="#006be6"/>
+<path d="M 45.75 -50 C 44.645 -50 43.75 -49.105 43.75 -48 L 43.75 -18 C 43.75 -16.895 44.645 -16 45.75 -16 L 75.75 -16 C 76.855 -16 77.75 -16.895 77.75 -18 L 77.75 -48 C 77.75 -49.105 76.855 -50 75.75 -50 Z M 9 -50 C 7.895 -50 7 -49.105 7 -48 L 7 -12 C 7 -10.895 7.895 -10 9 -10 L 38.166 -10 C 37.898 -10.612 37.75 -11.289 37.75 -12 L 37.75 -48 C 37.75 -48.711 37.898 -49.388 38.166 -50 Z M 83.334 -50 C 83.602 -49.388 83.75 -48.711 83.75 -48 L 83.75 -12 C 83.75 -11.289 83.602 -10.612 83.334 -10 L 112.5 -10 C 113.605 -10 114.5 -10.895 114.5 -12 L 114.5 -48 C 114.5 -49.105 113.605 -50 112.5 -50 Z" fill="#1495ff"/>
+</g>
+<g id="shape8">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108 -2.686 108 -6 L 108 -48 C 108 -51.314 105.314 -54 102 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 102 -1 C 104.761 -1 107 -3.239 107 -6 L 107 -48 C 107 -50.761 104.761 -53 102 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 102 -2 C 104.209 -2 106 -3.791 106 -6 L 106 -48 C 106 -50.209 104.209 -52 102 -52 Z" fill="#0077ff"/>
+<path d="M 39 -51 C 37.343 -51 36 -49.657 36 -48 L 36 -18 C 36 -16.343 37.343 -15 39 -15 L 69 -15 C 70.657 -15 72 -16.343 72 -18 L 72 -48 C 72 -49.657 70.657 -51 69 -51 Z M 9 -51 C 7.343 -51 6 -49.657 6 -48 L 6 -12 C 6 -10.343 7.343 -9 9 -9 L 33.354 -9 C 32.524 -9.733 32 -10.805 32 -12 L 32 -48 C 32 -49.195 32.524 -50.267 33.354 -51 Z M 74.646 -51 C 75.476 -50.267 76 -49.195 76 -48 L 76 -12 C 76 -10.805 75.476 -9.733 74.646 -9 L 99 -9 C 100.657 -9 102 -10.343 102 -12 L 102 -48 C 102 -49.657 100.657 -51 99 -51 Z" fill="#006be6"/>
+<path d="M 39 -50 C 37.895 -50 37 -49.105 37 -48 L 37 -18 C 37 -16.895 37.895 -16 39 -16 L 69 -16 C 70.105 -16 71 -16.895 71 -18 L 71 -48 C 71 -49.105 70.105 -50 69 -50 Z M 9 -50 C 7.895 -50 7 -49.105 7 -48 L 7 -12 C 7 -10.895 7.895 -10 9 -10 L 31.416 -10 C 31.148 -10.612 31 -11.289 31 -12 L 31 -48 C 31 -48.711 31.148 -49.388 31.416 -50 Z M 76.584 -50 C 76.852 -49.388 77 -48.711 77 -48 L 77 -12 C 77 -11.289 76.852 -10.612 76.584 -10 L 99 -10 C 100.105 -10 101 -10.895 101 -12 L 101 -48 C 101 -49.105 100.105 -50 99 -50 Z" fill="#1495ff"/>
+</g>
+<g id="shape9">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 480 0 C 483.314 0 486 -2.686 486 -6 L 486 -48 C 486 -51.314 483.314 -54 480 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 480 -1 C 482.761 -1 485 -3.239 485 -6 L 485 -48 C 485 -50.761 482.761 -53 480 -53 Z" fill="#006be6"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 480 -2 C 482.209 -2 484 -3.791 484 -6 L 484 -48 C 484 -50.209 482.209 -52 480 -52 Z" fill="#0077ff"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 474 -15 C 475.657 -15 477 -16.343 477 -18 L 477 -48 C 477 -49.657 475.657 -51 474 -51 Z" fill="#006be6"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 474 -16 C 475.105 -16 476 -16.895 476 -18 L 476 -48 C 476 -49.105 475.105 -50 474 -50 Z" fill="#1495ff"/>
+</g>
 </defs>
 <g class="keyboard">
 <g class="key">
-<use xlink:href="#shape0" transform="translate(0 0)"/>
-<text x="40.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">HYPER</text>
+<use xlink:href="#shape0" transform="translate(0 -270)"/>
+<text x="54" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">MACRO</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(81 0)"/>
-<text x="121.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SUPER</text>
+<use xlink:href="#shape0" transform="translate(108 -270)"/>
+<text x="162" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">TERMINAL</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(162 0)"/>
-<text x="202.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">META</text>
+<use xlink:href="#shape0" transform="translate(216 -270)"/>
+<text x="270" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">QUOTE</text>
 </g>
 <g class="key">
-<use xlink:href="#shape1" transform="translate(243 0)"/>
-<text x="290.25" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">CTRL</text>
+<use xlink:href="#shape0" transform="translate(324 -270)"/>
+<text x="378" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">OVER</text>
+<text x="378" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">STRIKE</text>
 </g>
 <g class="key">
-<use xlink:href="#shape2" transform="translate(364.5 0)"/>
+<use xlink:href="#shape0" transform="translate(432 -270)"/>
+<text x="486" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">CLEAR</text>
+<text x="486" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">INPUT</text>
 </g>
 <g class="key">
-<use xlink:href="#shape1" transform="translate(877.5 0)"/>
-<text x="924.75" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">CTRL</text>
+<use xlink:href="#shape0" transform="translate(540 -270)"/>
+<text x="594" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">CLEAR</text>
+<text x="594" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">SCREEN</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(1053 0)"/>
-<text x="1093.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">META</text>
+<use xlink:href="#shape0" transform="translate(648 -270)"/>
+<text x="702" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">HOLD</text>
+<text x="702" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">OUTPUT</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(1134 0)"/>
-<text x="1174.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SUPER</text>
+<use xlink:href="#shape0" transform="translate(756 -270)"/>
+<text x="810" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">STOP</text>
+<text x="810" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">OUTPUT</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(1215 0)"/>
-<text x="1255.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">HYPER</text>
+<use xlink:href="#shape0" transform="translate(864 -270)"/>
+<text x="918" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">ABORT</text>
 </g>
 <g class="key">
-<use xlink:href="#shape3" transform="translate(0 -54)"/>
-<text x="27" y="-89" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">CAPS</text>
-<text x="27" y="-79" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">LOCK</text>
+<use xlink:href="#shape0" transform="translate(972 -270)"/>
+<text x="1026" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">BREAK</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(54 -54)"/>
-<text x="94.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">TOP</text>
+<use xlink:href="#shape0" transform="translate(1080 -270)"/>
+<text x="1134" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">RESUME</text>
 </g>
 <g class="key">
-<use xlink:href="#shape0" transform="translate(135 -54)"/>
-<text x="175.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">GREEK</text>
-<text x="175.5" y="-59" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">FRONT</text>
+<use xlink:href="#shape0" transform="translate(1188 -270)"/>
+<text x="1242" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">CALL</text>
 </g>
 <g class="key">
-<use xlink:href="#shape4" transform="translate(216 -54)"/>
-<text x="276.75" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SHIFT</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(337.5 -54)"/>
-<text x="364.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">Z</text>
-<text x="364.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8970;</text>
-<text x="364.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#950;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(391.5 -54)"/>
-<text x="418.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">X</text>
-<text x="418.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8968;</text>
-<text x="418.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#958;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(445.5 -54)"/>
-<text x="472.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">C</text>
-<text x="472.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8800;</text>
-<text x="472.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#967;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(499.5 -54)"/>
-<text x="526.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">V</text>
-<text x="526.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8771;</text>
-<text x="526.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#962;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(553.5 -54)"/>
-<text x="580.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">B</text>
-<text x="580.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8801;</text>
-<text x="580.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#946;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(607.5 -54)"/>
-<text x="634.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">N</text>
-<text x="634.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8804;</text>
-<text x="634.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#957;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(661.5 -54)"/>
-<text x="688.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">M</text>
-<text x="688.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8805;</text>
-<text x="688.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#956;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(715.5 -54)"/>
-<text x="742.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">,</text>
-<text x="742.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&lt;</text>
-<text x="742.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#171;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(769.5 -54)"/>
-<text x="796.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">.</text>
-<text x="796.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&gt;</text>
-<text x="796.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#187;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(823.5 -54)"/>
-<text x="850.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">/</text>
-<text x="850.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">?</text>
-<text x="850.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8747;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape6" transform="translate(877.5 -54)"/>
-<text x="931.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SHIFT</text>
-</g>
-<g class="key">
-<use xlink:href="#shape0" transform="translate(985.5 -54)"/>
-<text x="1026" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">GREEK</text>
-<text x="1026" y="-59" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">FRONT</text>
-</g>
-<g class="key">
-<use xlink:href="#shape0" transform="translate(1080 -54)"/>
-<text x="1120.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">TOP</text>
-</g>
-<g class="key">
-<use xlink:href="#shape0" transform="translate(1161 -54)"/>
-<text x="1201.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">REPEAT</text>
-</g>
-<g class="key">
-<use xlink:href="#shape3" transform="translate(1242 -54)"/>
-<text x="1269" y="-89" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">ALT</text>
-<text x="1269" y="-79" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">LOCK</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(0 -108)"/>
-<text x="54" y="-143" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">MODE</text>
-<text x="54" y="-133" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">LOCK</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(108 -108)"/>
-<text x="162" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">ALT MODE</text>
-</g>
-<g class="key">
-<use xlink:href="#shape1" transform="translate(216 -108)"/>
-<text x="263.25" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">RUB OUT</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(310.5 -108)"/>
-<text x="337.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">A</text>
-<text x="337.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8869;</text>
-<text x="337.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#945;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(364.5 -108)"/>
-<text x="391.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">S</text>
-<text x="391.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8868;</text>
-<text x="391.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#963;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(418.5 -108)"/>
-<text x="445.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">D</text>
-<text x="445.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8866;</text>
-<text x="445.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#948;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(472.5 -108)"/>
-<text x="499.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">F</text>
-<text x="499.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8867;</text>
-<text x="499.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#966;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(526.5 -108)"/>
-<text x="553.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">G</text>
-<text x="553.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8593;</text>
-<text x="553.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#947;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(580.5 -108)"/>
-<text x="607.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">H</text>
-<text x="607.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8595;</text>
-<text x="607.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#951;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(634.5 -108)"/>
-<text x="661.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">J</text>
-<text x="661.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8592;</text>
-<text x="661.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#977;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(688.5 -108)"/>
-<text x="715.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">K</text>
-<text x="715.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8594;</text>
-<text x="715.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#954;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(742.5 -108)"/>
-<text x="769.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">L</text>
-<text x="769.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8596;</text>
-<text x="769.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#955;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(796.5 -108)"/>
-<text x="823.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">;</text>
-<text x="823.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">:</text>
-<text x="823.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#168;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(850.5 -108)"/>
-<text x="877.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#39;</text>
-<text x="877.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#34;</text>
-<text x="877.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8226;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(904.5 -108)"/>
-<text x="958.5" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">RETURN</text>
-</g>
-<g class="key">
-<use xlink:href="#shape8" transform="translate(1012.5 -108)"/>
-<text x="1046.25" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">LINE</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(1080 -108)"/>
-<text x="1134" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">END</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(1188 -108)"/>
-<text x="1242" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">HELP</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(0 -162)"/>
-<text x="27" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#8546;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(54 -162)"/>
-<text x="81" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#8547;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(108 -162)"/>
-<text x="162" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">NETWORK</text>
-</g>
-<g class="key">
-<use xlink:href="#shape0" transform="translate(216 -162)"/>
-<text x="256.5" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">TAB</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(297 -162)"/>
-<text x="324" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">Q</text>
-<text x="324" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8743;</text>
-<text x="324" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#952;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(351 -162)"/>
-<text x="378" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">W</text>
-<text x="378" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8744;</text>
-<text x="378" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#969;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(405 -162)"/>
-<text x="432" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">E</text>
-<text x="432" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8745;</text>
-<text x="432" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#949;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(459 -162)"/>
-<text x="486" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">R</text>
-<text x="486" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8746;</text>
-<text x="486" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#961;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(513 -162)"/>
-<text x="540" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">T</text>
-<text x="540" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8834;</text>
-<text x="540" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#964;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(567 -162)"/>
-<text x="594" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">Y</text>
-<text x="594" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8835;</text>
-<text x="594" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#968;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(621 -162)"/>
-<text x="648" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">U</text>
-<text x="648" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8704;</text>
-<text x="648" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#965;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(675 -162)"/>
-<text x="702" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">I</text>
-<text x="702" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8734;</text>
-<text x="702" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#953;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(729 -162)"/>
-<text x="756" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">O</text>
-<text x="756" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8707;</text>
-<text x="756" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#959;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(783 -162)"/>
-<text x="810" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">P</text>
-<text x="810" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8706;</text>
-<text x="810" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#960;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(837 -162)"/>
-<text x="864" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">(</text>
-<text x="864" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">[</text>
-<text x="864" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#10214;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(891 -162)"/>
-<text x="918" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">)</text>
-<text x="918" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">]</text>
-<text x="918" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#10215;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(945 -162)"/>
-<text x="972" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">`</text>
-<text x="972" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">~</text>
-<text x="972" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#172;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape9" transform="translate(999 -162)"/>
-<text x="1039.5" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">\</text>
-<text x="1039.5" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">|</text>
-<text x="1039.5" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8214;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape7" transform="translate(1080 -162)"/>
-<text x="1134" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">DELETE</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(1188 -162)"/>
-<text x="1215" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#9756;</text>
-<text x="1215" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8855;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(1242 -162)"/>
-<text x="1269" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#9758;</text>
-<text x="1269" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8856;</text>
-</g>
-<g class="key">
-<use xlink:href="#shape5" transform="translate(0 -216)"/>
+<use xlink:href="#shape1" transform="translate(0 -216)"/>
 <text x="27" y="-244.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#8544;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(54 -216)"/>
+<use xlink:href="#shape1" transform="translate(54 -216)"/>
 <text x="81" y="-244.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#8545;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(108 -216)"/>
+<use xlink:href="#shape0" transform="translate(108 -216)"/>
 <text x="162" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">SYSTEM</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(216 -216)"/>
+<use xlink:href="#shape1" transform="translate(216 -216)"/>
 <text x="243" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">:</text>
 <text x="243" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#177;</text>
 <text x="243" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8750;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(270 -216)"/>
+<use xlink:href="#shape1" transform="translate(270 -216)"/>
 <text x="297" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">1</text>
 <text x="297" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">!</text>
 <text x="297" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8224;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(324 -216)"/>
+<use xlink:href="#shape1" transform="translate(324 -216)"/>
 <text x="351" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">2</text>
 <text x="351" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">@</text>
 <text x="351" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8225;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(378 -216)"/>
+<use xlink:href="#shape1" transform="translate(378 -216)"/>
 <text x="405" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">3</text>
 <text x="405" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">#</text>
 <text x="405" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8711;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(432 -216)"/>
+<use xlink:href="#shape1" transform="translate(432 -216)"/>
 <text x="459" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">4</text>
 <text x="459" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">$</text>
 <text x="459" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#162;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(486 -216)"/>
+<use xlink:href="#shape1" transform="translate(486 -216)"/>
 <text x="513" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">5</text>
 <text x="513" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">%</text>
 <text x="513" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#9675;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(540 -216)"/>
+<use xlink:href="#shape1" transform="translate(540 -216)"/>
 <text x="567" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">6</text>
 <text x="567" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">^</text>
 <text x="567" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#9109;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(594 -216)"/>
+<use xlink:href="#shape1" transform="translate(594 -216)"/>
 <text x="621" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">7</text>
 <text x="621" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&amp;</text>
 <text x="621" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#247;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(648 -216)"/>
+<use xlink:href="#shape1" transform="translate(648 -216)"/>
 <text x="675" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">8</text>
 <text x="675" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">*</text>
 <text x="675" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#215;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(702 -216)"/>
+<use xlink:href="#shape1" transform="translate(702 -216)"/>
 <text x="729" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">9</text>
 <text x="729" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">(</text>
 <text x="729" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#182;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(756 -216)"/>
+<use xlink:href="#shape1" transform="translate(756 -216)"/>
 <text x="783" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">0</text>
 <text x="783" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">)</text>
 <text x="783" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#9711;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape9" transform="translate(810 -216)"/>
+<use xlink:href="#shape2" transform="translate(810 -216)"/>
 <text x="850.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8722;</text>
 <text x="850.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">_</text>
 <text x="850.5" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#175;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape9" transform="translate(891 -216)"/>
+<use xlink:href="#shape2" transform="translate(891 -216)"/>
 <text x="931.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">=</text>
 <text x="931.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">+</text>
 <text x="931.5" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8776;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(972 -216)"/>
+<use xlink:href="#shape1" transform="translate(972 -216)"/>
 <text x="999" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">{</text>
 <text x="999" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&lt;</text>
 <text x="999" y="-219.2" text-anchor="middle" font-family="Arial" font-size="6" fill="#f2f2f2">&#8990;</text>
 <text x="999" y="-225.2" text-anchor="middle" font-family="Arial" font-size="6" fill="#f2f2f2">&#8988;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(1026 -216)"/>
+<use xlink:href="#shape1" transform="translate(1026 -216)"/>
 <text x="1053" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">}</text>
 <text x="1053" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&gt;</text>
 <text x="1053" y="-219.2" text-anchor="middle" font-family="Arial" font-size="6" fill="#f2f2f2">&#8991;</text>
 <text x="1053" y="-225.2" text-anchor="middle" font-family="Arial" font-size="6" fill="#f2f2f2">&#8989;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(1080 -216)"/>
+<use xlink:href="#shape0" transform="translate(1080 -216)"/>
 <text x="1134" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">STATUS</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(1188 -216)"/>
+<use xlink:href="#shape1" transform="translate(1188 -216)"/>
 <text x="1215" y="-244.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#128077;</text>
 <text x="1215" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8854;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape5" transform="translate(1242 -216)"/>
+<use xlink:href="#shape1" transform="translate(1242 -216)"/>
 <text x="1269" y="-244.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#128078;</text>
 <text x="1269" y="-220.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8853;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(0 -270)"/>
-<text x="54" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">MACRO</text>
+<use xlink:href="#shape1" transform="translate(0 -162)"/>
+<text x="27" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#8546;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(108 -270)"/>
-<text x="162" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">TERMINAL</text>
+<use xlink:href="#shape1" transform="translate(54 -162)"/>
+<text x="81" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#8547;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(216 -270)"/>
-<text x="270" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">QUOTE</text>
+<use xlink:href="#shape0" transform="translate(108 -162)"/>
+<text x="162" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">NETWORK</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(324 -270)"/>
-<text x="378" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">OVER</text>
-<text x="378" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">STRIKE</text>
+<use xlink:href="#shape3" transform="translate(216 -162)"/>
+<text x="256.5" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">TAB</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(432 -270)"/>
-<text x="486" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">CLEAR</text>
-<text x="486" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">INPUT</text>
+<use xlink:href="#shape1" transform="translate(297 -162)"/>
+<text x="324" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">Q</text>
+<text x="324" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8743;</text>
+<text x="324" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#952;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(540 -270)"/>
-<text x="594" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">CLEAR</text>
-<text x="594" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">SCREEN</text>
+<use xlink:href="#shape1" transform="translate(351 -162)"/>
+<text x="378" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">W</text>
+<text x="378" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8744;</text>
+<text x="378" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#969;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(648 -270)"/>
-<text x="702" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">HOLD</text>
-<text x="702" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">OUTPUT</text>
+<use xlink:href="#shape1" transform="translate(405 -162)"/>
+<text x="432" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">E</text>
+<text x="432" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8745;</text>
+<text x="432" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#949;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(756 -270)"/>
-<text x="810" y="-305" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">STOP</text>
-<text x="810" y="-295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">OUTPUT</text>
+<use xlink:href="#shape1" transform="translate(459 -162)"/>
+<text x="486" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">R</text>
+<text x="486" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8746;</text>
+<text x="486" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#961;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(864 -270)"/>
-<text x="918" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">ABORT</text>
+<use xlink:href="#shape1" transform="translate(513 -162)"/>
+<text x="540" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">T</text>
+<text x="540" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8834;</text>
+<text x="540" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#964;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(972 -270)"/>
-<text x="1026" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">BREAK</text>
+<use xlink:href="#shape1" transform="translate(567 -162)"/>
+<text x="594" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">Y</text>
+<text x="594" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8835;</text>
+<text x="594" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#968;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(1080 -270)"/>
-<text x="1134" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">RESUME</text>
+<use xlink:href="#shape1" transform="translate(621 -162)"/>
+<text x="648" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">U</text>
+<text x="648" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8704;</text>
+<text x="648" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#965;</text>
 </g>
 <g class="key">
-<use xlink:href="#shape7" transform="translate(1188 -270)"/>
-<text x="1242" y="-300" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">CALL</text>
+<use xlink:href="#shape1" transform="translate(675 -162)"/>
+<text x="702" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">I</text>
+<text x="702" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8734;</text>
+<text x="702" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#953;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(729 -162)"/>
+<text x="756" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">O</text>
+<text x="756" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8707;</text>
+<text x="756" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#959;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(783 -162)"/>
+<text x="810" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">P</text>
+<text x="810" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8706;</text>
+<text x="810" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#960;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(837 -162)"/>
+<text x="864" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">(</text>
+<text x="864" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">[</text>
+<text x="864" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#10214;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(891 -162)"/>
+<text x="918" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">)</text>
+<text x="918" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">]</text>
+<text x="918" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#10215;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(945 -162)"/>
+<text x="972" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">`</text>
+<text x="972" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">~</text>
+<text x="972" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#172;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape2" transform="translate(999 -162)"/>
+<text x="1039.5" y="-183.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">\</text>
+<text x="1039.5" y="-198.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">|</text>
+<text x="1039.5" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8214;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(1080 -162)"/>
+<text x="1134" y="-192" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">DELETE</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(1188 -162)"/>
+<text x="1215" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#9756;</text>
+<text x="1215" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8855;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(1242 -162)"/>
+<text x="1269" y="-190.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#f2f2f2">&#9758;</text>
+<text x="1269" y="-166.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8856;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -108)"/>
+<text x="54" y="-143" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">MODE</text>
+<text x="54" y="-133" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">LOCK</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(108 -108)"/>
+<text x="162" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">ALT MODE</text>
+</g>
+<g class="key">
+<use xlink:href="#shape4" transform="translate(216 -108)"/>
+<text x="263.25" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">RUB OUT</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(310.5 -108)"/>
+<text x="337.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">A</text>
+<text x="337.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8869;</text>
+<text x="337.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#945;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(364.5 -108)"/>
+<text x="391.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">S</text>
+<text x="391.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8868;</text>
+<text x="391.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#963;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(418.5 -108)"/>
+<text x="445.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">D</text>
+<text x="445.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8866;</text>
+<text x="445.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#948;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(472.5 -108)"/>
+<text x="499.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">F</text>
+<text x="499.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8867;</text>
+<text x="499.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#966;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(526.5 -108)"/>
+<text x="553.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">G</text>
+<text x="553.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8593;</text>
+<text x="553.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#947;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(580.5 -108)"/>
+<text x="607.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">H</text>
+<text x="607.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8595;</text>
+<text x="607.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#951;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(634.5 -108)"/>
+<text x="661.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">J</text>
+<text x="661.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8592;</text>
+<text x="661.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#977;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(688.5 -108)"/>
+<text x="715.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">K</text>
+<text x="715.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8594;</text>
+<text x="715.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#954;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(742.5 -108)"/>
+<text x="769.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">L</text>
+<text x="769.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8596;</text>
+<text x="769.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#955;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(796.5 -108)"/>
+<text x="823.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">;</text>
+<text x="823.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">:</text>
+<text x="823.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#168;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(850.5 -108)"/>
+<text x="877.5" y="-129.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#39;</text>
+<text x="877.5" y="-144.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#34;</text>
+<text x="877.5" y="-112.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8226;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(904.5 -108)"/>
+<text x="958.5" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">RETURN</text>
+</g>
+<g class="key">
+<use xlink:href="#shape5" transform="translate(1012.5 -108)"/>
+<text x="1046.25" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">LINE</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(1080 -108)"/>
+<text x="1134" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">END</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(1188 -108)"/>
+<text x="1242" y="-138" text-anchor="middle" font-family="Arial" font-size="10" fill="#f2f2f2">HELP</text>
+</g>
+<g class="key">
+<use xlink:href="#shape6" transform="translate(0 -54)"/>
+<text x="27" y="-89" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">CAPS</text>
+<text x="27" y="-79" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">LOCK</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(54 -54)"/>
+<text x="94.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">TOP</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(135 -54)"/>
+<text x="175.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">GREEK</text>
+<text x="175.5" y="-59" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">FRONT</text>
+</g>
+<g class="key">
+<use xlink:href="#shape7" transform="translate(216 -54)"/>
+<text x="276.75" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SHIFT</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(337.5 -54)"/>
+<text x="364.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">Z</text>
+<text x="364.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8970;</text>
+<text x="364.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#950;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(391.5 -54)"/>
+<text x="418.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">X</text>
+<text x="418.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8968;</text>
+<text x="418.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#958;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(445.5 -54)"/>
+<text x="472.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">C</text>
+<text x="472.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8800;</text>
+<text x="472.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#967;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(499.5 -54)"/>
+<text x="526.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">V</text>
+<text x="526.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8771;</text>
+<text x="526.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#962;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(553.5 -54)"/>
+<text x="580.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">B</text>
+<text x="580.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8801;</text>
+<text x="580.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#946;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(607.5 -54)"/>
+<text x="634.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">N</text>
+<text x="634.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8804;</text>
+<text x="634.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#957;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(661.5 -54)"/>
+<text x="688.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">M</text>
+<text x="688.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8805;</text>
+<text x="688.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#956;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(715.5 -54)"/>
+<text x="742.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">,</text>
+<text x="742.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&lt;</text>
+<text x="742.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#171;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(769.5 -54)"/>
+<text x="796.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">.</text>
+<text x="796.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&gt;</text>
+<text x="796.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#187;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(823.5 -54)"/>
+<text x="850.5" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">/</text>
+<text x="850.5" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">?</text>
+<text x="850.5" y="-58.4" text-anchor="middle" font-family="Arial" font-size="12" fill="#f2f2f2">&#8747;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape8" transform="translate(877.5 -54)"/>
+<text x="931.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SHIFT</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(985.5 -54)"/>
+<text x="1026" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">GREEK</text>
+<text x="1026" y="-59" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">FRONT</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(1080 -54)"/>
+<text x="1120.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">TOP</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(1161 -54)"/>
+<text x="1201.5" y="-84" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">REPEAT</text>
+</g>
+<g class="key">
+<use xlink:href="#shape6" transform="translate(1242 -54)"/>
+<text x="1269" y="-89" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">ALT</text>
+<text x="1269" y="-79" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">LOCK</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(0 0)"/>
+<text x="40.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">HYPER</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(81 0)"/>
+<text x="121.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SUPER</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(162 0)"/>
+<text x="202.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">META</text>
+</g>
+<g class="key">
+<use xlink:href="#shape4" transform="translate(243 0)"/>
+<text x="290.25" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">CTRL</text>
+</g>
+<g class="key">
+<use xlink:href="#shape9" transform="translate(364.5 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape4" transform="translate(877.5 0)"/>
+<text x="924.75" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">CTRL</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(1053 0)"/>
+<text x="1093.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">META</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(1134 0)"/>
+<text x="1174.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">SUPER</text>
+</g>
+<g class="key">
+<use xlink:href="#shape3" transform="translate(1215 0)"/>
+<text x="1255.5" y="-30" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">HYPER</text>
 </g>
 </g>
 </svg>
