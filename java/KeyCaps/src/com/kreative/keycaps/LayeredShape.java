@@ -1,7 +1,9 @@
 package com.kreative.keycaps;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.Shape;
+import java.awt.geom.AffineTransform;
 
 public class LayeredShape extends LayeredObject {
 	public final Shape shape;
@@ -28,5 +30,12 @@ public class LayeredShape extends LayeredObject {
 		}
 		sb.append("\"/>");
 		return sb.toString();
+	}
+	
+	public void paint(Graphics2D g, AffineTransform tx) {
+		Color base = g.getColor();
+		g.setColor(ColorUtilities.overrideColor(base, color, opacity));
+		g.fill((tx != null) ? tx.createTransformedShape(shape) : shape);
+		g.setColor(base);
 	}
 }

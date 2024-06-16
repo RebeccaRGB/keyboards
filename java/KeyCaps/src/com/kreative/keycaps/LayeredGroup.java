@@ -1,6 +1,8 @@
 package com.kreative.keycaps;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -37,5 +39,12 @@ public class LayeredGroup extends LayeredObject {
 		sb.append(prefix);
 		sb.append("</g>");
 		return sb.toString();
+	}
+	
+	public void paint(Graphics2D g, AffineTransform tx) {
+		Color base = g.getColor();
+		g.setColor(ColorUtilities.overrideColor(base, color, opacity));
+		for (LayeredObject o : contents) o.paint(g, tx);
+		g.setColor(base);
 	}
 }

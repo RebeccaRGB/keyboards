@@ -30,6 +30,12 @@ public final class ColorUtilities {
 		return "#" + Integer.toHexString(0xFF000000 | color.getRGB()).substring(2);
 	}
 	
+	public static Color overrideColor(Color base, Color color, Float opacity) {
+		Color c = (color != null) ? color : base;
+		int a = base.getAlpha(); if (opacity != null) a *= opacity;
+		return new Color(c.getRed(), c.getGreen(), c.getBlue(), a);
+	}
+	
 	private static final Color[] PALETTE_COLORS = {
 		null,
 		new Color(0x1a1a1a), // black
