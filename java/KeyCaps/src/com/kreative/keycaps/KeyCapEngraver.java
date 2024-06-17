@@ -1,6 +1,7 @@
 package com.kreative.keycaps;
 
 import java.awt.Shape;
+import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -183,12 +184,13 @@ public class KeyCapEngraver {
 	}
 	
 	public TextBox[] makeBoxes(KeyCapShape shape, String vs, KeyCapLegend legend) {
-		Shape cs = shape.toAWTShape(keyCapSize);
+		Shape cs = shape.toAWTShape(keyCapSize / moldScale);
 		Shape ts = mold.createTopTextArea(cs, vs);
 		Shape fs = mold.createFrontTextArea(cs, vs);
-		Rectangle2D cbox = ShapeUtilities.getWidestRect(cs, null);
-		Rectangle2D tbox = ShapeUtilities.getWidestRect(ts, null);
-		Rectangle2D fbox = ShapeUtilities.getWidestRect(fs, null);
+		AffineTransform tx = AffineTransform.getScaleInstance(moldScale, moldScale);
+		Rectangle2D cbox = ShapeUtilities.getWidestRect(tx.createTransformedShape(cs), null);
+		Rectangle2D tbox = ShapeUtilities.getWidestRect(tx.createTransformedShape(ts), null);
+		Rectangle2D fbox = ShapeUtilities.getWidestRect(tx.createTransformedShape(fs), null);
 		ArrayList<TextBox> boxes = new ArrayList<TextBox>();
 		String[] keys = legend.keySet().toArray(new String[legend.size()]);
 		Arrays.sort(keys, KEY_COMPARATOR);

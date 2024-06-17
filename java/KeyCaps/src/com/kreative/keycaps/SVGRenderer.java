@@ -26,6 +26,11 @@ public class SVGRenderer {
 		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
 	}
 	
+	public KeyCapMold getKeyCapMold() { return mold; }
+	public float getKeyCapMoldScale() { return moldScale; }
+	public float getKeyCapSize() { return keyCapSize; }
+	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
+	
 	public String render(KeyCapLayout layout) {
 		String vbox = toSVGViewBox(layout.getBounds(keyCapSize), 0, ROUNDING);
 		SVGShapeDefs shapeDefs = new SVGShapeDefs(mold, moldScale, keyCapSize);

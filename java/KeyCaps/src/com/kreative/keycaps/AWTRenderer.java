@@ -31,6 +31,11 @@ public class AWTRenderer {
 		this.pathDefs = new AWTPathDefs();
 	}
 	
+	public KeyCapMold getKeyCapMold() { return mold; }
+	public float getKeyCapMoldScale() { return moldScale; }
+	public float getKeyCapSize() { return keyCapSize; }
+	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
+	
 	public Rectangle2D getBounds(KeyCapLayout layout) {
 		return layout.getBounds(keyCapSize);
 	}
