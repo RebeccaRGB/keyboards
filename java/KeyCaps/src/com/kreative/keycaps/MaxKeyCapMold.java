@@ -57,6 +57,10 @@ public class MaxKeyCapMold extends KeyCapMold {
 		}
 	}
 	
+	public Padding getPadding() {
+		return new Padding(0, 0, 0, 0);
+	}
+	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
 		float b = maxBorder(shape);
 		List<String> vss = vss(vs);

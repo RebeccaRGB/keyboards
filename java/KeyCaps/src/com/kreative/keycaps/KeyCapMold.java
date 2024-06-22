@@ -11,6 +11,7 @@ public abstract class KeyCapMold {
 		return ColorUtilities.contrastingColor(keyCapColor);
 	}
 	
+	public abstract Padding getPadding();
 	public abstract LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity);
 	public abstract Shape createTopTextArea(Shape shape, String vs);
 	public abstract Shape createFrontTextArea(Shape shape, String vs);

@@ -37,11 +37,17 @@ public class AWTRenderer {
 	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
 	
 	public Rectangle2D getBounds(KeyCapLayout layout) {
-		return layout.getBounds(keyCapSize);
+		Rectangle2D.Float bounds = layout.getBounds(keyCapSize);
+		Padding padding = mold.getPadding();
+		bounds.x -= padding.left * moldScale;
+		bounds.y -= padding.top * moldScale;
+		bounds.width += (padding.left + padding.right) * moldScale;
+		bounds.height += (padding.top + padding.bottom) * moldScale;
+		return bounds;
 	}
 	
 	public void paint(Graphics2D g, KeyCapLayout layout, Rectangle2D bounds, boolean aspect) {
-		AffineTransform baseTX = getViewTransform(bounds, layout.getBounds(keyCapSize), aspect);
+		AffineTransform baseTX = getViewTransform(bounds, this.getBounds(layout), aspect);
 		PropertyMap lp = layout.getPropertyMap();
 		String lvs = lp.containsAny("vs") ? lp.getString("vs") : null;
 		Color lcc = lp.containsAny("cc") ? lp.getColor("cc") : null;

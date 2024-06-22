@@ -7,6 +7,7 @@ import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.PathIterator;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -90,6 +91,69 @@ public final class ShapeUtilities {
 		if (shape == null || (dx == 0 && dy == 0)) return shape;
 		AffineTransform tx = AffineTransform.getTranslateInstance(dx, dy);
 		return tx.createTransformedShape(shape);
+	}
+	
+	public static Shape simplify(Shape shape, AffineTransform tx) {
+		if (shape == null) return null;
+		ArrayList<float[]> segments = new ArrayList<float[]>();
+		int seg; float startX = 0, startY = 0; float[] c = new float[6];
+		for (PathIterator i = shape.getPathIterator(tx); !i.isDone(); i.next()) {
+			switch (seg = i.currentSegment(c)) {
+				case PathIterator.SEG_MOVETO:
+					startX = c[0]; startY = c[1];
+					// fallthrough;
+				case PathIterator.SEG_LINETO:
+					segments.add(new float[]{seg, c[0], c[1]});
+					break;
+				case PathIterator.SEG_QUADTO:
+					segments.add(new float[]{seg, c[0], c[1], c[2], c[3]});
+					break;
+				case PathIterator.SEG_CUBICTO:
+					segments.add(new float[]{seg, c[0], c[1], c[2], c[3], c[4], c[5]});
+					break;
+				case PathIterator.SEG_CLOSE:
+					segments.add(new float[]{seg, startX, startY});
+					break;
+			}
+		}
+		seg = segments.size();
+		for (int i = segments.size() - 3; i >= 0; i--) {
+			float[] p0 = segments.get(i+0);
+			float[] p1 = segments.get(i+1);
+			float[] p2 = segments.get(i+2);
+			if (p1[0] == PathIterator.SEG_LINETO && (
+				p2[0] == PathIterator.SEG_LINETO ||
+				p2[0] == PathIterator.SEG_CLOSE
+			)) {
+				float x01 = p1[p1.length-2] - p0[p0.length-2];
+				float y01 = p1[p1.length-1] - p0[p0.length-1];
+				float x12 = p2[p2.length-2] - p1[p1.length-2];
+				float y12 = p2[p2.length-1] - p1[p1.length-1];
+				if (x01*y12 == y01*x12) segments.remove(i+1);
+			}
+		}
+		if (seg == segments.size()) return shape;
+		GeneralPath path = new GeneralPath();
+		for (float[] segment : segments) {
+			switch ((int)(c = segment)[0]) {
+				case PathIterator.SEG_MOVETO:
+					path.moveTo(c[1], c[2]);
+					break;
+				case PathIterator.SEG_LINETO:
+					path.lineTo(c[1], c[2]);
+					break;
+				case PathIterator.SEG_QUADTO:
+					path.quadTo(c[1], c[2], c[3], c[4]);
+					break;
+				case PathIterator.SEG_CUBICTO:
+					path.curveTo(c[1], c[2], c[3], c[4], c[5], c[6]);
+					break;
+				case PathIterator.SEG_CLOSE:
+					path.closePath();
+					break;
+			}
+		}
+		return path;
 	}
 	
 	public static final Comparator<Rectangle2D> WIDEST = new Comparator<Rectangle2D>() {

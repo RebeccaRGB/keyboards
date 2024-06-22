@@ -190,6 +190,10 @@ public class IconKeyCapMold extends KeyCapMold {
 		return defaultColor;
 	}
 	
+	public Padding getPadding() {
+		return new Padding(0, 0, 0, 0);
+	}
+	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
 		if (color == null) color = getDefaultKeyCapColor();
 		List<LayeredObject> layers = new ArrayList<LayeredObject>();

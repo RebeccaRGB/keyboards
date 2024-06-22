@@ -11,6 +11,7 @@ import static com.kreative.keycaps.StringUtilities.xmlSpecialChars;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 import java.util.Collections;
 
 public class SVGRenderer {
@@ -31,8 +32,18 @@ public class SVGRenderer {
 	public float getKeyCapSize() { return keyCapSize; }
 	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
 	
+	public Rectangle2D getBounds(KeyCapLayout layout) {
+		Rectangle2D.Float bounds = layout.getBounds(keyCapSize);
+		Padding padding = mold.getPadding();
+		bounds.x -= padding.left * moldScale;
+		bounds.y -= padding.top * moldScale;
+		bounds.width += (padding.left + padding.right) * moldScale;
+		bounds.height += (padding.top + padding.bottom) * moldScale;
+		return bounds;
+	}
+	
 	public String render(KeyCapLayout layout) {
-		String vbox = toSVGViewBox(layout.getBounds(keyCapSize), 0, ROUNDING);
+		String vbox = toSVGViewBox(this.getBounds(layout), 0, ROUNDING);
 		SVGShapeDefs shapeDefs = new SVGShapeDefs(mold, moldScale, keyCapSize);
 		SVGPathDefs pathDefs = new SVGPathDefs();
 		StringBuffer keyboard = new StringBuffer();

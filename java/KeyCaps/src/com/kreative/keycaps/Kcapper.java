@@ -20,7 +20,7 @@ public final class Kcapper {
 			try { id = Integer.parseInt(file.getName().split("\\D")[0]); }
 			catch (Exception e) {}
 			InputStream in = new FileInputStream(file);
-			String svg = kcapToSVG(in, new KbitKeyCapMold(), 1, id);
+			String svg = kcapToSVG(in, new KbitKeyCapMold(0), 1, id);
 			System.out.println(svg.trim());
 			in.close();
 		}

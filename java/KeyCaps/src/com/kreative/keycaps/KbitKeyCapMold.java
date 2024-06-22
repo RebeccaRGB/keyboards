@@ -2,6 +2,9 @@ package com.kreative.keycaps;
 
 import static com.kreative.keycaps.ColorUtilities.multiplyAdd;
 import static com.kreative.keycaps.ShapeUtilities.contract;
+import static com.kreative.keycaps.ShapeUtilities.expand;
+import static com.kreative.keycaps.ShapeUtilities.simplify;
+import static com.kreative.keycaps.ShapeUtilities.translate;
 
 import java.awt.Color;
 import java.awt.Shape;
@@ -108,11 +111,26 @@ public class KbitKeyCapMold extends KeyCapMold {
 		),
 	};
 	
+	private final float overhang;
+	
+	public KbitKeyCapMold() {
+		this.overhang = 0.5f;
+	}
+	
+	public KbitKeyCapMold(float overhang) {
+		this.overhang = overhang;
+	}
+	
 	public Color getDefaultKeyCapColor() {
 		return defaultColor;
 	}
 	
+	public Padding getPadding() {
+		return new Padding(0, 0, overhang*2, overhang*2);
+	}
+	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
+		if (overhang > 0) shape = translate(simplify(expand(shape, overhang), null), overhang, overhang);
 		if (color == null) color = getDefaultKeyCapColor();
 		List<LayeredObject> layers = new ArrayList<LayeredObject>();
 		for (int li = 0; li < layerCount; li++) {
@@ -126,6 +144,7 @@ public class KbitKeyCapMold extends KeyCapMold {
 	}
 	
 	public Shape createTopTextArea(Shape shape, String vs) {
+		if (overhang > 0) shape = translate(expand(shape, overhang), overhang, overhang);
 		return contract(shape, pathInset);
 	}
 	
