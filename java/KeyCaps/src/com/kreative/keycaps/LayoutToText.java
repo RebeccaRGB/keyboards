@@ -13,13 +13,13 @@ public final class LayoutToText extends LayoutConverter {
 		public abstract String format(KeyCapLayout layout);
 	};
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		new LayoutToText().mainImpl(args, ".txt");
 	}
 	
 	protected Format format = Format.STANDARD;
 	
-	protected final int parseArg(String[] args, String arg, int argi) throws IOException {
+	protected final int parseArg(String[] args, String arg, int argi) {
 		if (arg.equals("-s")) {
 			format = Format.STANDARD;
 		} else if (arg.equals("-n")) {

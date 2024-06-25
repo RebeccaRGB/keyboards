@@ -4,5 +4,5 @@ if [ ! -f java/KeyCaps/keycaps.jar ]; then
 	make
 	cd ../..
 fi
-rm keyboards-svg/*.svg
-java -jar java/KeyCaps/keycaps.jar --svg -m max -u 54 -o keyboards-svg -- keyboards/*.txt
+rm -rf keyboards-svg/*
+java -jar java/KeyCaps/keycaps.jar --svg -m max -u 54 -o keyboards-svg -f keyboards

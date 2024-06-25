@@ -6,11 +6,11 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 public final class LayoutToKKCX extends LayoutConverter {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		new LayoutToKKCX().mainImpl(args, ".kkcx");
 	}
 	
-	protected final int parseArg(String[] args, String arg, int argi) throws IOException {
+	protected final int parseArg(String[] args, String arg, int argi) {
 		return HELP;
 	}
 	

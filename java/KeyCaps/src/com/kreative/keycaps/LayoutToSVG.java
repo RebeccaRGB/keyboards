@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
 public final class LayoutToSVG extends LayoutConverter {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		new LayoutToSVG().mainImpl(args, ".svg");
 	}
 	
@@ -14,7 +14,7 @@ public final class LayoutToSVG extends LayoutConverter {
 	protected float moldScale = 1;
 	protected float size = 48;
 	
-	protected final int parseArg(String[] args, String arg, int argi) throws IOException {
+	protected final int parseArg(String[] args, String arg, int argi) {
 		if (arg.equals("-m") && argi < args.length) {
 			arg = args[argi++];
 			mold = KeyCapMold.forName(arg);
