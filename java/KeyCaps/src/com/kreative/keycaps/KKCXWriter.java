@@ -72,7 +72,9 @@ public class KKCXWriter {
 		}
 		KeyCapLegend legend = cap.getLegend();
 		KeyCapLegend.Type type = legend.getExplicitType();
-		if (type != null) {
+		if (type == null) {
+			type = legend.getImpliedType();
+		} else {
 			out.print(" type=\"");
 			out.print(xmlSpecialChars(type.toString()));
 			out.print("\"");
@@ -84,7 +86,7 @@ public class KKCXWriter {
 		if (inlineKeyCapChildren(cap)) {
 			out.print(">");
 			writeProperties(out, null, props, KEYCAP_ATTRIBUTES);
-			List<KeyCapLegendItem> items = legend.getItemList();
+			List<KeyCapLegendItem> items = legend.getItemList(type);
 			if (items != null) {
 				String text = singleKeyCapTextChild(items);
 				if (text != null) {
@@ -104,7 +106,7 @@ public class KKCXWriter {
 			out.println(">");
 			String cprefix = prefix + "\t";
 			writeProperties(out, cprefix, props, KEYCAP_ATTRIBUTES);
-			List<KeyCapLegendItem> items = legend.getItemList();
+			List<KeyCapLegendItem> items = legend.getItemList(type);
 			if (items != null) {
 				for (KeyCapLegendItem item : items) {
 					writeLegendItem(out, cprefix, null, item);
@@ -121,7 +123,7 @@ public class KKCXWriter {
 	
 	private static boolean inlineKeyCapChildren(KeyCap cap) {
 		KeyCapLegend legend = cap.getLegend();
-		if (legend.size() > 2) return false;
+		if (legend.size() > 4) return false;
 		HashSet<String> propertyKeys = new HashSet<String>();
 		propertyKeys.addAll(cap.getPropertyMap().keySet());
 		propertyKeys.addAll(legend.getPropertyMap().keySet());

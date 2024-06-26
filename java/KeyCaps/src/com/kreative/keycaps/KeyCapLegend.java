@@ -265,14 +265,21 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 		return type;
 	}
 	
-	public List<KeyCapLegendItem> getItemList() {
+	public Type getImpliedType() {
 		Type type = Type.forKeys(items.keySet());
 		if (type == null) return null;
 		int n = minParamCount(type);
 		if (n == 0) return null;
 		if (!canImplyType(type, n)) return null;
+		return type;
+	}
+	
+	public List<KeyCapLegendItem> getItemList(Type type) {
+		if (type == null) return null;
+		int n = minParamCount(type);
+		if (n == 0) return null;
 		List<KeyCapLegendItem> items = new ArrayList<KeyCapLegendItem>();
-		for (String key : type.paramKeys) items.add(this.items.get(key));
+		for (int i = 0; i < n; i++) items.add(this.items.get(type.paramKeys[i]));
 		return items;
 	}
 	
