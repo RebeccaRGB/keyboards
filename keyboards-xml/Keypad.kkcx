@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k x="0u" y="4u">Num&#10;Lock</k>
+	<k>/</k>
+	<k>*</k>
+	<k>-</k>
+	<k x="0u" y="3u" type="N"><l>7</l><l>Home</l></k>
+	<k type="N"><l>8</l><l>&#8593;</l></k>
+	<k type="N"><l>9</l><l>PgUp</l></k>
+	<k x="0u" y="2u" type="N"><l>4</l><l>&#8592;</l></k>
+	<k type="N">5</k>
+	<k type="N"><l>6</l><l>&#8594;</l></k>
+	<k shape="1+2u">+</k>
+	<k x="0u" y="1u" type="N"><l>1</l><l>End</l></k>
+	<k type="N"><l>2</l><l>&#8595;</l></k>
+	<k type="N"><l>3</l><l>PgDn</l></k>
+	<k x="0u" y="0u" shape="2u" type="N"><l>0</l><l>Ins</l></k>
+	<k type="N"><l>.</l><l>Del</l></k>
+	<k shape="1+2u">Enter</k>
+</keyCapLayout>

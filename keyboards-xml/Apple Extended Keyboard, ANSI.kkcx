@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Apple Extended Keyboard, ANSI" kbdType="2" gestalt="4" cc="5" lc="1" a="sw">
+	<k x="0u" y="6u">esc</k>
+	<k x="2u" y="6u">F1</k>
+	<k>F2</k>
+	<k>F3</k>
+	<k>F4</k>
+	<k x="6.5u" y="6u">F5</k>
+	<k>F6</k>
+	<k>F7</k>
+	<k>F8</k>
+	<k x="11u" y="6u">F9</k>
+	<k>F10</k>
+	<k>F11</k>
+	<k>F12</k>
+	<k x="15.5u" y="6u"><l>F13</l><l lh="0.5" a="nw">print&#10;screen</l></k>
+	<k><l>F14</l><l lh="0.5" a="nw">scroll&#10;lock</l></k>
+	<k><l>F15</l><l lh="0.5" a="nw">pause</l></k>
+	<k x="22u" y="6u" type="F">&#9665;</k>
+	<k x="0u" y="4u"><l>`</l><l>~</l></k>
+	<k><l>1</l><l>!</l></k>
+	<k><l>2</l><l>@</l></k>
+	<k><l>3</l><l>#</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>^</l></k>
+	<k><l>7</l><l>&amp;</l></k>
+	<k><l>8</l><l>*</l></k>
+	<k><l>9</l><l>(</l></k>
+	<k><l>0</l><l>)</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k><l>=</l><l>+</l></k>
+	<k shape="2u">delete</k>
+	<k x="15.5u" y="4u"><l>help</l><l lh="0.5" a="nw">ins</l></k>
+	<k>home</k>
+	<k>page&#10;up</k>
+	<k x="19u" y="4u"><l>clear</l><l lh="0.5" a="nw">num&#10;lock</l></k>
+	<k>=</k>
+	<k>/</k>
+	<k>*</k>
+	<k x="0u" y="3u" shape="1.5u">tab</k>
+	<k>Q</k>
+	<k>W</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Y</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k><l>[</l><l>{</l></k>
+	<k><l>]</l><l>}</l></k>
+	<k shape="1.5u"><l>\</l><l>|</l></k>
+	<k x="15.5u" y="3u"><l>&#8998;</l><l lh="0.5" a="nw">del</l></k>
+	<k>end</k>
+	<k>page&#10;down</k>
+	<k x="19u" y="3u">7</k>
+	<k>8</k>
+	<k>9</k>
+	<k>-</k>
+	<k x="0u" y="2u" shape="1.75u">caps&#10;lock</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k><l>;</l><l>:</l></k>
+	<k><l>&#39;</l><l>&#34;</l></k>
+	<k shape="2.25u">return</k>
+	<k x="19u" y="2u">4</k>
+	<k>5</k>
+	<k>6</k>
+	<k>+</k>
+	<k x="0u" y="1u" shape="2.25u">shift</k>
+	<k>Z</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k>M</k>
+	<k><l>,</l><l>&lt;</l></k>
+	<k><l>.</l><l>&gt;</l></k>
+	<k><l>/</l><l>?</l></k>
+	<k shape="2.75u">shift</k>
+	<k x="16.5u" y="1u">&#8593;</k>
+	<k x="19u" y="1u">1</k>
+	<k>2</k>
+	<k>3</k>
+	<k x="0u" y="0u" shape="1.5u">control</k>
+	<k shape="1.25u"><l>option</l><l lh="0.5" a="nw">alt</l></k>
+	<k shape="1.5u" type="H"><l>&#63506;</l><l a="se">&#8984;</l></k>
+	<k shape="6.5u"></k>
+	<k shape="1.5u" type="H"><l>&#63506;</l><l a="se">&#8984;</l></k>
+	<k shape="1.25u"><l>option</l><l lh="0.5" a="nw">alt</l></k>
+	<k shape="1.5u">control</k>
+	<k x="15.5u" y="0u">&#8592;</k>
+	<k>&#8595;</k>
+	<k>&#8594;</k>
+	<k x="19u" y="0u" shape="2u">0</k>
+	<k>.</k>
+	<k shape="1+2u">enter</k>
+</keyCapLayout>

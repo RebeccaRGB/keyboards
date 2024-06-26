@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k x="0u" y="5.25u" shape="2u">help</k>
+	<k x="2.5u" y="5.25u">esc</k>
+	<k x="4.5u" y="5.25u">F1</k>
+	<k>F2</k>
+	<k>F3</k>
+	<k>F4</k>
+	<k x="9u" y="5.25u">F5</k>
+	<k>F6</k>
+	<k>F7</k>
+	<k>F8</k>
+	<k x="13.5u" y="5.25u">F9</k>
+	<k>F10</k>
+	<k>F11</k>
+	<k>F12</k>
+	<k x="18u" y="5.25u">print&#10;screen</k>
+	<k>scroll&#10;lock</k>
+	<k>pause</k>
+	<k x="21.5u" y="5.25u"><l>&#128263;</l><l>&#128437;</l></k>
+	<k><l>&#128265;</l><l>&#9681;&#8722;</l></k>
+	<k><l>&#128266;</l><l>&#9681;+</l></k>
+	<k>&#9214;</k>
+	<k x="0u" y="4u">stop</k>
+	<k>again</k>
+	<k x="2.5u" y="4u"><l>`</l><l>&#172;</l></k>
+	<k><l>1</l><l>!</l></k>
+	<k><l>2</l><l>&#34;</l></k>
+	<k><l>3</l><l>&#163;</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>^</l></k>
+	<k><l>7</l><l>&amp;</l></k>
+	<k><l>8</l><l>*</l></k>
+	<k><l>9</l><l>(</l></k>
+	<k><l>0</l><l>)</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k><l>=</l><l>+</l></k>
+	<k shape="2u">back space</k>
+	<k x="18u" y="4u">insert</k>
+	<k>home</k>
+	<k>page&#10;up</k>
+	<k x="21.5u" y="4u">num&#10;lock</k>
+	<k>/</k>
+	<k>*</k>
+	<k>-</k>
+	<k x="0u" y="3u">props</k>
+	<k>undo</k>
+	<k x="2.5u" y="3u" shape="1.5u">tab</k>
+	<k>Q</k>
+	<k>W</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Y</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k><l>[</l><l>{</l></k>
+	<k><l>]</l><l>}</l></k>
+	<k x="18u" y="3u">del</k>
+	<k>end</k>
+	<k>page&#10;down</k>
+	<k x="21.5u" y="3u" type="N"><l>7</l><l>home</l></k>
+	<k type="N"><l>8</l><l>&#8593;</l></k>
+	<k type="N"><l>9</l><l>pgup</l></k>
+	<k x="0u" y="2u">front</k>
+	<k>copy</k>
+	<k x="2.5u" y="2u" shape="1.75u">caps lock</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k><l>;</l><l>:</l></k>
+	<k><l>&#39;</l><l>@</l></k>
+	<k><l>#</l><l>~</l></k>
+	<k shape="1.25+2+1.5u">return</k>
+	<k x="21.5u" y="2u" type="N"><l>4</l><l>&#8592;</l></k>
+	<k type="N">5</k>
+	<k type="N"><l>6</l><l>&#8594;</l></k>
+	<k shape="1+2u">+</k>
+	<k x="0u" y="1u">open</k>
+	<k>paste</k>
+	<k x="2.5u" y="1u" shape="1.25u">shift</k>
+	<k><l>\</l><l>|</l></k>
+	<k>Z</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k>M</k>
+	<k><l>,</l><l>&lt;</l></k>
+	<k><l>.</l><l>&gt;</l></k>
+	<k><l>/</l><l>?</l></k>
+	<k shape="2.75u">shift</k>
+	<k x="19u" y="1u">&#8593;</k>
+	<k x="21.5u" y="1u" type="N"><l>1</l><l>end</l></k>
+	<k type="N"><l>2</l><l>&#8595;</l></k>
+	<k type="N"><l>3</l><l>pgdn</l></k>
+	<k x="0u" y="0u">find</k>
+	<k>cut</k>
+	<k x="2.5u" y="0u" shape="1.75u">control</k>
+	<k type="F">&#9670;</k>
+	<k shape="1.5u">alt</k>
+	<k shape="7.25u"></k>
+	<k shape="1.5u">alt&#10;graph</k>
+	<k type="F">&#9670;</k>
+	<k>compose</k>
+	<k x="18u" y="0u">&#8592;</k>
+	<k>&#8595;</k>
+	<k>&#8594;</k>
+	<k x="21.5u" y="0u" shape="2u" type="N"><l>0</l><l>ins</l></k>
+	<k type="N"><l>.</l><l>del</l></k>
+	<k shape="1+2u">enter</k>
+</keyCapLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Famicom" cc="234" lc="1" a="c">
+	<k x="0.25u" y="5u" shape="2u" cc="#800">F1</k>
+	<k shape="2u" cc="#800">F2</k>
+	<k shape="2u" cc="#800">F3</k>
+	<k shape="2u" cc="#800">F4</k>
+	<k shape="2u" cc="#800">F5</k>
+	<k shape="2u" cc="#800">F6</k>
+	<k shape="2u" cc="#800">F7</k>
+	<k shape="2u" cc="#800">F8</k>
+	<k x="0.75u" y="4u"><l>1</l><l>!</l><l>&#12450;</l><l>&#12449;</l></k>
+	<k><l>2</l><l>&#34;</l><l>&#12452;</l><l>&#12451;</l></k>
+	<k><l>3</l><l>#</l><l>&#12454;</l><l>&#12453;</l></k>
+	<k><l>4</l><l>$</l><l>&#12456;</l><l>&#12455;</l></k>
+	<k><l>5</l><l>%</l><l>&#12458;</l><l>&#12457;</l></k>
+	<k type="Q"><l>6</l><l>&amp;</l><l>&#12490;</l></k>
+	<k type="Q"><l>7</l><l>&#39;</l><l>&#12491;</l></k>
+	<k type="Q"><l>8</l><l>(</l><l>&#12492;</l></k>
+	<k type="Q"><l>9</l><l>)</l><l>&#12493;</l></k>
+	<k type="Q"><l>0</l><l></l><l>&#12494;</l></k>
+	<k type="Q"><l>-</l><l>=</l><l>&#12521;</l></k>
+	<k type="Q"><l>^</l><l></l><l>&#12522;</l></k>
+	<k type="Q"><l>&#165;</l><l></l><l>&#12523;</l></k>
+	<k>STOP</k>
+	<k x="15.75u" y="3.5u"><l>HOME</l><l>CLR</l></k>
+	<k>INS</k>
+	<k>DEL</k>
+	<k x="0.25u" y="3u">ESC</k>
+	<k type="Q"><l>Q</l><l></l><l>&#12459;</l></k>
+	<k type="Q"><l>W</l><l></l><l>&#12461;</l></k>
+	<k type="Q"><l>E</l><l></l><l>&#12463;</l></k>
+	<k type="Q"><l>R</l><l></l><l>&#12465;</l></k>
+	<k type="Q"><l>T</l><l></l><l>&#12467;</l></k>
+	<k><l>Y</l><l></l><l>&#12495;</l><l>&#12497;</l></k>
+	<k><l>U</l><l></l><l>&#12498;</l><l>&#12500;</l></k>
+	<k><l>I</l><l></l><l>&#12501;</l><l>&#12503;</l></k>
+	<k><l>O</l><l></l><l>&#12504;</l><l>&#12506;</l></k>
+	<k><l>P</l><l></l><l>&#12507;</l><l>&#12509;</l></k>
+	<k type="Q"><l>@</l><l></l><l>&#12524;</l></k>
+	<k><l>[</l><l></l><l>&#12525;</l><l>&#12300;</l></k>
+	<k shape="2u" cc="#800">RETURN</k>
+	<k x="16.25u" y="2.5u" shape="2u" cc="#800">&#8593;</k>
+	<k x="0.5u" y="2u">CTR</k>
+	<k type="Q"><l>A</l><l></l><l>&#12469;</l></k>
+	<k type="Q"><l>S</l><l></l><l>&#12471;</l></k>
+	<k type="Q"><l>D</l><l></l><l>&#12473;</l></k>
+	<k type="Q"><l>F</l><l></l><l>&#12475;</l></k>
+	<k type="Q"><l>G</l><l></l><l>&#12477;</l></k>
+	<k type="Q"><l>H</l><l></l><l>&#12510;</l></k>
+	<k type="Q"><l>J</l><l></l><l>&#12511;</l></k>
+	<k type="Q"><l>K</l><l></l><l>&#12512;</l></k>
+	<k type="Q"><l>L</l><l></l><l>&#12513;</l></k>
+	<k type="Q"><l>;</l><l>+</l><l>&#12514;</l></k>
+	<k type="Q"><l>:</l><l>*</l><l>&#12540;</l></k>
+	<k><l>]</l><l></l><l>&#12290;</l><l>&#12301;</l></k>
+	<k>&#12459;&#12490;</k>
+	<k x="15.25u" y="1.5u" shape="2u" cc="#800">&#8592;</k>
+	<k shape="2u" cc="#800">&#8594;</k>
+	<k x="0u" y="1u" shape="2u" cc="#800">SHIFT</k>
+	<k type="Q"><l>Z</l><l></l><l>&#12479;</l></k>
+	<k type="Q"><l>X</l><l></l><l>&#12481;</l></k>
+	<k><l>C</l><l></l><l>&#12484;</l><l>&#12483;</l></k>
+	<k type="Q"><l>V</l><l></l><l>&#12486;</l></k>
+	<k type="Q"><l>B</l><l></l><l>&#12488;</l></k>
+	<k><l>N</l><l></l><l>&#12516;</l><l>&#12515;</l></k>
+	<k><l>M</l><l></l><l>&#12518;</l><l>&#12517;</l></k>
+	<k><l>,</l><l>&lt;</l><l>&#12520;</l><l>&#12519;</l></k>
+	<k type="Q"><l>.</l><l>&gt;</l><l>&#12527;</l></k>
+	<k type="Q"><l>/</l><l>?</l><l>&#12530;</l></k>
+	<k><l>&#12531;</l><l>&#9251;</l></k>
+	<k shape="2u" cc="#800">SHIFT</k>
+	<k x="16.25u" y="0.5u" shape="2u" cc="#800">&#8595;</k>
+	<k x="3u" y="0u">GRPH</k>
+	<k shape="8u" cc="#800"></k>
+</keyCapLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k x="0u" y="5u" shape="1+0.5u">esc</k>
+	<k x="1.5u" y="5u" shape="1+0.5u">F1</k>
+	<k shape="1+0.5u">F2</k>
+	<k shape="1+0.5u">F3</k>
+	<k shape="1+0.5u">F4</k>
+	<k x="6u" y="5u" shape="1+0.5u">F5</k>
+	<k shape="1+0.5u">F6</k>
+	<k shape="1+0.5u">F7</k>
+	<k shape="1+0.5u">F8</k>
+	<k x="10.5u" y="5u" shape="1+0.5u">F9</k>
+	<k shape="1+0.5u">F10</k>
+	<k shape="1+0.5u">F11</k>
+	<k shape="1+0.5u">F12</k>
+	<k x="0.5u" y="4u" type="Q"><l>1</l><l>!</l><l>&#12396;</l></k>
+	<k type="Q"><l>2</l><l>&#34;</l><l>&#12405;</l></k>
+	<k><l>3</l><l>#</l><l>&#12354;</l><l>&#12353;</l></k>
+	<k><l>4</l><l>$</l><l>&#12358;</l><l>&#12357;</l></k>
+	<k><l>5</l><l>%</l><l>&#12360;</l><l>&#12359;</l></k>
+	<k><l>6</l><l>&amp;</l><l>&#12362;</l><l>&#12361;</l></k>
+	<k><l>7</l><l>&#39;</l><l>&#12420;</l><l>&#12419;</l></k>
+	<k><l>8</l><l>(</l><l>&#12422;</l><l>&#12421;</l></k>
+	<k><l>9</l><l>)</l><l>&#12424;</l><l>&#12423;</l></k>
+	<k><l>0</l><l></l><l>&#12431;</l><l>&#12434;</l></k>
+	<k type="Q"><l>-</l><l>=</l><l>&#12411;</l></k>
+	<k type="Q"><l>^</l><l>~</l><l>&#12408;</l></k>
+	<k type="Q"><l>&#165;</l><l>|</l><l>&#12540;</l></k>
+	<k>delete</k>
+	<k x="0u" y="3u">tab</k>
+	<k type="T"><l>Q</l><l>&#12383;</l></k>
+	<k type="T"><l>W</l><l>&#12390;</l></k>
+	<k><l>E</l><l>&#12356;</l><l>&#12355;</l></k>
+	<k type="T"><l>R</l><l>&#12377;</l></k>
+	<k type="T"><l>T</l><l>&#12363;</l></k>
+	<k type="T"><l>Y</l><l>&#12435;</l></k>
+	<k type="T"><l>U</l><l>&#12394;</l></k>
+	<k type="T"><l>I</l><l>&#12395;</l></k>
+	<k type="T"><l>O</l><l>&#12425;</l></k>
+	<k type="T"><l>P</l><l>&#12379;</l></k>
+	<k type="Q"><l>@</l><l>`</l><l>&#12443;</l></k>
+	<k><l>[</l><l>{</l><l>&#12444;</l><l>&#12300;</l></k>
+	<k x="0u" y="2u" shape="1.25u">control</k>
+	<k type="T"><l>A</l><l>&#12385;</l></k>
+	<k type="T"><l>S</l><l>&#12392;</l></k>
+	<k type="T"><l>D</l><l>&#12375;</l></k>
+	<k type="T"><l>F</l><l>&#12399;</l></k>
+	<k type="T"><l>G</l><l>&#12365;</l></k>
+	<k type="T"><l>H</l><l>&#12367;</l></k>
+	<k type="T"><l>J</l><l>&#12414;</l></k>
+	<k type="T"><l>K</l><l>&#12398;</l></k>
+	<k type="T"><l>L</l><l>&#12426;</l></k>
+	<k type="Q"><l>;</l><l>+</l><l>&#12428;</l></k>
+	<k type="Q"><l>:</l><l>*</l><l>&#12369;</l></k>
+	<k><l>]</l><l>}</l><l>&#12416;</l><l>&#12301;</l></k>
+	<k shape="1.25+2+1.5u">return</k>
+	<k x="0u" y="1u" shape="1.75u">shift</k>
+	<k><l>Z</l><l>&#12388;</l><l>&#12387;</l></k>
+	<k type="T"><l>X</l><l>&#12373;</l></k>
+	<k type="T"><l>C</l><l>&#12381;</l></k>
+	<k type="T"><l>V</l><l>&#12402;</l></k>
+	<k type="T"><l>B</l><l>&#12371;</l></k>
+	<k type="T"><l>N</l><l>&#12415;</l></k>
+	<k type="T"><l>M</l><l>&#12418;</l></k>
+	<k><l>,</l><l>&lt;</l><l>&#12397;</l><l>&#12289;</l></k>
+	<k><l>.</l><l>&gt;</l><l>&#12427;</l><l>&#12290;</l></k>
+	<k><l>/</l><l>?</l><l>&#12417;</l><l>&#12539;</l></k>
+	<k><l>&#12429;</l><l>_</l></k>
+	<k shape="1.75u">shift</k>
+	<k x="12.5u" y="0.5u" shape="1+0.5u">&#8593;</k>
+	<k x="0u" y="0u" shape="1.25u">caps&#10;lock</k>
+	<k>option</k>
+	<k shape="1.25u">&#8984;</k>
+	<k shape="1.25u">&#33521;&#25968;</k>
+	<k shape="3u"></k>
+	<k shape="1.25u"><l>&#12363;&#12394;</l><l>&#12459;&#12490;</l></k>
+	<k>fn</k>
+	<k>enter</k>
+	<k x="11.5u" y="0u" shape="1+0.5u">&#8592;</k>
+	<k shape="1+0.5u">&#8595;</k>
+	<k shape="1+0.5u">&#8594;</k>
+</keyCapLayout>

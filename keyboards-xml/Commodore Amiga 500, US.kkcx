@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Commodore Amiga 500, US" cc="31" lc="1" a="nw">
+	<k x="0u" y="5.5u" cc="4">Esc</k>
+	<k x="1.5u" y="5.5u" shape="1.25u" cc="4">F1</k>
+	<k shape="1.25u" cc="4">F2</k>
+	<k shape="1.25u" cc="4">F3</k>
+	<k shape="1.25u" cc="4">F4</k>
+	<k shape="1.25u" cc="4">F5</k>
+	<k x="8.25u" y="5.5u" shape="1.25u" cc="4">F6</k>
+	<k shape="1.25u" cc="4">F7</k>
+	<k shape="1.25u" cc="4">F8</k>
+	<k shape="1.25u" cc="4">F9</k>
+	<k shape="1.25u" cc="4">F10</k>
+	<k x="0u" y="4u" shape="1.5u" cc="4"><l>`</l><l>~</l></k>
+	<k><l>1</l><l>!</l></k>
+	<k><l>2</l><l>@</l></k>
+	<k><l>3</l><l>#</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>^</l></k>
+	<k><l>7</l><l>&amp;</l></k>
+	<k><l>8</l><l>*</l></k>
+	<k><l>9</l><l>(</l></k>
+	<k><l>0</l><l>)</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k><l>=</l><l>+</l></k>
+	<k><l>\</l><l>&#166;</l></k>
+	<k cc="4">&#8592;</k>
+	<k x="16u" y="4u" shape="1.5u" cc="4">Del</k>
+	<k shape="1.5u" cc="4">Help</k>
+	<k x="19.5u" y="4u" cc="4"><l type="FF" a="c">Num L</l><l type="L">(</l></k>
+	<k cc="4"><l type="FF" a="c">Scr L</l><l type="L">)</l></k>
+	<k cc="4">/</k>
+	<k cc="4"><l type="FF" a="c">Prt Sc</l><l type="L">*</l></k>
+	<k x="0u" y="3u" shape="2u" cc="4"><l>&#8677;</l><l>&#8676;</l></k>
+	<k>Q</k>
+	<k>W</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Y</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k><l>[</l><l>{</l></k>
+	<k><l>]</l><l>}</l></k>
+	<k x="19.5u" y="3u"><l type="FF" a="c">Home</l><l type="L">7</l></k>
+	<k><l type="FF" a="c">&#8593;</l><l type="L">8</l></k>
+	<k><l type="FF" a="c">Pg Up</l><l type="L">9</l></k>
+	<k cc="4">-</k>
+	<k x="0u" y="2u" shape="1.25u" cc="4">Ctrl</k>
+	<k cc="4">Caps&#10;Lock</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k><l>;</l><l>:</l></k>
+	<k><l>&#39;</l><l>&#34;</l></k>
+	<k shape="2.25+2+1.5u" cc="4" a="n">&#8626;</k>
+	<k x="17u" y="2u">&#8593;</k>
+	<k x="19.5u" y="2u"><l type="FF" a="c">&#8592;</l><l type="L">4</l></k>
+	<k>5</k>
+	<k><l type="FF" a="c">&#8594;</l><l type="L">6</l></k>
+	<k cc="4">+</k>
+	<k x="0u" y="1u" shape="2.75u" cc="4">&#8679;</k>
+	<k>Z</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k>M</k>
+	<k><l>,</l><l>&lt;</l></k>
+	<k><l>.</l><l>&gt;</l></k>
+	<k><l>/</l><l>?</l></k>
+	<k shape="2.75u" cc="4">&#8679;</k>
+	<k x="16u" y="1u">&#8592;</k>
+	<k>&#8595;</k>
+	<k>&#8594;</k>
+	<k x="19.5u" y="1u"><l type="FF" a="c">End</l><l type="L">1</l></k>
+	<k><l type="FF" a="c">&#8595;</l><l type="L">2</l></k>
+	<k><l type="FF" a="c">Pg Dn</l><l type="L">3</l></k>
+	<k x="0.75u" y="0u" shape="1.25u" cc="4">Alt</k>
+	<k shape="1.25u" cc="4">&#63522;</k>
+	<k shape="9u"></k>
+	<k shape="1.25u" cc="4">&#63523;</k>
+	<k shape="1.25u" cc="4">Alt</k>
+	<k x="19.5u" y="0u" shape="2u"><l type="FF" a="c">Ins</l><l type="L">0</l></k>
+	<k><l type="FF" a="c">Del</l><l type="L">.</l></k>
+	<k shape="1+2u" cc="4">E&#10;n&#10;t&#10;e&#10;r</k>
+</keyCapLayout>

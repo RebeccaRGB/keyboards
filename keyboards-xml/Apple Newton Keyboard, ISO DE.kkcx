@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Apple Newton Keyboard, ISO DE" cc="1" lc="31" a="w">
+	<k x="0u" y="4u"><l>^</l><l>&#176;</l></k>
+	<k><l>1</l><l>!</l></k>
+	<k><l>2</l><l>&#34;</l></k>
+	<k><l>3</l><l>&#167;</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>&amp;</l></k>
+	<k><l>7</l><l>/</l></k>
+	<k><l>8</l><l>(</l></k>
+	<k><l>9</l><l>)</l></k>
+	<k><l>0</l><l>=</l></k>
+	<k><l>&#223;</l><l>?</l></k>
+	<k><l>&#180;</l><l>`</l></k>
+	<k shape="1.5u">&#8592;</k>
+	<k x="0u" y="3u" shape="1.5u"><l>&#8677;</l><l>&#8676;</l></k>
+	<k>Q</k>
+	<k>W</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Z</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k>&#220;</k>
+	<k><l>+</l><l>*</l></k>
+	<k x="0u" y="2u" shape="1.75u">&#8682;</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k>&#214;</k>
+	<k>&#196;</k>
+	<k><l>#</l><l>&#39;</l></k>
+	<k shape="0.75+2+1u">&#8617;</k>
+	<k x="0u" y="1u" shape="1.25u">&#8679;</k>
+	<k><l>&lt;</l><l>&gt;</l></k>
+	<k>Y</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k>M</k>
+	<k><l>,</l><l>;</l></k>
+	<k><l>.</l><l>:</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k shape="2.25u">&#8679;</k>
+	<k x="0u" y="0u" shape="1.5u">Ctrl</k>
+	<k shape="1.75u">&#8997;</k>
+	<k shape="1.5u">&#63506;</k>
+	<k shape="5.5u"></k>
+	<k>&#8592;</k>
+	<k>&#8594;</k>
+	<k>&#8595;</k>
+	<k shape="1.25u">&#8593;</k>
+</keyCapLayout>

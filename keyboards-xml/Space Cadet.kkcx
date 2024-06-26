@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Space Cadet" cc="#777" lc="31" a="c">
+	<k x="0u" y="5u" shape="2u" cc="#07f">MACRO</k>
+	<k shape="2u" cc="#07f">TERMINAL</k>
+	<k shape="2u" cc="#07f">QUOTE</k>
+	<k shape="2u" cc="#07f">OVER&#10;STRIKE</k>
+	<k shape="2u" cc="#07f">CLEAR&#10;INPUT</k>
+	<k shape="2u" cc="#07f">CLEAR&#10;SCREEN</k>
+	<k shape="2u" cc="#07f">HOLD&#10;OUTPUT</k>
+	<k shape="2u" cc="#07f">STOP&#10;OUTPUT</k>
+	<k shape="2u" cc="#07f">ABORT</k>
+	<k shape="2u" cc="#07f">BREAK</k>
+	<k shape="2u" cc="#07f">RESUME</k>
+	<k shape="2u" cc="#07f">CALL</k>
+	<k x="0u" y="4u">&#8544;</k>
+	<k>&#8545;</k>
+	<k shape="2u" cc="#07f">SYSTEM</k>
+	<k><l type="FL">&#8750;</l><l type="S">&#177;</l><l type="U">:</l></k>
+	<k><l type="FL">&#8224;</l><l type="S">!</l><l type="U">1</l></k>
+	<k><l type="FL">&#8225;</l><l type="S">@</l><l type="U">2</l></k>
+	<k><l type="FL">&#8711;</l><l type="S">#</l><l type="U">3</l></k>
+	<k><l type="FL">&#162;</l><l type="S">$</l><l type="U">4</l></k>
+	<k><l type="FL">&#9675;</l><l type="S">%</l><l type="U">5</l></k>
+	<k><l type="FL">&#9109;</l><l type="S">^</l><l type="U">6</l></k>
+	<k><l type="FL">&#247;</l><l type="S">&amp;</l><l type="U">7</l></k>
+	<k><l type="FL">&#215;</l><l type="S">*</l><l type="U">8</l></k>
+	<k><l type="FL">&#182;</l><l type="S">(</l><l type="U">9</l></k>
+	<k><l type="FL">&#9711;</l><l type="S">)</l><l type="U">0</l></k>
+	<k shape="1.5u"><l type="FL">&#175;</l><l type="S">_</l><l type="U">-</l></k>
+	<k shape="1.5u"><l type="FL">&#8776;</l><l type="S">+</l><l type="U">=</l></k>
+	<k><l type="FS">&#8988;</l><l type="FU">&#8990;</l><l type="S">&lt;</l><l type="U">{</l></k>
+	<k><l type="FS">&#8989;</l><l type="FU">&#8991;</l><l type="S">&gt;</l><l type="U">}</l></k>
+	<k shape="2u" cc="#07f">STATUS</k>
+	<k><l type="FL">&#8854;</l><l type="L">&#128077;</l></k>
+	<k><l type="FL">&#8853;</l><l type="L">&#128078;</l></k>
+	<k x="0u" y="3u">&#8546;</k>
+	<k>&#8547;</k>
+	<k shape="2u" cc="#07f">NETWORK</k>
+	<k shape="1.5u" cc="#07f">TAB</k>
+	<k><l type="FL">&#952;</l><l type="S">&#8743;</l><l type="U">Q</l></k>
+	<k><l type="FL">&#969;</l><l type="S">&#8744;</l><l type="U">W</l></k>
+	<k><l type="FL">&#949;</l><l type="S">&#8745;</l><l type="U">E</l></k>
+	<k><l type="FL">&#961;</l><l type="S">&#8746;</l><l type="U">R</l></k>
+	<k><l type="FL">&#964;</l><l type="S">&#8834;</l><l type="U">T</l></k>
+	<k><l type="FL">&#968;</l><l type="S">&#8835;</l><l type="U">Y</l></k>
+	<k><l type="FL">&#965;</l><l type="S">&#8704;</l><l type="U">U</l></k>
+	<k><l type="FL">&#953;</l><l type="S">&#8734;</l><l type="U">I</l></k>
+	<k><l type="FL">&#959;</l><l type="S">&#8707;</l><l type="U">O</l></k>
+	<k><l type="FL">&#960;</l><l type="S">&#8706;</l><l type="U">P</l></k>
+	<k><l type="FL">&#10214;</l><l type="S">[</l><l type="U">(</l></k>
+	<k><l type="FL">&#10215;</l><l type="S">]</l><l type="U">)</l></k>
+	<k><l type="FL">&#172;</l><l type="S">~</l><l type="U">`</l></k>
+	<k shape="1.5u"><l type="FL">&#8214;</l><l type="S">|</l><l type="U">\</l></k>
+	<k shape="2u" cc="#07f">DELETE</k>
+	<k><l type="FL">&#8855;</l><l type="L">&#9756;</l></k>
+	<k><l type="FL">&#8856;</l><l type="L">&#9758;</l></k>
+	<k x="0u" y="2u" shape="2u" cc="#07f">MODE&#10;LOCK</k>
+	<k shape="2u" cc="#07f">ALT MODE</k>
+	<k shape="1.75u" cc="#07f">RUB OUT</k>
+	<k><l type="FL">&#945;</l><l type="S">&#8869;</l><l type="U">A</l></k>
+	<k><l type="FL">&#963;</l><l type="S">&#8868;</l><l type="U">S</l></k>
+	<k><l type="FL">&#948;</l><l type="S">&#8866;</l><l type="U">D</l></k>
+	<k><l type="FL">&#966;</l><l type="S">&#8867;</l><l type="U">F</l></k>
+	<k><l type="FL">&#947;</l><l type="S">&#8593;</l><l type="U">G</l></k>
+	<k><l type="FL">&#951;</l><l type="S">&#8595;</l><l type="U">H</l></k>
+	<k><l type="FL">&#977;</l><l type="S">&#8592;</l><l type="U">J</l></k>
+	<k><l type="FL">&#954;</l><l type="S">&#8594;</l><l type="U">K</l></k>
+	<k><l type="FL">&#955;</l><l type="S">&#8596;</l><l type="U">L</l></k>
+	<k><l type="FL">&#168;</l><l type="S">:</l><l type="U">;</l></k>
+	<k><l type="FL">&#8226;</l><l type="S">&#34;</l><l type="U">&#39;</l></k>
+	<k shape="2u" cc="#07f">RETURN</k>
+	<k shape="1.25u" cc="#07f">LINE</k>
+	<k shape="2u" cc="#07f">END</k>
+	<k shape="2u" cc="#07f">HELP</k>
+	<k x="0u" y="1u" cc="#07f" lc="1">CAPS&#10;LOCK</k>
+	<k shape="1.5u" cc="#07f" lc="1">TOP</k>
+	<k shape="1.5u" cc="#07f" lc="1"><l type="F">GREEK</l><l type="FF">FRONT</l></k>
+	<k shape="2.25u" vs="s" cc="#07f" lc="1">SHIFT</k>
+	<k><l type="FL">&#950;</l><l type="S">&#8970;</l><l type="U">Z</l></k>
+	<k><l type="FL">&#958;</l><l type="S">&#8968;</l><l type="U">X</l></k>
+	<k><l type="FL">&#967;</l><l type="S">&#8800;</l><l type="U">C</l></k>
+	<k><l type="FL">&#962;</l><l type="S">&#8771;</l><l type="U">V</l></k>
+	<k><l type="FL">&#946;</l><l type="S">&#8801;</l><l type="U">B</l></k>
+	<k><l type="FL">&#957;</l><l type="S">&#8804;</l><l type="U">N</l></k>
+	<k><l type="FL">&#956;</l><l type="S">&#8805;</l><l type="U">M</l></k>
+	<k><l type="FL">&#171;</l><l type="S">&lt;</l><l type="U">,</l></k>
+	<k><l type="FL">&#187;</l><l type="S">&gt;</l><l type="U">.</l></k>
+	<k><l type="FL">&#8747;</l><l type="S">?</l><l type="U">/</l></k>
+	<k shape="2u" vs="s" cc="#07f" lc="1">SHIFT</k>
+	<k shape="1.5u" cc="#07f" lc="1"><l type="F">GREEK</l><l type="FF">FRONT</l></k>
+	<k x="20u" y="1u" shape="1.5u" cc="#07f" lc="1">TOP</k>
+	<k shape="1.5u" cc="#07f" lc="1">REPEAT</k>
+	<k cc="#07f" lc="1">ALT&#10;LOCK</k>
+	<k x="0u" y="0u" shape="1.5u" cc="#07f" lc="1">HYPER</k>
+	<k shape="1.5u" cc="#07f" lc="1">SUPER</k>
+	<k shape="1.5u" cc="#07f" lc="1">META</k>
+	<k shape="1.75u" cc="#07f" lc="1">CTRL</k>
+	<k x="6.75u" y="0u" shape="9u" cc="#07f" lc="1"></k>
+	<k x="16.25u" y="0u" shape="1.75u" cc="#07f" lc="1">CTRL</k>
+	<k x="19.5u" y="0u" shape="1.5u" cc="#07f" lc="1">META</k>
+	<k shape="1.5u" cc="#07f" lc="1">SUPER</k>
+	<k shape="1.5u" cc="#07f" lc="1">HYPER</k>
+</keyCapLayout>

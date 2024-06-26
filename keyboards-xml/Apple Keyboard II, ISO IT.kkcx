@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Apple Keyboard II, ISO IT" kbdType="9" gestalt="11" cc="5" lc="1" a="sw">
+	<k x="4.75u" y="6u" shape="2u" type="F" vs="r" a="w">&#9665;</k>
+	<k x="0u" y="4u" shape="1.25u"><l>@</l><l>#</l></k>
+	<k><l>&amp;</l><l>1</l></k>
+	<k><l>&#34;</l><l>2</l></k>
+	<k><l>&#39;</l><l>3</l></k>
+	<k><l>(</l><l>4</l></k>
+	<k><l>&#231;</l><l>5</l></k>
+	<k><l>&#232;</l><l>6</l></k>
+	<k><l>)</l><l>7</l></k>
+	<k><l>&#163;</l><l>8</l></k>
+	<k><l>&#224;</l><l>9</l></k>
+	<k><l>&#233;</l><l>0</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k><l>=</l><l>+</l></k>
+	<k shape="1.75u">&#8592;</k>
+	<k x="16u" y="4u">&#8999;</k>
+	<k>=</k>
+	<k>/</k>
+	<k>*</k>
+	<k x="0u" y="3u" shape="1.75u">&#8677;</k>
+	<k>Q</k>
+	<k>Z</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Y</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k><l>&#236;</l><l>^</l></k>
+	<k><l>$</l><l>*</l></k>
+	<k x="16u" y="3u">7</k>
+	<k>8</k>
+	<k>9</k>
+	<k>-</k>
+	<k x="0u" y="2u" shape="2u">&#8682;</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k>M</k>
+	<k><l>&#249;</l><l>%</l></k>
+	<k><l>&#167;</l><l>&#176;</l></k>
+	<k shape="1+2+1.25u">&#8617;</k>
+	<k x="16u" y="2u">4</k>
+	<k>5</k>
+	<k>6</k>
+	<k>+</k>
+	<k x="0u" y="1u" shape="1.5u">&#8679;</k>
+	<k><l>&lt;</l><l>&gt;</l></k>
+	<k>W</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k><l>,</l><l>?</l></k>
+	<k><l>;</l><l>.</l></k>
+	<k><l>:</l><l>/</l></k>
+	<k><l>&#242;</l><l>!</l></k>
+	<k shape="1.5u">&#8679;</k>
+	<k>&#8593;</k>
+	<k x="16u" y="1u">1</k>
+	<k>2</k>
+	<k>3</k>
+	<k x="0u" y="0u">ctrl</k>
+	<k shape="1.25u">&#8997;</k>
+	<k shape="1.75u" type="H"><l>&#63506;</l><l a="se">&#8984;</l></k>
+	<k shape="7u"></k>
+	<k>esc</k>
+	<k>&#8592;</k>
+	<k>&#8594;</k>
+	<k>&#8595;</k>
+	<k x="16u" y="0u" shape="2u">0</k>
+	<k>.</k>
+	<k shape="1+2u">&#8996;</k>
+</keyCapLayout>

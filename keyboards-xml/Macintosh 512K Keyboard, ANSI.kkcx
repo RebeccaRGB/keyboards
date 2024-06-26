@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Macintosh 512K Keyboard, ANSI" kbdType="3" gestalt="1" cc="8" lc="1" a="nw">
+	<k x="0u" y="4u"><l>`</l><l>~</l></k>
+	<k><l>1</l><l>!</l></k>
+	<k><l>2</l><l>@</l></k>
+	<k><l>3</l><l>#</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>^</l></k>
+	<k><l>7</l><l>&amp;</l></k>
+	<k><l>8</l><l>*</l></k>
+	<k><l>9</l><l>(</l></k>
+	<k><l>0</l><l>)</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k><l>=</l><l>+</l></k>
+	<k shape="1.5u">Backspace</k>
+	<k x="0u" y="3u" shape="1.5u">Tab</k>
+	<k>Q</k>
+	<k>W</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Y</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k><l>[</l><l>{</l></k>
+	<k><l>]</l><l>}</l></k>
+	<k><l>\</l><l>|</l></k>
+	<k x="0u" y="2u" shape="1.75u">Caps Lock</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k><l>;</l><l>:</l></k>
+	<k><l>&#39;</l><l>&#34;</l></k>
+	<k shape="1.75u">Return</k>
+	<k x="0u" y="1u" shape="2.25u">Shift</k>
+	<k>Z</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k>M</k>
+	<k><l>,</l><l>&lt;</l></k>
+	<k><l>.</l><l>&gt;</l></k>
+	<k><l>/</l><l>?</l></k>
+	<k shape="2.25u">Shift</k>
+	<k x="1u" y="0u">Option</k>
+	<k shape="1.5u">&#8984;</k>
+	<k shape="7.5u"></k>
+	<k shape="1.5u">Enter</k>
+	<k>Option</k>
+</keyCapLayout>

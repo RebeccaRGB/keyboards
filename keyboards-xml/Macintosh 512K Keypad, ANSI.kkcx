@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Macintosh 512K Keypad, ANSI" kbdType="3" gestalt="2" cc="8" lc="1" a="nw">
+	<k x="0u" y="4u">Clear</k>
+	<k type="N">-</k>
+	<k type="N"><l>+</l><l>&#1047576;</l></k>
+	<k type="N"><l>*</l><l>&#1047578;</l></k>
+	<k x="0u" y="3u">7</k>
+	<k>8</k>
+	<k>9</k>
+	<k type="N"><l>/</l><l>&#1047577;</l></k>
+	<k x="0u" y="2u">4</k>
+	<k>5</k>
+	<k>6</k>
+	<k type="N"><l>,</l><l>&#1047579;</l></k>
+	<k x="0u" y="1u">1</k>
+	<k>2</k>
+	<k>3</k>
+	<k x="0u" y="0u" shape="2u">0</k>
+	<k>.</k>
+	<k shape="1+2u">Enter</k>
+</keyCapLayout>

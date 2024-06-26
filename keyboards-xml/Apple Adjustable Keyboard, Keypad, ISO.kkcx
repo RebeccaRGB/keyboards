@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Apple Adjustable Keyboard, Keypad, ISO" kbdType="14" gestalt="14" cc="5" lc="1" a="sw">
+	<k x="0u" y="4u">F1</k>
+	<k>F2</k>
+	<k>F3</k>
+	<k x="3.5u" y="4u" type="F">&#8505;</k>
+	<k>&#8598;</k>
+	<k>&#8670;</k>
+	<k x="7u" y="4u">&#8999;</k>
+	<k>=</k>
+	<k>/</k>
+	<k>*</k>
+	<k x="0u" y="3u">F4</k>
+	<k>F5</k>
+	<k>F6</k>
+	<k x="3.5u" y="3u">&#8998;</k>
+	<k>&#8600;</k>
+	<k>&#8671;</k>
+	<k x="7u" y="3u">7</k>
+	<k>8</k>
+	<k>9</k>
+	<k>-</k>
+	<k x="0u" y="2u">F7</k>
+	<k>F8</k>
+	<k>F9</k>
+	<k x="7u" y="2u">4</k>
+	<k>5</k>
+	<k>6</k>
+	<k>+</k>
+	<k x="0u" y="1u">F10</k>
+	<k>F11</k>
+	<k>F12</k>
+	<k x="4.5u" y="1u">&#8593;</k>
+	<k x="7u" y="1u">1</k>
+	<k>2</k>
+	<k>3</k>
+	<k x="0u" y="0u">F13</k>
+	<k>F14</k>
+	<k>F15</k>
+	<k x="3.5u" y="0u">&#8592;</k>
+	<k>&#8595;</k>
+	<k>&#8594;</k>
+	<k x="7u" y="0u" shape="2u">0</k>
+	<k>.</k>
+	<k shape="1+2u">&#8996;</k>
+</keyCapLayout>

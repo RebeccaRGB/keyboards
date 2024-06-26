@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="IBM Model F122" cc="31" lc="1" a="nw">
+	<k x="3.5u" y="7u" cc="4" a="w">F13</k>
+	<k cc="4" a="w">F14</k>
+	<k cc="4" a="w">F15</k>
+	<k cc="4" a="w">F16</k>
+	<k a="w">F17</k>
+	<k a="w">F18</k>
+	<k a="w">F19</k>
+	<k a="w">F20</k>
+	<k cc="4" a="w">F21</k>
+	<k cc="4" a="w">F22</k>
+	<k cc="4" a="w">F23</k>
+	<k cc="4" a="w"><l type="F">F24</l><l type="FF">+Cr</l></k>
+	<k x="3.5u" y="6u" cc="4" a="w">F1</k>
+	<k cc="4" a="w">F2</k>
+	<k cc="4" a="w">F3</k>
+	<k cc="4" a="w">F4</k>
+	<k a="w">F5</k>
+	<k a="w">F6</k>
+	<k a="w">F7</k>
+	<k a="w">F8</k>
+	<k cc="4" a="w"><l type="F">F9</l><l type="FF">Back</l></k>
+	<k cc="4" a="w"><l type="F">F10</l><l type="FF">Fwd</l></k>
+	<k cc="4" a="w">F11</k>
+	<k cc="4" a="w">F12</k>
+	<k x="0u" y="4u" shape="1u" cc="4" a="w"><l>Attn</l><l>SysRq</l></k>
+	<k shape="1u" cc="4" a="w"><l type="FF">Clear</l></k>
+	<k x="2.5u" y="4u"><l>`</l><l>~</l></k>
+	<k><l>1</l><l>|</l></k>
+	<k><l>2</l><l>@</l></k>
+	<k><l>3</l><l>#</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>&#172;</l></k>
+	<k><l>7</l><l>&amp;</l></k>
+	<k><l>8</l><l>*</l></k>
+	<k><l>9</l><l>(</l></k>
+	<k><l>0</l><l>)</l></k>
+	<k><l>-</l><l>_</l></k>
+	<k><l>=</l><l>+</l></k>
+	<k shape="2u" cc="4" a="w">&#8592;</k>
+	<k x="18u" y="4u" shape="1u" cc="4" a="w"><l type="F">&#8676;</l><l type="FF" lh="2">&#1047791;</l></k>
+	<k shape="1u" cc="4" a="w">Dup</k>
+	<k shape="1u" cc="4" a="w"><l type="FF">Jump</l></k>
+	<k x="21.5u" y="4u" shape="1u" cc="4" a="w"></k>
+	<k shape="1u" cc="4" a="w"></k>
+	<k shape="1u" cc="4" a="w"></k>
+	<k shape="1u" cc="4" a="w"></k>
+	<k x="0u" y="3u" shape="1u" cc="4" a="w"></k>
+	<k shape="1u" cc="4" a="w">ErInp</k>
+	<k x="2.5u" y="3u" shape="1.5u" cc="4" a="w">&#8677;</k>
+	<k>Q</k>
+	<k>W</k>
+	<k>E</k>
+	<k>R</k>
+	<k>T</k>
+	<k>Y</k>
+	<k>U</k>
+	<k>I</k>
+	<k>O</k>
+	<k>P</k>
+	<k><l>&#162;</l><l>!</l></k>
+	<k><l>{</l><l>}</l></k>
+	<k x="18u" y="3u" shape="1u" cc="4" a="w">&#8629;</k>
+	<k shape="1u" cc="4" a="w">Insert</k>
+	<k shape="1u" cc="4" a="w">Delete</k>
+	<k x="21.5u" y="3u" type="N">7</k>
+	<k type="N">8</k>
+	<k type="N">9</k>
+	<k shape="1u" cc="4" a="w">Field&#10;&#8722;</k>
+	<k x="0u" y="2u" shape="1u" cc="4" a="w">Print</k>
+	<k shape="1u" cc="4" a="w"><l type="F">Help</l><l type="FF">Hex</l></k>
+	<k x="2.5u" y="2u" shape="1.75u" vs="sc" cc="4" a="w">&#1047790;</k>
+	<k>A</k>
+	<k>S</k>
+	<k>D</k>
+	<k>F</k>
+	<k>G</k>
+	<k>H</k>
+	<k>J</k>
+	<k>K</k>
+	<k>L</k>
+	<k><l>;</l><l>:</l></k>
+	<k><l>&#39;</l><l>&#34;</l></k>
+	<k><l>\</l><l>&#166;</l></k>
+	<k shape="1.25+2+1.5u" vs="se" cc="4" a="w">Field&#10;Exit</k>
+	<k x="19u" y="2u" cc="4" a="w"><l>&#8593;</l><l>Roll &#8593;</l></k>
+	<k x="21.5u" y="2u" type="N">4</k>
+	<k type="N">5</k>
+	<k type="N">6</k>
+	<k shape="1u" cc="4" a="w"></k>
+	<k x="0u" y="1u" shape="1u" cc="4" a="w"></k>
+	<k shape="1u" cc="4" a="w"><l type="F">Play</l><l type="FF">Test</l></k>
+	<k x="2.5u" y="1u" shape="1.25u" cc="4" a="w">&#8679;</k>
+	<k><l>&lt;</l><l>&gt;</l></k>
+	<k>Z</k>
+	<k>X</k>
+	<k>C</k>
+	<k>V</k>
+	<k>B</k>
+	<k>N</k>
+	<k>M</k>
+	<k><l>,</l><l>,</l></k>
+	<k><l>.</l><l>.</l></k>
+	<k><l>/</l><l>?</l></k>
+	<k shape="2.75u" cc="4" a="w">&#8679;</k>
+	<k x="18u" y="1u" cc="4" a="w">&#8592;</k>
+	<k shape="1u" cc="4" a="w"><l type="F">Rule</l><l type="FF">Home</l></k>
+	<k cc="4" a="w">&#8594;</k>
+	<k x="21.5u" y="1u" type="N">1</k>
+	<k type="N">2</k>
+	<k type="N">3</k>
+	<k x="0u" y="0u" shape="1u" cc="4" a="w">SetUp</k>
+	<k shape="1u" cc="4" a="w"><l type="F">Recrd</l><l type="FF">Pause</l></k>
+	<k x="2.5u" y="0u" shape="1.5u" cc="4" a="w"><l type="F">Reset</l><l type="FF">Quit</l></k>
+	<k x="5u" y="0u" shape="1.5u" cc="4" a="w">Alt</k>
+	<k shape="7u"></k>
+	<k shape="1.5u" cc="4" a="w">Alt</k>
+	<k x="16u" y="0u" shape="1.5u" cc="4" a="w">Enter</k>
+	<k x="19u" y="0u" cc="4" a="w"><l>&#8595;</l><l>Roll &#8595;</l></k>
+	<k x="21.5u" y="0u" shape="2u" type="N">0</k>
+	<k type="N">.</k>
+	<k shape="1+2u" cc="4" a="w">Field&#10;+</k>
+</keyCapLayout>
