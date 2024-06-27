@@ -26,7 +26,7 @@ public class ViewerMenuBar extends JMenuBar {
 	
 	private final ViewerFrame frame;
 	
-	public ViewerMenuBar(ViewerFrame frame) {
+	public ViewerMenuBar(ViewerFrame frame, File kbdDir) {
 		this.frame = frame;
 		
 		JMenu fileMenu = new JMenu("File");
@@ -51,7 +51,6 @@ public class ViewerMenuBar extends JMenuBar {
 		editMenu.add(new CopyMenuItem("Copy as PNG", 0, 0, "png"));
 		add(editMenu);
 		
-		File kbdDir = UIUtilities.getKeyboardDirectory();
 		if (kbdDir != null) {
 			ActionListener kbdDirListener = new KeyboardDirectoryListener();
 			JMenu kbdDirMenu = (JMenu)ViewerFileMenuItem.create(kbdDir, kbdDirListener);

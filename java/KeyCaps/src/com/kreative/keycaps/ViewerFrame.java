@@ -11,11 +11,11 @@ public class ViewerFrame extends JFrame {
 	
 	private final ViewerPanel panel;
 	
-	public ViewerFrame(ViewerComponent vc) {
+	public ViewerFrame(ViewerComponent vc, File kbdDir) {
 		this.panel = new ViewerPanel(vc);
 		
 		setTitle("Key Caps");
-		setJMenuBar(new ViewerMenuBar(this));
+		setJMenuBar(new ViewerMenuBar(this, kbdDir));
 		setContentPane(this.panel);
 		pack();
 		setLocationRelativeTo(null);

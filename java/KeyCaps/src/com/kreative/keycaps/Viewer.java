@@ -30,6 +30,7 @@ public class Viewer {
 			aacn.set(tk, "Key Caps");
 		} catch (Exception e) {}
 		
+		boolean opened = false;
 		boolean parseOpts = true;
 		KeyCapMold mold = new IconKeyCapMold();
 		float moldScale = 1;
@@ -65,52 +66,75 @@ public class Viewer {
 						return;
 					}
 				} else if (arg.equals("-i")) {
-					KeyCapLayout layout = read(System.in);
-					if (layout == null) return;
-					AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null);
-					ViewerComponent vc = new ViewerComponent(renderer, layout);
-					ViewerFrame vf = new ViewerFrame(vc);
-					vf.setVisible(true);
+					open(mold, moldScale, size, null);
+					opened = true;
 				} else if (arg.equals("-f") && argi < args.length) {
 					File input = new File(args[argi++]);
-					KeyCapLayout layout = read(input);
-					if (layout == null) return;
-					AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null);
-					ViewerComponent vc = new ViewerComponent(renderer, layout);
-					ViewerFrame vf = new ViewerFrame(vc);
-					vf.setVisible(true);
+					open(mold, moldScale, size, input);
+					opened = true;
 				} else {
 					help();
 					return;
 				}
 			} else {
 				File input = new File(arg);
-				KeyCapLayout layout = read(input);
-				if (layout == null) return;
-				AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null);
-				ViewerComponent vc = new ViewerComponent(renderer, layout);
-				ViewerFrame vf = new ViewerFrame(vc);
-				vf.setVisible(true);
+				open(mold, moldScale, size, input);
+				opened = true;
+			}
+		}
+		
+		if (!opened) {
+			File kbdDir = UIUtilities.getKeyboardDirectory();
+			if (kbdDir != null) {
+				File kbdFile = UIUtilities.getKeyboardFile(kbdDir);
+				if (kbdFile != null) {
+					try {
+						KeyCapLayout layout = KeyCapReader.read(kbdFile);
+						open(mold, moldScale, size, layout, kbdDir);
+						return;
+					} catch (IOException e) {
+						System.err.println("Could not read from input: " + e);
+					}
+				}
+			}
+			try {
+				InputStream in = Viewer.class.getResourceAsStream("ANSI.kkcx");
+				KeyCapLayout layout = KeyCapReader.read("ANSI.kkcx", in);
+				open(mold, moldScale, size, layout, kbdDir);
+				return;
+			} catch (IOException e) {
+				System.err.println("Could not read from input: " + e);
 			}
 		}
 	}
 	
-	private static KeyCapLayout read(File input) {
+	public static void open(KeyCapMold mold, float moldScale, float size, File input) {
 		try {
-			return KeyCapReader.read(input);
+			if (input == null) {
+				KeyCapLayout layout = KeyCapReader.read("input", System.in);
+				open(mold, moldScale, size, layout, UIUtilities.getKeyboardDirectory());
+			} else if (input.isDirectory()) {
+				File file = UIUtilities.getKeyboardFile(input);
+				if (file != null) {
+					KeyCapLayout layout = KeyCapReader.read(file);
+					open(mold, moldScale, size, layout, input);
+				} else {
+					throw new IOException("No applicable files found in directory");
+				}
+			} else {
+				KeyCapLayout layout = KeyCapReader.read(input);
+				open(mold, moldScale, size, layout, UIUtilities.getKeyboardDirectory());
+			}
 		} catch (IOException e) {
 			System.err.println("Could not read from input: " + e);
-			return null;
 		}
 	}
 	
-	private static KeyCapLayout read(InputStream in) {
-		try {
-			return KeyCapReader.read("input", in);
-		} catch (IOException e) {
-			System.err.println("Could not parse input: " + e);
-			return null;
-		}
+	public static void open(KeyCapMold mold, float moldScale, float size, KeyCapLayout layout, File kbdDir) {
+		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null);
+		ViewerComponent vc = new ViewerComponent(renderer, layout);
+		ViewerFrame vf = new ViewerFrame(vc, kbdDir);
+		vf.setVisible(true);
 	}
 	
 	public static void help() {

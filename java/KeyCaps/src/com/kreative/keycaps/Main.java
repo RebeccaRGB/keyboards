@@ -5,17 +5,21 @@ import java.io.IOException;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		if (args.length == 0) {
-			help();
+			Viewer.main(args);
 		} else if (eic(args[0], "--help", "help")) {
 			if (args.length == 1) help();
-			else help(args[1]);
-		} else if (eic(args[0], "--LayoutToKKCX", "--toKKCX", "--kkcx", "LayoutToKKCX", "toKKCX", "kkcx")) {
+			else if (args.length == 2) help(args[1]);
+			else for (int i = 1; i < args.length; i++) {
+				System.err.println(args[i] + ":");
+				help(args[i]);
+			}
+		} else if (eic(args[0], "--LayoutToKKCX", "--toKKCX", "--kkcx", "--xml", "LayoutToKKCX", "toKKCX", "kkcx", "xml")) {
 			LayoutToKKCX.main(tail(args));
 		} else if (eic(args[0], "--LayoutToPNG", "--toPNG", "--png", "LayoutToPNG", "toPNG", "png")) {
 			LayoutToPNG.main(tail(args));
 		} else if (eic(args[0], "--LayoutToSVG", "--toSVG", "--svg", "LayoutToSVG", "toSVG", "svg")) {
 			LayoutToSVG.main(tail(args));
-		} else if (eic(args[0], "--LayoutToText", "--toText", "--text", "--txt", "LayoutToText", "ToText", "text", "txt")) {
+		} else if (eic(args[0], "--LayoutToText", "--toText", "--text", "--txt", "LayoutToText", "toText", "text", "txt")) {
 			LayoutToText.main(tail(args));
 		} else if (eic(args[0], "--PopArt", "PopArt")) {
 			PopArt.main(tail(args));
@@ -32,7 +36,7 @@ public class Main {
 		} else if (eic(args[0], "--KKCXPositionTest", "--PositionTest", "KKCXPositionTest", "PositionTest")) {
 			KKCXPositionTest.main(tail(args));
 		} else {
-			help();
+			Viewer.main(args);
 		}
 	}
 	

@@ -64,6 +64,64 @@ public class UIUtilities {
 		return null;
 	}
 	
+	private static final String[] KBD_FILE_EXTENSIONS = {
+		".kkcx", ".xml", ".kkc", ".txt"
+	};
+	
+	private static File getKeyboardFile(File parent, String name) {
+		if (parent == null) return null;
+		File[] children = parent.listFiles();
+		for (String ext : KBD_FILE_EXTENSIONS) {
+			for (File child : children) {
+				String cn = child.getName();
+				if (cn.startsWith(".") || cn.endsWith("\r")) {
+					continue;
+				} else if (child.isDirectory()) {
+					continue;
+				} else if (cn.toLowerCase().endsWith(ext)) {
+					if (name == null) return child;
+					String bn = cn.substring(0, cn.length() - ext.length());
+					String nn = bn.replaceAll("[^\\p{L}\\p{M}\\p{N}]", "");
+					if (nn.equalsIgnoreCase(name)) return child;
+				}
+			}
+		}
+		for (File child : children) {
+			String cn = child.getName();
+			if (cn.startsWith(".") || cn.endsWith("\r")) {
+				continue;
+			} else if (child.isDirectory()) {
+				child = getKeyboardFile(child, name);
+				if (child != null) return child;
+			}
+		}
+		return null;
+	}
+	
+	private static String[] kbdFileNames(String cc) {
+		if (cc == null || cc.equalsIgnoreCase("us")) {
+			return new String[] {"ansi", "iso"+"us", "us"};
+		} else if (cc.equalsIgnoreCase("jp")) {
+			return new String[] {"jis", "jp", "ansi", "iso"+"us", "us"};
+		} else {
+			return new String[] {"iso"+cc, cc, "ansi", "iso"+"us", "us"};
+		}
+	}
+	
+	private static String[] kbdFileNames() {
+		try { return kbdFileNames(System.getProperty("user.country").toLowerCase()); }
+		catch (Exception e) { return kbdFileNames(null); }
+	}
+	
+	public static File getKeyboardFile(File parent) {
+		if (parent == null) return null;
+		for (String name : kbdFileNames()) {
+			File child = getKeyboardFile(parent, name);
+			if (child != null) return child;
+		}
+		return getKeyboardFile(parent, null);
+	}
+	
 	private static String lastOpenDirectory = null;
 	static {
 		File kbdDir = getKeyboardDirectory();
