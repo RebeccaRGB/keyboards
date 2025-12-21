@@ -15,17 +15,21 @@ public class AWTRenderer {
 	private final float moldScale;
 	private final float keyCapSize;
 	private final KeyCapEngraver engraver;
+	private final boolean showUSBCodes;
 	private final Font baseFont;
+	private final Font monoFont;
 	private final FontRenderContext frc;
 	private final AWTShapeDefs shapeDefs;
 	private final AWTPathDefs pathDefs;
 	
-	public AWTRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e) {
+	public AWTRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e, boolean showUSBCodes) {
 		this.mold = mold;
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
 		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
+		this.showUSBCodes = showUSBCodes;
 		this.baseFont = new Font("SansSerif", Font.PLAIN, 1);
+		this.monoFont = new Font("Monospaced", Font.PLAIN, 12);
 		this.frc = new FontRenderContext(null, true, true);
 		this.shapeDefs = new AWTShapeDefs(mold, moldScale, keyCapSize);
 		this.pathDefs = new AWTPathDefs();
@@ -35,6 +39,7 @@ public class AWTRenderer {
 	public float getKeyCapMoldScale() { return moldScale; }
 	public float getKeyCapSize() { return keyCapSize; }
 	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
+	public boolean getShowUSBCodes() { return showUSBCodes; }
 	
 	public Rectangle2D getBounds(KeyCapLayout layout) {
 		Rectangle2D.Float bounds = layout.getBounds(keyCapSize);
@@ -116,27 +121,46 @@ public class AWTRenderer {
 					float ty = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, th) + ta;
 					for (int i = 0; i < lines.length; i++) {
 						if (lines[i] == null || lines[i].length() == 0) continue;
-						TextLayout tl = new TextLayout(lines[i], baseFont, frc);
-						float sw = lh * tl.getAdvance();
+						TextLayout tl = new TextLayout(lines[i], baseFont.deriveFont(lh), frc);
+						float sw = tl.getAdvance();
 						if (sw > tb.width) {
-							float sx = lh * tb.width / sw;
+							float sx = tb.width / sw;
 							float x = tb.x + pos.x;
 							float y = ty + lh * i;
 							AffineTransform textTX = new AffineTransform(baseTX);
-							textTX.concatenate(new AffineTransform(sx, 0, 0, lh, x, y));
+							textTX.concatenate(new AffineTransform(sx, 0, 0, 1, x, y));
 							g.fill(tl.getOutline(textTX));
 						} else {
 							Anchor a = ((iha != null) ? iha : tb.anchor);
 							float x = a.getX(tb.x, tb.width, sw) + pos.x;
 							float y = ty + lh * i;
 							AffineTransform textTX = new AffineTransform(baseTX);
-							textTX.concatenate(new AffineTransform(lh, 0, 0, lh, x, y));
+							textTX.concatenate(new AffineTransform(1, 0, 0, 1, x, y));
 							g.fill(tl.getOutline(textTX));
 						}
 					}
 				}
 				
 				g.setColor(base);
+			}
+			
+			if (showUSBCodes) {
+				Integer usb = k.getPropertyMap().getInteger("usb");
+				if (usb != null) {
+					Color base = g.getColor();
+					Color tc = textColor(jlc, kcc);
+					Float to = (jlo != null && jlo < 1) ? jlo : null;
+					g.setColor(ColorUtilities.overrideColor(base, tc, to));
+					
+					String h = Integer.toHexString(usb).toUpperCase();
+					h = ((h.length() < 2) ? "0x0" : "0x") + h;
+					TextLayout tl = new TextLayout(h, monoFont, frc);
+					AffineTransform textTX = new AffineTransform(baseTX);
+					textTX.concatenate(new AffineTransform(1, 0, 0, 1, pos.x + 4, -pos.y - 4));
+					g.fill(tl.getOutline(textTX));
+					
+					g.setColor(base);
+				}
 			}
 		}
 	}

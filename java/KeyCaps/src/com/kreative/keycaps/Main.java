@@ -13,6 +13,8 @@ public class Main {
 				System.err.println(args[i] + ":");
 				help(args[i]);
 			}
+		} else if (eic(args[0], "--LayoutToInkbox", "--toInkbox", "--inkbox", "LayoutToInkbox", "toInkbox", "inkbox")) {
+			LayoutToInkbox.main(tail(args));
 		} else if (eic(args[0], "--LayoutToKKCX", "--toKKCX", "--kkcx", "--xml", "LayoutToKKCX", "toKKCX", "kkcx", "xml")) {
 			LayoutToKKCX.main(tail(args));
 		} else if (eic(args[0], "--LayoutToPNG", "--toPNG", "--png", "LayoutToPNG", "toPNG", "png")) {
@@ -45,6 +47,8 @@ public class Main {
 			help();
 		} else if (eic(what, "--help", "help")) {
 			System.err.println("What yer lookin' at.");
+		} else if (eic(what, "--LayoutToInkbox", "--toInkbox", "--inkbox", "LayoutToInkbox", "toInkbox", "inkbox")) {
+			LayoutToInkbox.help();
 		} else if (eic(what, "--LayoutToKKCX", "--toKKCX", "--kkcx", "LayoutToKKCX", "toKKCX", "kkcx")) {
 			LayoutToKKCX.help();
 		} else if (eic(what, "--LayoutToPNG", "--toPNG", "--png", "LayoutToPNG", "toPNG", "png")) {
@@ -73,6 +77,7 @@ public class Main {
 	}
 	
 	public static void help() {
+		System.err.println("  LayoutToInkbox    Generate Inkbox ASK profile");
 		System.err.println("  LayoutToKKCX      Convert text format to KKCX");
 		System.err.println("  LayoutToPNG       Generate PNG of keycap layout");
 		System.err.println("  LayoutToSVG       Generate SVG of keycap layout");

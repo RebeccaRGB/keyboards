@@ -19,18 +19,21 @@ public class SVGRenderer {
 	private final float moldScale;
 	private final float keyCapSize;
 	private final KeyCapEngraver engraver;
+	private final boolean showUSBCodes;
 	
-	public SVGRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e) {
+	public SVGRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e, boolean showUSBCodes) {
 		this.mold = mold;
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
 		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
+		this.showUSBCodes = showUSBCodes;
 	}
 	
 	public KeyCapMold getKeyCapMold() { return mold; }
 	public float getKeyCapMoldScale() { return moldScale; }
 	public float getKeyCapSize() { return keyCapSize; }
 	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
+	public boolean getShowUSBCodes() { return showUSBCodes; }
 	
 	public Rectangle2D getBounds(KeyCapLayout layout) {
 		Rectangle2D.Float bounds = layout.getBounds(keyCapSize);
@@ -149,6 +152,29 @@ public class SVGRenderer {
 						keyboard.append(xmlSpecialChars(lines[i]));
 						keyboard.append("</text>\n");
 					}
+				}
+			}
+			
+			if (showUSBCodes) {
+				Integer usb = k.getPropertyMap().getInteger("usb");
+				if (usb != null) {
+					StringBuffer tas = new StringBuffer();
+					String tcs = textColorString(jlc, kcc);
+					if (tcs != null) tas.append(" fill=\"" + tcs + "\"");
+					String tos = (jlo != null && jlo < 1) ? valueToString(jlo) : null;
+					if (tos != null) tas.append(" opacity=\"" + tos + "\"");
+					
+					keyboard.append("<text");
+					keyboard.append(" x=\"" + valueToString(pos.x + 4) + "\"");
+					keyboard.append(" y=\"" + valueToString(-pos.y - 4) + "\"");
+					keyboard.append(" font-family=\"monospace\"");
+					keyboard.append(" font-size=\"12\"");
+					keyboard.append(tas);
+					keyboard.append(">0x");
+					String h = Integer.toHexString(usb).toUpperCase();
+					if (h.length() < 2) keyboard.append("0");
+					keyboard.append(h);
+					keyboard.append("</text>\n");
 				}
 			}
 			

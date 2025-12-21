@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k usb="0x49" x="0u" y="5u">Insert</k>
+	<k usb="0x46"><l>PrtSc</l><l>SysRq</l></k>
+	<k usb="0x47">Scroll&#10;Lock</k>
+	<k usb="0x48"><l>Pause</l><l>Break</l></k>
+	<k usb="0x53">Num&#10;Lock</k>
+	<k usb="0x4C" x="0u" y="4u">Delete</k>
+	<k usb="0x5F" type="N"><l>7</l><l>Home</l></k>
+	<k usb="0x60" type="N"><l>8</l><l>&#8593;</l></k>
+	<k usb="0x61" type="N"><l>9</l><l>PgUp</l></k>
+	<k usb="0x54">/</k>
+	<k usb="0x4A" x="0u" y="3u">Home</k>
+	<k usb="0x5C" type="N"><l>4</l><l>&#8592;</l></k>
+	<k usb="0x5D" type="N">5</k>
+	<k usb="0x5E" type="N"><l>6</l><l>&#8594;</l></k>
+	<k usb="0x55">*</k>
+	<k usb="0x4D" x="0u" y="2u">End</k>
+	<k usb="0x59" type="N"><l>1</l><l>End</l></k>
+	<k usb="0x5A" type="N"><l>2</l><l>&#8595;</l></k>
+	<k usb="0x5B" type="N"><l>3</l><l>PgDn</l></k>
+	<k usb="0x56">-</k>
+	<k usb="0x4B" x="0u" y="1u">Page&#10;Up</k>
+	<k usb="0x62" type="N"><l>0</l><l>Ins</l></k>
+	<k usb="0x52">&#8593;</k>
+	<k usb="0x63" type="N"><l>.</l><l>Del</l></k>
+	<k usb="0x57">+</k>
+	<k usb="0x4E" x="0u" y="0u">Page&#10;Down</k>
+	<k usb="0x50">&#8592;</k>
+	<k usb="0x51">&#8595;</k>
+	<k usb="0x4F">&#8594;</k>
+	<k usb="0x58">Enter</k>
+</keyCapLayout>

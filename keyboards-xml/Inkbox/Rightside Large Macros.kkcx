@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k x="0u" y="5u" shape="5u"></k>
+	<k x="0.05u" y="3.3u" shape="1.6+1.6u"></k>
+	<k x="1.7u" shape="1.6+1.6u"></k>
+	<k x="3.35u" shape="1.6+1.6u"></k>
+	<k x="0.05u" y="1.65u" shape="1.6+1.6u"></k>
+	<k x="1.7u" shape="1.6+1.6u"></k>
+	<k x="3.35u" shape="1.6+1.6u"></k>
+	<k x="0.05u" y="0u" shape="1.6+1.6u"></k>
+	<k x="1.7u" shape="1.6+1.6u"></k>
+	<k x="3.35u" shape="1.6+1.6u"></k>
+</keyCapLayout>

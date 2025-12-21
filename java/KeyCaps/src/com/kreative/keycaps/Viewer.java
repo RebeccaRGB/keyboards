@@ -35,6 +35,8 @@ public class Viewer {
 		KeyCapMold mold = new IconKeyCapMold();
 		float moldScale = 1;
 		float size = 48;
+		boolean showUSBCodes = false;
+		
 		int argi = 0;
 		while (argi < args.length) {
 			String arg = args[argi++];
@@ -65,12 +67,14 @@ public class Viewer {
 						System.err.println("Invalid size: " + arg);
 						return;
 					}
+				} else if (arg.equals("-U")) {
+					showUSBCodes = true;
 				} else if (arg.equals("-i")) {
-					open(mold, moldScale, size, null);
+					open(mold, moldScale, size, showUSBCodes, null);
 					opened = true;
 				} else if (arg.equals("-f") && argi < args.length) {
 					File input = new File(args[argi++]);
-					open(mold, moldScale, size, input);
+					open(mold, moldScale, size, showUSBCodes, input);
 					opened = true;
 				} else {
 					help();
@@ -78,7 +82,7 @@ public class Viewer {
 				}
 			} else {
 				File input = new File(arg);
-				open(mold, moldScale, size, input);
+				open(mold, moldScale, size, showUSBCodes, input);
 				opened = true;
 			}
 		}
@@ -90,7 +94,7 @@ public class Viewer {
 				if (kbdFile != null) {
 					try {
 						KeyCapLayout layout = KeyCapReader.read(kbdFile);
-						open(mold, moldScale, size, layout, kbdDir);
+						open(mold, moldScale, size, showUSBCodes, layout, kbdDir);
 						return;
 					} catch (IOException e) {
 						System.err.println("Could not read from input: " + e);
@@ -100,7 +104,7 @@ public class Viewer {
 			try {
 				InputStream in = Viewer.class.getResourceAsStream("ANSI.kkcx");
 				KeyCapLayout layout = KeyCapReader.read("ANSI.kkcx", in);
-				open(mold, moldScale, size, layout, kbdDir);
+				open(mold, moldScale, size, showUSBCodes, layout, kbdDir);
 				return;
 			} catch (IOException e) {
 				System.err.println("Could not read from input: " + e);
@@ -108,30 +112,30 @@ public class Viewer {
 		}
 	}
 	
-	public static void open(KeyCapMold mold, float moldScale, float size, File input) {
+	public static void open(KeyCapMold mold, float moldScale, float size, boolean showUSBCodes, File input) {
 		try {
 			if (input == null) {
 				KeyCapLayout layout = KeyCapReader.read("input", System.in);
-				open(mold, moldScale, size, layout, UIUtilities.getKeyboardDirectory());
+				open(mold, moldScale, size, showUSBCodes, layout, UIUtilities.getKeyboardDirectory());
 			} else if (input.isDirectory()) {
 				File file = UIUtilities.getKeyboardFile(input);
 				if (file != null) {
 					KeyCapLayout layout = KeyCapReader.read(file);
-					open(mold, moldScale, size, layout, input);
+					open(mold, moldScale, size, showUSBCodes, layout, input);
 				} else {
 					throw new IOException("No applicable files found in directory");
 				}
 			} else {
 				KeyCapLayout layout = KeyCapReader.read(input);
-				open(mold, moldScale, size, layout, UIUtilities.getKeyboardDirectory());
+				open(mold, moldScale, size, showUSBCodes, layout, UIUtilities.getKeyboardDirectory());
 			}
 		} catch (IOException e) {
 			System.err.println("Could not read from input: " + e);
 		}
 	}
 	
-	public static void open(KeyCapMold mold, float moldScale, float size, KeyCapLayout layout, File kbdDir) {
-		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null);
+	public static void open(KeyCapMold mold, float moldScale, float size, boolean showUSBCodes, KeyCapLayout layout, File kbdDir) {
+		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null, showUSBCodes);
 		ViewerComponent vc = new ViewerComponent(renderer, layout);
 		ViewerFrame vf = new ViewerFrame(vc, kbdDir);
 		vf.setVisible(true);

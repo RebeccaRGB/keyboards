@@ -17,6 +17,7 @@ public final class LayoutToPNG extends LayoutConverter {
 	protected KeyCapMold mold = new IconKeyCapMold();
 	protected float moldScale = 1;
 	protected float size = 48;
+	protected boolean showUSBCodes = false;
 	
 	protected final int parseArg(String[] args, String arg, int argi) {
 		if (arg.equals("-m") && argi < args.length) {
@@ -40,6 +41,8 @@ public final class LayoutToPNG extends LayoutConverter {
 				System.err.println("Invalid size: " + arg);
 				return EXIT;
 			}
+		} else if (arg.equals("-U")) {
+			showUSBCodes = true;
 		} else {
 			return HELP;
 		}
@@ -47,7 +50,7 @@ public final class LayoutToPNG extends LayoutConverter {
 	}
 	
 	protected final void write(OutputStream os, KeyCapLayout layout) throws IOException {
-		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null);
+		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null, showUSBCodes);
 		Rectangle2D bounds = renderer.getBounds(layout);
 		int w = (int)Math.round(bounds.getWidth());
 		int h = (int)Math.round(bounds.getHeight());

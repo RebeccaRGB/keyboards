@@ -59,6 +59,7 @@ public class ViewerMenuBar extends JMenuBar {
 		}
 		
 		JMenu styleMenu = new JMenu("Style");
+		styleMenu.add(new KeyCapMoldMenuItem(null, 0, 0, new FlatKeyCapMold()));
 		styleMenu.add(new KeyCapMoldMenuItem(null, 0, 0, new IconKeyCapMold()));
 		styleMenu.add(new KeyCapMoldMenuItem(null, 0, 0, new KbitKeyCapMold()));
 		styleMenu.add(new KeyCapMoldMenuItem(null, 0, 0, new MaxKeyCapMold()));
@@ -70,6 +71,8 @@ public class ViewerMenuBar extends JMenuBar {
 		for (int keyCapSize : KEY_CAP_SIZES) {
 			styleMenu.add(new KeyCapSizeMenuItem(null, 0, 0, keyCapSize));
 		}
+		styleMenu.addSeparator();
+		styleMenu.add(new ShowUSBCodesMenuItem());
 		add(styleMenu);
 	}
 	
@@ -145,7 +148,8 @@ public class ViewerMenuBar extends JMenuBar {
 					if (renderer != null) {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							mold, renderer.getKeyCapMoldScale(),
-							renderer.getKeyCapSize(), null
+							renderer.getKeyCapSize(), null,
+							renderer.getShowUSBCodes()
 						));
 						frame.hack();
 					}
@@ -165,7 +169,8 @@ public class ViewerMenuBar extends JMenuBar {
 					if (renderer != null) {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							renderer.getKeyCapMold(), moldScale,
-							renderer.getKeyCapSize(), null
+							renderer.getKeyCapSize(), null,
+							renderer.getShowUSBCodes()
 						));
 						frame.hack();
 					}
@@ -186,7 +191,30 @@ public class ViewerMenuBar extends JMenuBar {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							renderer.getKeyCapMold(),
 							renderer.getKeyCapMoldScale(),
-							keyCapSize, null
+							keyCapSize, null,
+							renderer.getShowUSBCodes()
+						));
+						frame.hack();
+					}
+				}
+			});
+		}
+	}
+	
+	private class ShowUSBCodesMenuItem extends JMenuItem {
+		private static final long serialVersionUID = 1L;
+		public ShowUSBCodesMenuItem() {
+			super("Show USB Codes");
+			setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U, UIUtilities.SHORTCUT_KEY));
+			addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					AWTRenderer renderer = frame.getViewerPanel().getViewerComponent().getRenderer();
+					if (renderer != null) {
+						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
+							renderer.getKeyCapMold(),
+							renderer.getKeyCapMoldScale(),
+							renderer.getKeyCapSize(), null,
+							!renderer.getShowUSBCodes()
 						));
 						frame.hack();
 					}
