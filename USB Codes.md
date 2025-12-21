@@ -31,6 +31,9 @@
 ### Triplex
 ![](keyboards-svg-usb/Inkbox/Leftside%20Triplex.svg)
 
+### Keypad
+![](keyboards-svg-usb/Inkbox/Rightside%20Keypad.svg)
+
 ## Other Keyboards
 
 ### [K130](https://github.com/RebeccaRGB/K130)
