@@ -209,7 +209,7 @@ public class UIUtilities {
 			if (renderer == null) return null;
 			SVGRenderer svg = new SVGRenderer(
 				renderer.getKeyCapMold(), renderer.getKeyCapMoldScale(),
-				renderer.getKeyCapSize(), null, renderer.getShowUSBCodes()
+				renderer.getKeyCapSize(), null, 0, renderer.getShowUSBCodes()
 			);
 			return svg.render(layout);
 		} else {

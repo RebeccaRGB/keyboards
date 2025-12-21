@@ -158,7 +158,7 @@ public final class LayoutToInkbox extends LayoutConverter {
 	
 	private static BufferedImage createMasterImage(KeyCapLayout layout) {
 		FlatKeyCapMold mold = new FlatKeyCapMold(0, TEXT_INSET);
-		AWTRenderer renderer = new AWTRenderer(mold, 1, IMAGE_SIZE, null, false);
+		AWTRenderer renderer = new AWTRenderer(mold, 1, IMAGE_SIZE, null, 0, false);
 		Rectangle2D bounds = renderer.getBounds(layout);
 		int w = (int)Math.round(bounds.getWidth());
 		int h = (int)Math.round(bounds.getHeight());

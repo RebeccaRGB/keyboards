@@ -135,7 +135,7 @@ public class Viewer {
 	}
 	
 	public static void open(KeyCapMold mold, float moldScale, float size, boolean showUSBCodes, KeyCapLayout layout, File kbdDir) {
-		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null, showUSBCodes);
+		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null, 0, showUSBCodes);
 		ViewerComponent vc = new ViewerComponent(renderer, layout);
 		ViewerFrame vf = new ViewerFrame(vc, kbdDir);
 		vf.setVisible(true);

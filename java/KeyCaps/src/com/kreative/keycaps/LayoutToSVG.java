@@ -13,6 +13,7 @@ public final class LayoutToSVG extends LayoutConverter {
 	protected KeyCapMold mold = new IconKeyCapMold();
 	protected float moldScale = 1;
 	protected float size = 48;
+	protected int backgroundColor = 0;
 	protected boolean showUSBCodes = false;
 	
 	protected final int parseArg(String[] args, String arg, int argi) {
@@ -37,6 +38,9 @@ public final class LayoutToSVG extends LayoutConverter {
 				System.err.println("Invalid size: " + arg);
 				return EXIT;
 			}
+		} else if (arg.equals("-b") && argi < args.length) {
+			arg = args[argi++];
+			backgroundColor = ColorUtilities.parseColorIndex(arg);
 		} else if (arg.equals("-U")) {
 			showUSBCodes = true;
 		} else {
@@ -46,7 +50,7 @@ public final class LayoutToSVG extends LayoutConverter {
 	}
 	
 	protected final void write(OutputStream os, KeyCapLayout layout) throws IOException {
-		SVGRenderer svg = new SVGRenderer(mold, moldScale, size, null, showUSBCodes);
+		SVGRenderer svg = new SVGRenderer(mold, moldScale, size, null, backgroundColor, showUSBCodes);
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(os, "UTF-8"), true);
 		out.println(svg.render(layout));
 	}

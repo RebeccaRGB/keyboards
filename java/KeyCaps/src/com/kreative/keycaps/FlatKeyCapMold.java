@@ -1,7 +1,5 @@
 package com.kreative.keycaps;
 
-import static com.kreative.keycaps.ShapeUtilities.contract;
-
 import java.awt.Color;
 import java.awt.Shape;
 
@@ -28,13 +26,13 @@ public class FlatKeyCapMold extends KeyCapMold {
 	}
 	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
-		shape = contract(shape, pathInset);
+		shape = ShapeUtilities.contract(shape, pathInset);
 		if (color == null) color = Color.black;
 		return new LayeredShape(shape, color, opacity);
 	}
 	
 	public Shape createTopTextArea(Shape shape, String vs) {
-		return contract(shape, textInset);
+		return ShapeUtilities.contract(shape, textInset);
 	}
 	
 	public Shape createFrontTextArea(Shape shape, String vs) {

@@ -19,13 +19,19 @@ public class SVGRenderer {
 	private final float moldScale;
 	private final float keyCapSize;
 	private final KeyCapEngraver engraver;
+	private final int backgroundColor;
 	private final boolean showUSBCodes;
 	
-	public SVGRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e, boolean showUSBCodes) {
+	public SVGRenderer(
+		KeyCapMold mold, float moldScale,
+		float keyCapSize, KeyCapEngraver e,
+		int backgroundColor, boolean showUSBCodes
+	) {
 		this.mold = mold;
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
 		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
+		this.backgroundColor = backgroundColor;
 		this.showUSBCodes = showUSBCodes;
 	}
 	
@@ -33,9 +39,10 @@ public class SVGRenderer {
 	public float getKeyCapMoldScale() { return moldScale; }
 	public float getKeyCapSize() { return keyCapSize; }
 	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
+	public int getBackgroundColor() { return backgroundColor; }
 	public boolean getShowUSBCodes() { return showUSBCodes; }
 	
-	public Rectangle2D getBounds(KeyCapLayout layout) {
+	public Rectangle2D.Float getBounds(KeyCapLayout layout) {
 		Rectangle2D.Float bounds = layout.getBounds(keyCapSize);
 		Padding padding = mold.getPadding();
 		bounds.x -= padding.left * moldScale;
@@ -46,7 +53,8 @@ public class SVGRenderer {
 	}
 	
 	public String render(KeyCapLayout layout) {
-		String vbox = toSVGViewBox(this.getBounds(layout), 0, ROUNDING);
+		Rectangle2D.Float layoutBounds = this.getBounds(layout);
+		String vbox = toSVGViewBox(layoutBounds, 0, ROUNDING);
 		SVGShapeDefs shapeDefs = new SVGShapeDefs(mold, moldScale, keyCapSize);
 		SVGPathDefs pathDefs = new SVGPathDefs();
 		StringBuffer keyboard = new StringBuffer();
@@ -62,6 +70,21 @@ public class SVGRenderer {
 		Float llh = lp.containsAny("lh") ? lp.getFloat("lh") : null;
 		Anchor lha = lp.containsAny("ha", "a") ? lp.getAnchor("ha", "a") : null;
 		Anchor lva = lp.containsAny("va", "a") ? lp.getAnchor("va", "a") : null;
+		
+		if (backgroundColor != 0) {
+			Color bc = ColorUtilities.getPaletteColor(backgroundColor);
+			Float bo = ColorUtilities.getPaletteOpacity(backgroundColor);
+			keyboard.append("<rect class=\"background\"");
+			keyboard.append(" x=\"" + valueToString(layoutBounds.x) + "\"");
+			keyboard.append(" y=\"" + valueToString(layoutBounds.y) + "\"");
+			keyboard.append(" width=\"" + valueToString(layoutBounds.width) + "\"");
+			keyboard.append(" height=\"" + valueToString(layoutBounds.height) + "\"");
+			keyboard.append(" fill=\"" + colorToString(bc, null) + "\"");
+			if (bo != null && bo.floatValue() < 1) {
+				keyboard.append(" opacity=\"" + valueToString(bo.floatValue()) + "\"");
+			}
+			keyboard.append("/>\n");
+		}
 		
 		keyboard.append("<g class=\"keyboard");
 		if (lclass != null && lclass.length() > 0) keyboard.append(" " + lclass);

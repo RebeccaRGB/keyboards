@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="940" height="1128" viewBox="0 -1128 940 1128">
+<defs>
+<g id="shape0">
+<path d="M 6.5 -181.5 L 6.5 -6.5 L 181.5 -6.5 L 181.5 -181.5 Z" fill="#000000"/>
+</g>
+</defs>
+<rect class="background" x="0" y="-1128" width="940" height="1128" fill="#ff00ff"/>
+<g class="keyboard">
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -940)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(188 -940)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(376 -940)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(564 -940)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(752 -940)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -752)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(188 -752)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(376 -752)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(564 -752)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(752 -752)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -564)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(188 -564)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(376 -564)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(564 -564)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(752 -564)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -376)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(188 -376)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(376 -376)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(564 -376)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(752 -376)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -188)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(188 -188)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(376 -188)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(564 -188)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(752 -188)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(188 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(376 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(564 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(752 0)"/>
+</g>
+</g>
+</svg>

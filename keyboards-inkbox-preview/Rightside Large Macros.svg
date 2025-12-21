@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="940" height="1128" viewBox="0 -1128 940 1128">
+<defs>
+<g id="shape0">
+<path d="M 6.5 -181.5 L 6.5 -6.5 L 933.5 -6.5 L 933.5 -181.5 Z" fill="#000000"/>
+</g>
+<g id="shape1">
+<path d="M 6.5 -294.3 L 6.5 -6.5 L 294.3 -6.5 L 294.3 -294.3 Z" fill="#000000"/>
+</g>
+</defs>
+<rect class="background" x="0" y="-1128" width="940" height="1128" fill="#ff00ff"/>
+<g class="keyboard">
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -940)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(9.4 -620.4)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(319.6 -620.4)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(629.8 -620.4)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(9.4 -310.2)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(319.6 -310.2)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(629.8 -310.2)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(9.4 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(319.6 0)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape1" transform="translate(629.8 0)"/>
+</g>
+</g>
+</svg>

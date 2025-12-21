@@ -15,6 +15,7 @@ public class AWTRenderer {
 	private final float moldScale;
 	private final float keyCapSize;
 	private final KeyCapEngraver engraver;
+	private final int backgroundColor;
 	private final boolean showUSBCodes;
 	private final Font baseFont;
 	private final Font monoFont;
@@ -22,11 +23,16 @@ public class AWTRenderer {
 	private final AWTShapeDefs shapeDefs;
 	private final AWTPathDefs pathDefs;
 	
-	public AWTRenderer(KeyCapMold mold, float moldScale, float keyCapSize, KeyCapEngraver e, boolean showUSBCodes) {
+	public AWTRenderer(
+		KeyCapMold mold, float moldScale,
+		float keyCapSize, KeyCapEngraver e,
+		int backgroundColor, boolean showUSBCodes
+	) {
 		this.mold = mold;
 		this.moldScale = moldScale;
 		this.keyCapSize = keyCapSize;
 		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
+		this.backgroundColor = backgroundColor;
 		this.showUSBCodes = showUSBCodes;
 		this.baseFont = new Font("SansSerif", Font.PLAIN, 1);
 		this.monoFont = new Font("Monospaced", Font.PLAIN, 12);
@@ -39,9 +45,10 @@ public class AWTRenderer {
 	public float getKeyCapMoldScale() { return moldScale; }
 	public float getKeyCapSize() { return keyCapSize; }
 	public KeyCapEngraver getKeyCapEngraver() { return engraver; }
+	public int getBackgroundColor() { return backgroundColor; }
 	public boolean getShowUSBCodes() { return showUSBCodes; }
 	
-	public Rectangle2D getBounds(KeyCapLayout layout) {
+	public Rectangle2D.Float getBounds(KeyCapLayout layout) {
 		Rectangle2D.Float bounds = layout.getBounds(keyCapSize);
 		Padding padding = mold.getPadding();
 		bounds.x -= padding.left * moldScale;
@@ -52,7 +59,8 @@ public class AWTRenderer {
 	}
 	
 	public void paint(Graphics2D g, KeyCapLayout layout, Rectangle2D bounds, boolean aspect) {
-		AffineTransform baseTX = getViewTransform(bounds, this.getBounds(layout), aspect);
+		Rectangle2D.Float layoutBounds = this.getBounds(layout);
+		AffineTransform baseTX = getViewTransform(bounds, layoutBounds, aspect);
 		PropertyMap lp = layout.getPropertyMap();
 		String lvs = lp.containsAny("vs") ? lp.getString("vs") : null;
 		Color lcc = lp.containsAny("cc") ? lp.getColor("cc") : null;
@@ -62,6 +70,15 @@ public class AWTRenderer {
 		Float llh = lp.containsAny("lh") ? lp.getFloat("lh") : null;
 		Anchor lha = lp.containsAny("ha", "a") ? lp.getAnchor("ha", "a") : null;
 		Anchor lva = lp.containsAny("va", "a") ? lp.getAnchor("va", "a") : null;
+		
+		if (backgroundColor != 0) {
+			Color base = g.getColor();
+			Color bc = ColorUtilities.getPaletteColor(backgroundColor);
+			Float bo = ColorUtilities.getPaletteOpacity(backgroundColor);
+			g.setColor(ColorUtilities.overrideColor(base, bc, bo));
+			g.fill(layoutBounds);
+			g.setColor(base);
+		}
 		
 		for (KeyCap k : layout) {
 			PropertyMap kp = k.getPropertyMap();

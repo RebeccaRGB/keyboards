@@ -148,7 +148,7 @@ public class ViewerMenuBar extends JMenuBar {
 					if (renderer != null) {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							mold, renderer.getKeyCapMoldScale(),
-							renderer.getKeyCapSize(), null,
+							renderer.getKeyCapSize(), null, 0,
 							renderer.getShowUSBCodes()
 						));
 						frame.hack();
@@ -169,7 +169,7 @@ public class ViewerMenuBar extends JMenuBar {
 					if (renderer != null) {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							renderer.getKeyCapMold(), moldScale,
-							renderer.getKeyCapSize(), null,
+							renderer.getKeyCapSize(), null, 0,
 							renderer.getShowUSBCodes()
 						));
 						frame.hack();
@@ -191,7 +191,7 @@ public class ViewerMenuBar extends JMenuBar {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							renderer.getKeyCapMold(),
 							renderer.getKeyCapMoldScale(),
-							keyCapSize, null,
+							keyCapSize, null, 0,
 							renderer.getShowUSBCodes()
 						));
 						frame.hack();
@@ -213,7 +213,7 @@ public class ViewerMenuBar extends JMenuBar {
 						frame.getViewerPanel().getViewerComponent().setRenderer(new AWTRenderer(
 							renderer.getKeyCapMold(),
 							renderer.getKeyCapMoldScale(),
-							renderer.getKeyCapSize(), null,
+							renderer.getKeyCapSize(), null, 0,
 							!renderer.getShowUSBCodes()
 						));
 						frame.hack();
