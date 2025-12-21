@@ -1,4 +1,4 @@
-# Keyboards
+# Keyboard Diagrams
 
 ## Standard Full-Size Keyboards
 
@@ -290,6 +290,32 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Commodore Amiga 500, US
 ![](keyboards-svg/Commodore/Commodore%20Amiga%20500,%20US.svg)
+
+## Inkbox ASK Profiles
+
+### Leftside - ANSI
+![](keyboards-svg/Inkbox/Leftside%20ANSI.svg)
+
+### Leftside - ISO US
+![](keyboards-svg/Inkbox/Leftside%20ISO%20US.svg)
+
+### Leftside - ISO UK
+![](keyboards-svg/Inkbox/Leftside%20ISO%20UK.svg)
+
+### Leftside - JIS
+![](keyboards-svg/Inkbox/Leftside%20JIS.svg)
+
+### Leftside - Triplex
+![](keyboards-svg/Inkbox/Leftside%20Triplex.svg)
+
+### Rightside - Keypad
+![](keyboards-svg/Inkbox/Rightside%20Keypad.svg)
+
+### Rightside - Macro Pad
+![](keyboards-svg/Inkbox/Rightside%20Macro%20Pad.svg)
+
+### Rightside - Large Macros
+![](keyboards-svg/Inkbox/Rightside%20Large%20Macros.svg)
 
 ## Other Keyboards
 
