@@ -10,5 +10,5 @@ if [ -d keyboards-inkbox ]; then
 fi
 if [ -d keyboards-inkbox-preview ]; then
 	rm -rf keyboards-inkbox-preview/*
-	java -jar java/KeyCaps/keycaps.jar --svg -m "flat(6.5,32.5)" -u 188 -b "#F0F" -o keyboards-inkbox-preview -f keyboards-xml/Inkbox
+	java -jar java/KeyCaps/keycaps.jar --png -m "flat(6.5,32.5)" -u 188 -b "#F0F" -o keyboards-inkbox-preview -f keyboards-xml/Inkbox
 fi

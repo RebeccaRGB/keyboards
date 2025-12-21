@@ -76,7 +76,7 @@ public class AWTRenderer {
 			Color bc = ColorUtilities.getPaletteColor(backgroundColor);
 			Float bo = ColorUtilities.getPaletteOpacity(backgroundColor);
 			g.setColor(ColorUtilities.overrideColor(base, bc, bo));
-			g.fill(layoutBounds);
+			g.fill(bounds);
 			g.setColor(base);
 		}
 		
