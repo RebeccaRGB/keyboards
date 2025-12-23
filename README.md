@@ -11,6 +11,12 @@
 ### ISO UK
 ![](keyboards-svg/Generic/ISO%20UK.svg)
 
+### ISO FR
+![](keyboards-svg/Generic/ISO%20FR.svg)
+
+### ISO DE
+![](keyboards-svg/Generic/ISO%20DE.svg)
+
 ### JIS
 ![](keyboards-svg/Generic/JIS.svg)
 
@@ -25,6 +31,12 @@
 ### ISO UK TKL
 ![](keyboards-svg/Generic/ISO%20UK%20TKL.svg)
 
+### ISO FR TKL
+![](keyboards-svg/Generic/ISO%20FR%20TKL.svg)
+
+### ISO DE TKL
+![](keyboards-svg/Generic/ISO%20DE%20TKL.svg)
+
 ### JIS TKL
 ![](keyboards-svg/Generic/JIS%20TKL.svg)
 
@@ -38,6 +50,12 @@
 
 ### ISO UK 60%
 ![](keyboards-svg/Generic/ISO%20UK%2060%25.svg)
+
+### ISO FR 60%
+![](keyboards-svg/Generic/ISO%20FR%2060%25.svg)
+
+### ISO DE 60%
+![](keyboards-svg/Generic/ISO%20DE%2060%25.svg)
 
 ### JIS 60%
 ![](keyboards-svg/Generic/JIS%2060%25.svg)
@@ -301,6 +319,12 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Leftside - ISO UK
 ![](keyboards-svg/Inkbox/Leftside%20ISO%20UK.svg)
+
+### Leftside - ISO FR
+![](keyboards-svg/Inkbox/Leftside%20ISO%20FR.svg)
+
+### Leftside - ISO DE
+![](keyboards-svg/Inkbox/Leftside%20ISO%20DE.svg)
 
 ### Leftside - JIS
 ![](keyboards-svg/Inkbox/Leftside%20JIS.svg)

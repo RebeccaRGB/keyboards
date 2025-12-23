@@ -11,6 +11,12 @@
 ### ISO UK
 ![](keyboards-svg-usb/Generic/ISO%20UK.svg)
 
+### ISO FR
+![](keyboards-svg-usb/Generic/ISO%20FR.svg)
+
+### ISO DE
+![](keyboards-svg-usb/Generic/ISO%20DE.svg)
+
 ### JIS
 ![](keyboards-svg-usb/Generic/JIS.svg)
 
@@ -24,6 +30,12 @@
 
 ### ISO UK
 ![](keyboards-svg-usb/Inkbox/Leftside%20ISO%20UK.svg)
+
+### ISO FR
+![](keyboards-svg-usb/Inkbox/Leftside%20ISO%20FR.svg)
+
+### ISO DE
+![](keyboards-svg-usb/Inkbox/Leftside%20ISO%20DE.svg)
 
 ### JIS
 ![](keyboards-svg-usb/Inkbox/Leftside%20JIS.svg)

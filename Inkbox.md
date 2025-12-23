@@ -12,6 +12,14 @@ Standard ANSI (US) layout
 
 ![](keyboards-inkbox-preview/Leftside%20ANSI.png)
 
+### ISO US
+
+Standard ISO layout with US legends
+
+[Download Profile](keyboards-inkbox/Leftside%20ISO%20US.zip)
+
+![](keyboards-inkbox-preview/Leftside%20ISO%20US.png)
+
 ### ISO UK
 
 Standard ISO layout with UK legends
@@ -20,13 +28,21 @@ Standard ISO layout with UK legends
 
 ![](keyboards-inkbox-preview/Leftside%20ISO%20UK.png)
 
-### ISO US
+### ISO FR
 
-Standard ISO layout with US legends
+Standard ISO layout with French legends
 
-[Download Profile](keyboards-inkbox/Leftside%20ISO%20US.zip)
+[Download Profile](keyboards-inkbox/Leftside%20ISO%20FR.zip)
 
-![](keyboards-inkbox-preview/Leftside%20ISO%20US.png)
+![](keyboards-inkbox-preview/Leftside%20ISO%20FR.png)
+
+### ISO DE
+
+Standard ISO layout with German legends
+
+[Download Profile](keyboards-inkbox/Leftside%20ISO%20DE.zip)
+
+![](keyboards-inkbox-preview/Leftside%20ISO%20DE.png)
 
 ### JIS
 
