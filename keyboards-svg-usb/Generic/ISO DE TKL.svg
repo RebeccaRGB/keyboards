@@ -152,8 +152,8 @@
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(54 -216)"/>
-<text x="81" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">1</text>
-<text x="81" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">!</text>
+<text x="73.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">1</text>
+<text x="73.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">!</text>
 <text x="58" y="-220" font-family="monospace" font-size="12" fill="#000000">0x1E</text>
 </g>
 <g class="key">
@@ -172,20 +172,20 @@
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(216 -216)"/>
-<text x="243" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">4</text>
-<text x="243" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">$</text>
+<text x="235.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">4</text>
+<text x="235.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">$</text>
 <text x="220" y="-220" font-family="monospace" font-size="12" fill="#000000">0x21</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(270 -216)"/>
-<text x="297" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">5</text>
-<text x="297" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">%</text>
+<text x="289.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">5</text>
+<text x="289.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">%</text>
 <text x="274" y="-220" font-family="monospace" font-size="12" fill="#000000">0x22</text>
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(324 -216)"/>
-<text x="351" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">6</text>
-<text x="351" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">&amp;</text>
+<text x="343.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">6</text>
+<text x="343.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">&amp;</text>
 <text x="328" y="-220" font-family="monospace" font-size="12" fill="#000000">0x23</text>
 </g>
 <g class="key">

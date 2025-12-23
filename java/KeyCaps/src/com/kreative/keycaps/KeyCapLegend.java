@@ -159,7 +159,7 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 	public void addAll(Type type, List<KeyCapLegendItem> items) {
 		if (type == null) type = Type.forItems(items);
 		for (int i = 0, n = Math.min(items.size(), type.paramKeys.length); i < n; i++) {
-			if (items.get(i) != null) this.items.put(type.paramKeys[i], items.get(i));
+			this.items.put(type.paramKeys[i], items.get(i));
 		}
 	}
 	

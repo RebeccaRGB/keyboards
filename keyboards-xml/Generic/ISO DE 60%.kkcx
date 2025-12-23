@@ -2,12 +2,12 @@
 <!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
 <keyCapLayout>
 	<k usb="0x35" x="0u" y="4u"><l>^</l><l>°</l></k>
-	<k usb="0x1E"><l>1</l><l>!</l></k>
+	<k usb="0x1E" type="Q"><l>1</l><l>!</l><l></l></k>
 	<k usb="0x1F" type="Q"><l>2</l><l>"</l><l>²</l></k>
 	<k usb="0x20" type="Q"><l>3</l><l>§</l><l>³</l></k>
-	<k usb="0x21"><l>4</l><l>$</l></k>
-	<k usb="0x22"><l>5</l><l>%</l></k>
-	<k usb="0x23"><l>6</l><l>&amp;</l></k>
+	<k usb="0x21" type="Q"><l>4</l><l>$</l><l></l></k>
+	<k usb="0x22" type="Q"><l>5</l><l>%</l><l></l></k>
+	<k usb="0x23" type="Q"><l>6</l><l>&amp;</l><l></l></k>
 	<k usb="0x24" type="Q"><l>7</l><l>/</l><l>{</l></k>
 	<k usb="0x25" type="Q"><l>8</l><l>(</l><l>[</l></k>
 	<k usb="0x26" type="Q"><l>9</l><l>)</l><l>]</l></k>

@@ -158,8 +158,8 @@
 </g>
 <g class="key">
 <use xlink:href="#shape0" transform="translate(54 -216)"/>
-<text x="81" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">&amp;</text>
-<text x="81" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">1</text>
+<text x="73.5" y="-237.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">&amp;</text>
+<text x="73.5" y="-252.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">1</text>
 <text x="58" y="-220" font-family="monospace" font-size="12" fill="#000000">0x1E</text>
 </g>
 <g class="key">

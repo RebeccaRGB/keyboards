@@ -2,7 +2,7 @@
 <!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
 <keyCapLayout>
 	<k usb="0x35" x="0u" y="4u" type="S">²</k>
-	<k usb="0x1E"><l>&amp;</l><l>1</l></k>
+	<k usb="0x1E" type="Q"><l>&amp;</l><l>1</l><l></l></k>
 	<k usb="0x1F" type="Q"><l>é</l><l>2</l><l>~</l></k>
 	<k usb="0x20" type="Q"><l>"</l><l>3</l><l>#</l></k>
 	<k usb="0x21" type="Q"><l>'</l><l>4</l><l>{</l></k>
