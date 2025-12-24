@@ -364,5 +364,5 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### [TTCC (Two-Thirds California Case)](https://github.com/RebeccaRGB/ttcc)
 ![](keyboards-svg/Kreative/Two-Thirds%20California%20Case.svg)
 
-### [Two-Thirds Keyboard by Attoparsec](https://www.attoparsec.com/artifacts/twothirds.html)
+### [Two-Thirds Keyboard (Original by Attoparsec)](https://www.attoparsec.com/artifacts/twothirds.html)
 ![](keyboards-svg/Attoparsec/Two-Thirds%20Keyboard.svg)
