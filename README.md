@@ -346,6 +346,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Famicom
 ![](keyboards-svg/Nintendo/Famicom.svg)
 
+### [K65](https://github.com/kreativekorp/segterm/tree/master/board/K65)
+![](keyboards-svg/Kreative/K65.svg)
+
 ### [K130](https://github.com/RebeccaRGB/K130)
 ![](keyboards-svg/Kreative/K130.svg)
 
@@ -357,3 +360,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Space Cadet
 ![](keyboards-svg/MIT/Space%20Cadet.svg)
+
+### [TTCC (Two-Thirds California Case)](https://github.com/RebeccaRGB/ttcc)
+![](keyboards-svg/Kreative/Two-Thirds%20California%20Case.svg)
+
+### [Two-Thirds Keyboard by Attoparsec](https://www.attoparsec.com/artifacts/twothirds.html)
+![](keyboards-svg/Attoparsec/Two-Thirds%20Keyboard.svg)

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k x="0u" y="9u" shape="1+2u">A</k>
+	<k shape="1+2u">B</k>
+	<k shape="1+2u">C</k>
+	<k shape="1+2u">D</k>
+	<k shape="1+2u">E</k>
+	<k shape="1+2u">F</k>
+	<k shape="1+2u">G</k>
+	<k shape="1+2u">Esc</k>
+	<k x="8.5u" y="9u" shape="1+2u">H</k>
+	<k shape="1+2u">I</k>
+	<k shape="1+2u">K</k>
+	<k shape="1+2u">L</k>
+	<k shape="1+2u">M</k>
+	<k shape="1+2u">N</k>
+	<k shape="1+2u">O</k>
+	<k shape="1+2u">&#8592;</k>
+	<k x="0u" y="7u" shape="1+2u">P</k>
+	<k shape="1+2u">Q</k>
+	<k shape="1+2u">R</k>
+	<k shape="1+2u">S</k>
+	<k shape="1+2u">T</k>
+	<k shape="1+2u">V</k>
+	<k shape="1+2u">W</k>
+	<k shape="1+2u">=</k>
+	<k x="8.5u" y="7u" shape="1+2u">X</k>
+	<k shape="1+2u">Y</k>
+	<k shape="1+2u">Z</k>
+	<k shape="1+2u">J</k>
+	<k shape="1+2u">U</k>
+	<k shape="1+2u">&amp;</k>
+	<k shape="1+2u">$</k>
+	<k shape="1+2u">/</k>
+	<k x="0u" y="6u">(</k>
+	<k>)</k>
+	<k>*</k>
+	<k>+</k>
+	<k>&#39;</k>
+	<k>k</k>
+	<k x="8.5u" y="6u">1</k>
+	<k>2</k>
+	<k>3</k>
+	<k>4</k>
+	<k>5</k>
+	<k>6</k>
+	<k>7</k>
+	<k>8</k>
+	<k x="0u" y="5u">j</k>
+	<k x="14.5u" y="5u">&#64256;</k>
+	<k>9</k>
+	<k x="0u" y="4u">?</k>
+	<k shape="1+2u">b</k>
+	<k shape="2+2u">c</k>
+	<k shape="2+2u">d</k>
+	<k shape="2+3u">e</k>
+	<k x="8.5u" y="4u" shape="2+2u">i</k>
+	<k shape="2+2u">s</k>
+	<k shape="1+2u">f</k>
+	<k shape="1+2u">g</k>
+	<k>&#64257;</k>
+	<k>0</k>
+	<k x="0u" y="3u">!</k>
+	<k x="0u" y="2u">z</k>
+	<k shape="1+2u">l</k>
+	<k shape="2+2u">m</k>
+	<k shape="2+2u">n</k>
+	<k shape="2+2u">h</k>
+	<k x="8.5u" y="2u" shape="2+2u">o</k>
+	<k shape="1+2u">y</k>
+	<k shape="1+2u">p</k>
+	<k shape="1+2u">w</k>
+	<k shape="1+2u">,</k>
+	<k shape="1+2u">Ctrl</k>
+	<k shape="1+2u">Alt</k>
+	<k x="0u" y="1u">x</k>
+	<k x="12.5u" y="1u">;</k>
+	<k>:</k>
+	<k x="0u" y="0u">q</k>
+	<k shape="1+2u">v</k>
+	<k shape="2+2u">u</k>
+	<k shape="2+2u">t</k>
+	<k shape="2+2u"></k>
+	<k x="8.5u" y="0u" shape="2+2u">a</k>
+	<k shape="2+2u">r</k>
+	<k>.</k>
+	<k>-</k>
+	<k shape="2+2u">Enter</k>
+</keyCapLayout>

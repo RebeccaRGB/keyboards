@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k usb="0x29" x="0u" y="4u">Esc</k>
+	<k usb="0x1E"><l>1</l><l>!</l></k>
+	<k usb="0x1F"><l>2</l><l>@</l></k>
+	<k usb="0x20"><l>3</l><l>#</l></k>
+	<k usb="0x21"><l>4</l><l>$</l></k>
+	<k usb="0x22"><l>5</l><l>%</l></k>
+	<k usb="0x23"><l>6</l><l>^</l></k>
+	<k usb="0x24"><l>7</l><l>&amp;</l></k>
+	<k usb="0x25"><l>8</l><l>*</l></k>
+	<k usb="0x26"><l>9</l><l>(</l></k>
+	<k usb="0x27"><l>0</l><l>)</l></k>
+	<k usb="0x2D"><l>-</l><l>_</l></k>
+	<k usb="0x2E"><l>=</l><l>+</l></k>
+	<k usb="0x2A">Bksp</k>
+	<k usb="0x4C">Del</k>
+	<k usb="0x2B" x="0.5u" y="3u">Tab</k>
+	<k usb="0x14">Q</k>
+	<k usb="0x1A">W</k>
+	<k usb="0x08">E</k>
+	<k usb="0x15">R</k>
+	<k usb="0x17">T</k>
+	<k usb="0x1C">Y</k>
+	<k usb="0x18">U</k>
+	<k usb="0x0C">I</k>
+	<k usb="0x12">O</k>
+	<k usb="0x13">P</k>
+	<k usb="0x2F"><l>[</l><l>{</l></k>
+	<k usb="0x30"><l>]</l><l>}</l></k>
+	<k usb="0x31"><l>\</l><l>|</l></k>
+	<k usb="0x35"><l>`</l><l>~</l></k>
+	<k usb="0x39" x="0.75u" y="2u">Caps&#10;Lock</k>
+	<k usb="0x04">A</k>
+	<k usb="0x16">S</k>
+	<k usb="0x07">D</k>
+	<k usb="0x09">F</k>
+	<k usb="0x0A">G</k>
+	<k usb="0x0B">H</k>
+	<k usb="0x0D">J</k>
+	<k usb="0x0E">K</k>
+	<k usb="0x0F">L</k>
+	<k usb="0x33"><l>;</l><l>:</l></k>
+	<k usb="0x34"><l>&#39;</l><l>&#34;</l></k>
+	<k usb="0x28">Enter</k>
+	<k usb="0x52">&#8593;</k>
+	<k usb="0xE1" x="0.25u" y="1u">Shift</k>
+	<k usb="0x64"><l>&lt;</l><l>&gt;</l></k>
+	<k usb="0x1D">Z</k>
+	<k usb="0x1B">X</k>
+	<k usb="0x06">C</k>
+	<k usb="0x19">V</k>
+	<k usb="0x05">B</k>
+	<k usb="0x11">N</k>
+	<k usb="0x10">M</k>
+	<k usb="0x36"><l>,</l><l>&lt;</l></k>
+	<k usb="0x37"><l>.</l><l>&gt;</l></k>
+	<k usb="0x38"><l>/</l><l>?</l></k>
+	<k usb="0xE5">Shift</k>
+	<k usb="0x50">&#8592;</k>
+	<k usb="0x4F">&#8594;</k>
+	<k usb="0xE0" x="0.75u" y="0u" shape="1.5u">Ctrl</k>
+	<k usb="0xE2" shape="1.5u">Alt</k>
+	<k usb="0x2C" shape="7u"></k>
+	<k usb="0xE6" shape="1.5u">Alt</k>
+	<k usb="0xE4" shape="1.5u">Ctrl</k>
+	<k usb="0x51">&#8595;</k>
+</keyCapLayout>

@@ -48,5 +48,8 @@
 
 ## Other Keyboards
 
+### [K65](https://github.com/kreativekorp/segterm/tree/master/board/K65)
+![](keyboards-svg-usb/Kreative/K65.svg)
+
 ### [K130](https://github.com/RebeccaRGB/K130)
 ![](keyboards-svg-usb/Kreative/K130.svg)
