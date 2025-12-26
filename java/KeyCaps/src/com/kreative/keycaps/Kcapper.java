@@ -71,16 +71,17 @@ public final class Kcapper {
 				String tx = "translate(" + points.get(0).x + " " + points.get(0).y + ")";
 				if (mold != null && scale != 1) tx += " scale(" + scale + " " + scale + ")";
 				keyboard.append("<use xlink:href=\"#shape" + i + "\" transform=\"" + tx + "\"/>\n");
+				if (id == 259) code = (code & 0xFFC0) | MAC_512K_ISO_MAP[code & 0x003F];
+				if ((code & 0xFF80) == 0x0200) code = macPlusToNumpadKeys(code);
+				if ((code & 0xFF80) == 0x7D80) code = macPlusToArrowKeys(code);
 				if (KEY_LABELS[code & 0x7F] != null) {
 					Shape shape = makeKeyShape(points);
-					Rectangle r = shape.getBounds();
+					Rectangle r = ShapeUtilities.getWidestRect(shape, null).getBounds();
 					float tx0 = r.x, tx1 = r.x + r.width;
 					float ty = Math.max(r.y + r.height - 5, r.y + r.height * 0.5f + 2);
-					while (!shape.contains(tx0, ty)) tx0++;
-					while (!shape.contains(tx1, ty)) tx1--;
 					String[] lines = KEY_LABELS[code & 0x7F].split(" ");
 					for (int l = 0, n = lines.length; l < n; l++) {
-						keyboard.append("<text x=\"" + ((tx0+tx1+1)/2) + "\" y=\"" + (ty-(n-l-1)*7) + "\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"6\">" + lines[l] + "</text>\n");
+						keyboard.append("<text x=\"" + ((tx0+tx1)/2) + "\" y=\"" + (ty-(n-l-1)*7) + "\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"6\">" + lines[l] + "</text>\n");
 					}
 				}
 				keyboard.append("</g>\n");
@@ -125,6 +126,37 @@ public final class Kcapper {
 		}
 		return a;
 	}
+	
+	private static int macPlusToNumpadKeys(int code) {
+		switch (code &= 0x7F) {
+			case 0x42: return 0x43;
+			case 0x46: return 0x45;
+			case 0x48: return 0x51;
+			case 0x4D: return 0x4B;
+			default: return code;
+		}
+	}
+	
+	private static int macPlusToArrowKeys(int code) {
+		switch (code &= 0x7F) {
+			case 0x42: return 0x7C;
+			case 0x46: return 0x7B;
+			case 0x48: return 0x7D;
+			case 0x4D: return 0x7E;
+			default: return code;
+		}
+	}
+	
+	private static final int[] MAC_512K_ISO_MAP = {
+		0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x32, 0x06,
+		0x07, 0x08, 0x2C, 0x09, 0x0C, 0x0D, 0x0E, 0x0F,
+		0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17,
+		0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F,
+		0x20, 0x21, 0x22, 0x23, 0x2A, 0x25, 0x26, 0x27,
+		0x28, 0x29, 0x24, 0x2E, 0x2F, 0x0B, 0x2D, 0x2B,
+		0x30, 0x34, 0x0A, 0x33, 0x31, 0x35, 0x36, 0x37,
+		0x38, 0x39, 0x3A, 0x3B, 0x3C, 0x3D, 0x3E, 0x3F
+	};
 	
 	private static final String[] KEY_LABELS = {
 		"A", "S", "D", "F", "H", "G", "Z", "X", "C", "V", "&#177; &#167;", "B",

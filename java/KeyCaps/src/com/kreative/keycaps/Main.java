@@ -35,6 +35,8 @@ public class Main {
 			Kbitter.main(tail(args));
 		} else if (eic(args[0], "--Kcapper", "Kcapper")) {
 			Kcapper.main(tail(args));
+		} else if (eic(args[0], "--Kmapper", "Kmapper")) {
+			Kmapper.main(tail(args));
 		} else if (eic(args[0], "--KKCXPositionTest", "--PositionTest", "KKCXPositionTest", "PositionTest")) {
 			KKCXPositionTest.main(tail(args));
 		} else {
@@ -69,6 +71,8 @@ public class Main {
 			System.err.println("No help available for " + what + ".");
 		} else if (eic(what, "--Kcapper", "Kcapper")) {
 			System.err.println("No help available for " + what + ".");
+		} else if (eic(what, "--Kmapper", "Kmapper")) {
+			System.err.println("No help available for " + what + ".");
 		} else if (eic(what, "--KKCXPositionTest", "--PositionTest", "KKCXPositionTest", "PositionTest")) {
 			System.err.println("No help available for " + what + ".");
 		} else {
@@ -88,6 +92,7 @@ public class Main {
 		System.err.println("  Viewer            View keycap layout in window");
 		System.err.println("  Kbitter           Convert kbit resource to PNG");
 		System.err.println("  Kcapper           Generate SVG of KCAP resource");
+		System.err.println("  Kmapper           Dump contents of KMAP resource");
 		System.err.println("  KKCXPositionTest  Print normalized x,y coordinates");
 	}
 	

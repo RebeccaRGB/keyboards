@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="800" height="96" viewBox="0 0 400 48">
 <defs>
 </defs>
-<path class="textarea" d="M 43.0 13.0 L 43.0 35.0 L 357.0 35.0 L 357.0 13.0 Z" fill="white" stroke="black" stroke-width="2"/>
+<path class="textarea" d="M 43 13 L 43 35 L 357 35 L 357 13 Z" fill="white" stroke="black" stroke-width="2"/>
 <g class="keyboard keyboardId6000">
 </g>
 </svg>
