@@ -2,7 +2,7 @@
 <!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
 <keyCapLayout cc="5" lc="1">
 	<k usb="0x75" x="0u" y="5.5u" shape="2u">help</k>
-	<k usb="0x29" x="2.5u" y="5.5u">esc</k>
+	<k usb="0x76" x="2.5u" y="5.5u"></k>
 	<k usb="0x3A" x="4.5u" y="5.5u">F1</k>
 	<k usb="0x3B">F2</k>
 	<k usb="0x3C">F3</k>
@@ -24,10 +24,10 @@
 	<k usb="0x66" cc="31">&#9211;</k>
 	<k usb="0x78" x="0u" y="4u">stop</k>
 	<k usb="0x79">again</k>
-	<k usb="0x35" cc="31" x="2.5u" y="4u"><l>`</l><l>&#172;</l></k>
+	<k usb="0x29" x="2.5u" y="4u">esc</k>
 	<k usb="0x1E" cc="31"><l>1</l><l>!</l></k>
-	<k usb="0x1F" cc="31"><l>2</l><l>&#34;</l></k>
-	<k usb="0x20" cc="31"><l>3</l><l>&#163;</l></k>
+	<k usb="0x1F" cc="31"><l>2</l><l>@</l></k>
+	<k usb="0x20" cc="31"><l>3</l><l>#</l></k>
 	<k usb="0x21" cc="31"><l>4</l><l>$</l></k>
 	<k usb="0x22" cc="31"><l>5</l><l>%</l></k>
 	<k usb="0x23" cc="31"><l>6</l><l>^</l></k>
@@ -37,7 +37,8 @@
 	<k usb="0x27" cc="31"><l>0</l><l>)</l></k>
 	<k usb="0x2D" cc="31"><l>-</l><l>_</l></k>
 	<k usb="0x2E" cc="31"><l>=</l><l>+</l></k>
-	<k usb="0x2A" shape="2u">back space</k>
+	<k usb="0x31" cc="31"><l>\</l><l>|</l></k>
+	<k usb="0x35" cc="31"><l>`</l><l>~</l></k>
 	<k usb="0x49" x="18u" y="4u">insert</k>
 	<k usb="0x4A">home</k>
 	<k usb="0x4B">page&#10;up</k>
@@ -60,6 +61,7 @@
 	<k usb="0x13" cc="31">P</k>
 	<k usb="0x2F" cc="31"><l>[</l><l>{</l></k>
 	<k usb="0x30" cc="31"><l>]</l><l>}</l></k>
+	<k usb="0x2A" shape="1.5u">back space</k>
 	<k usb="0x4C" x="18u" y="3u">del</k>
 	<k usb="0x4D">end</k>
 	<k usb="0x4E">page&#10;down</k>
@@ -68,7 +70,7 @@
 	<k usb="0x61" cc="31" type="N"><l>9</l><l>pgup</l></k>
 	<k usb="0x77" x="0u" y="2u">front</k>
 	<k usb="0x7C">copy</k>
-	<k usb="0x39" x="2.5u" y="2u" shape="1.75u">caps lock</k>
+	<k usb="0xE0" x="2.5u" y="2u" shape="1.75u">control</k>
 	<k usb="0x04" cc="31">A</k>
 	<k usb="0x16" cc="31">S</k>
 	<k usb="0x07" cc="31">D</k>
@@ -79,17 +81,15 @@
 	<k usb="0x0E" cc="31">K</k>
 	<k usb="0x0F" cc="31">L</k>
 	<k usb="0x33" cc="31"><l>;</l><l>:</l></k>
-	<k usb="0x34" cc="31"><l>&#39;</l><l>@</l></k>
-	<k usb="0x32" cc="31"><l>#</l><l>~</l></k>
-	<k usb="0x28" shape="1.25+2+1.5u">return</k>
+	<k usb="0x34" cc="31"><l>&#39;</l><l>&#34;</l></k>
+	<k usb="0x28" shape="2.25u">return</k>
 	<k usb="0x5C" cc="31" x="21.5u" y="2u" type="N"><l>4</l><l>&#8592;</l></k>
 	<k usb="0x5D" cc="31" type="N">5</k>
 	<k usb="0x5E" cc="31" type="N"><l>6</l><l>&#8594;</l></k>
 	<k usb="0x57" shape="1+2u">+</k>
 	<k usb="0x74" x="0u" y="1u">open</k>
 	<k usb="0x7D">paste</k>
-	<k usb="0xE1" x="2.5u" y="1u" shape="1.25u">shift</k>
-	<k usb="0x64" cc="31"><l>\</l><l>|</l></k>
+	<k usb="0xE1" x="2.5u" y="1u" shape="2.25u">shift</k>
 	<k usb="0x1D" cc="31">Z</k>
 	<k usb="0x1B" cc="31">X</k>
 	<k usb="0x06" cc="31">C</k>
@@ -107,7 +107,7 @@
 	<k usb="0x5B" cc="31" type="N"><l>3</l><l>pgdn</l></k>
 	<k usb="0x7E" x="0u" y="0u">find</k>
 	<k usb="0x7B">cut</k>
-	<k usb="0xE0" x="2.5u" y="0u" shape="1.75u">control</k>
+	<k usb="0x39" x="2.5u" y="0u" shape="1.75u">caps lock</k>
 	<k usb="0xE2">alt</k>
 	<k usb="0xE3" shape="1.5u" type="F">&#9670;</k>
 	<k usb="0x2C" shape="7.25u"></k>
