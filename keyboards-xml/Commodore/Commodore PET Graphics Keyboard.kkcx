@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout cc="1" lc="31">
+	<k x="0u" y="4u"><l type="L">@</l><l type="FL">&#129913;</l></k>
+	<k><l type="L">!</l><l type="FL">&#9612;</l></k>
+	<k><l type="L">&#34;</l><l type="FL">&#9604;</l></k>
+	<k><l type="L">#</l><l type="FL">&#9620;</l></k>
+	<k><l type="L">$</l><l type="FL">&#9601;</l></k>
+	<k><l type="L">%</l><l type="FL">&#9615;</l></k>
+	<k><l type="L">&#39;</l><l type="FL">&#9621;</l></k>
+	<k><l type="L">&amp;</l><l type="FL">&#9618;</l></k>
+	<k><l type="L">\</l><l type="FL">&#129932;</l></k>
+	<k><l type="L">(</l><l type="FL">&#129935;</l></k>
+	<k><l type="L">)</l><l type="FL">&#9700;</l></k>
+	<k><l type="L">&#8592;</l><l type="FL">&#9701;</l></k>
+	<k><l type="L">[</l><l type="FL">&#9532;</l></k>
+	<k><l type="L">]</l><l type="FL">&#129907;</l></k>
+	<k x="15.5u" y="4u"><l>HOME</l><l>CLR</l></k>
+	<k>&#8657;&#10;CRSR&#10;&#8659;</k>
+	<k>&#8656;&#10;CRSR&#10;&#8658;</k>
+	<k><l>DEL</l><l>INST</l></k>
+	<k x="0u" y="3u" shape="1.5u"><l>RVS</l><l>OFF</l></k>
+	<k><l type="L">Q</l><l type="FL">&#9679;</l></k>
+	<k><l type="L">W</l><l type="FL">&#9675;</l></k>
+	<k><l type="L">E</l><l type="FL">&#129910;</l></k>
+	<k><l type="L">R</l><l type="FL">&#129915;</l></k>
+	<k><l type="L">T</l><l type="FL">&#129904;</l></k>
+	<k><l type="L">Y</l><l type="FL">&#129909;</l></k>
+	<k><l type="L">U</l><l type="FL">&#9581;</l></k>
+	<k><l type="L">I</l><l type="FL">&#9582;</l></k>
+	<k><l type="L">O</l><l type="FL">&#129917;</l></k>
+	<k><l type="L">P</l><l type="FL">&#129918;</l></k>
+	<k><l type="L">&#8593;</l><l type="FL">&#960;</l></k>
+	<k><l type="L">&lt;</l><l type="FL">&#9629;</l></k>
+	<k><l type="L">&gt;</l><l type="FL">&#9624;</l></k>
+	<k x="15.5u" y="3u"><l type="L">7</l><l type="FL">&#129922;</l></k>
+	<k><l type="L">8</l><l type="FL">&#129923;</l></k>
+	<k><l type="L">9</l><l type="FL">&#9603;</l></k>
+	<k><l type="L">/</l><l type="FL">&#9602;</l></k>
+	<k x="0.25u" y="2u" shape="1.5u">SHIFT&#10;LOCK</k>
+	<k><l type="L">A</l><l type="FL">&#9824;</l></k>
+	<k><l type="L">S</l><l type="FL">&#9829;</l></k>
+	<k><l type="L">D</l><l type="FL">&#129911;</l></k>
+	<k><l type="L">F</l><l type="FL">&#129914;</l></k>
+	<k><l type="L">G</l><l type="FL">&#129905;</l></k>
+	<k><l type="L">H</l><l type="FL">&#129908;</l></k>
+	<k><l type="L">J</l><l type="FL">&#9584;</l></k>
+	<k><l type="L">K</l><l type="FL">&#9583;</l></k>
+	<k><l type="L">L</l><l type="FL">&#129916;</l></k>
+	<k><l type="L">:</l><l type="FL">&#129919;</l></k>
+	<k><l>STOP</l><l>RUN</l></k>
+	<k shape="1.5u">RETURN</k>
+	<k x="15.5u" y="2u"><l type="L">4</l><l type="FL">&#9614;</l></k>
+	<k><l type="L">5</l><l type="FL">&#9613;</l></k>
+	<k><l type="L">6</l><l type="FL">&#129928;</l></k>
+	<k><l type="L">*</l><l type="FL">&#129927;</l></k>
+	<k x="0.25u" y="1u" shape="2u">SHIFT</k>
+	<k><l type="L">Z</l><l type="FL">&#9830;</l></k>
+	<k><l type="L">X</l><l type="FL">&#9827;</l></k>
+	<k><l type="L">C</l><l type="FL">&#129912;</l></k>
+	<k><l type="L">V</l><l type="FL">&#9587;</l></k>
+	<k><l type="L">B</l><l type="FL">&#129906;</l></k>
+	<k><l type="L">N</l><l type="FL">&#9585;</l></k>
+	<k><l type="L">M</l><l type="FL">&#9586;</l></k>
+	<k><l type="L">,</l><l type="FL">&#9623;</l></k>
+	<k><l type="L">;</l><l type="FL">&#9622;</l></k>
+	<k><l type="L">?</l><l type="FL">&#9626;</l></k>
+	<k shape="2u">SHIFT</k>
+	<k x="15.5u" y="1u"><l type="L">1</l><l type="FL">&#9524;</l></k>
+	<k><l type="L">2</l><l type="FL">&#9516;</l></k>
+	<k><l type="L">3</l><l type="FL">&#9508;</l></k>
+	<k><l type="L">+</l><l type="FL">&#9500;</l></k>
+	<k x="2.75u" y="0u" shape="9u"></k>
+	<k x="15.5u" y="0u"><l type="L">0</l><l type="FL">&#9484;</l></k>
+	<k><l type="L">.</l><l type="FL">&#9488;</l></k>
+	<k><l type="L">-</l><l type="FL">&#9492;</l></k>
+	<k><l type="L">=</l><l type="FL">&#9496;</l></k>
+</keyCapLayout>

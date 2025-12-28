@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k x="0u" y="4u" cc="#ABD" type="S"><l>!</l><l>&#9612;</l></k>
+	<k cc="#ABD" type="S"><l>&#34;</l><l>&#9604;</l></k>
+	<k cc="#ABD" type="S"><l>#</l><l>&#9620;</l></k>
+	<k cc="#ABD" type="S"><l>$</l><l>&#9601;</l></k>
+	<k cc="#ABD" type="S"><l>%</l><l>&#9615;</l></k>
+	<k cc="#ABD" type="S"><l>&#39;</l><l>&#9621;</l></k>
+	<k cc="#ABD" type="S"><l>&amp;</l><l>&#9618;</l></k>
+	<k cc="#ABD" type="S"><l>\</l><l>&#129932;</l></k>
+	<k cc="#ABD" type="S"><l>(</l><l>&#129935;</l></k>
+	<k cc="#ABD" type="S"><l>)</l><l>&#9700;</l></k>
+	<k cc="#ABD" type="S"><l>&#8592;</l><l>&#9701;</l></k>
+	<k x="12u" y="4u" cc="11"><l>HOME</l><l>CLR</l></k>
+	<k cc="23">&#8657;&#10;CRSR&#10;&#8659;</k>
+	<k cc="23">&#8656;&#10;CRSR&#10;&#8658;</k>
+	<k cc="11"><l>DEL</l><l>INST</l></k>
+	<k x="0u" y="3u" cc="5" type="S"><l>Q</l><l>&#9679;</l></k>
+	<k cc="5" type="S"><l>W</l><l>&#9675;</l></k>
+	<k cc="5" type="S"><l>E</l><l>&#129910;</l></k>
+	<k cc="5" type="S"><l>R</l><l>&#129915;</l></k>
+	<k cc="5" type="S"><l>T</l><l>&#129904;</l></k>
+	<k cc="5" type="S"><l>Y</l><l>&#129909;</l></k>
+	<k cc="5" type="S"><l>U</l><l>&#9581;</l></k>
+	<k cc="5" type="S"><l>I</l><l>&#9582;</l></k>
+	<k cc="5" type="S"><l>O</l><l>&#129917;</l></k>
+	<k cc="5" type="S"><l>P</l><l>&#129918;</l></k>
+	<k cc="#ABD" type="S"><l>&#8593;</l><l>&#960;</l></k>
+	<k x="12u" y="3u" cc="9" type="S"><l>7</l><l>&#129922;</l></k>
+	<k cc="9" type="S"><l>8</l><l>&#129923;</l></k>
+	<k cc="9" type="S"><l>9</l><l>&#9603;</l></k>
+	<k cc="#ABD" type="S"><l>/</l><l>&#9602;</l></k>
+	<k x="0u" y="2u" cc="5" type="S"><l>A</l><l>&#9824;</l></k>
+	<k cc="5" type="S"><l>S</l><l>&#9829;</l></k>
+	<k cc="5" type="S"><l>D</l><l>&#129911;</l></k>
+	<k cc="5" type="S"><l>F</l><l>&#129914;</l></k>
+	<k cc="5" type="S"><l>G</l><l>&#129905;</l></k>
+	<k cc="5" type="S"><l>H</l><l>&#129908;</l></k>
+	<k cc="5" type="S"><l>J</l><l>&#9584;</l></k>
+	<k cc="5" type="S"><l>K</l><l>&#9583;</l></k>
+	<k cc="5" type="S"><l>L</l><l>&#129916;</l></k>
+	<k cc="5" type="S"><l>:</l><l>&#129919;</l></k>
+	<k x="12u" y="2u" cc="9" type="S"><l>4</l><l>&#9614;</l></k>
+	<k cc="9" type="S"><l>5</l><l>&#9613;</l></k>
+	<k cc="9" type="S"><l>6</l><l>&#129928;</l></k>
+	<k cc="#ABD" type="S"><l>*</l><l>&#129927;</l></k>
+	<k x="0u" y="1u" cc="5" type="S"><l>Z</l><l>&#9830;</l></k>
+	<k cc="5" type="S"><l>X</l><l>&#9827;</l></k>
+	<k cc="5" type="S"><l>C</l><l>&#129912;</l></k>
+	<k cc="5" type="S"><l>V</l><l>&#9587;</l></k>
+	<k cc="5" type="S"><l>B</l><l>&#129906;</l></k>
+	<k cc="5" type="S"><l>N</l><l>&#9585;</l></k>
+	<k cc="5" type="S"><l>M</l><l>&#9586;</l></k>
+	<k cc="#ABD" type="S"><l>,</l><l>&#9623;</l></k>
+	<k cc="#ABD" type="S"><l>;</l><l>&#9622;</l></k>
+	<k cc="#ABD" type="S"><l>?</l><l>&#9626;</l></k>
+	<k cc="11" shape="1+2u">R&#10;E&#10;T&#10;U&#10;R&#10;N</k>
+	<k x="12u" y="1u" cc="9" type="S"><l>1</l><l>&#9524;</l></k>
+	<k cc="9" type="S"><l>2</l><l>&#9516;</l></k>
+	<k cc="9" type="S"><l>3</l><l>&#9508;</l></k>
+	<k cc="#ABD" type="S"><l>+</l><l>&#9500;</l></k>
+	<k x="0u" y="0u" cc="11">SHIFT</k>
+	<k cc="23"><l>RVS</l><l>OFF</l></k>
+	<k cc="#ABD" type="S"><l>@</l><l>&#129913;</l></k>
+	<k cc="#ABD" type="S"><l>[</l><l>&#9532;</l></k>
+	<k cc="#ABD" type="S"><l>]</l><l>&#129907;</l></k>
+	<k cc="11" shape="2u">SPACE</k>
+	<k cc="#ABD" type="S"><l>&lt;</l><l>&#9629;</l></k>
+	<k cc="#ABD" type="S"><l>&gt;</l><l>&#9624;</l></k>
+	<k cc="23"><l>STOP</l><l>RUN</l></k>
+	<k cc="11">SHIFT</k>
+	<k x="12u" y="0u" cc="9" type="S"><l>0</l><l>&#9484;</l></k>
+	<k cc="9" type="S"><l>.</l><l>&#9488;</l></k>
+	<k cc="#ABD" type="S"><l>-</l><l>&#9492;</l></k>
+	<k cc="#ABD" type="S"><l>=</l><l>&#9496;</l></k>
+</keyCapLayout>

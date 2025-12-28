@@ -3,9 +3,12 @@ package com.kreative.keycaps;
 import java.awt.BasicStroke;
 import java.awt.Shape;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Arc2D;
 import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
+import java.awt.geom.IllegalPathStateException;
 import java.awt.geom.PathIterator;
+import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -363,11 +366,93 @@ public final class ShapeUtilities {
 						case 't':
 							ccx = cx * 2 - ccx; ccy = cy * 2 - ccy; cx += cc[0]; cy += cc[1];
 							path.quadTo(ccx, ccy, cx, cy); break;
+						case 'A':
+							ccx = cx = cc[5]; ccy = cy = cc[6];
+							svgArcTo(path, cc[0], cc[1], cc[2], cc[3]!=0, cc[4]!=0, cx, cy); break;
+						case 'a':
+							ccx = cx += cc[5]; ccy = cy += cc[6];
+							svgArcTo(path, cc[0], cc[1], cc[2], cc[3]!=0, cc[4]!=0, cx, cy); break;
 					}
 				}
 			}
 		}
 		return path;
+	}
+	
+	private static void svgArcTo(
+		GeneralPath p, double rx, double ry, double a,
+		boolean large, boolean sweep, double x, double y
+	) {
+		Point2D p0 = p.getCurrentPoint();
+		if (p0 == null) throw new IllegalPathStateException("missing initial moveto in path definition");
+		Shape arc = createSvgArc(p0.getX(), p0.getY(), rx, ry, a, large, sweep, x, y);
+		if (arc != null) p.append(arc, true);
+		p.lineTo(x, y);
+	}
+	
+	private static Shape createSvgArc(
+		double x0, double y0, double rx, double ry, double a,
+		boolean large, boolean sweep, double x, double y
+	) {
+		if (x0 == x && y0 == y) return null;
+		if (rx == 0 || ry == 0) return null;
+		double dx2 = (x0 - x) / 2;
+		double dy2 = (y0 - y) / 2;
+		a = Math.toRadians(a % 360);
+		double ca = Math.cos(a);
+		double sa = Math.sin(a);
+		double x1 = sa * dy2 + ca * dx2;
+		double y1 = ca * dy2 - sa * dx2;
+		rx = Math.abs(rx);
+		ry = Math.abs(ry);
+		double Prx = rx * rx;
+		double Pry = ry * ry;
+		double Px1 = x1 * x1;
+		double Py1 = y1 * y1;
+		double rc = Px1/Prx + Py1/Pry;
+		if (rc > 1) {
+			rx = Math.sqrt(rc) * rx;
+			ry = Math.sqrt(rc) * ry;
+			Prx = rx * rx;
+			Pry = ry * ry;
+		}
+		double s = (large == sweep) ? -1 : 1;
+		double sq = ((Prx*Pry)-(Prx*Py1)-(Pry*Px1)) / ((Prx*Py1)+(Pry*Px1));
+		if (sq < 0) sq = 0;
+		double m = s * Math.sqrt(sq);
+		double cx1 = m *  ((rx * y1) / ry);
+		double cy1 = m * -((ry * x1) / rx);
+		double sx2 = (x0 + x) / 2;
+		double sy2 = (y0 + y) / 2;
+		double cx = sx2 + ca * cx1 - sa * cy1;
+		double cy = sy2 + sa * cx1 + ca * cy1;
+		double ux = (x1 - cx1) / rx;
+		double uy = (y1 - cy1) / ry;
+		double vx = (-x1 -cx1) / rx;
+		double vy = (-y1 -cy1) / ry;
+		double sn = Math.sqrt(ux*ux + uy*uy);
+		double sp = ux;
+		double ss = (uy < 0) ? -1 : 1;
+		double as = Math.toDegrees(ss * Math.acos(sp / sn));
+		double en = Math.sqrt((ux*ux + uy*uy) * (vx*vx + vy*vy));
+		double ep = ux * vx + uy * vy;
+		double es = (ux * vy - uy * vx < 0) ? -1 : 1;
+		double ae = Math.toDegrees(es * Math.acos(ep / en));
+		if (!sweep && ae > 0) ae -= 360;
+		if (sweep && ae < 0) ae += 360;
+		ae %= 360;
+		as %= 360;
+		Arc2D.Double arc = new Arc2D.Double();
+		arc.x = cx - rx;
+		arc.y = cy - ry;
+		arc.width = rx * 2;
+		arc.height = ry * 2;
+		arc.start = -as;
+		arc.extent = -ae;
+		double acx = arc.getCenterX();
+		double acy = arc.getCenterY();
+		AffineTransform t = AffineTransform.getRotateInstance(a, acx, acy);
+		return t.createTransformedShape(arc);
 	}
 	
 	private ShapeUtilities() {}
