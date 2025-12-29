@@ -155,6 +155,10 @@ public class SVGRenderer {
 					String[] lines = tb.text.split("\r\n|\r|\n");
 					float lh = (ilh != null) ? (tb.height * ilh) : tb.lineHeight;
 					float th = lh * lines.length;
+					if (th > tb.height) {
+						th = tb.height;
+						lh = tb.height / lines.length;
+					}
 					float ta = lh * 0.8f - pos.y;
 					String a = ((iha != null) ? iha : tb.anchor).getTextAnchor();
 					float x = ((iha != null) ? iha : tb.anchor).getX(tb.x, tb.width, 0) + pos.x;

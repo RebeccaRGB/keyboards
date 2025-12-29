@@ -134,6 +134,10 @@ public class AWTRenderer {
 					String[] lines = tb.text.split("\r\n|\r|\n");
 					float lh = (ilh != null) ? (tb.height * ilh) : tb.lineHeight;
 					float th = lh * lines.length;
+					if (th > tb.height) {
+						th = tb.height;
+						lh = tb.height / lines.length;
+					}
 					float ta = lh * 0.8f - pos.y;
 					float ty = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, th) + ta;
 					for (int i = 0; i < lines.length; i++) {

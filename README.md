@@ -318,6 +318,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Commodore PET Business Keyboard
 ![](keyboards-svg/Commodore/Commodore%20PET%20Business%20Keyboard.svg)
 
+### Commodore VIC 20
+![](keyboards-svg/Commodore/Commodore%20VIC%2020.svg)
+
 ### Commodore 64
 ![](keyboards-svg/Commodore/Commodore%2064.svg)
 
