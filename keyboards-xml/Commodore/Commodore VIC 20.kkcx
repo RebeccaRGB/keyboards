@@ -11,7 +11,7 @@
 	<k><l>7</l><l>&#39;</l><l type="FF">BLU</l></k>
 	<k><l>8</l><l>(</l><l type="FF">YEL</l></k>
 	<k><l>9</l><l>)</l><l type="FF">RVS&#10;ON</l></k>
-	<k><l>0</l><l></l><l type="FF">RVS&#10;OFF</l></k>
+	<k><l type="U">0</l><l type="FF">RVS&#10;OFF</l></k>
 	<k><l>+</l><l type="FL">&#9618;</l><l type="FAL">&#9532;</l></k>
 	<k><l>-</l><l type="FL">&#129932;</l><l type="FAL">&#129907;</l></k>
 	<k><l>&#163;</l><l type="FL">&#129935;</l><l type="FAL">&#9700;</l></k>

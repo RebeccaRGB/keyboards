@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
-<keyCapLayout>
-	<k x="0u" y="5.5u">ESC</k>
-	<k>TAB</k>
-	<k>ALT</k>
-	<k>CAPS&#10;LOCK</k>
-	<k x="6u" y="5.5u">HELP</k>
-	<k>LINE&#10;FEED</k>
-	<k>40/80&#10;DISPLAY</k>
-	<k>NO&#10;SCROLL</k>
-	<k x="12u" y="5.5u">&#8593;</k>
-	<k>&#8595;</k>
-	<k>&#8592;</k>
-	<k>&#8594;</k>
-	<k x="17u" y="5.5u"><l>F1</l><l>F2</l></k>
-	<k><l>F3</l><l>F4</l></k>
-	<k><l>F5</l><l>F6</l></k>
-	<k><l>F7</l><l>F8</l></k>
+<keyCapLayout cc="31" lc="1" a="nw">
+	<k x="0u" y="5.5u" cc="4">ESC</k>
+	<k cc="4">TAB</k>
+	<k cc="4">ALT</k>
+	<k cc="4">CAPS&#10;LOCK</k>
+	<k x="6u" y="5.5u" cc="4">HELP</k>
+	<k cc="4">LINE&#10;FEED</k>
+	<k cc="4">40/80&#10;DISPLAY</k>
+	<k cc="4">NO&#10;SCROLL</k>
+	<k x="12u" y="5.5u" cc="4" a="c">&#8593;</k>
+	<k cc="4" a="c">&#8595;</k>
+	<k cc="4" a="c">&#8592;</k>
+	<k cc="4" a="c">&#8594;</k>
+	<k x="17u" y="5.5u" cc="4"><l>F1</l><l type="FF">F2</l></k>
+	<k cc="4"><l>F3</l><l type="FF">F4</l></k>
+	<k cc="4"><l>F5</l><l type="FF">F6</l></k>
+	<k cc="4"><l>F7</l><l type="FF">F8</l></k>
 	<k x="0u" y="4u" type="L">&#8592;</k>
-	<k><l>1</l><l>!</l></k>
-	<k><l>2</l><l>&#34;</l></k>
-	<k><l>3</l><l>#</l></k>
-	<k><l>4</l><l>$</l></k>
-	<k><l>5</l><l>%</l></k>
-	<k><l>6</l><l>&amp;</l></k>
-	<k><l>7</l><l>&#39;</l></k>
-	<k><l>8</l><l>(</l></k>
-	<k><l>9</l><l>)</l></k>
-	<k type="S">0</k>
-	<k>+</k>
-	<k>-</k>
-	<k>&#163;</k>
+	<k><l>1</l><l>!</l><l type="FF" lc="3">Blk&#10;Orng</l></k>
+	<k><l>2</l><l>&#34;</l><l type="FF" lc="3">Wht&#10;Brn</l></k>
+	<k><l>3</l><l>#</l><l type="FF" lc="3">Red&#10;L Red</l></k>
+	<k><l>4</l><l>$</l><l type="FF" lc="3">Cyn&#10;D Gry</l></k>
+	<k><l>5</l><l>%</l><l type="FF" lc="3">Pur&#10;M Gry</l></k>
+	<k><l>6</l><l>&amp;</l><l type="FF" lc="3">Grn&#10;L Grn</l></k>
+	<k><l>7</l><l>&#39;</l><l type="FF" lc="3">Blu&#10;L Blu</l></k>
+	<k><l>8</l><l>(</l><l type="FF" lc="3">Yel&#10;L Gry</l></k>
+	<k><l>9</l><l>)</l><l type="FF" lc="3">Rvs&#10;On</l></k>
+	<k><l type="U">0</l><l type="FF" lc="3">Rvs&#10;Off</l></k>
+	<k><l>+</l><l type="FL" lc="3" a="c">&#9618;</l><l type="FAL" lc="3" a="c">&#9532;</l></k>
+	<k><l>-</l><l type="FL" lc="3" a="c">&#129932;</l><l type="FAL" lc="3" a="c">&#129907;</l></k>
+	<k><l>&#163;</l><l type="FL" lc="3" a="c">&#129935;</l><l type="FAL" lc="3" a="c">&#9700;</l></k>
 	<k><l>HOME</l><l>CLR</l></k>
 	<k><l>DEL</l><l>INST</l></k>
 	<k x="17u" y="4u">7</k>
 	<k>8</k>
 	<k>9</k>
 	<k>+</k>
-	<k x="0u" y="3u" shape="1.5u">CTRL</k>
-	<k>Q</k>
-	<k>W</k>
-	<k>E</k>
-	<k>R</k>
-	<k>T</k>
-	<k>Y</k>
-	<k>U</k>
-	<k>I</k>
-	<k>O</k>
-	<k>P</k>
-	<k>@</k>
-	<k>*</k>
-	<k type="L">&#8593;</k>
+	<k x="0u" y="3u" shape="1.5u">CONTROL</k>
+	<k><l>Q</l><l type="FL" lc="3" a="c">&#9500;</l><l type="FAL" lc="3" a="c">&#9679;</l></k>
+	<k><l>W</l><l type="FL" lc="3" a="c">&#9508;</l><l type="FAL" lc="3" a="c">&#9675;</l></k>
+	<k><l>E</l><l type="FL" lc="3" a="c">&#9524;</l><l type="FAL" lc="3" a="c">&#129910;</l></k>
+	<k><l>R</l><l type="FL" lc="3" a="c">&#9516;</l><l type="FAL" lc="3" a="c">&#129915;</l></k>
+	<k><l>T</l><l type="FL" lc="3" a="c">&#9620;</l><l type="FAL" lc="3" a="c">&#129904;</l></k>
+	<k><l>Y</l><l type="FL" lc="3" a="c">&#129922;</l><l type="FAL" lc="3" a="c">&#129909;</l></k>
+	<k><l>U</l><l type="FL" lc="3" a="c">&#129923;</l><l type="FAL" lc="3" a="c">&#9581;</l></k>
+	<k><l>I</l><l type="FL" lc="3" a="c">&#9604;</l><l type="FAL" lc="3" a="c">&#9582;</l></k>
+	<k><l>O</l><l type="FL" lc="3" a="c">&#9603;</l><l type="FAL" lc="3" a="c">&#129917;</l></k>
+	<k><l>P</l><l type="FL" lc="3" a="c">&#9602;</l><l type="FAL" lc="3" a="c">&#129918;</l></k>
+	<k><l>@</l><l type="FL" lc="3" a="c">&#9601;</l><l type="FAL" lc="3" a="c">&#129919;</l></k>
+	<k><l>*</l><l type="FL" lc="3" a="c">&#9701;</l><l type="FAL" lc="3" a="c">&#129913;</l></k>
+	<k><l type="L">&#8593;</l><l type="FL" lc="3" a="c">&#960;</l></k>
 	<k shape="1.5u">RESTORE</k>
 	<k x="17u" y="3u">4</k>
 	<k>5</k>
@@ -58,15 +58,15 @@
 	<k>-</k>
 	<k x="0u" y="2u"><l>STOP</l><l>RUN</l></k>
 	<k>SHIFT&#10;LOCK</k>
-	<k>A</k>
-	<k>S</k>
-	<k>D</k>
-	<k>F</k>
-	<k>G</k>
-	<k>H</k>
-	<k>J</k>
-	<k>K</k>
-	<k>L</k>
+	<k><l>A</l><l type="FL" lc="3" a="c">&#9484;</l><l type="FAL" lc="3" a="c">&#9824;</l></k>
+	<k><l>S</l><l type="FL" lc="3" a="c">&#9488;</l><l type="FAL" lc="3" a="c">&#9829;</l></k>
+	<k><l>D</l><l type="FL" lc="3" a="c">&#9623;</l><l type="FAL" lc="3" a="c">&#129911;</l></k>
+	<k><l>F</l><l type="FL" lc="3" a="c">&#9622;</l><l type="FAL" lc="3" a="c">&#129914;</l></k>
+	<k><l>G</l><l type="FL" lc="3" a="c">&#9615;</l><l type="FAL" lc="3" a="c">&#129905;</l></k>
+	<k><l>H</l><l type="FL" lc="3" a="c">&#9614;</l><l type="FAL" lc="3" a="c">&#129908;</l></k>
+	<k><l>J</l><l type="FL" lc="3" a="c">&#9613;</l><l type="FAL" lc="3" a="c">&#9584;</l></k>
+	<k><l>K</l><l type="FL" lc="3" a="c">&#9612;</l><l type="FAL" lc="3" a="c">&#9583;</l></k>
+	<k><l>L</l><l type="FL" lc="3" a="c">&#129928;</l><l type="FAL" lc="3" a="c">&#129916;</l></k>
 	<k><l>:</l><l>[</l></k>
 	<k><l>;</l><l>]</l></k>
 	<k>=</k>
@@ -76,21 +76,21 @@
 	<k>3</k>
 	<k x="0u" y="1u">&#63521;</k>
 	<k shape="1.5u">SHIFT</k>
-	<k>Z</k>
-	<k>X</k>
-	<k>C</k>
-	<k>V</k>
-	<k>B</k>
-	<k>N</k>
-	<k>M</k>
+	<k><l>Z</l><l type="FL" lc="3" a="c">&#9492;</l><l type="FAL" lc="3" a="c">&#9830;</l></k>
+	<k><l>X</l><l type="FL" lc="3" a="c">&#9496;</l><l type="FAL" lc="3" a="c">&#9827;</l></k>
+	<k><l>C</l><l type="FL" lc="3" a="c">&#9629;</l><l type="FAL" lc="3" a="c">&#129912;</l></k>
+	<k><l>V</l><l type="FL" lc="3" a="c">&#9624;</l><l type="FAL" lc="3" a="c">&#9587;</l></k>
+	<k><l>B</l><l type="FL" lc="3" a="c">&#9626;</l><l type="FAL" lc="3" a="c">&#129906;</l></k>
+	<k><l>N</l><l type="FL" lc="3" a="c">&#129927;</l><l type="FAL" lc="3" a="c">&#9585;</l></k>
+	<k><l>M</l><l type="FL" lc="3" a="c">&#9621;</l><l type="FAL" lc="3" a="c">&#9586;</l></k>
 	<k><l>,</l><l>&lt;</l></k>
 	<k><l>.</l><l>&gt;</l></k>
 	<k><l>/</l><l>?</l></k>
 	<k shape="1.5u">SHIFT</k>
-	<k>&#8657;&#10;CRSR&#10;&#8659;</k>
-	<k>&#8656;&#10;CRSR&#10;&#8658;</k>
+	<k a="c">&#8593;&#10;CRSR&#10;&#8595;</k>
+	<k a="c">&#8592;&#10;CRSR&#10;&#8594;</k>
 	<k x="17u" y="1u" shape="2u">0</k>
 	<k>.</k>
-	<k shape="1+2u">ENTER</k>
+	<k shape="1+2u">E&#10;N&#10;T&#10;E&#10;R</k>
 	<k x="3.5u" y="0u" shape="9u"></k>
 </keyCapLayout>
