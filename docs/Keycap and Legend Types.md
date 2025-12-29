@@ -18,7 +18,7 @@ regardless, both characters are printed on the keycap.
 "Letter" refers to a legend (or part of a legend) consisting of a single printable character, not necessarily an actual letter.
 If the character is not an actual letter, both unshifted and shifted states produce the same character.
 If the character is an actual letter, the unshifted state produces lowercase and the shifted state produces uppercase,
-but only one case is printed on the keycap.
+but only one case (usually uppercase) is printed on the keycap.
 
 | Type | Description                     | Legend Types, In Order |
 | ---- | ------------------------------- | ---------------------- |
