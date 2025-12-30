@@ -324,11 +324,17 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Commodore 64
 ![](keyboards-svg/Commodore/Commodore%2064.svg)
 
-### Commodore 64C
-![](keyboards-svg/Commodore/Commodore%2064C.svg)
+### Commodore 16
+![](keyboards-svg/Commodore/Commodore%2016.svg)
+
+### Commodore Plus/4
+![](keyboards-svg/Commodore/Commodore%20Plus-4.svg)
 
 ### Commodore 128
 ![](keyboards-svg/Commodore/Commodore%20128.svg)
+
+### Commodore 64C
+![](keyboards-svg/Commodore/Commodore%2064C.svg)
 
 ### Commodore Amiga 500, US
 ![](keyboards-svg/Commodore/Commodore%20Amiga%20500,%20US.svg)
