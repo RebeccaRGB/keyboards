@@ -28,9 +28,9 @@
 	<k><l>8</l><l>(</l><l type="FF" lc="3">Yel&#10;L Gry</l></k>
 	<k><l>9</l><l>)</l><l type="FF" lc="3">Rvs&#10;On</l></k>
 	<k><l type="U">0</l><l type="FF" lc="3">Rvs&#10;Off</l></k>
-	<k><l>+</l><l type="FL" lc="3" a="c">&#9618;</l><l type="FAL" lc="3" a="c">&#9532;</l></k>
-	<k><l>-</l><l type="FL" lc="3" a="c">&#129932;</l><l type="FAL" lc="3" a="c">&#129907;</l></k>
-	<k><l>&#163;</l><l type="FL" lc="3" a="c">&#129935;</l><l type="FAL" lc="3" a="c">&#9700;</l></k>
+	<k><l>+</l><l type="FPC" lc="3" a="c">&#9618;</l><l type="FPS" lc="3" a="c">&#9532;</l></k>
+	<k><l>-</l><l type="FPC" lc="3" a="c">&#129932;</l><l type="FPS" lc="3" a="c">&#129907;</l></k>
+	<k><l>&#163;</l><l type="FPC" lc="3" a="c">&#129935;</l><l type="FPS" lc="3" a="c">&#9700;</l></k>
 	<k><l>HOME</l><l>CLR</l></k>
 	<k><l>DEL</l><l>INST</l></k>
 	<k x="17u" y="4u">7</k>
@@ -38,19 +38,19 @@
 	<k>9</k>
 	<k>+</k>
 	<k x="0u" y="3u" shape="1.5u">CONTROL</k>
-	<k><l>Q</l><l type="FL" lc="3" a="c">&#9500;</l><l type="FAL" lc="3" a="c">&#9679;</l></k>
-	<k><l>W</l><l type="FL" lc="3" a="c">&#9508;</l><l type="FAL" lc="3" a="c">&#9675;</l></k>
-	<k><l>E</l><l type="FL" lc="3" a="c">&#9524;</l><l type="FAL" lc="3" a="c">&#129910;</l></k>
-	<k><l>R</l><l type="FL" lc="3" a="c">&#9516;</l><l type="FAL" lc="3" a="c">&#129915;</l></k>
-	<k><l>T</l><l type="FL" lc="3" a="c">&#9620;</l><l type="FAL" lc="3" a="c">&#129904;</l></k>
-	<k><l>Y</l><l type="FL" lc="3" a="c">&#129922;</l><l type="FAL" lc="3" a="c">&#129909;</l></k>
-	<k><l>U</l><l type="FL" lc="3" a="c">&#129923;</l><l type="FAL" lc="3" a="c">&#9581;</l></k>
-	<k><l>I</l><l type="FL" lc="3" a="c">&#9604;</l><l type="FAL" lc="3" a="c">&#9582;</l></k>
-	<k><l>O</l><l type="FL" lc="3" a="c">&#9603;</l><l type="FAL" lc="3" a="c">&#129917;</l></k>
-	<k><l>P</l><l type="FL" lc="3" a="c">&#9602;</l><l type="FAL" lc="3" a="c">&#129918;</l></k>
-	<k><l>@</l><l type="FL" lc="3" a="c">&#9601;</l><l type="FAL" lc="3" a="c">&#129919;</l></k>
-	<k><l>*</l><l type="FL" lc="3" a="c">&#9701;</l><l type="FAL" lc="3" a="c">&#129913;</l></k>
-	<k><l type="L">&#8593;</l><l type="FL" lc="3" a="c">&#960;</l></k>
+	<k><l>Q</l><l type="FPC" lc="3" a="c">&#9500;</l><l type="FPS" lc="3" a="c">&#9679;</l></k>
+	<k><l>W</l><l type="FPC" lc="3" a="c">&#9508;</l><l type="FPS" lc="3" a="c">&#9675;</l></k>
+	<k><l>E</l><l type="FPC" lc="3" a="c">&#9524;</l><l type="FPS" lc="3" a="c">&#129910;</l></k>
+	<k><l>R</l><l type="FPC" lc="3" a="c">&#9516;</l><l type="FPS" lc="3" a="c">&#129915;</l></k>
+	<k><l>T</l><l type="FPC" lc="3" a="c">&#9620;</l><l type="FPS" lc="3" a="c">&#129904;</l></k>
+	<k><l>Y</l><l type="FPC" lc="3" a="c">&#129922;</l><l type="FPS" lc="3" a="c">&#129909;</l></k>
+	<k><l>U</l><l type="FPC" lc="3" a="c">&#129923;</l><l type="FPS" lc="3" a="c">&#9581;</l></k>
+	<k><l>I</l><l type="FPC" lc="3" a="c">&#9604;</l><l type="FPS" lc="3" a="c">&#9582;</l></k>
+	<k><l>O</l><l type="FPC" lc="3" a="c">&#9603;</l><l type="FPS" lc="3" a="c">&#129917;</l></k>
+	<k><l>P</l><l type="FPC" lc="3" a="c">&#9602;</l><l type="FPS" lc="3" a="c">&#129918;</l></k>
+	<k><l>@</l><l type="FPC" lc="3" a="c">&#9601;</l><l type="FPS" lc="3" a="c">&#129919;</l></k>
+	<k><l>*</l><l type="FPC" lc="3" a="c">&#9701;</l><l type="FPS" lc="3" a="c">&#129913;</l></k>
+	<k><l type="L">&#8593;</l><l type="FPL" lc="3" a="c">&#960;</l></k>
 	<k shape="1.5u">RESTORE</k>
 	<k x="17u" y="3u">4</k>
 	<k>5</k>
@@ -58,15 +58,15 @@
 	<k>-</k>
 	<k x="0u" y="2u"><l>STOP</l><l>RUN</l></k>
 	<k>SHIFT&#10;LOCK</k>
-	<k><l>A</l><l type="FL" lc="3" a="c">&#9484;</l><l type="FAL" lc="3" a="c">&#9824;</l></k>
-	<k><l>S</l><l type="FL" lc="3" a="c">&#9488;</l><l type="FAL" lc="3" a="c">&#9829;</l></k>
-	<k><l>D</l><l type="FL" lc="3" a="c">&#9623;</l><l type="FAL" lc="3" a="c">&#129911;</l></k>
-	<k><l>F</l><l type="FL" lc="3" a="c">&#9622;</l><l type="FAL" lc="3" a="c">&#129914;</l></k>
-	<k><l>G</l><l type="FL" lc="3" a="c">&#9615;</l><l type="FAL" lc="3" a="c">&#129905;</l></k>
-	<k><l>H</l><l type="FL" lc="3" a="c">&#9614;</l><l type="FAL" lc="3" a="c">&#129908;</l></k>
-	<k><l>J</l><l type="FL" lc="3" a="c">&#9613;</l><l type="FAL" lc="3" a="c">&#9584;</l></k>
-	<k><l>K</l><l type="FL" lc="3" a="c">&#9612;</l><l type="FAL" lc="3" a="c">&#9583;</l></k>
-	<k><l>L</l><l type="FL" lc="3" a="c">&#129928;</l><l type="FAL" lc="3" a="c">&#129916;</l></k>
+	<k><l>A</l><l type="FPC" lc="3" a="c">&#9484;</l><l type="FPS" lc="3" a="c">&#9824;</l></k>
+	<k><l>S</l><l type="FPC" lc="3" a="c">&#9488;</l><l type="FPS" lc="3" a="c">&#9829;</l></k>
+	<k><l>D</l><l type="FPC" lc="3" a="c">&#9623;</l><l type="FPS" lc="3" a="c">&#129911;</l></k>
+	<k><l>F</l><l type="FPC" lc="3" a="c">&#9622;</l><l type="FPS" lc="3" a="c">&#129914;</l></k>
+	<k><l>G</l><l type="FPC" lc="3" a="c">&#9615;</l><l type="FPS" lc="3" a="c">&#129905;</l></k>
+	<k><l>H</l><l type="FPC" lc="3" a="c">&#9614;</l><l type="FPS" lc="3" a="c">&#129908;</l></k>
+	<k><l>J</l><l type="FPC" lc="3" a="c">&#9613;</l><l type="FPS" lc="3" a="c">&#9584;</l></k>
+	<k><l>K</l><l type="FPC" lc="3" a="c">&#9612;</l><l type="FPS" lc="3" a="c">&#9583;</l></k>
+	<k><l>L</l><l type="FPC" lc="3" a="c">&#129928;</l><l type="FPS" lc="3" a="c">&#129916;</l></k>
 	<k><l>:</l><l>[</l></k>
 	<k><l>;</l><l>]</l></k>
 	<k>=</k>
@@ -76,13 +76,13 @@
 	<k>3</k>
 	<k x="0u" y="1u">&#63521;</k>
 	<k shape="1.5u">SHIFT</k>
-	<k><l>Z</l><l type="FL" lc="3" a="c">&#9492;</l><l type="FAL" lc="3" a="c">&#9830;</l></k>
-	<k><l>X</l><l type="FL" lc="3" a="c">&#9496;</l><l type="FAL" lc="3" a="c">&#9827;</l></k>
-	<k><l>C</l><l type="FL" lc="3" a="c">&#9629;</l><l type="FAL" lc="3" a="c">&#129912;</l></k>
-	<k><l>V</l><l type="FL" lc="3" a="c">&#9624;</l><l type="FAL" lc="3" a="c">&#9587;</l></k>
-	<k><l>B</l><l type="FL" lc="3" a="c">&#9626;</l><l type="FAL" lc="3" a="c">&#129906;</l></k>
-	<k><l>N</l><l type="FL" lc="3" a="c">&#129927;</l><l type="FAL" lc="3" a="c">&#9585;</l></k>
-	<k><l>M</l><l type="FL" lc="3" a="c">&#9621;</l><l type="FAL" lc="3" a="c">&#9586;</l></k>
+	<k><l>Z</l><l type="FPC" lc="3" a="c">&#9492;</l><l type="FPS" lc="3" a="c">&#9830;</l></k>
+	<k><l>X</l><l type="FPC" lc="3" a="c">&#9496;</l><l type="FPS" lc="3" a="c">&#9827;</l></k>
+	<k><l>C</l><l type="FPC" lc="3" a="c">&#9629;</l><l type="FPS" lc="3" a="c">&#129912;</l></k>
+	<k><l>V</l><l type="FPC" lc="3" a="c">&#9624;</l><l type="FPS" lc="3" a="c">&#9587;</l></k>
+	<k><l>B</l><l type="FPC" lc="3" a="c">&#9626;</l><l type="FPS" lc="3" a="c">&#129906;</l></k>
+	<k><l>N</l><l type="FPC" lc="3" a="c">&#129927;</l><l type="FPS" lc="3" a="c">&#9585;</l></k>
+	<k><l>M</l><l type="FPC" lc="3" a="c">&#9621;</l><l type="FPS" lc="3" a="c">&#9586;</l></k>
 	<k><l>,</l><l>&lt;</l></k>
 	<k><l>.</l><l>&gt;</l></k>
 	<k><l>/</l><l>?</l></k>
