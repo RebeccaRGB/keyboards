@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="732" height="432" viewBox="36 -351 549 324">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="732" height="540" viewBox="36 -351 549 432">
 <defs>
 <g id="shape0">
 <path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
@@ -16,6 +16,9 @@
 <path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 69 -16 C 70.105 -16 71 -16.895 71 -18 L 71 -48 C 71 -49.105 70.105 -50 69 -50 Z" fill="#ffffff"/>
 </g>
 <path id="path0" d="M 0.363 1 C 0.29 1 0.224 0.946 0.162 0.834 c -0.057 -0.1 -0.085 -0.2 -0.085 -0.297 c 0 -0.093 0.024 -0.171 0.07 -0.231 C 0.196 0.242 0.26 0.209 0.336 0.209 c 0.031 0 0.067 0.006 0.108 0.019 c 0.001 0 0.002 0 0.003 0.001 C 0.453 0.181 0.469 0.138 0.495 0.1 c 0.034 -0.049 0.089 -0.083 0.164 -0.099 c 0.021 -0.005 0.044 0.006 0.052 0.027 c 0.004 0.01 0.006 0.02 0.006 0.029 c 0 0.003 0.001 0.007 0.001 0.011 c 0 0.028 -0.007 0.059 -0.02 0.091 C 0.693 0.175 0.685 0.19 0.675 0.205 c 0.054 0 0.102 0.014 0.146 0.043 c 0.025 0.019 0.047 0.04 0.067 0.064 C 0.903 0.332 0.9 0.359 0.881 0.375 C 0.849 0.403 0.834 0.42 0.828 0.43 c -0.02 0.028 -0.029 0.056 -0.029 0.087 c 0 0.035 0.01 0.067 0.03 0.096 c 0.019 0.027 0.039 0.044 0.062 0.051 c 0.011 0.003 0.021 0.012 0.027 0.022 c 0.005 0.01 0.007 0.023 0.003 0.035 C 0.907 0.77 0.882 0.819 0.849 0.87 C 0.792 0.956 0.733 0.998 0.67 0.998 c -0.024 0 -0.053 -0.006 -0.091 -0.02 C 0.545 0.965 0.524 0.963 0.512 0.963 c -0.017 0 -0.038 0.005 -0.06 0.015 C 0.416 0.993 0.388 1 0.363 1 z M 0.336 0.3 c -0.047 0 -0.085 0.02 -0.117 0.061 C 0.185 0.406 0.168 0.465 0.168 0.538 c 0 0.082 0.024 0.167 0.073 0.252 c 0.043 0.078 0.085 0.119 0.122 0.119 c 0.008 0 0.024 -0.002 0.054 -0.015 C 0.483 0.865 0.536 0.865 0.61 0.893 c 0.034 0.012 0.051 0.014 0.06 0.014 c 0.038 0 0.077 -0.047 0.104 -0.087 c 0.02 -0.03 0.036 -0.059 0.047 -0.088 C 0.796 0.716 0.773 0.694 0.754 0.666 c -0.03 -0.044 -0.046 -0.094 -0.046 -0.148 c 0 -0.05 0.015 -0.096 0.044 -0.139 c 0.008 -0.013 0.02 -0.026 0.035 -0.041 C 0.781 0.333 0.775 0.327 0.768 0.322 c -0.042 -0.028 -0.087 -0.038 -0.169 -0.01 C 0.556 0.327 0.527 0.333 0.506 0.333 c -0.011 0 -0.033 -0.002 -0.087 -0.019 C 0.386 0.305 0.358 0.3 0.336 0.3 z M 0.62 0.11 C 0.598 0.121 0.582 0.135 0.57 0.152 C 0.557 0.169 0.548 0.188 0.543 0.209 c 0.009 -0.005 0.02 -0.014 0.032 -0.024 c 0.018 -0.018 0.031 -0.038 0.04 -0.059 C 0.617 0.121 0.619 0.115 0.62 0.11 z"/>
+<path id="path1" d="M 0 0 h 1 v 1 h -1 z M 0.1 0.1 v 0.8 h 0.35 v -0.45 h 0.45 v -0.35 z M 0.55 0.55 v 0.35 h 0.35 v -0.35 z"/>
+<path id="path2" d="M 0 0 h 1 v 1 h -1 z M 0.8 0.1 v 0.1 h 0.1 v -0.1 z M 0.6 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 z M 0.4 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 z M 0.2 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 z M 0.1 0.2 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 z M 0.1 0.4 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 z M 0.1 0.6 v 0.1 h 0.1 v 0.1 h 0.1 v 0.1 h 0.1 v -0.1 h -0.1 v -0.1 h -0.1 v -0.1 z M 0.1 0.8 v 0.1 h 0.1 v -0.1 z"/>
+<path id="path3" d="M 0 0 h 1 v 1 h -1 z M 0.1 0.1 v 0.35 h 0.35 v -0.35 z M 0.55 0.1 v 0.35 h 0.35 v -0.35 z M 0.1 0.55 v 0.35 h 0.35 v -0.35 z M 0.55 0.55 v 0.35 h 0.35 v -0.35 z"/>
 </defs>
 <g class="keyboard">
 <g class="key">
@@ -98,6 +101,30 @@
 <text x="534" y="-75.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">&#12354;</text>
 <text x="534" y="-90.9" text-anchor="middle" font-family="Arial" font-size="12" fill="#000000">&#12353;</text>
 </g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(121.5 54)"/>
+<use xlink:href="#path1" transform="translate(136 25) scale(10 10)" fill="#000000"/>
+<text x="148.5" y="19.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">A</text>
+<text x="156" y="33" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">&#9824;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(229.5 54)"/>
+<use xlink:href="#path2" transform="translate(244 25) scale(10 10)" fill="#000000"/>
+<text x="256.5" y="19.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">+</text>
+<use xlink:href="#path3" transform="translate(259 25) scale(10 10)" fill="#000000"/>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(337.5 54)"/>
+<use xlink:href="#path1" transform="translate(352 7) scale(10 10)" fill="#000000"/>
+<text x="372" y="15" text-anchor="middle" font-family="Arial" font-size="10" fill="#000000">&#9824;</text>
+<text x="364.5" y="31.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">A</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(445.5 54)"/>
+<use xlink:href="#path2" transform="translate(460 7) scale(10 10)" fill="#000000"/>
+<use xlink:href="#path3" transform="translate(475 7) scale(10 10)" fill="#000000"/>
+<text x="472.5" y="31.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#000000">+</text>
+</g>
 </g>
 <text x="81" y="-333" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type F</text>
 <text x="189" y="-333" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type G</text>
@@ -109,12 +136,18 @@
 <text x="94.5" y="-117" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type S</text>
 <text x="202.5" y="-117" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type Z</text>
 <text x="418.5" y="-117" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type Q</text>
+<text x="202.5" y="-9" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type P</text>
+<text x="418.5" y="-9" text-anchor="middle" font-family="Arial" font-size="12">Keycap Type M</text>
 <polyline points="405 -333 405 -337 441 -337" fill="none" stroke="#000000"/>
 <polyline points="567 -333 567 -337 531 -337" fill="none" stroke="#000000"/>
 <polyline points="283.5 -225 283.5 -229 373.5 -229" fill="none" stroke="#000000"/>
 <polyline points="553.5 -225 553.5 -229 463.5 -229" fill="none" stroke="#000000"/>
 <polyline points="283.5 -117 283.5 -121 373.5 -121" fill="none" stroke="#000000"/>
 <polyline points="553.5 -117 553.5 -121 463.5 -121" fill="none" stroke="#000000"/>
+<polyline points="121.5 -9 121.5 -13 157.5 -13" fill="none" stroke="#000000"/>
+<polyline points="283.5 -9 283.5 -13 247.5 -13" fill="none" stroke="#000000"/>
+<polyline points="337.5 -9 337.5 -13 373.5 -13" fill="none" stroke="#000000"/>
+<polyline points="499.5 -9 499.5 -13 463.5 -13" fill="none" stroke="#000000"/>
 <text x="81" y="-261" text-anchor="middle" font-family="Arial" font-size="8">Legend Type F</text>
 <text x="189" y="-261" text-anchor="middle" font-family="Arial" font-size="8">Legend Type F</text>
 <text x="189" y="-252" text-anchor="middle" font-family="Arial" font-size="8">Legend Type AF</text>
@@ -150,6 +183,18 @@
 <text x="517.5" y="-36" text-anchor="middle" font-family="Arial" font-size="8">U</text>
 <text x="535.5" y="-45" text-anchor="middle" font-family="Arial" font-size="8">AS</text>
 <text x="535.5" y="-36" text-anchor="middle" font-family="Arial" font-size="8">AU</text>
+<text x="148.5" y="63" text-anchor="middle" font-family="Arial" font-size="8">Legend Type PL</text>
+<text x="139.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PC</text>
+<text x="157.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PS</text>
+<text x="256.5" y="63" text-anchor="middle" font-family="Arial" font-size="8">Legend Type PL</text>
+<text x="247.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PC</text>
+<text x="265.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PS</text>
+<text x="364.5" y="63" text-anchor="middle" font-family="Arial" font-size="8">Legend Type PU</text>
+<text x="355.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PC</text>
+<text x="373.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PS</text>
+<text x="472.5" y="63" text-anchor="middle" font-family="Arial" font-size="8">Legend Type PU</text>
+<text x="463.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PC</text>
+<text x="481.5" y="72" text-anchor="middle" font-family="Arial" font-size="8">PS</text>
 <path d="M 63 -303 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V -264 h 6" fill="none" stroke="#000000"/>
 <path d="M 171 -295.5 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V -264 h 6" fill="none" stroke="#000000"/>
 <path d="M 207 -310.5 m 4 4 l -4 -4 l 4 -4 m -4 4 h 18 V -255 h -4" fill="none" stroke="#000000"/>
@@ -185,4 +230,16 @@
 <path d="M 508.5 -80 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V -39 h 21" fill="none" stroke="#000000"/>
 <path d="M 544.5 -95 m 4 4 l -4 -4 l 4 -4 m -4 4 h 18 V -48 h -18" fill="none" stroke="#000000"/>
 <path d="M 544.5 -80 m 4 4 l -4 -4 l 4 -4 m -4 4 h 27 V -39 h -27" fill="none" stroke="#000000"/>
+<path d="M 130.5 14.5 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V 60 h 4" fill="none" stroke="#000000"/>
+<path d="M 130.5 30 m -4 -4 l 4 4 l -4 4 m 4 -4 h -27 V 69 h 27" fill="none" stroke="#000000"/>
+<path d="M 166.5 30 m 4 4 l -4 -4 l 4 -4 m -4 4 h 18 V 69 h -18" fill="none" stroke="#000000"/>
+<path d="M 238.5 14.5 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V 60 h 4" fill="none" stroke="#000000"/>
+<path d="M 238.5 30 m -4 -4 l 4 4 l -4 4 m 4 -4 h -27 V 69 h 27" fill="none" stroke="#000000"/>
+<path d="M 274.5 30 m 4 4 l -4 -4 l 4 -4 m -4 4 h 18 V 69 h -18" fill="none" stroke="#000000"/>
+<path d="M 346.5 26.5 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V 60 h 4" fill="none" stroke="#000000"/>
+<path d="M 346.5 12 m -4 -4 l 4 4 l -4 4 m 4 -4 h -27 V 69 h 27" fill="none" stroke="#000000"/>
+<path d="M 382.5 12 m 4 4 l -4 -4 l 4 -4 m -4 4 h 18 V 69 h -18" fill="none" stroke="#000000"/>
+<path d="M 454.5 26.5 m -4 -4 l 4 4 l -4 4 m 4 -4 h -18 V 60 h 4" fill="none" stroke="#000000"/>
+<path d="M 454.5 12 m -4 -4 l 4 4 l -4 4 m 4 -4 h -27 V 69 h 27" fill="none" stroke="#000000"/>
+<path d="M 490.5 12 m 4 4 l -4 -4 l 4 -4 m -4 4 h 18 V 69 h -18" fill="none" stroke="#000000"/>
 </svg>

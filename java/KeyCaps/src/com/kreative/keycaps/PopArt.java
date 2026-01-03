@@ -1,8 +1,11 @@
 package com.kreative.keycaps;
 
+import static com.kreative.keycaps.ColorUtilities.colorToString;
+import static com.kreative.keycaps.ColorUtilities.contrastingColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteColor;
 import static com.kreative.keycaps.ColorUtilities.getPaletteOpacity;
 import static com.kreative.keycaps.KeyCapUnits.ROUNDING;
+import static com.kreative.keycaps.KeyCapUnits.valueToString;
 import static com.kreative.keycaps.ShapeUtilities.toSVGViewBox;
 import static com.kreative.keycaps.ShapeUtilities.translate;
 
@@ -20,6 +23,7 @@ public final class PopArt {
 		String vs = null;
 		int columns = 16;
 		int rows = 16;
+		int showCodes = 0;
 		File output = null;
 		
 		int argi = 0;
@@ -73,6 +77,10 @@ public final class PopArt {
 					System.err.println("Invalid row count: " + arg);
 					return;
 				}
+			} else if (arg.equals("-d")) {
+				showCodes = 10;
+			} else if (arg.equals("-h")) {
+				showCodes = 16;
 			} else if (arg.equals("-o") && argi < args.length) {
 				output = new File(args[argi++]);
 			} else if (arg.equals("--")) {
@@ -103,6 +111,35 @@ public final class PopArt {
 				Float opacity = getPaletteOpacity(i);
 				LayeredObject o = mold.createLayeredObject(s, vs, color, opacity);
 				svg.add(o.toSVG("", "", ROUNDING));
+				
+				if (showCodes > 0) {
+					if (color == null) color = mold.getDefaultKeyCapColor();
+					color = contrastingColor(color);
+					StringBuffer sb = new StringBuffer();
+					sb.append("<text");
+					sb.append(" x=\"" + valueToString(fx + 4) + "\"");
+					sb.append(" y=\"" + valueToString(fy - 4) + "\"");
+					sb.append(" font-family=\"monospace\"");
+					sb.append(" font-size=\"12\"");
+					sb.append(" fill=\"" + colorToString(color, null) + "\"");
+					sb.append(">");
+					if (showCodes < 2 || showCodes == 10) {
+						sb.append(i);
+					} else {
+						switch (showCodes) {
+							case 2: sb.append("0b"); break;
+							case 8: sb.append("0"); break;
+							case 16: sb.append("0x"); break;
+							default: sb.append(showCodes + "r"); break;
+						}
+						String is = Integer.toString(i, showCodes).toUpperCase();
+						String ms = Integer.toString(rows * columns - 1, showCodes);
+						for (int j = is.length(); j < ms.length(); j++) sb.append("0");
+						sb.append(is);
+					}
+					sb.append("</text>");
+					svg.add(sb.toString());
+				}
 			}
 		}
 		svg.add("</svg>");
@@ -134,6 +171,8 @@ public final class PopArt {
 		System.err.println("  -8            Specify 16 rows and 16 columns");
 		System.err.println("  -c <int>      Specify column count");
 		System.err.println("  -r <int>      Specify row count");
+		System.err.println("  -d            Add palette indices in decimal");
+		System.err.println("  -h            Add palette indices in hexadecimal");
 		System.err.println("  -o <path>     Specify output file");
 		System.err.println("  --            Specify standard output");
 	}
