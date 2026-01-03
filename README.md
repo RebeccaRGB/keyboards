@@ -324,6 +324,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Commodore 64
 ![](keyboards-svg/Commodore/Commodore%2064.svg)
 
+### Commodore MAX Machine
+![](keyboards-svg/Commodore/Commodore%20MAX%20Machine.svg)
+
 ### Commodore 16
 ![](keyboards-svg/Commodore/Commodore%2016.svg)
 

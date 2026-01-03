@@ -24,6 +24,7 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 	public static final String KEY_PETSCII_LETTER = "PL";
 	public static final String KEY_PETSCII_COMMODORE = "PC";
 	public static final String KEY_PETSCII_SHIFTED = "PS";
+	public static final String KEY_PETSCII_UNSHIFTED = "PU";
 	public static final String KEY_NUMPAD = "N";
 	public static final String KEY_NUMPAD_FUNCTION = "NF";
 	
@@ -40,6 +41,7 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 	public static final String KEY_FRONT_PETSCII_LETTER = "FPL";
 	public static final String KEY_FRONT_PETSCII_COMMODORE = "FPC";
 	public static final String KEY_FRONT_PETSCII_SHIFTED = "FPS";
+	public static final String KEY_FRONT_PETSCII_UNSHIFTED = "FPU";
 	public static final String KEY_FRONT_NUMPAD = "FN";
 	public static final String KEY_FRONT_NUMPAD_FUNCTION = "FNF";
 	
@@ -55,6 +57,7 @@ public class KeyCapLegend implements Map<String,KeyCapLegendItem> {
 		Z(KEY_UNSHIFTED, KEY_SHIFTED, KEY_ALT_LETTER),
 		Q(KEY_UNSHIFTED, KEY_SHIFTED, KEY_ALT_UNSHIFTED, KEY_ALT_SHIFTED),
 		P(KEY_PETSCII_LETTER, KEY_PETSCII_COMMODORE, KEY_PETSCII_SHIFTED),
+		M(KEY_PETSCII_UNSHIFTED, KEY_PETSCII_COMMODORE, KEY_PETSCII_SHIFTED),
 		N(KEY_NUMPAD, KEY_NUMPAD_FUNCTION);
 		private final String[] paramKeys;
 		private Type(String... paramKeys) {
