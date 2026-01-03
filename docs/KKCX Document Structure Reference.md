@@ -69,14 +69,14 @@ A `<p>` element may not contain any child elements.
 
 The X and Y coordinates of keycaps are expressed using a numeric value followed by a unit, e.g. "1u" (one unit) or "0.75in" (three quarters of an inch). The units supported are:
 
-| Unit | Description                                                                                                                                                     |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `u`  | The standard keyboard unit. 1u = 4v = 20w = 0.75in = 19.05mm = 54pt.                                                                                            |
-| `v`  | One quarter of a standard keyboard unit. 4v = 1u. The minimal unit of the size of a standard keycap.                                                            |
-| `w`  | One twentieth of a standard keyboard unit. 20w = 1u. Equivalent to the units of a Mac OS Classic `KCAP` resource or a pixel within the Key Caps desk accessory. |
-| `in` | Inches. 0.75in = 1u.                                                                                                                                            |
-| `mm` | Millimeters. 19.05mm = 1u.                                                                                                                                      |
-| `pt` | Points. 54pt = 1u. 72pt = 1in. Equivalent to a pixel at 72dpi.                                                                                                  |
+| Unit | Description                                                                                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `u`  | The standard keyboard unit. 1u = 4v = 20w = 0.75in = 19.05mm = 54pt.                                                                        |
+| `v`  | One quarter of a standard keyboard unit. 1v = 5w = 0.25u = 0.1875in = 4.7625mm = 13.5pt. The minimal unit of the size of a standard keycap. |
+| `w`  | One twentieth of a standard keyboard unit. 1w = 0.2v = 0.05u = 0.0375in = 0.9525mm = 2.7pt. Equivalent to the units of a Mac OS Classic `KCAP` resource or a pixel within the Key Caps desk accessory. |
+| `in` | Inches. 0.75in = 19.05mm = 54pt = 1u. 1in = 25.4mm = 72pt.                                                                                  |
+| `mm` | Millimeters. 19.05mm = 0.75in = 54pt = 1u. 25.4mm = 1in = 72pt.                                                                             |
+| `pt` | Points. 54pt = 0.75in = 19.05mm = 1u. 72pt = 1in = 25.4mm. Equivalent to a pixel at 72dpi.                                                  |
 
 ## Keycap Shapes
 
@@ -99,6 +99,8 @@ Codes used for `type` attributes on `<k>` (keycap) elements. Child `<l>` (legend
 | `S`  | symbol                          | `U`, `S`               |
 | `Z`  | symbol with letter alt          | `U`, `S`, `AL`         |
 | `Q`  | symbol with symbol alt ("quad") | `U`, `S`, `AU`, `AS`   |
+| `P`  | PETSCII (Commodore 64C)         | `PL`, `PC`, `PS`       |
+| `M`  | PETSCII (Commodore MAX)         | `PU`, `PC`, `PS`       |
 | `N`  | numpad                          | `N`, `NF`              |
 
 "Symbol" refers to a legend (or part of a legend) consisting of two printable characters stacked vertically.
@@ -117,20 +119,24 @@ but only one case (usually uppercase) is printed on the keycap.
 
 Codes used for `type` attributes on `<l>` (legend) elements.
 
-| Type  | Description     | Type  | Description           |
-| ----- | --------------- | ----- | --------------------- |
-| `F`   | function        | `FF`  | front function        |
-| `AF`  | alt function    | `FAF` | front alt function    |
-| `LF`  | left function   | `FLF` | front left function   |
-| `RF`  | right function  | `FRF` | front right function  |
-| `L`   | letter          | `FL`  | front letter          |
-| `U`   | unshifted       | `FU`  | front unshifted       |
-| `S`   | shifted         | `FS`  | front shifted         |
-| `AL`  | alt letter      | `FAL` | front alt letter      |
-| `AU`  | alt unshifted   | `FAU` | front alt unshifted   |
-| `AS`  | alt shifted     | `FAS` | front alt shifted     |
-| `N`   | numpad number   | `FN`  | front numpad number   |
-| `NF`  | numpad function | `FNF` | front numpad function |
+| Type  | Description       | Type  | Description             |
+| ----- | ----------------- | ----- | ----------------------- |
+| `F`   | function          | `FF`  | front function          |
+| `AF`  | alt function      | `FAF` | front alt function      |
+| `LF`  | left function     | `FLF` | front left function     |
+| `RF`  | right function    | `FRF` | front right function    |
+| `L`   | letter            | `FL`  | front letter            |
+| `U`   | unshifted         | `FU`  | front unshifted         |
+| `S`   | shifted           | `FS`  | front shifted           |
+| `AL`  | alt letter        | `FAL` | front alt letter        |
+| `AU`  | alt unshifted     | `FAU` | front alt unshifted     |
+| `AS`  | alt shifted       | `FAS` | front alt shifted       |
+| `PL`  | PETSCII letter    | `FPL` | front PETSCII letter    |
+| `PC`  | PETSCII Commodore | `FPC` | front PETSCII Commodore |
+| `PS`  | PETSCII shifted   | `FPS` | front PETSCII shifted   |
+| `PU`  | PETSCII unshifted | `FPU` | front PETSCII unshifted |
+| `N`   | numpad number     | `FN`  | front numpad number     |
+| `NF`  | numpad function   | `FNF` | front numpad function   |
 
 "Front" refers to legends printed on the side of the keycap facing the user, as opposed to the top of the keycap where legends are usually printed.
 
@@ -138,6 +144,10 @@ Codes used for `type` attributes on `<l>` (legend) elements.
 If the character is not an actual letter, both unshifted and shifted states produce the same character.
 If the character is an actual letter, the unshifted state produces lowercase and the shifted state produces uppercase,
 but only one case (usually uppercase) is printed on the keycap.
+
+"PETSCII letter" and "PETSCII unshifted" both refer to the character produced in the unshifted state,
+but "PETSCII letter" appears on the upper half of the keycap (as on the Commodore 64C)
+while "PETSCII unshifted" appears on the lower half (as on the Commodore MAX).
 
 ![](/docs/types.svg)
 
