@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout cc="8" lc="1" a="nw">
+	<k x="0u" y="3u">Esc</k>
+	<k x="2u" y="3u">7</k>
+	<k>8</k>
+	<k>9</k>
+	<k x="5.75u" y="3u">(</k>
+	<k>)</k>
+	<k x="0u" y="2u">&#8592;</k>
+	<k x="2u" y="2u">4</k>
+	<k>5</k>
+	<k>6</k>
+	<k x="5.75u" y="2u">-</k>
+	<k>&#247;</k>
+	<k x="0u" y="1u">&#8594;</k>
+	<k x="2u" y="1u">1</k>
+	<k>2</k>
+	<k>3</k>
+	<k x="5.75u" y="1u">+</k>
+	<k>&#215;</k>
+	<k x="0u" y="0u">Space</k>
+	<k x="1.5u" y="0u" shape="1.5u">0</k>
+	<k>,</k>
+	<k>.</k>
+	<k x="5.75u" y="0u">Ret</k>
+	<k>Print</k>
+</keyCapLayout>

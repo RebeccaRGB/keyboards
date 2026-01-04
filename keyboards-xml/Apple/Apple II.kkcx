@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout cc="#321" lc="31">
+	<k x="0.5u" y="4u"><l>1</l><l>!</l></k>
+	<k><l>2</l><l>&#34;</l></k>
+	<k><l>3</l><l>#</l></k>
+	<k><l>4</l><l>$</l></k>
+	<k><l>5</l><l>%</l></k>
+	<k><l>6</l><l>&amp;</l></k>
+	<k><l>7</l><l>&#39;</l></k>
+	<k><l>8</l><l>(</l></k>
+	<k><l>9</l><l>)</l></k>
+	<k><l type="U">0</l></k>
+	<k><l>:</l><l>*</l></k>
+	<k><l>-</l><l>=</l></k>
+	<k>RESET</k>
+	<k x="0u" y="3u">ESC</k>
+	<k><l type="U">Q</l></k>
+	<k><l type="U">W</l></k>
+	<k><l type="U">E</l></k>
+	<k><l type="U">R</l></k>
+	<k><l type="U">T</l></k>
+	<k><l type="U">Y</l></k>
+	<k><l type="U">U</l></k>
+	<k><l type="U">I</l></k>
+	<k><l type="U">O</l></k>
+	<k><l>P</l><l>@</l></k>
+	<k>REPT</k>
+	<k shape="1.5u">RETURN</k>
+	<k x="0.25u" y="2u">CTRL</k>
+	<k><l type="U">A</l></k>
+	<k><l type="U">S</l></k>
+	<k><l type="U">D</l></k>
+	<k><l type="U">F</l></k>
+	<k><l type="U">G</l><l type="AF">BELL</l></k>
+	<k><l type="U">H</l></k>
+	<k><l type="U">J</l></k>
+	<k><l type="U">K</l></k>
+	<k><l type="U">L</l></k>
+	<k><l>;</l><l>+</l></k>
+	<k>&#8592;</k>
+	<k>&#8594;</k>
+	<k x="0.25u" y="1u" shape="1.5u">SHIFT</k>
+	<k><l type="U">Z</l></k>
+	<k><l type="U">X</l></k>
+	<k><l type="U">C</l></k>
+	<k><l type="U">V</l></k>
+	<k><l type="U">B</l></k>
+	<k><l>N</l><l>^</l></k>
+	<k><l type="U">M</l></k>
+	<k><l>,</l><l>&lt;</l></k>
+	<k><l>.</l><l>&gt;</l></k>
+	<k><l>/</l><l>?</l></k>
+	<k shape="1.5u">SHIFT</k>
+	<k x="0.25u" y="0u" cc="31" lc="1">POWER</k>
+	<k x="2.75u" y="0u" shape="8u"></k>
+</keyCapLayout>

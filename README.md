@@ -89,6 +89,18 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ## Apple Keyboards
 
+### Apple II
+![](keyboards-svg/Apple/Apple%20II.svg)
+
+### Apple IIe, US
+![](keyboards-svg/Apple/Apple%20IIe,%20US.svg)
+
+### Apple Numeric Keypad IIe
+![](keyboards-svg/Apple/Apple%20Numeric%20Keypad%20IIe.svg)
+
+### Apple IIe Platinum, US
+![](keyboards-svg/Apple/Apple%20IIe%20Platinum,%20US.svg)
+
 ### Apple Lisa, US
 ![](keyboards-svg/Apple/Apple%20Lisa,%20US.svg)
 
