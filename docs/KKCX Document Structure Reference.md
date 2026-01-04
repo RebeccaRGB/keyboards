@@ -162,6 +162,8 @@ Codes used for `vs` attributes which describe the topography of the keycap, for 
 | `sb` | Stepped backspace. The active surface of the keycap is the right two thirds of the widest rectangle of the keycap shape.           |
 | `se` | Stepped enter. The active surface of the keycap is the tallest rectangle of the keycap shape.                                      |
 | `r`  | Recessed. The keycap is half the height of other keycaps.                                                                          |
+| `i`  | Oblique. The keycap is slanted to the right by approximately 14 degrees, as on the Apple IIc keyboard.                             |
+| `ii` | Oblique. The keycap is slanted to the right by 45 degrees, as on the Atari ST keyboard.                                            |
 
 ![](/docs/vs.svg)
 

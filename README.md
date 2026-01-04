@@ -101,6 +101,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Apple IIe Platinum, US
 ![](keyboards-svg/Apple/Apple%20IIe%20Platinum,%20US.svg)
 
+### Apple IIc, US
+![](keyboards-svg/Apple/Apple%20IIc,%20US.svg)
+
 ### Apple Lisa, US
 ![](keyboards-svg/Apple/Apple%20Lisa,%20US.svg)
 

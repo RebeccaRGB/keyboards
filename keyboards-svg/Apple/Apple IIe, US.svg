@@ -117,7 +117,7 @@
 </g>
 <g class="key">
 <use xlink:href="#shape2" transform="translate(796.5 -216)"/>
-<text x="823.5" y="-246" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">Reset</text>
+<text x="823.5" y="-243" text-anchor="middle" font-family="Arial" font-size="10" fill="#1a1a1a">Reset</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -162)"/>

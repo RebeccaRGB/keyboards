@@ -26,45 +26,14 @@ public class MaxKeyCapMold extends KeyCapMold {
 		return (border < 6) ? 6 : (border > 12) ? 12 : border;
 	}
 	
-	private List<String> vss(String vs) {
-		if (vs == null || (vs = vs.trim()).length() == 0) return Arrays.<String>asList();
-		return Arrays.asList(vs.split("\\s+"));
-	}
-	
-	private Shape topShape(Shape shape, List<String> vss) {
-		if (vss.isEmpty()) {
-			return shape;
-		} else if (vss.contains("s")) {
-			// Stepped
-			Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
-			double s = Math.min(r.getWidth(), r.getHeight());
-			return new Rectangle2D.Double(r.getCenterX() - s/2, r.getCenterY() - s/2, s, s);
-		} else if (vss.contains("sc")) {
-			// Stepped Caps / Ctrl
-			Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
-			double s = Math.min(r.getWidth(), r.getHeight());
-			return new Rectangle2D.Double(r.getX(), r.getY(), r.getWidth() - s/2, r.getHeight());
-		} else if (vss.contains("sb")) {
-			// Stepped Backspace
-			Rectangle2D r = ShapeUtilities.getWidestRect(shape, null);
-			double s = Math.min(r.getWidth(), r.getHeight());
-			return new Rectangle2D.Double(r.getX() + s/2, r.getY(), r.getWidth() - s/2, r.getHeight());
-		} else if (vss.contains("se")) {
-			// Stepped Enter
-			return ShapeUtilities.getTallestRect(shape, null);
-		} else {
-			return shape;
-		}
-	}
-	
 	public Padding getPadding() {
 		return new Padding(0, 0, 0, 0);
 	}
 	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
 		float b = maxBorder(shape);
-		List<String> vss = vss(vs);
-		Shape top = topShape(shape, vss);
+		List<String> vss = Arrays.asList(StringUtilities.split(vs));
+		Shape top = KeyCapVariants.getActiveArea(shape, vss);
 		Shape s0 = roundCorners(shape, 6);
 		Shape s1 = roundCorners(contract(shape, 1), 5);
 		Shape s2 = roundCorners(contract(shape, 2), 4);
@@ -84,11 +53,17 @@ public class MaxKeyCapMold extends KeyCapMold {
 			s4 = add(s4b, subtract(s4a, s4c));
 			s5 = add(s5b, subtract(s5a, s5c));
 		} else {
-			float a = vss.contains("r") ? ((6 + b) / 2) : b; // Recessed
+			float a = vss.contains(KeyCapVariants.RECESSED) ? ((6 + b) / 2) : b;
 			s3 = translate(roundCorners(contract(shape, a-3), 3), 0, 6-a);
 			s4 = translate(roundCorners(contract(shape, a-2), 2), 0, 6-a);
 			s5 = translate(roundCorners(contract(shape, a-1), 1), 0, 6-a);
 		}
+		s0 = KeyCapVariants.applyTransformations(s0, vss);
+		s1 = KeyCapVariants.applyTransformations(s1, vss);
+		s2 = KeyCapVariants.applyTransformations(s2, vss);
+		s3 = KeyCapVariants.applyTransformations(s3, vss);
+		s4 = KeyCapVariants.applyTransformations(s4, vss);
+		s5 = KeyCapVariants.applyTransformations(s5, vss);
 		Color c0 = (color != null) ? color : getDefaultKeyCapColor();
 		Color c1 = multiplyAdd(c0, 0.9f, 0.9f, 0.9f, 0, 0, 0);
 		Color c2 = multiplyAdd(c0, 1.09f, 1.09f, 1.09f, 19.5f, 19.5f, 19.5f);
@@ -123,17 +98,21 @@ public class MaxKeyCapMold extends KeyCapMold {
 	
 	public Shape createTopTextArea(Shape shape, String vs) {
 		float b = maxBorder(shape);
-		List<String> vss = vss(vs);
-		Shape top = topShape(shape, vss);
-		return translate(contract(top, b), 0, 6-b);
+		List<String> vss = Arrays.asList(StringUtilities.split(vs));
+		Shape top = KeyCapVariants.getActiveArea(shape, vss);
+		if (top == shape && vss.contains(KeyCapVariants.RECESSED)) b = ((6 + b) / 2);
+		Shape tas = translate(contract(top, b), 0, 6-b);
+		return KeyCapVariants.applyTransformations(tas, vss);
 	}
 	
 	public Shape createFrontTextArea(Shape shape, String vs) {
 		float b = maxBorder(shape);
-		List<String> vss = vss(vs);
-		Shape top = topShape(shape, vss);
+		List<String> vss = Arrays.asList(StringUtilities.split(vs));
+		Shape top = KeyCapVariants.getActiveArea(shape, vss);
+		if (top == shape && vss.contains(KeyCapVariants.RECESSED)) b = ((6 + b) / 2);
 		Shape se = translate(contract(top, b-4), 0, 6-b);
 		Shape ss = translate(contract(top, b), 0, b-2);
-		return subtract(ss, se);
+		Shape tas = subtract(ss, se);
+		return KeyCapVariants.applyTransformations(tas, vss);
 	}
 }

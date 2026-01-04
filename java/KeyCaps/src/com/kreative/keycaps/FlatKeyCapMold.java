@@ -2,6 +2,8 @@ package com.kreative.keycaps;
 
 import java.awt.Color;
 import java.awt.Shape;
+import java.util.Arrays;
+import java.util.List;
 
 public class FlatKeyCapMold extends KeyCapMold {
 	private final float pathInset;
@@ -26,12 +28,17 @@ public class FlatKeyCapMold extends KeyCapMold {
 	}
 	
 	public LayeredObject createLayeredObject(Shape shape, String vs, Color color, Float opacity) {
+		List<String> vss = Arrays.asList(StringUtilities.split(vs));
+		shape = KeyCapVariants.applyTransformations(shape, vss);
 		shape = ShapeUtilities.contract(shape, pathInset);
 		if (color == null) color = Color.black;
 		return new LayeredShape(shape, color, opacity);
 	}
 	
 	public Shape createTopTextArea(Shape shape, String vs) {
+		List<String> vss = Arrays.asList(StringUtilities.split(vs));
+		shape = KeyCapVariants.getActiveArea(shape, vss);
+		shape = KeyCapVariants.applyTransformations(shape, vss);
 		return ShapeUtilities.contract(shape, textInset);
 	}
 	

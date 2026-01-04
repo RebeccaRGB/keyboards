@@ -183,16 +183,32 @@ public final class ShapeUtilities {
 		return getMaxRect(shape, tx, WIDEST);
 	}
 	
+	public static Rectangle2D getWidestRect(Shape shape, AffineTransform tx, double flatness) {
+		return getMaxRect(shape, tx, flatness, WIDEST);
+	}
+	
 	public static Rectangle2D getTallestRect(Shape shape, AffineTransform tx) {
 		return getMaxRect(shape, tx, TALLEST);
 	}
 	
+	public static Rectangle2D getTallestRect(Shape shape, AffineTransform tx, double flatness) {
+		return getMaxRect(shape, tx, flatness, TALLEST);
+	}
+	
 	public static Rectangle2D getMaxRect(Shape shape, AffineTransform tx, Comparator<Rectangle2D> cmp) {
 		if (shape == null) return null;
+		return getMaxRect(shape, shape.getPathIterator(tx), cmp);
+	}
+	
+	public static Rectangle2D getMaxRect(Shape shape, AffineTransform tx, double flatness, Comparator<Rectangle2D> cmp) {
+		if (shape == null) return null;
+		return getMaxRect(shape, shape.getPathIterator(tx, flatness), cmp);
+	}
+	
+	private static Rectangle2D getMaxRect(Shape shape, PathIterator i, Comparator<Rectangle2D> cmp) {
 		SortedSet<Float> xCoords = new TreeSet<Float>();
 		SortedSet<Float> yCoords = new TreeSet<Float>();
-		float[] c = new float[6];
-		for (PathIterator i = shape.getPathIterator(tx); !i.isDone(); i.next()) {
+		for (float[] c = new float[6]; !i.isDone(); i.next()) {
 			switch (i.currentSegment(c)) {
 				case PathIterator.SEG_MOVETO:
 				case PathIterator.SEG_LINETO:

@@ -62,7 +62,7 @@
 <g class="keyboard">
 <g class="key">
 <use xlink:href="#shape0" transform="translate(256.5 -324)"/>
-<text x="268.5" y="-354" text-anchor="start" font-family="Arial" font-size="10" fill="#1a1a1a">&#9665;</text>
+<text x="265.5" y="-351" text-anchor="start" font-family="Arial" font-size="10" fill="#1a1a1a">&#9665;</text>
 </g>
 <g class="key">
 <use xlink:href="#shape1" transform="translate(0 -216)"/>

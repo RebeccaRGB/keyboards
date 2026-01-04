@@ -6,6 +6,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class StringUtilities {
+	public static String[] split(String s) {
+		if (s == null || (s = s.trim()).length() == 0) return new String[0];
+		return s.split("\\s+");
+	}
+	
 	public static String quote(String s, char quote) {
 		StringBuffer sb = new StringBuffer();
 		sb.append(quote);
