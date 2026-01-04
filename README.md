@@ -1,5 +1,18 @@
 # Keyboard Diagrams
 
+Jump to:
+- [Standard Full-Size Keyboards](#standard-full-size-keyboards)
+- [Tenkeyless Keyboards](#tenkeyless-keyboards)
+- [60% Keyboards](#60-keyboards)
+- [Keypads](#keypads)
+- [IBM Keyboards](#ibm-keyboards)
+- [Apple Keyboards](#apple-keyboards)
+- [Sun Keyboards](#sun-keyboards)
+- [Commodore Keyboards](#commodore-keyboards)
+- [Atari Keyboards](#atari-keyboards)
+- [Inkbox ASK Profiles](#inkbox-ask-profiles)
+- [Other Keyboards](#other-keyboards)
+
 ## Standard Full-Size Keyboards
 
 ### ANSI
@@ -19,6 +32,8 @@
 
 ### JIS
 ![](keyboards-svg/Generic/JIS.svg)
+
+[Back to Top](#keyboard-diagrams)
 
 ## Tenkeyless Keyboards
 
@@ -40,6 +55,8 @@
 ### JIS TKL
 ![](keyboards-svg/Generic/JIS%20TKL.svg)
 
+[Back to Top](#keyboard-diagrams)
+
 ## 60% Keyboards
 
 ### ANSI 60%
@@ -60,10 +77,14 @@
 ### JIS 60%
 ![](keyboards-svg/Generic/JIS%2060%25.svg)
 
+[Back to Top](#keyboard-diagrams)
+
 ## Keypads
 
 ### Keypad
 ![](keyboards-svg/Generic/Keypad.svg)
+
+[Back to Top](#keyboard-diagrams)
 
 ## IBM Keyboards
 
@@ -86,6 +107,8 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### IBM Model M, Space Saving, US
 ![](keyboards-svg/IBM/IBM%20Model%20M,%20Space%20Saving,%20US.svg)
+
+[Back to Top](#keyboard-diagrams)
 
 ## Apple Keyboards
 
@@ -293,6 +316,8 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ![](keyboards-svg/Apple/PowerBook%201999%20Keyboard,%20JIS.svg)
 
+[Back to Top](#keyboard-diagrams)
+
 ## Sun Keyboards
 
 ### Sun Type 5, UNIX
@@ -321,6 +346,8 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Sun Type 7, ISO
 ![](keyboards-svg/Sun/Sun%20Type%207,%20ISO.svg)
+
+[Back to Top](#keyboard-diagrams)
 
 ## Commodore Keyboards
 
@@ -357,6 +384,18 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Commodore Amiga 500, US
 ![](keyboards-svg/Commodore/Commodore%20Amiga%20500,%20US.svg)
 
+[Back to Top](#keyboard-diagrams)
+
+## Atari Keyboards
+
+### Atari 520ST
+![](keyboards-svg/Atari/Atari%20520ST.svg)
+
+### Atari 1040ST
+![](keyboards-svg/Atari/Atari%201040ST.svg)
+
+[Back to Top](#keyboard-diagrams)
+
 ## Inkbox ASK Profiles
 
 ### Leftside - ANSI
@@ -389,6 +428,8 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### Rightside - Large Macros
 ![](keyboards-svg/Inkbox/Rightside%20Large%20Macros.svg)
 
+[Back to Top](#keyboard-diagrams)
+
 ## Other Keyboards
 
 ### Famicom
@@ -414,3 +455,5 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### [Two-Thirds Keyboard (Original by Attoparsec)](https://www.attoparsec.com/artifacts/twothirds.html)
 ![](keyboards-svg/Attoparsec/Two-Thirds%20Keyboard.svg)
+
+[Back to Top](#keyboard-diagrams)
