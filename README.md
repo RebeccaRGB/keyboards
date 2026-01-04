@@ -450,13 +450,43 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ## Kreative Custom Keyboards
 
-### [K65](https://github.com/kreativekorp/segterm/tree/master/board/K65)
+### [K65 8×8 Matrix Keyboard](https://github.com/kreativekorp/segterm/tree/master/board/K65)
 ![](keyboards-svg/Kreative/K65.svg)
 
-### [K130](https://github.com/RebeccaRGB/K130)
+### [K130 Battlestation Keyboard](https://github.com/RebeccaRGB/K130)
 ![](keyboards-svg/Kreative/K130.svg)
 
-### [TTCC (Two-Thirds California Case)](https://github.com/RebeccaRGB/ttcc)
+### K130 US AltGr Layout
+![](keyboards-svg/Kreative/K130%20US%20AltGr.svg)
+
+### K130 PETSCII Layout
+![](keyboards-svg/Kreative/K130%20PETSCII.svg)
+
+### K130 Greek Symbol Layout
+![](keyboards-svg/Kreative/K130%20Greek%20Symbol.svg)
+
+### K130 Cyrillic Layout
+![](keyboards-svg/Kreative/K130%20Cyrillic.svg)
+
+### K130 Hebrew Layout
+![](keyboards-svg/Kreative/K130%20Hebrew.svg)
+
+### K130 Arabic Layout
+![](keyboards-svg/Kreative/K130%20Arabic.svg)
+
+### K130 IPA Layout
+![](keyboards-svg/Kreative/K130%20IPA.svg)
+
+### K130 Sitelen Pona Layout
+![](keyboards-svg/Kreative/K130%20Sitelen%20Pona.svg)
+
+### K130 JIS Hiragana Layout
+![](keyboards-svg/Kreative/K130%20JIS%20Hiragana.svg)
+
+### K130 JIS Katakana Layout
+![](keyboards-svg/Kreative/K130%20JIS%20Katakana.svg)
+
+### [Two-Thirds California Case Keyboard](https://github.com/RebeccaRGB/ttcc)
 ![](keyboards-svg/Kreative/Two-Thirds%20California%20Case.svg)
 
 [Back to Top](#keyboard-diagrams)

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k usb="0x68" x="0u" y="5.25u">F13&#10;Help&#10;Dec</k>
+	<k usb="0x69">F14&#10;&#10;Hex</k>
+	<k usb="0x29" x="2.5u" y="5.25u">Esc</k>
+	<k usb="0x3A" x="4.5u" y="5.25u">F1</k>
+	<k usb="0x3B">F2</k>
+	<k usb="0x3C">F3</k>
+	<k usb="0x3D">F4</k>
+	<k usb="0x3E" x="9u" y="5.25u">F5</k>
+	<k usb="0x3F">F6</k>
+	<k usb="0x40">F7</k>
+	<k usb="0x41">F8</k>
+	<k usb="0x42" x="13.5u" y="5.25u">F9</k>
+	<k usb="0x43">F10</k>
+	<k usb="0x44">F11</k>
+	<k usb="0x45">F12</k>
+	<k usb="0x46" x="18u" y="5.25u">Print&#10;Screen</k>
+	<k usb="0x47">Scroll&#10;Lock</k>
+	<k usb="0x48"><l>Pause</l><l>Break</l></k>
+	<k usb="0x7F" x="21.5u" y="5.25u"><l>&#128263;</l><l>&#9199;</l></k>
+	<k usb="0x81"><l>&#128265;</l><l>&#9198;</l></k>
+	<k usb="0x80"><l>&#128266;</l><l>&#9197;</l></k>
+	<k usb="0x66"><l>&#9211;</l><l>&#9167;</l></k>
+	<k usb="0x6A" x="0u" y="4u">F15&#10;Stop&#10;AltGr</k>
+	<k usb="0x6B">F16&#10;Again&#10;PETSCII</k>
+	<k usb="0x35" x="2.5u" y="4u"><l>&#92;</l><l>&#95;</l><l>&#12429;</l><l></l></k>
+	<k usb="0x1E"><l>&#49;</l><l>&#33;</l><l>&#12396;</l><l></l></k>
+	<k usb="0x1F"><l>&#50;</l><l>&#34;</l><l>&#12405;</l><l></l></k>
+	<k usb="0x20"><l>&#51;</l><l>&#35;</l><l>&#12354;</l><l>&#12353;</l></k>
+	<k usb="0x21"><l>&#52;</l><l>&#36;</l><l>&#12358;</l><l>&#12357;</l></k>
+	<k usb="0x22"><l>&#53;</l><l>&#37;</l><l>&#12360;</l><l>&#12359;</l></k>
+	<k usb="0x23"><l>&#54;</l><l>&#38;</l><l>&#12362;</l><l>&#12361;</l></k>
+	<k usb="0x24"><l>&#55;</l><l>&#39;</l><l>&#12420;</l><l>&#12419;</l></k>
+	<k usb="0x25"><l>&#56;</l><l>&#40;</l><l>&#12422;</l><l>&#12421;</l></k>
+	<k usb="0x26"><l>&#57;</l><l>&#41;</l><l>&#12424;</l><l>&#12423;</l></k>
+	<k usb="0x27"><l>&#48;</l><l>&#124;</l><l>&#12431;</l><l>&#12434;</l></k>
+	<k usb="0x2D"><l>&#45;</l><l>&#61;</l><l>&#12411;</l><l></l></k>
+	<k usb="0x2E"><l>&#94;</l><l>&#126;</l><l>&#12408;</l><l></l></k>
+	<k usb="0x89"><l>&#165;</l><l>&#124;</l><l>&#12540;</l><l>&#124;</l></k>
+	<k usb="0x2A">Back&#10;Space</k>
+	<k usb="0x49" x="18u" y="4u">Insert</k>
+	<k usb="0x4A">Home</k>
+	<k usb="0x4B">Page&#10;Up</k>
+	<k usb="0x53" x="21.5u" y="4u" type="N"><l lh="0.5">Num&#10;Lock</l><l>A</l></k>
+	<k usb="0x67" type="N"><l>=</l><l>B</l></k>
+	<k usb="0x54" type="N"><l>/</l><l>C</l></k>
+	<k usb="0x55" type="N"><l>*</l><l>D</l></k>
+	<k usb="0x6C" x="0u" y="3u">F17&#10;Props&#10;Greek</k>
+	<k usb="0x6D">F18&#10;Undo&#10;Cyrillic</k>
+	<k usb="0x2B" x="2.5u" y="3u" shape="1.5u">Tab</k>
+	<k usb="0x14"><l>&#113;</l><l>&#81;</l><l>&#12383;</l><l></l></k>
+	<k usb="0x1A"><l>&#119;</l><l>&#87;</l><l>&#12390;</l><l></l></k>
+	<k usb="0x08"><l>&#101;</l><l>&#69;</l><l>&#12356;</l><l>&#12355;</l></k>
+	<k usb="0x15"><l>&#114;</l><l>&#82;</l><l>&#12377;</l><l></l></k>
+	<k usb="0x17"><l>&#116;</l><l>&#84;</l><l>&#12363;</l><l>&#12437;</l></k>
+	<k usb="0x1C"><l>&#121;</l><l>&#89;</l><l>&#12435;</l><l></l></k>
+	<k usb="0x18"><l>&#117;</l><l>&#85;</l><l>&#12394;</l><l>&#12432;</l></k>
+	<k usb="0x0C"><l>&#105;</l><l>&#73;</l><l>&#12395;</l><l>&#12433;</l></k>
+	<k usb="0x12"><l>&#111;</l><l>&#79;</l><l>&#12425;</l><l></l></k>
+	<k usb="0x13"><l>&#112;</l><l>&#80;</l><l>&#12379;</l><l>&#12540;</l></k>
+	<k usb="0x2F"><l>&#64;</l><l>&#96;</l><l>&#168;</l><l>&#165;</l></k>
+	<k usb="0x30"><l>&#91;</l><l>&#123;</l><l>&#730;</l><l>&#12300;</l></k>
+	<k usb="0x31" shape="1.5u"><l>&#93;</l><l>&#125;</l><l>&#12416;</l><l>&#12301;</l></k>
+	<k usb="0x4C" x="18u" y="3u">Delete</k>
+	<k usb="0x4D">End</k>
+	<k usb="0x4E">Page&#10;Down</k>
+	<k usb="0x5F" x="21.5u" y="3u" type="N"><l>7</l><l>Home</l></k>
+	<k usb="0x60" type="N"><l>8</l><l>&#8593;</l></k>
+	<k usb="0x61" type="N"><l>9</l><l>PgUp</l></k>
+	<k usb="0x56" type="N"><l>-</l><l>E</l></k>
+	<k usb="0x6E" x="0u" y="2u">F19&#10;Front&#10;Hebrew</k>
+	<k usb="0x6F">F20&#10;Copy&#10;Arabic</k>
+	<k usb="0x39" x="2.5u" y="2u" shape="1.75u">Caps Lock</k>
+	<k usb="0x04"><l>&#97;</l><l>&#65;</l><l>&#12385;</l><l></l></k>
+	<k usb="0x16"><l>&#115;</l><l>&#83;</l><l>&#12392;</l><l></l></k>
+	<k usb="0x07"><l>&#100;</l><l>&#68;</l><l>&#12375;</l><l></l></k>
+	<k usb="0x09"><l>&#102;</l><l>&#70;</l><l>&#12399;</l><l></l></k>
+	<k usb="0x0A"><l>&#103;</l><l>&#71;</l><l>&#12365;</l><l></l></k>
+	<k usb="0x0B"><l>&#104;</l><l>&#72;</l><l>&#12367;</l><l></l></k>
+	<k usb="0x0D"><l>&#106;</l><l>&#74;</l><l>&#12414;</l><l>&#110928;</l></k>
+	<k usb="0x0E"><l>&#107;</l><l>&#75;</l><l>&#12398;</l><l>&#110929;</l></k>
+	<k usb="0x0F"><l>&#108;</l><l>&#76;</l><l>&#12426;</l><l></l></k>
+	<k usb="0x33"><l>&#59;</l><l>&#43;</l><l>&#12428;</l><l></l></k>
+	<k usb="0x34"><l>&#58;</l><l>&#42;</l><l>&#12369;</l><l>&#12438;</l></k>
+	<k usb="0x32"><l>&#93;</l><l>&#125;</l><l>&#12416;</l><l>&#12301;</l></k>
+	<k usb="0x28" shape="1.25u">Enter</k>
+	<k usb="0x5C" x="21.5u" y="2u" type="N"><l>4</l><l>&#8592;</l></k>
+	<k usb="0x5D" type="N">5</k>
+	<k usb="0x5E" type="N"><l>6</l><l>&#8594;</l></k>
+	<k usb="0x57" type="N"><l>+</l><l>F</l></k>
+	<k usb="0x70" x="0u" y="1u">F21&#10;Open&#10;IPA</k>
+	<k usb="0x71">F22&#10;Paste&#10;CS</k>
+	<k usb="0xE1" x="2.5u" y="1u" shape="1.25u">Shift</k>
+	<k usb="0x64"><l>&#165;</l><l>&#124;</l><l>&#12540;</l><l>&#124;</l></k>
+	<k usb="0x1D"><l>&#122;</l><l>&#90;</l><l>&#12388;</l><l>&#12387;</l></k>
+	<k usb="0x1B"><l>&#120;</l><l>&#88;</l><l>&#12373;</l><l></l></k>
+	<k usb="0x06"><l>&#99;</l><l>&#67;</l><l>&#12381;</l><l></l></k>
+	<k usb="0x19"><l>&#118;</l><l>&#86;</l><l>&#12402;</l><l></l></k>
+	<k usb="0x05"><l>&#98;</l><l>&#66;</l><l>&#12371;</l><l>&#110898;</l></k>
+	<k usb="0x11"><l>&#110;</l><l>&#78;</l><l>&#12415;</l><l>&#12430;</l></k>
+	<k usb="0x10"><l>&#109;</l><l>&#77;</l><l>&#12418;</l><l>&#110930;</l></k>
+	<k usb="0x36"><l>&#44;</l><l>&#60;</l><l>&#12397;</l><l>&#12289;</l></k>
+	<k usb="0x37"><l>&#46;</l><l>&#62;</l><l>&#12427;</l><l>&#12290;</l></k>
+	<k usb="0x38"><l>&#47;</l><l>&#63;</l><l>&#12417;</l><l>&#12539;</l></k>
+	<k usb="0x87"><l>&#92;</l><l>&#95;</l><l>&#12429;</l><l></l></k>
+	<k usb="0xE5" shape="1.75u">Shift</k>
+	<k usb="0x52" x="19u" y="1u">&#8593;</k>
+	<k usb="0x59" x="21.5u" y="1u" type="N"><l>1</l><l>End</l></k>
+	<k usb="0x5A" type="N"><l>2</l><l>&#8595;</l></k>
+	<k usb="0x5B" type="N"><l>3</l><l>PgDn</l></k>
+	<k usb="0x72" x="0u" y="0u">F23&#10;Find&#10;Hiragana</k>
+	<k usb="0x73">F24&#10;Cut&#10;Katakana</k>
+	<k usb="0xE0" x="2.5u" y="0u">Ctrl</k>
+	<k usb="0x01">Fn</k>
+	<k usb="0xE3">Meta</k>
+	<k usb="0xE2">Alt</k>
+	<k usb="0x8B" shape="1.5u">Muhenkan</k>
+	<k usb="0x2C" shape="2.75u"></k>
+	<k usb="0x8A" shape="1.5u">Henkan</k>
+	<k usb="0x88" shape="1.25u">Kana</k>
+	<k usb="0xE6">Alt</k>
+	<k usb="0xE7">Meta</k>
+	<k usb="0x65">Menu</k>
+	<k usb="0xE4">Ctrl</k>
+	<k usb="0x50" x="18u" y="0u">&#8592;</k>
+	<k usb="0x51">&#8595;</k>
+	<k usb="0x4F">&#8594;</k>
+	<k usb="0x62" x="21.5u" y="0u" type="N"><l>0</l><l>Ins</l></k>
+	<k usb="0x85" type="N"><l>,</l><l>Copy</l></k>
+	<k usb="0x63" type="N"><l>.</l><l>Del</l></k>
+	<k usb="0x58" shape="1+2u">Enter</k>
+</keyCapLayout>
