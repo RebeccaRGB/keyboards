@@ -10,8 +10,10 @@ Jump to:
 - [Sun Keyboards](#sun-keyboards)
 - [Commodore Keyboards](#commodore-keyboards)
 - [Atari Keyboards](#atari-keyboards)
+- [Other Commercial Keyboards](#other-commercial-keyboards)
 - [Inkbox ASK Profiles](#inkbox-ask-profiles)
-- [Other Keyboards](#other-keyboards)
+- [Kreative Custom Keyboards](#kreative-custom-keyboards)
+- [Other Custom Keyboards](#other-custom-keyboards)
 
 ## Standard Full-Size Keyboards
 
@@ -396,6 +398,22 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 [Back to Top](#keyboard-diagrams)
 
+## Other Commercial Keyboards
+
+### MIT LISP Space Cadet Keyboard
+![](keyboards-svg/MIT/Space%20Cadet.svg)
+
+### NABU
+![](keyboards-svg/NABU/NABU.svg)
+
+### Nintendo Family BASIC Keyboard
+![](keyboards-svg/Nintendo/Famicom.svg)
+
+### Osborne Vixen
+![](keyboards-svg/Osborne/Osborne%20Vixen.svg)
+
+[Back to Top](#keyboard-diagrams)
+
 ## Inkbox ASK Profiles
 
 ### Leftside - ANSI
@@ -430,10 +448,7 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 [Back to Top](#keyboard-diagrams)
 
-## Other Keyboards
-
-### Famicom
-![](keyboards-svg/Nintendo/Famicom.svg)
+## Kreative Custom Keyboards
 
 ### [K65](https://github.com/kreativekorp/segterm/tree/master/board/K65)
 ![](keyboards-svg/Kreative/K65.svg)
@@ -441,19 +456,14 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ### [K130](https://github.com/RebeccaRGB/K130)
 ![](keyboards-svg/Kreative/K130.svg)
 
-### NABU
-![](keyboards-svg/NABU/NABU.svg)
-
-### Osborne Vixen
-![](keyboards-svg/Osborne/Osborne%20Vixen.svg)
-
-### Space Cadet
-![](keyboards-svg/MIT/Space%20Cadet.svg)
-
 ### [TTCC (Two-Thirds California Case)](https://github.com/RebeccaRGB/ttcc)
 ![](keyboards-svg/Kreative/Two-Thirds%20California%20Case.svg)
 
-### [Two-Thirds Keyboard (Original by Attoparsec)](https://www.attoparsec.com/artifacts/twothirds.html)
+[Back to Top](#keyboard-diagrams)
+
+## Other Custom Keyboards
+
+### [Attoparsec Two-Thirds Keyboard](https://www.attoparsec.com/artifacts/twothirds.html)
 ![](keyboards-svg/Attoparsec/Two-Thirds%20Keyboard.svg)
 
 [Back to Top](#keyboard-diagrams)
