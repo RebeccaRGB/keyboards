@@ -79,6 +79,23 @@ public class KeyCapEngraver {
 			if (mustContain != null && !legend.containsAny(mustContain)) return null;
 			Rectangle2D box = (front ? fbox : tbox);
 			if (box == null) return null;
+			
+			Anchor da = item.getPropertyMap().getAnchor("da");
+			if (da == null) da = legend.getPropertyMap().getAnchor("da");
+			if (da == null) da = TextBoxGen.this.da;
+			Float dsw = item.getPropertyMap().getFloat("dsw");
+			if (dsw == null) dsw = legend.getPropertyMap().getFloat("dsw");
+			if (dsw == null) dsw = TextBoxGen.this.dsw;
+			Float dsh = item.getPropertyMap().getFloat("dsh");
+			if (dsh == null) dsh = legend.getPropertyMap().getFloat("dsh");
+			if (dsh == null) dsh = TextBoxGen.this.dsh;
+			Float lhd = item.getPropertyMap().getFloat("lhd");
+			if (lhd == null) lhd = legend.getPropertyMap().getFloat("lhd");
+			if (lhd == null) lhd = TextBoxGen.this.lhd;
+			Anchor ta = item.getPropertyMap().getAnchor("ta");
+			if (ta == null) ta = legend.getPropertyMap().getAnchor("ta");
+			if (ta == null) ta = TextBoxGen.this.ta;
+			
 			if (da != null) box = da.divide(box, dsw, dsh);
 			float lh = (float)Math.min(defTopBox.getHeight() / lhd, box.getHeight());
 			return new TextBox(box, lh, ta, item);
@@ -135,63 +152,87 @@ public class KeyCapEngraver {
 	}
 	
 	protected void makeGens() {
-		Collection<String> altFn = Arrays.asList(KeyCapLegend.KEY_ALT_FUNCTION);
+		Collection<String> altFn = Arrays.asList(
+			KeyCapLegend.KEY_ALT_FUNCTION,
+			KeyCapLegend.KEY_LEFT_ALT_FUNCTION,
+			KeyCapLegend.KEY_RIGHT_ALT_FUNCTION
+		);
 		Collection<String> alt = Arrays.asList(
 			KeyCapLegend.KEY_ALT_LETTER,
 			KeyCapLegend.KEY_ALT_UNSHIFTED,
 			KeyCapLegend.KEY_ALT_SHIFTED
 		);
 		Collection<String> petU = Arrays.asList(KeyCapLegend.KEY_PETSCII_UNSHIFTED);
-		Collection<String> frAltFn = Arrays.asList(KeyCapLegend.KEY_FRONT_ALT_FUNCTION);
+		Collection<String> frAltFn = Arrays.asList(
+			KeyCapLegend.KEY_FRONT_ALT_FUNCTION,
+			KeyCapLegend.KEY_FRONT_LEFT_ALT_FUNCTION,
+			KeyCapLegend.KEY_FRONT_RIGHT_ALT_FUNCTION
+		);
 		Collection<String> frAlt = Arrays.asList(
 			KeyCapLegend.KEY_FRONT_ALT_LETTER,
 			KeyCapLegend.KEY_FRONT_ALT_UNSHIFTED,
 			KeyCapLegend.KEY_FRONT_ALT_SHIFTED
 		);
-		// condition -------- key -------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
-		TMNC(KeyCapLegend.KEY_FUNCTION,         altFn, null,             1,    1,    3,    Anchor.CENTER);
-		TMC (KeyCapLegend.KEY_FUNCTION,         altFn, Anchor.SOUTH,     1,    0.5f, 3,    Anchor.CENTER);
-		T   (KeyCapLegend.KEY_ALT_FUNCTION,            Anchor.NORTH,     1,    0.5f, 3,    Anchor.CENTER);
-		T   (KeyCapLegend.KEY_LEFT_FUNCTION,           Anchor.WEST,      0.5f, 1,    3,    Anchor.CENTER);
-		T   (KeyCapLegend.KEY_RIGHT_FUNCTION,          Anchor.EAST,      0.5f, 1,    3,    Anchor.CENTER);
-		TMNC(KeyCapLegend.KEY_LETTER,             alt, null,             1,    1,    2,    Anchor.CENTER);
-		TMC (KeyCapLegend.KEY_LETTER,             alt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		T   (KeyCapLegend.KEY_ALT_LETTER,              Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		TMNC(KeyCapLegend.KEY_UNSHIFTED,          alt, Anchor.SOUTH,     1,    0.5f, 2.5f, Anchor.CENTER);
-		TMC (KeyCapLegend.KEY_UNSHIFTED,          alt, Anchor.SOUTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		T   (KeyCapLegend.KEY_ALT_UNSHIFTED,           Anchor.SOUTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		TMNC(KeyCapLegend.KEY_SHIFTED,            alt, Anchor.NORTH,     1,    0.5f, 2.5f, Anchor.CENTER);
-		TMC (KeyCapLegend.KEY_SHIFTED,            alt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		T   (KeyCapLegend.KEY_ALT_SHIFTED,             Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		T   (KeyCapLegend.KEY_PETSCII_LETTER,          Anchor.NORTH,     1,    0.6f, 2,    Anchor.CENTER);
-		TMNC(KeyCapLegend.KEY_PETSCII_COMMODORE, petU, Anchor.SOUTHWEST, 0.5f, 0.4f, 3,    Anchor.CENTER);
-		TMNC(KeyCapLegend.KEY_PETSCII_SHIFTED,   petU, Anchor.SOUTHEAST, 0.5f, 0.4f, 3,    Anchor.CENTER);
-		TMC (KeyCapLegend.KEY_PETSCII_COMMODORE, petU, Anchor.NORTHWEST, 0.5f, 0.4f, 3,    Anchor.CENTER);
-		TMC (KeyCapLegend.KEY_PETSCII_SHIFTED,   petU, Anchor.NORTHEAST, 0.5f, 0.4f, 3,    Anchor.CENTER);
-		T   (KeyCapLegend.KEY_PETSCII_UNSHIFTED,       Anchor.SOUTH,     1,    0.6f, 2,    Anchor.CENTER);
-		T   (KeyCapLegend.KEY_NUMPAD,                  Anchor.NORTH,     1,    0.6f, 2,    Anchor.CENTER);
-		T   (KeyCapLegend.KEY_NUMPAD_FUNCTION,         Anchor.SOUTH,     1,    0.4f, 3,    Anchor.CENTER);
-		// condition -------- key -------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
-		FMNC(KeyCapLegend.KEY_FRONT_FUNCTION, frAltFn, null,             1,    1,    3,    Anchor.CENTER);
-		FMC (KeyCapLegend.KEY_FRONT_FUNCTION, frAltFn, Anchor.SOUTH,     1,    0.5f, 3,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_ALT_FUNCTION,      Anchor.NORTH,     1,    0.5f, 3,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_LEFT_FUNCTION,     Anchor.WEST,      0.5f, 1,    3,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_RIGHT_FUNCTION,    Anchor.EAST,      0.5f, 1,    3,    Anchor.CENTER);
-		FMNC(KeyCapLegend.KEY_FRONT_LETTER,     frAlt, null,             1,    1,    2,    Anchor.CENTER);
-		FMC (KeyCapLegend.KEY_FRONT_LETTER,     frAlt, Anchor.WEST,      0.5f, 1,    2,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_ALT_LETTER,        Anchor.EAST,      0.5f, 1,    2,    Anchor.CENTER);
-		FMNC(KeyCapLegend.KEY_FRONT_UNSHIFTED,  frAlt, Anchor.SOUTH,     1,    0.5f, 2.5f, Anchor.CENTER);
-		FMC (KeyCapLegend.KEY_FRONT_UNSHIFTED,  frAlt, Anchor.SOUTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_ALT_UNSHIFTED,     Anchor.SOUTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		FMNC(KeyCapLegend.KEY_FRONT_SHIFTED,    frAlt, Anchor.NORTH,     1,    0.5f, 2.5f, Anchor.CENTER);
-		FMC (KeyCapLegend.KEY_FRONT_SHIFTED,    frAlt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_ALT_SHIFTED,       Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_PETSCII_LETTER,    null,             1,    1,    2,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_PETSCII_COMMODORE, Anchor.WEST,      0.5f, 1,    2,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_PETSCII_SHIFTED,   Anchor.EAST,      0.5f, 1,    2,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_PETSCII_UNSHIFTED, null,             1,    1,    2,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_NUMPAD,            Anchor.NORTH,     1,    0.6f, 2,    Anchor.CENTER);
-		F   (KeyCapLegend.KEY_FRONT_NUMPAD_FUNCTION,   Anchor.SOUTH,     1,    0.4f, 3,    Anchor.CENTER);
+		// condition -------- key -------------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
+		TMNC(KeyCapLegend.KEY_FUNCTION,               altFn, null,             1,    1,    3,    Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_FUNCTION,               altFn, Anchor.SOUTH,     1,    0.5f, 3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_ALT_FUNCTION,                  Anchor.NORTH,     1,    0.5f, 3,    Anchor.CENTER);
+		TMNC(KeyCapLegend.KEY_LEFT_FUNCTION,          altFn, Anchor.WEST,      0.5f, 1,    3,    Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_LEFT_FUNCTION,          altFn, Anchor.SOUTHWEST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_LEFT_ALT_FUNCTION,             Anchor.NORTHWEST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		TMNC(KeyCapLegend.KEY_RIGHT_FUNCTION,         altFn, Anchor.EAST,      0.5f, 1,    3,    Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_RIGHT_FUNCTION,         altFn, Anchor.SOUTHEAST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_RIGHT_ALT_FUNCTION,            Anchor.NORTHEAST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		// condition -------- key -------------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
+		TMNC(KeyCapLegend.KEY_LETTER,                   alt, null,             1,    1,    2,    Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_LETTER,                   alt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		T   (KeyCapLegend.KEY_ALT_LETTER,                    Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		TMNC(KeyCapLegend.KEY_UNSHIFTED,                alt, Anchor.SOUTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_UNSHIFTED,                alt, Anchor.SOUTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		T   (KeyCapLegend.KEY_ALT_UNSHIFTED,                 Anchor.SOUTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		TMNC(KeyCapLegend.KEY_SHIFTED,                  alt, Anchor.NORTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_SHIFTED,                  alt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		T   (KeyCapLegend.KEY_ALT_SHIFTED,                   Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		T   (KeyCapLegend.KEY_BOTH_UNSHIFTED,                Anchor.SOUTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		T   (KeyCapLegend.KEY_BOTH_SHIFTED,                  Anchor.NORTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		// condition -------- key -------------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
+		T   (KeyCapLegend.KEY_PETSCII_LETTER,                Anchor.NORTH,     1,    0.6f, 2,    Anchor.CENTER);
+		TMNC(KeyCapLegend.KEY_PETSCII_COMMODORE,       petU, Anchor.SOUTHWEST, 0.5f, 0.4f, 3,    Anchor.CENTER);
+		TMNC(KeyCapLegend.KEY_PETSCII_SHIFTED,         petU, Anchor.SOUTHEAST, 0.5f, 0.4f, 3,    Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_PETSCII_COMMODORE,       petU, Anchor.NORTHWEST, 0.5f, 0.4f, 3,    Anchor.CENTER);
+		TMC (KeyCapLegend.KEY_PETSCII_SHIFTED,         petU, Anchor.NORTHEAST, 0.5f, 0.4f, 3,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_PETSCII_UNSHIFTED,             Anchor.SOUTH,     1,    0.6f, 2,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_NUMPAD,                        Anchor.NORTH,     1,    0.6f, 2,    Anchor.CENTER);
+		T   (KeyCapLegend.KEY_NUMPAD_FUNCTION,               Anchor.SOUTH,     1,    0.4f, 3,    Anchor.CENTER);
+		// condition -------- key -------------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
+		FMNC(KeyCapLegend.KEY_FRONT_FUNCTION,       frAltFn, null,             1,    1,    3,    Anchor.CENTER);
+		FMC (KeyCapLegend.KEY_FRONT_FUNCTION,       frAltFn, Anchor.SOUTH,     1,    0.5f, 3,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_ALT_FUNCTION,            Anchor.NORTH,     1,    0.5f, 3,    Anchor.CENTER);
+		FMNC(KeyCapLegend.KEY_FRONT_LEFT_FUNCTION,  frAltFn, Anchor.WEST,      0.5f, 1,    3,    Anchor.CENTER);
+		FMC (KeyCapLegend.KEY_FRONT_LEFT_FUNCTION,  frAltFn, Anchor.SOUTHWEST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_LEFT_ALT_FUNCTION,       Anchor.NORTHWEST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		FMNC(KeyCapLegend.KEY_FRONT_RIGHT_FUNCTION, frAltFn, Anchor.EAST,      0.5f, 1,    3,    Anchor.CENTER);
+		FMC (KeyCapLegend.KEY_FRONT_RIGHT_FUNCTION, frAltFn, Anchor.SOUTHEAST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_RIGHT_ALT_FUNCTION,      Anchor.NORTHEAST, 0.5f, 0.5f, 3,    Anchor.CENTER);
+		// condition -------- key -------------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
+		FMNC(KeyCapLegend.KEY_FRONT_LETTER,           frAlt, null,             1,    1,    2,    Anchor.CENTER);
+		FMC (KeyCapLegend.KEY_FRONT_LETTER,           frAlt, Anchor.WEST,      0.5f, 1,    2,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_ALT_LETTER,              Anchor.EAST,      0.5f, 1,    2,    Anchor.CENTER);
+		FMNC(KeyCapLegend.KEY_FRONT_UNSHIFTED,        frAlt, Anchor.SOUTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		FMC (KeyCapLegend.KEY_FRONT_UNSHIFTED,        frAlt, Anchor.SOUTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_ALT_UNSHIFTED,           Anchor.SOUTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		FMNC(KeyCapLegend.KEY_FRONT_SHIFTED,          frAlt, Anchor.NORTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		FMC (KeyCapLegend.KEY_FRONT_SHIFTED,          frAlt, Anchor.NORTHWEST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_ALT_SHIFTED,             Anchor.NORTHEAST, 0.5f, 0.5f, 2.5f, Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_BOTH_UNSHIFTED,          Anchor.SOUTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_BOTH_SHIFTED,            Anchor.NORTH,     1,    0.5f, 2.5f, Anchor.CENTER);
+		// condition -------- key -------------- condition -- divide anchor -- dsw - dsh - lhd - text anchor //
+		F   (KeyCapLegend.KEY_FRONT_PETSCII_LETTER,          null,             1,    1,    2,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_PETSCII_COMMODORE,       Anchor.WEST,      0.5f, 1,    2,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_PETSCII_SHIFTED,         Anchor.EAST,      0.5f, 1,    2,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_PETSCII_UNSHIFTED,       null,             1,    1,    2,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_NUMPAD,                  Anchor.NORTH,     1,    0.6f, 2,    Anchor.CENTER);
+		F   (KeyCapLegend.KEY_FRONT_NUMPAD_FUNCTION,         Anchor.SOUTH,     1,    0.4f, 3,    Anchor.CENTER);
 	}
 	
 	public TextBox[] makeBoxes(KeyCapShape shape, String vs, KeyCapLegend legend) {

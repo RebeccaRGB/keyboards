@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout cc="1" lc="31">
+	<k x="0u" y="3u">
+		<l type="AF">STATUS</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>+</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>A</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>IF</l>
+	</k>
+	<k x="1u" y="3u">
+		<l type="AF">PROGRAM</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>-</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>B</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>THEN</l>
+	</k>
+	<k x="2u" y="3u">
+		<l type="AF">STACK</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>&#8592;</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>C</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>ELSE</l>
+	</k>
+	<k x="0u" y="2u">
+		<l type="AF">VARIABLES</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>&#215;</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>D</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>GOTO</l>
+	</k>
+	<k x="1u" y="2u">
+		<l type="AF">OUTPUT</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>&#247;</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>E</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>PRINT</l>
+	</k>
+	<k x="2u" y="2u">
+		<l type="AF">GRAPHICS</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>NOTE</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>F</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>&#34;</l>
+	</k>
+	<k x="0u" y="1u">
+		<l type="AF">STEP</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>HOR1</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>G</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>(</l>
+	</k>
+	<k x="1u" y="1u">
+		<l type="AF">SLOWER</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>VER1</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>H</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>)</l>
+	</k>
+	<k x="2u" y="1u">
+		<l type="AF">FASTER</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>KEY</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>I</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>,</l>
+	</k>
+	<k x="0u" y="0u"><l>HALT</l><l>RUN</l></k>
+	<k x="1u" y="0u">
+		<l type="AF"><p k="da" v="n"/><p k="dsw" v="1"/><p k="dsh" v="0.3"/>&#8592;</l>
+		<l type="LF" lc="11"><p k="da" v="w"/><p k="dsw" v="0.3"/><p k="dsh" v="1"/>&#8595;</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="1"/><p k="dsh" v="0.3"/>&#8594;</l>
+		<l type="RF" lc="20"><p k="da" v="e"/><p k="dsw" v="0.3"/><p k="dsh" v="1"/>&#8593;</l>
+	</k>
+	<k x="2u" y="0u">ERASE</k>
+	<k x="4u" y="3u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>1</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>J</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>U</l>
+	</k>
+	<k x="5u" y="3u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>2</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>K</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>V</l>
+	</k>
+	<k x="6u" y="3u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>3</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>L</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>W</l>
+	</k>
+	<k x="4u" y="2u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>4</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>M</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>X</l>
+	</k>
+	<k x="5u" y="2u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>5</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>N</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>Y</l>
+	</k>
+	<k x="6u" y="2u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>6</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>O</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>Z</l>
+	</k>
+	<k x="4u" y="1u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>7</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>P</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>CLEAR</l>
+	</k>
+	<k x="5u" y="1u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>8</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>Q</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>MOD</l>
+	</k>
+	<k x="6u" y="1u">
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>9</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>R</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>HIT</l>
+	</k>
+	<k x="4u" y="0u">
+		<l type="AF">BACKWARD</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>HOR2</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>S</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>=</l>
+	</k>
+	<k x="5u" y="0u">
+		<l type="AF">FORWARD</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>VER2</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>T</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>&gt;</l>
+	</k>
+	<k x="6u" y="0u">
+		<l type="AF">NEW LINE</l>
+		<l type="LF" lc="11"><p k="da" v="sw"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>0</l>
+		<l type="F" lc="24"><p k="da" v="s"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>SPACE</l>
+		<l type="RF" lc="20"><p k="da" v="se"/><p k="dsw" v="0.3"/><p k="dsh" v="0.5"/>&lt;</l>
+	</k>
+</keyCapLayout>

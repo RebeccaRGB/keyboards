@@ -390,6 +390,15 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ## Atari Keyboards
 
+### Atari 2600 Keyboard Controllers
+![](keyboards-svg/Atari/Atari%202600%20Keyboard%20Controllers.svg)
+
+### Atari 400/800
+![](keyboards-svg/Atari/Atari%20800.svg)
+
+### Atari 800XL
+![](keyboards-svg/Atari/Atari%20800XL.svg)
+
 ### Atari 520ST
 ![](keyboards-svg/Atari/Atari%20520ST.svg)
 
