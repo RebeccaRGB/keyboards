@@ -10,6 +10,7 @@ Jump to:
 - [Sun Keyboards](#sun-keyboards)
 - [Commodore Keyboards](#commodore-keyboards)
 - [Atari Keyboards](#atari-keyboards)
+- [AlphaSmart Keyboards](#alphasmart-keyboards)
 - [Other Commercial Keyboards](#other-commercial-keyboards)
 - [Inkbox ASK Profiles](#inkbox-ask-profiles)
 - [Kreative Custom Keyboards](#kreative-custom-keyboards)
@@ -404,6 +405,19 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ### Atari 1040ST
 ![](keyboards-svg/Atari/Atari%201040ST.svg)
+
+[Back to Top](#keyboard-diagrams)
+
+## AlphaSmart Keyboards
+
+### AlphaSmart/AlphaSmart Pro
+![](keyboards-svg/AlphaSmart/AlphaSmart.svg)
+
+### AlphaSmart 2000
+![](keyboards-svg/AlphaSmart/AlphaSmart%202000.svg)
+
+### AlphaSmart 3000
+![](keyboards-svg/AlphaSmart/AlphaSmart%203000.svg)
 
 [Back to Top](#keyboard-diagrams)
 
