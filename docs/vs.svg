@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="697.5" height="180" viewBox="36 -180 697.5 180">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="697.5" height="288" viewBox="36 -180 697.5 288">
 <defs>
 <g id="shape0">
 <path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108 -2.686 108 -6 L 108 -48 C 108 -51.314 105.314 -54 102 -54 Z" fill="#000000"/>
@@ -36,6 +36,27 @@
 <path d="M 9 -105 C 7.343 -105 6 -103.657 6 -102 L 6 -77.646 L 6 -77.646 C 6.733 -78.476 7.805 -79 9 -79 L 45 -79 C 46.195 -79 47.267 -78.476 48 -77.646 L 48 -77.646 L 48 -102 C 48 -103.657 46.657 -105 45 -105 Z M 6 -77.646 L 6 -77.646 C 6 -77.646 6 -77.646 6 -77.646 L 6 -77.646 L 6 -77.646 Z M 12 -78 C 10.343 -78 9 -76.657 9 -75 L 9 -45 C 9 -43.343 10.343 -42 12 -42 L 42 -42 C 43.657 -42 45 -43.343 45 -45 L 45 -75 C 45 -76.657 43.657 -78 42 -78 Z M 6 -36.354 L 6 -12 C 6 -10.343 7.343 -9 9 -9 L 45 -9 C 46.657 -9 48 -10.343 48 -12 L 48 -36.354 L 48 -36.354 C 47.267 -35.524 46.195 -35 45 -35 L 9 -35 C 7.805 -35 6.733 -35.524 6 -36.354 Z" fill="#dadada"/>
 <path d="M 9 -104 C 7.895 -104 7 -103.105 7 -102 L 7 -79.584 L 7 -79.584 C 7.612 -79.852 8.289 -80 9 -80 L 45 -80 C 45.711 -80 46.388 -79.852 47 -79.584 L 47 -79.584 L 47 -102 C 47 -103.105 46.105 -104 45 -104 Z M 7 -79.584 C 7 -79.584 7 -79.584 7 -79.584 L 7 -79.584 L 7 -79.584 Z M 12 -77 C 10.895 -77 10 -76.105 10 -75 L 10 -45 C 10 -43.895 10.895 -43 12 -43 L 42 -43 C 43.105 -43 44 -43.895 44 -45 L 44 -75 C 44 -76.105 43.105 -77 42 -77 Z M 7 -34.416 L 7 -12 C 7 -10.895 7.895 -10 9 -10 L 45 -10 C 46.105 -10 47 -10.895 47 -12 L 47 -34.416 L 47 -34.416 C 46.388 -34.148 45.711 -34 45 -34 L 9 -34 C 8.289 -34 7.612 -34.148 7 -34.416 Z" fill="#ffffff"/>
 </g>
+<g id="shape5">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108 -2.686 108 -6 L 108 -48 C 108 -51.314 105.314 -54 102 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 102 -1 C 104.761 -1 107 -3.239 107 -6 L 107 -48 C 107 -50.761 104.761 -53 102 -53 Z" fill="#dadada"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 102 -2 C 104.209 -2 106 -3.791 106 -6 L 106 -48 C 106 -50.209 104.209 -52 102 -52 Z" fill="#f2f2f2"/>
+<path d="M 9 -51 C 7.343 -51 6 -49.657 6 -48 L 6 -12 C 6 -10.343 7.343 -9 9 -9 L 99 -9 C 100.657 -9 102 -10.343 102 -12 L 102 -48 C 102 -49.657 100.657 -51 99 -51 Z" fill="#dadada"/>
+<path d="M 9 -50 C 7.895 -50 7 -49.105 7 -48 L 7 -12 C 7 -10.895 7.895 -10 9 -10 L 99 -10 C 100.105 -10 101 -10.895 101 -12 L 101 -48 C 101 -49.105 100.105 -50 99 -50 Z" fill="#ffffff"/>
+</g>
+<g id="shape6">
+<path d="M 19.5 -54 C 16.186 -54 12.828 -51.314 12 -48 L 1.5 -6 C 0.672 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 108.672 -2.686 109.5 -6 L 120 -48 C 120.828 -51.314 118.814 -54 115.5 -54 Z" fill="#000000"/>
+<path d="M 19.25 -53 C 16.489 -53 13.69 -50.761 13 -48 L 2.5 -6 C 1.81 -3.239 3.489 -1 6.25 -1 L 102.25 -1 C 105.011 -1 107.81 -3.239 108.5 -6 L 119 -48 C 119.69 -50.761 118.011 -53 115.25 -53 Z" fill="#dadada"/>
+<path d="M 19 -52 C 16.791 -52 14.552 -50.209 14 -48 L 3.5 -6 C 2.948 -3.791 4.291 -2 6.5 -2 L 102.5 -2 C 104.709 -2 106.948 -3.791 107.5 -6 L 118 -48 C 118.552 -50.209 117.209 -52 115 -52 Z" fill="#f2f2f2"/>
+<path d="M 24.75 -51 C 23.093 -51 21.414 -49.657 21 -48 L 13.5 -18 C 13.086 -16.343 14.093 -15 15.75 -15 L 99.75 -15 C 101.407 -15 103.086 -16.343 103.5 -18 L 111 -48 C 111.414 -49.657 110.407 -51 108.75 -51 Z" fill="#dadada"/>
+<path d="M 24.5 -50 C 23.395 -50 22.276 -49.105 22 -48 L 14.5 -18 C 14.224 -16.895 14.895 -16 16 -16 L 100 -16 C 101.105 -16 102.224 -16.895 102.5 -18 L 110 -48 C 110.276 -49.105 109.605 -50 108.5 -50 Z" fill="#ffffff"/>
+</g>
+<g id="shape7">
+<path d="M 60 -54 C 56.686 -54 51.314 -51.314 48 -48 L 6 -6 C 2.686 -2.686 2.686 0 6 0 L 102 0 C 105.314 0 110.686 -2.686 114 -6 L 156 -48 C 159.314 -51.314 159.314 -54 156 -54 Z" fill="#000000"/>
+<path d="M 59 -53 C 56.239 -53 51.761 -50.761 49 -48 L 7 -6 C 4.239 -3.239 4.239 -1 7 -1 L 103 -1 C 105.761 -1 110.239 -3.239 113 -6 L 155 -48 C 157.761 -50.761 157.761 -53 155 -53 Z" fill="#dadada"/>
+<path d="M 58 -52 C 55.791 -52 52.209 -50.209 50 -48 L 8 -6 C 5.791 -3.791 5.791 -2 8 -2 L 104 -2 C 106.209 -2 109.791 -3.791 112 -6 L 154 -48 C 156.209 -50.209 156.209 -52 154 -52 Z" fill="#f2f2f2"/>
+<path d="M 63 -51 C 61.343 -51 58.657 -49.657 57 -48 L 27 -18 C 25.343 -16.343 25.343 -15 27 -15 L 111 -15 C 112.657 -15 115.343 -16.343 117 -18 L 147 -48 C 148.657 -49.657 148.657 -51 147 -51 Z" fill="#dadada"/>
+<path d="M 62 -50 C 60.895 -50 59.105 -49.105 58 -48 L 28 -18 C 26.895 -16.895 26.895 -16 28 -16 L 112 -16 C 113.105 -16 114.895 -16.895 116 -18 L 146 -48 C 147.105 -49.105 147.105 -50 146 -50 Z" fill="#ffffff"/>
+</g>
 </defs>
 <g class="keyboard">
 <g class="key">
@@ -53,15 +74,30 @@
 <g class="key">
 <use xlink:href="#shape4" transform="translate(661.5 -54)"/>
 </g>
+<g class="key">
+<use xlink:href="#shape5" transform="translate(108 54)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape6" transform="translate(297 54)"/>
+</g>
+<g class="key">
+<use xlink:href="#shape7" transform="translate(499.5 54)"/>
+</g>
 </g>
 <text x="108" y="-36" text-anchor="middle" font-family="Arial" font-size="12">vs = s</text>
-<text x="108" y="-18" text-anchor="middle" font-family="Arial" font-size="12">stepped</text>
+<text x="108" y="-22" text-anchor="middle" font-family="Arial" font-size="12">stepped</text>
 <text x="270" y="-36" text-anchor="middle" font-family="Arial" font-size="12">vs = sc</text>
-<text x="270" y="-18" text-anchor="middle" font-family="Arial" font-size="12">stepped caps lock</text>
+<text x="270" y="-22" text-anchor="middle" font-family="Arial" font-size="12">stepped caps lock</text>
 <text x="432" y="-36" text-anchor="middle" font-family="Arial" font-size="12">vs = sb</text>
-<text x="432" y="-18" text-anchor="middle" font-family="Arial" font-size="12">stepped backspace</text>
+<text x="432" y="-22" text-anchor="middle" font-family="Arial" font-size="12">stepped backspace</text>
 <text x="573.75" y="-36" text-anchor="middle" font-family="Arial" font-size="12">vs = se</text>
-<text x="573.75" y="-18" text-anchor="middle" font-family="Arial" font-size="12">stepped enter</text>
+<text x="573.75" y="-22" text-anchor="middle" font-family="Arial" font-size="12">stepped enter</text>
 <text x="688.5" y="-36" text-anchor="middle" font-family="Arial" font-size="12">vs = s</text>
-<text x="688.5" y="-18" text-anchor="middle" font-family="Arial" font-size="12">stepped</text>
+<text x="688.5" y="-22" text-anchor="middle" font-family="Arial" font-size="12">stepped</text>
+<text x="162" y="72" text-anchor="middle" font-family="Arial" font-size="12">vs = r</text>
+<text x="162" y="86" text-anchor="middle" font-family="Arial" font-size="12">recessed</text>
+<text x="357.75" y="72" text-anchor="middle" font-family="Arial" font-size="12">vs = i</text>
+<text x="357.75" y="86" text-anchor="middle" font-family="Arial" font-size="12">oblique</text>
+<text x="580.5" y="72" text-anchor="middle" font-family="Arial" font-size="12">vs = ii</text>
+<text x="580.5" y="86" text-anchor="middle" font-family="Arial" font-size="12">ultra oblique</text>
 </svg>

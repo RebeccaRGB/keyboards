@@ -119,24 +119,28 @@ but only one case (usually uppercase) is printed on the keycap.
 
 Codes used for `type` attributes on `<l>` (legend) elements.
 
-| Type  | Description       | Type  | Description             |
-| ----- | ----------------- | ----- | ----------------------- |
-| `F`   | function          | `FF`  | front function          |
-| `AF`  | alt function      | `FAF` | front alt function      |
-| `LF`  | left function     | `FLF` | front left function     |
-| `RF`  | right function    | `FRF` | front right function    |
-| `L`   | letter            | `FL`  | front letter            |
-| `U`   | unshifted         | `FU`  | front unshifted         |
-| `S`   | shifted           | `FS`  | front shifted           |
-| `AL`  | alt letter        | `FAL` | front alt letter        |
-| `AU`  | alt unshifted     | `FAU` | front alt unshifted     |
-| `AS`  | alt shifted       | `FAS` | front alt shifted       |
-| `PL`  | PETSCII letter    | `FPL` | front PETSCII letter    |
-| `PC`  | PETSCII Commodore | `FPC` | front PETSCII Commodore |
-| `PS`  | PETSCII shifted   | `FPS` | front PETSCII shifted   |
-| `PU`  | PETSCII unshifted | `FPU` | front PETSCII unshifted |
-| `N`   | numpad number     | `FN`  | front numpad number     |
-| `NF`  | numpad function   | `FNF` | front numpad function   |
+| Type  | Description        | Type   | Description              |
+| ----- | ------------------ | ------ | ------------------------ |
+| `F`   | function           | `FF`   | front function           |
+| `AF`  | alt function       | `FAF`  | front alt function       |
+| `LF`  | left function      | `FLF`  | front left function      |
+| `RF`  | right function     | `FRF`  | front right function     |
+| `LAF` | left alt function  | `FLAF` | front left alt function  |
+| `RAF` | right alt function | `FRAF` | front right alt function |
+| `L`   | letter             | `FL`   | front letter             |
+| `U`   | unshifted          | `FU`   | front unshifted          |
+| `S`   | shifted            | `FS`   | front shifted            |
+| `AL`  | alt letter         | `FAL`  | front alt letter         |
+| `AU`  | alt unshifted      | `FAU`  | front alt unshifted      |
+| `AS`  | alt shifted        | `FAS`  | front alt shifted        |
+| `BU`  | both unshifted     | `FBU`  | front both unshifted     |
+| `BS`  | both shifted       | `FBS`  | front both shifted       |
+| `PL`  | PETSCII letter     | `FPL`  | front PETSCII letter     |
+| `PC`  | PETSCII Commodore  | `FPC`  | front PETSCII Commodore  |
+| `PS`  | PETSCII shifted    | `FPS`  | front PETSCII shifted    |
+| `PU`  | PETSCII unshifted  | `FPU`  | front PETSCII unshifted  |
+| `N`   | numpad number      | `FN`   | front numpad number      |
+| `NF`  | numpad function    | `FNF`  | front numpad function    |
 
 "Front" refers to legends printed on the side of the keycap facing the user, as opposed to the top of the keycap where legends are usually printed.
 
@@ -163,7 +167,7 @@ Codes used for `vs` attributes which describe the topography of the keycap, for 
 | `se` | Stepped enter. The active surface of the keycap is the tallest rectangle of the keycap shape.                                      |
 | `r`  | Recessed. The keycap is half the height of other keycaps.                                                                          |
 | `i`  | Oblique. The keycap is slanted to the right by approximately 14 degrees, as on the Apple IIc keyboard.                             |
-| `ii` | Oblique. The keycap is slanted to the right by 45 degrees, as on the Atari ST keyboard.                                            |
+| `ii` | Ultra oblique. The keycap is slanted to the right by 45 degrees, as on the Atari ST keyboard.                                      |
 
 ![](/docs/vs.svg)
 
