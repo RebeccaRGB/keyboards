@@ -70,6 +70,7 @@ public class SVGRenderer {
 		Float llh = lp.containsAny("lh") ? lp.getFloat("lh") : null;
 		Anchor lha = lp.containsAny("ha", "a") ? lp.getAnchor("ha", "a") : null;
 		Anchor lva = lp.containsAny("va", "a") ? lp.getAnchor("va", "a") : null;
+		String lff = lp.containsAny("font-family") ? lp.getString("font-family") : "Arial";
 		
 		if (backgroundColor != 0) {
 			Color bc = ColorUtilities.getPaletteColor(backgroundColor);
@@ -105,6 +106,7 @@ public class SVGRenderer {
 			Float klh = kp.containsAny("lh") ? kp.getFloat("lh") : llh;
 			Anchor kha = kp.containsAny("ha", "a") ? kp.getAnchor("ha", "a") : lha;
 			Anchor kva = kp.containsAny("va", "a") ? kp.getAnchor("va", "a") : lva;
+			String kff = kp.containsAny("font-family") ? kp.getString("font-family") : lff;
 			
 			keyboard.append("<g class=\"key");
 			if (kclass != null && kclass.length() > 0) keyboard.append(" " + kclass);
@@ -126,6 +128,7 @@ public class SVGRenderer {
 			Float jlh = jp.containsAny("lh") ? jp.getFloat("lh") : klh;
 			Anchor jha = jp.containsAny("ha", "a") ? jp.getAnchor("ha", "a") : kha;
 			Anchor jva = jp.containsAny("va", "a") ? jp.getAnchor("va", "a") : kva;
+			String jff = jp.containsAny("font-family") ? jp.getString("font-family") : kff;
 			
 			for (KeyCapEngraver.TextBox tb : engraver.makeBoxes(shape, kvs, legend)) {
 				if (tb == null || tb.item == null) continue;
@@ -135,6 +138,7 @@ public class SVGRenderer {
 				Float ilh = ip.containsAny("lh") ? ip.getFloat("lh") : jlh;
 				Anchor iha = ip.containsAny("ha", "a") ? ip.getAnchor("ha", "a") : jha;
 				Anchor iva = ip.containsAny("va", "a") ? ip.getAnchor("va", "a") : jva;
+				String iff = ip.containsAny("font-family") ? ip.getString("font-family") : jff;
 				
 				StringBuffer tas = new StringBuffer();
 				String tcs = textColorString(ilc, kcc);
@@ -168,9 +172,9 @@ public class SVGRenderer {
 						keyboard.append(" x=\"" + valueToString(x) + "\"");
 						keyboard.append(" y=\"" + valueToString(y + lh * i) + "\"");
 						keyboard.append(" text-anchor=\"" + a + "\"");
-						keyboard.append(" font-family=\"Arial\"");
+						keyboard.append(" font-family=\"" + xmlSpecialChars(iff) + "\"");
 						keyboard.append(" font-size=\"" + valueToString(lh) + "\"");
-						if (stringWidth(lines[i], "Arial", Font.PLAIN, lh) > tb.width) {
+						if (stringWidth(lines[i], iff, Font.PLAIN, lh) > tb.width) {
 							keyboard.append(" textLength=\"" + valueToString(tb.width) + "\"");
 							keyboard.append(" lengthAdjust=\"spacingAndGlyphs\"");
 						}

@@ -26,18 +26,18 @@
 	<k usb="0x6A" x="0u" y="4u">F15&#10;Stop&#10;AltGr</k>
 	<k usb="0x6B">F16&#10;Again&#10;PETSCII</k>
 	<k usb="0x35" x="2.5u" y="4u"><l>&#40;</l><l>&#41;</l><l>&#60;</l><l>&#62;</l></k>
-	<k usb="0x1E"><l>&#989555;</l><l>&#989497;</l><l>&#989527;</l><l>&#989561;</l></k>
-	<k usb="0x1F"><l>&#989550;</l><l>&#989502;</l><l>&#989521;</l><l>&#989441;</l></k>
-	<k usb="0x20"><l>&#989500;</l><l>&#989501;</l><l>&#989451;</l><l>&#989565;</l></k>
-	<k usb="0x21"><l>&#989545;</l><l>&#989448;</l><l>&#989490;</l><l>&#989601;</l></k>
-	<k usb="0x22"><l>&#989485;</l><l>&#989516;</l><l>&#989507;</l><l>&#989563;</l></k>
-	<k usb="0x23"><l>&#989480;</l><l>&#989539;</l><l>&#989542;</l><l>&#989571;</l></k>
-	<k usb="0x24"><l>&#989450;</l><l>&#989538;</l><l>&#989556;</l><l>&#989568;</l></k>
-	<k usb="0x25"><l>&#989462;</l><l>&#989558;</l><l>&#989478;</l><l>&#989560;</l></k>
-	<k usb="0x26"><l>&#989444;</l><l>&#989584;</l><l>&#989511;</l><l>&#989603;</l></k>
-	<k usb="0x27"><l>&#989442;</l><l>&#989585;</l><l>&#989515;</l><l>&#128487;</l></k>
-	<k usb="0x2D"><l>&#8205;</l><l>&#8205;</l><l>&#989587;</l><l>&#989586;</l></k>
-	<k usb="0x2E"><l>&#989589;</l><l>&#989590;</l><l>&#989588;</l><l>&#989593;</l></k>
+	<k usb="0x1E"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989555;</l><l>&#989497;</l><l>&#989527;</l><l>&#989561;</l></k>
+	<k usb="0x1F"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989550;</l><l>&#989502;</l><l>&#989521;</l><l>&#989441;</l></k>
+	<k usb="0x20"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989500;</l><l>&#989501;</l><l>&#989451;</l><l>&#989565;</l></k>
+	<k usb="0x21"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989545;</l><l>&#989448;</l><l>&#989490;</l><l>&#989601;</l></k>
+	<k usb="0x22"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989485;</l><l>&#989516;</l><l>&#989507;</l><l>&#989563;</l></k>
+	<k usb="0x23"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989480;</l><l>&#989539;</l><l>&#989542;</l><l>&#989571;</l></k>
+	<k usb="0x24"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989450;</l><l>&#989538;</l><l>&#989556;</l><l>&#989568;</l></k>
+	<k usb="0x25"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989462;</l><l>&#989558;</l><l>&#989478;</l><l>&#989560;</l></k>
+	<k usb="0x26"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989444;</l><l>&#989584;</l><l>&#989511;</l><l>&#989603;</l></k>
+	<k usb="0x27"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989442;</l><l>&#989585;</l><l>&#989515;</l><l>&#128487;</l></k>
+	<k usb="0x2D"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#8205;</l><l>&#8205;</l><l>&#989587;</l><l>&#989586;</l></k>
+	<k usb="0x2E"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989589;</l><l>&#989590;</l><l>&#989588;</l><l>&#989593;</l></k>
 	<k usb="0x89"><l>&#165;</l><l>&#95;</l><l>&#165;</l><l>&#124;</l></k>
 	<k usb="0x2A">Back&#10;Space</k>
 	<k usb="0x49" x="18u" y="4u">Insert</k>
@@ -50,18 +50,18 @@
 	<k usb="0x6C" x="0u" y="3u">F17&#10;Props&#10;Greek</k>
 	<k usb="0x6D">F18&#10;Undo&#10;Cyrillic</k>
 	<k usb="0x2B" x="2.5u" y="3u" shape="1.5u">Tab</k>
-	<k usb="0x14"><l>&#989529;</l><l>&#989540;</l><l>&#989468;</l><l>&#989498;</l></k>
-	<k usb="0x1A"><l>&#989473;</l><l>&#989557;</l><l>&#989530;</l><l>&#989554;</l></k>
-	<k usb="0x08"><l>&#989449;</l><l>&#989526;</l><l>&#989523;</l><l>&#989564;</l></k>
-	<k usb="0x15"><l>&#989547;</l><l>&#989476;</l><l>&#989483;</l><l>&#989575;</l></k>
-	<k usb="0x17"><l>&#989548;</l><l>&#989549;</l><l>&#989541;</l><l>&#989566;</l></k>
-	<k usb="0x1C"><l>&#989484;</l><l>&#989447;</l><l>&#989463;</l><l>&#989569;</l></k>
-	<k usb="0x18"><l>&#989534;</l><l>&#989461;</l><l>&#989552;</l><l>&#989551;</l></k>
-	<k usb="0x0C"><l>&#989453;</l><l>&#989454;</l><l>&#989455;</l><l>&#989570;</l></k>
-	<k usb="0x12"><l>&#989508;</l><l>&#989452;</l><l>&#989532;</l><l>&#989562;</l></k>
-	<k usb="0x13"><l>&#989524;</l><l>&#989512;</l><l>&#989522;</l><l>&#989525;</l></k>
-	<k usb="0x2F"><l>&#989591;</l><l>&#989594;</l><l>&#91;</l><l>&#123;</l></k>
-	<k usb="0x30"><l>&#989592;</l><l>&#989595;</l><l>&#93;</l><l>&#125;</l></k>
+	<k usb="0x14"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989529;</l><l>&#989540;</l><l>&#989468;</l><l>&#989498;</l></k>
+	<k usb="0x1A"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989473;</l><l>&#989557;</l><l>&#989530;</l><l>&#989554;</l></k>
+	<k usb="0x08"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989449;</l><l>&#989526;</l><l>&#989523;</l><l>&#989564;</l></k>
+	<k usb="0x15"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989547;</l><l>&#989476;</l><l>&#989483;</l><l>&#989575;</l></k>
+	<k usb="0x17"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989548;</l><l>&#989549;</l><l>&#989541;</l><l>&#989566;</l></k>
+	<k usb="0x1C"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989484;</l><l>&#989447;</l><l>&#989463;</l><l>&#989569;</l></k>
+	<k usb="0x18"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989534;</l><l>&#989461;</l><l>&#989552;</l><l>&#989551;</l></k>
+	<k usb="0x0C"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989453;</l><l>&#989454;</l><l>&#989455;</l><l>&#989570;</l></k>
+	<k usb="0x12"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989508;</l><l>&#989452;</l><l>&#989532;</l><l>&#989562;</l></k>
+	<k usb="0x13"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989524;</l><l>&#989512;</l><l>&#989522;</l><l>&#989525;</l></k>
+	<k usb="0x2F"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989591;</l><l>&#989594;</l><l>&#91;</l><l>&#123;</l></k>
+	<k usb="0x30"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989592;</l><l>&#989595;</l><l>&#93;</l><l>&#125;</l></k>
 	<k usb="0x31" shape="1.5u"><l>&#47;</l><l>&#95;</l><l>&#92;</l><l>&#124;</l></k>
 	<k usb="0x4C" x="18u" y="3u">Delete</k>
 	<k usb="0x4D">End</k>
@@ -73,16 +73,16 @@
 	<k usb="0x6E" x="0u" y="2u">F19&#10;Front&#10;Hebrew</k>
 	<k usb="0x6F">F20&#10;Copy&#10;Arabic</k>
 	<k usb="0x39" x="2.5u" y="2u" shape="1.75u">Caps Lock</k>
-	<k usb="0x04"><l>&#989440;</l><l>&#989446;</l><l>&#989460;</l><l>&#989445;</l></k>
-	<k usb="0x16"><l>&#989537;</l><l>&#989536;</l><l>&#989531;</l><l>&#989528;</l></k>
-	<k usb="0x07"><l>&#989544;</l><l>&#989482;</l><l>&#989477;</l><l>&#989443;</l></k>
-	<k usb="0x09"><l>&#989517;</l><l>&#989520;</l><l>&#989466;</l><l>&#989600;</l></k>
-	<k usb="0x0A"><l>&#989510;</l><l>&#989471;</l><l>&#989475;</l><l>&#989573;</l></k>
-	<k usb="0x0B"><l>&#989506;</l><l>&#989533;</l><l>&#989514;</l><l>&#989602;</l></k>
-	<k usb="0x0D"><l>&#989457;</l><l>&#989459;</l><l>&#989456;</l><l>&#989458;</l></k>
-	<k usb="0x0E"><l>&#989464;</l><l>&#989465;</l><l>&#989467;</l><l>&#989576;</l></k>
-	<k usb="0x0F"><l>&#989479;</l><l>&#989486;</l><l>&#989481;</l><l>&#989487;</l></k>
-	<k usb="0x33"><l>&#989596;</l><l>&#989597;</l><l>&#59;</l><l>&#58;</l></k>
+	<k usb="0x04"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989440;</l><l>&#989446;</l><l>&#989460;</l><l>&#989445;</l></k>
+	<k usb="0x16"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989537;</l><l>&#989536;</l><l>&#989531;</l><l>&#989528;</l></k>
+	<k usb="0x07"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989544;</l><l>&#989482;</l><l>&#989477;</l><l>&#989443;</l></k>
+	<k usb="0x09"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989517;</l><l>&#989520;</l><l>&#989466;</l><l>&#989600;</l></k>
+	<k usb="0x0A"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989510;</l><l>&#989471;</l><l>&#989475;</l><l>&#989573;</l></k>
+	<k usb="0x0B"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989506;</l><l>&#989533;</l><l>&#989514;</l><l>&#989602;</l></k>
+	<k usb="0x0D"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989457;</l><l>&#989459;</l><l>&#989456;</l><l>&#989458;</l></k>
+	<k usb="0x0E"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989464;</l><l>&#989465;</l><l>&#989467;</l><l>&#989576;</l></k>
+	<k usb="0x0F"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989479;</l><l>&#989486;</l><l>&#989481;</l><l>&#989487;</l></k>
+	<k usb="0x33"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989596;</l><l>&#989597;</l><l>&#59;</l><l>&#58;</l></k>
 	<k usb="0x34"><l>&#39;</l><l>&#34;</l><l>&#43;</l><l>&#42;</l></k>
 	<k usb="0x32"><l>&#47;</l><l>&#95;</l><l>&#92;</l><l>&#124;</l></k>
 	<k usb="0x28" shape="1.25u">Enter</k>
@@ -94,13 +94,13 @@
 	<k usb="0x71">F22&#10;Paste&#10;CS</k>
 	<k usb="0xE1" x="2.5u" y="1u" shape="1.25u">Shift</k>
 	<k usb="0x64"><l>&#12300;</l><l>&#12301;</l><l>&#12302;</l><l>&#12303;</l></k>
-	<k usb="0x1D"><l>&#989543;</l><l>&#989474;</l><l>&#989495;</l><l>&#989496;</l></k>
-	<k usb="0x1B"><l>&#989513;</l><l>&#989494;</l><l>&#989553;</l><l>&#989535;</l></k>
-	<k usb="0x06"><l>&#989518;</l><l>&#989509;</l><l>&#989470;</l><l>&#989572;</l></k>
-	<k usb="0x19"><l>&#989559;</l><l>&#989546;</l><l>&#989469;</l><l>&#989567;</l></k>
-	<k usb="0x05"><l>&#989505;</l><l>&#989503;</l><l>&#989519;</l><l>&#989493;</l></k>
-	<k usb="0x11"><l>&#989574;</l><l>&#989499;</l><l>&#989472;</l><l>&#989504;</l></k>
-	<k usb="0x10"><l>&#989492;</l><l>&#989488;</l><l>&#989489;</l><l>&#989491;</l></k>
+	<k usb="0x1D"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989543;</l><l>&#989474;</l><l>&#989495;</l><l>&#989496;</l></k>
+	<k usb="0x1B"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989513;</l><l>&#989494;</l><l>&#989553;</l><l>&#989535;</l></k>
+	<k usb="0x06"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989518;</l><l>&#989509;</l><l>&#989470;</l><l>&#989572;</l></k>
+	<k usb="0x19"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989559;</l><l>&#989546;</l><l>&#989469;</l><l>&#989567;</l></k>
+	<k usb="0x05"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989505;</l><l>&#989503;</l><l>&#989519;</l><l>&#989493;</l></k>
+	<k usb="0x11"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989574;</l><l>&#989499;</l><l>&#989472;</l><l>&#989504;</l></k>
+	<k usb="0x10"><p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/><l>&#989492;</l><l>&#989488;</l><l>&#989489;</l><l>&#989491;</l></k>
 	<k usb="0x36"><l>&#12289;</l><l>&#12300;</l><l>&#44;</l><l>&#12302;</l></k>
 	<k usb="0x37"><l>&#12290;</l><l>&#12301;</l><l>&#46;</l><l>&#12303;</l></k>
 	<k usb="0x38"><l>&#45;</l><l>&#61;</l><l>&#33;</l><l>&#63;</l></k>

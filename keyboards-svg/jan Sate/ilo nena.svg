@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="351" height="216" viewBox="0 -216 351 216">
+<defs>
+<g id="shape0">
+<path d="M 6 -54 C 2.686 -54 0 -51.314 0 -48 L 0 -6 C 0 -2.686 2.686 0 6 0 L 48 0 C 51.314 0 54 -2.686 54 -6 L 54 -48 C 54 -51.314 51.314 -54 48 -54 Z" fill="#000000"/>
+<path d="M 6 -53 C 3.239 -53 1 -50.761 1 -48 L 1 -6 C 1 -3.239 3.239 -1 6 -1 L 48 -1 C 50.761 -1 53 -3.239 53 -6 L 53 -48 C 53 -50.761 50.761 -53 48 -53 Z" fill="#b80000"/>
+<path d="M 6 -52 C 3.791 -52 2 -50.209 2 -48 L 2 -6 C 2 -3.791 3.791 -2 6 -2 L 48 -2 C 50.209 -2 52 -3.791 52 -6 L 52 -48 C 52 -50.209 50.209 -52 48 -52 Z" fill="#cc0000"/>
+<path d="M 12 -51 C 10.343 -51 9 -49.657 9 -48 L 9 -18 C 9 -16.343 10.343 -15 12 -15 L 42 -15 C 43.657 -15 45 -16.343 45 -18 L 45 -48 C 45 -49.657 43.657 -51 42 -51 Z" fill="#b80000"/>
+<path d="M 12 -50 C 10.895 -50 10 -49.105 10 -48 L 10 -18 C 10 -16.895 10.895 -16 12 -16 L 42 -16 C 43.105 -16 44 -16.895 44 -18 L 44 -48 C 44 -49.105 43.105 -50 42 -50 Z" fill="#f21414"/>
+</g>
+</defs>
+<g class="keyboard">
+<g class="key">
+<use xlink:href="#shape0" transform="translate(202.5 -162)"/>
+<text x="229.5" y="-190.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#ffcc00">&#989558;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(256.5 -162)"/>
+<text x="283.5" y="-190.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#ffcc00">&#989516;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(0 -108)"/>
+<text x="27" y="-136.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990345;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(54 -108)"/>
+<text x="81" y="-136.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990362;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(108 -108)"/>
+<text x="135" y="-136.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990347;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(162 -108)"/>
+<text x="189" y="-136.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990338;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(216 -108)"/>
+<text x="243" y="-136.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990355;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(270 -108)"/>
+<text x="297" y="-136.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990342;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(13.5 -54)"/>
+<text x="40.5" y="-82.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990352;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(67.5 -54)"/>
+<text x="94.5" y="-82.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990361;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(121.5 -54)"/>
+<text x="148.5" y="-82.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990344;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(175.5 -54)"/>
+<text x="202.5" y="-82.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990339;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(229.5 -54)"/>
+<text x="256.5" y="-82.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990356;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(283.5 -54)"/>
+<text x="310.5" y="-82.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990343;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(27 0)"/>
+<text x="54" y="-28.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990348;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(81 0)"/>
+<text x="108" y="-28.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990341;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(135 0)"/>
+<text x="162" y="-28.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990350;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(189 0)"/>
+<text x="216" y="-28.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990349;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(243 0)"/>
+<text x="270" y="-28.5" text-anchor="middle" font-family="nasin-nanpa, &#34;Fairfax HD&#34;, &#34;sitelen seli kiwen juniko&#34;" font-size="15" fill="#f2f2f2">&#990364;</text>
+</g>
+<g class="key">
+<use xlink:href="#shape0" transform="translate(297 0)"/>
+</g>
+</g>
+</svg>

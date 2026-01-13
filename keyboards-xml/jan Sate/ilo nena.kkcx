@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout cc="11" lc="31">
+	<p k="font-family" v='nasin-nanpa, "Fairfax HD", "sitelen seli kiwen juniko"'/>
+	<k x="3.75u" y="3u" lc="17">&#989558;</k>
+	<k lc="17">&#989516;</k>
+	<k x="0u" y="2u">&#990345;</k>
+	<k>&#990362;</k>
+	<k>&#990347;</k>
+	<k>&#990338;</k>
+	<k>&#990355;</k>
+	<k>&#990342;</k>
+	<k x="0.25u" y="1u">&#990352;</k>
+	<k>&#990361;</k>
+	<k>&#990344;</k>
+	<k>&#990339;</k>
+	<k>&#990356;</k>
+	<k>&#990343;</k>
+	<k x="0.5u" y="0u">&#990348;</k>
+	<k>&#990341;</k>
+	<k>&#990350;</k>
+	<k>&#990349;</k>
+	<k>&#990364;</k>
+	<k></k>
+</keyCapLayout>

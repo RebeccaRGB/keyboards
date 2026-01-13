@@ -17,7 +17,6 @@ public class AWTRenderer {
 	private final KeyCapEngraver engraver;
 	private final int backgroundColor;
 	private final boolean showUSBCodes;
-	private final Font baseFont;
 	private final Font monoFont;
 	private final FontRenderContext frc;
 	private final AWTShapeDefs shapeDefs;
@@ -34,7 +33,6 @@ public class AWTRenderer {
 		this.engraver = (e != null) ? e : new KeyCapEngraver(mold, moldScale, keyCapSize);
 		this.backgroundColor = backgroundColor;
 		this.showUSBCodes = showUSBCodes;
-		this.baseFont = new Font("SansSerif", Font.PLAIN, 1);
 		this.monoFont = new Font("Monospaced", Font.PLAIN, 12);
 		this.frc = new FontRenderContext(null, true, true);
 		this.shapeDefs = new AWTShapeDefs(mold, moldScale, keyCapSize);
@@ -70,6 +68,7 @@ public class AWTRenderer {
 		Float llh = lp.containsAny("lh") ? lp.getFloat("lh") : null;
 		Anchor lha = lp.containsAny("ha", "a") ? lp.getAnchor("ha", "a") : null;
 		Anchor lva = lp.containsAny("va", "a") ? lp.getAnchor("va", "a") : null;
+		String lff = lp.containsAny("font-family") ? lp.getString("font-family") : "SansSerif";
 		
 		if (backgroundColor != 0) {
 			Color base = g.getColor();
@@ -90,6 +89,7 @@ public class AWTRenderer {
 			Float klh = kp.containsAny("lh") ? kp.getFloat("lh") : llh;
 			Anchor kha = kp.containsAny("ha", "a") ? kp.getAnchor("ha", "a") : lha;
 			Anchor kva = kp.containsAny("va", "a") ? kp.getAnchor("va", "a") : lva;
+			String kff = kp.containsAny("font-family") ? kp.getString("font-family") : lff;
 			
 			KeyCapShape shape = k.getShape();
 			LayeredObject lo = shapeDefs.getLayeredObject(shape, kvs, kcc, kco);
@@ -105,6 +105,7 @@ public class AWTRenderer {
 			Float jlh = jp.containsAny("lh") ? jp.getFloat("lh") : klh;
 			Anchor jha = jp.containsAny("ha", "a") ? jp.getAnchor("ha", "a") : kha;
 			Anchor jva = jp.containsAny("va", "a") ? jp.getAnchor("va", "a") : kva;
+			String jff = jp.containsAny("font-family") ? jp.getString("font-family") : kff;
 			
 			for (KeyCapEngraver.TextBox tb : engraver.makeBoxes(shape, kvs, legend)) {
 				if (tb == null || tb.item == null) continue;
@@ -114,6 +115,7 @@ public class AWTRenderer {
 				Float ilh = ip.containsAny("lh") ? ip.getFloat("lh") : jlh;
 				Anchor iha = ip.containsAny("ha", "a") ? ip.getAnchor("ha", "a") : jha;
 				Anchor iva = ip.containsAny("va", "a") ? ip.getAnchor("va", "a") : jva;
+				String iff = ip.containsAny("font-family") ? ip.getString("font-family") : jff;
 				
 				Color base = g.getColor();
 				Color tc = textColor(ilc, kcc);
@@ -142,7 +144,8 @@ public class AWTRenderer {
 					float ty = ((iva != null) ? iva : tb.anchor).getY(tb.y, tb.height, th) + ta;
 					for (int i = 0; i < lines.length; i++) {
 						if (lines[i] == null || lines[i].length() == 0) continue;
-						TextLayout tl = new TextLayout(lines[i], baseFont.deriveFont(lh), frc);
+						Font font = new Font(iff, Font.PLAIN, 1).deriveFont(lh);
+						TextLayout tl = new TextLayout(lines[i], font, frc);
 						float sw = tl.getAdvance();
 						if (sw > tb.width) {
 							float sx = tb.width / sw;
