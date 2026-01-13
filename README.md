@@ -520,6 +520,6 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 ![](keyboards-svg/Attoparsec/Two-Thirds%20Keyboard.svg)
 
 ### [ilo nena pi jan Sate](https://github.com/SadaleNet/ilo-nena)
-![](keyboards-svg/jan%20Sate/ilo%20nena)
+![](keyboards-svg/jan%20Sate/ilo%20nena.svg)
 
 [Back to Top](#keyboard-diagrams)
