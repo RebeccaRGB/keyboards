@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout name="Goldtouch Numeric Keypad" cc="1" lc="31">
+	<k x="0u" y="5u"><l>ESC</l><l type="FF">MC</l></k>
+	<k><l>TAB</l><l type="FF">MR</l></k>
+	<k><l>&#8592;</l><l type="FF">MS</l></k>
+	<k>&#8679;/FN</k>
+	<k x="0u" y="4u"><l>NUM</l><l type="FF">$</l></k>
+	<k><l>=</l><l type="FF">&#8364;</l></k>
+	<k><l>/</l><l type="FF">&#163;</l></k>
+	<k><l>*</l><l type="FF">&#165;</l></k>
+	<k x="0u" y="3u" type="N"><l>7</l><l>HOME</l><l type="FF">&#162;</l></k>
+	<k type="N"><l>8</l><l>&#8593;</l><l type="FF">%</l></k>
+	<k type="N"><l>9</l><l>PGUP</l><l type="FF">+/&#8722;</l></k>
+	<k><l>-</l><l type="FF">M&#8722;</l></k>
+	<k x="0u" y="2u" type="N"><l>4</l><l>&#8592;</l><l type="FF">(</l></k>
+	<k type="N"><l>5</l><l type="FF">)</l></k>
+	<k type="N"><l>6</l><l>&#8594;</l><l type="FF">\</l></k>
+	<k><l>+</l><l type="FF">M+</l></k>
+	<k x="0u" y="1u" type="N"><l>1</l><l>END</l><l type="FF">:</l></k>
+	<k type="N"><l>2</l><l>&#8595;</l><l type="FF">@</l></k>
+	<k type="N"><l>3</l><l>PGDN</l><l type="FF">#</l></k>
+	<k x="0u" y="0u" type="N"><l>0</l><l>INS</l></k>
+	<k type="N"><l>00</l><l type="FF">,</l></k>
+	<k type="N"><l>.</l><l>DEL</l><l type="FF">Del</l></k>
+	<k shape="1+2u"><l>ENTER</l><l type="FF">=</l></k>
+</keyCapLayout>
