@@ -421,6 +421,16 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 [Back to Top](#keyboard-diagrams)
 
+## Goldtouch Keyboards
+
+### Goldtouch Numeric Keypad
+![](keyboards-svg/Goldtouch/Goldtouch%20Numeric%20Keypad.svg)
+
+### Goldtouch Elite Keypad
+![](keyboards-svg/Goldtouch/Goldtouch%20Elite%20Keypad.svg)
+
+[Back to Top](#keyboard-diagrams)
+
 ## Other Commercial Keyboards
 
 ### MIT LISP Space Cadet Keyboard
