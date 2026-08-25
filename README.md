@@ -11,6 +11,7 @@ Jump to:
 - [Commodore Keyboards](#commodore-keyboards)
 - [Atari Keyboards](#atari-keyboards)
 - [AlphaSmart Keyboards](#alphasmart-keyboards)
+- [Goldtouch Keyboards](#goldtouch-keyboards)
 - [Other Commercial Keyboards](#other-commercial-keyboards)
 - [Inkbox ASK Profiles](#inkbox-ask-profiles)
 - [Kreative Custom Keyboards](#kreative-custom-keyboards)
