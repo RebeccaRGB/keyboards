@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyCapLayout PUBLIC "-//Kreative//DTD KreativeKeyCaps 1.0//EN" "http://www.kreativekorp.com/dtd/kkcx.dtd">
+<keyCapLayout>
+	<k cc="1" lc="31" x="0pt" y="5u">e</k>
+	<k cc="1" lc="31">s</k>
+	<k cc="1" lc="31">c</k>
+	<k cc="1" lc="31">v</k>
+	<k cc="1" lc="31">x</k>
+	<k cc="1" lc="31"><l>&#7437;</l><l>&#64260;</l></k>
+	<k cc="24" lc="1">?</k>
+	<k cc="24" lc="1">&#8211;</k>
+	<k cc="24" lc="1"><l>&#7456;</l><l>1</l></k>
+	<k cc="24" lc="1"><l>&#610;</l><l>7</l></k>
+	<k cc="31" lc="1">E</k>
+	<k cc="31" lc="1">S</k>
+	<k cc="31" lc="1">C</k>
+	<k cc="31" lc="1">V</k>
+	<k cc="31" lc="1">X</k>
+	<k cc="1" lc="31" x="9pt" y="4u">t</k>
+	<k cc="1" lc="31">h</k>
+	<k cc="1" lc="31">m</k>
+	<k cc="1" lc="31">b</k>
+	<k cc="1" lc="31">z</k>
+	<k cc="24" lc="1"><l>••&#10;LEADER</l><l>EM&#10;SPACE</l></k>
+	<k cc="24" lc="1"><l>EN&#10;LEADER</l><l>EN&#10;SPACE</l></k>
+	<k cc="24" lc="1">THIN&#10;&#10;SPACE</k>
+	<k cc="24" lc="1"><l>&#665;</l><l>2</l></k>
+	<k cc="24" lc="1"><l>&#640;</l><l>8</l></k>
+	<k cc="31" lc="1">T</k>
+	<k cc="31" lc="1">H</k>
+	<k cc="31" lc="1">M</k>
+	<k cc="31" lc="1">B</k>
+	<k cc="31" lc="1"><l>&#7452;</l><l>Z</l></k>
+	<k cc="1" lc="31" x="18pt" y="3u">a</k>
+	<k cc="1" lc="31">r</k>
+	<k cc="1" lc="31">f</k>
+	<k cc="1" lc="31">g</k>
+	<k cc="1" lc="31">&#64257;</k>
+	<k cc="24" lc="1">,</k>
+	<k cc="24" lc="1"><l>&#7424;</l><l>(</l></k>
+	<k cc="24" lc="1"><l>&#42927;</l><l>)</l></k>
+	<k cc="24" lc="1"><l>&#7428;</l><l>3</l></k>
+	<k cc="24" lc="1"><l>&#7451;</l><l>9</l></k>
+	<k cc="31" lc="1">A</k>
+	<k cc="31" lc="1">R</k>
+	<k cc="31" lc="1">F</k>
+	<k cc="31" lc="1">G</k>
+	<k cc="31" lc="1">@&#10;&#339;&#10;&#668;</k>
+	<k cc="1" lc="31" x="27pt" y="2u">o</k>
+	<k cc="1" lc="31">d</k>
+	<k cc="1" lc="31">w</k>
+	<k cc="1" lc="31">k</k>
+	<k cc="1" lc="31"><l>&#655;</l><l>&#64258;</l></k>
+	<k cc="24" lc="1">.</k>
+	<k cc="24" lc="1"><l>&#618;</l><l>|</l></k>
+	<k cc="24" lc="1"><l>&#671;</l><l>•&#10;LEADER</l></k>
+	<k cc="24" lc="1"><l>&#7429;</l><l>4</l></k>
+	<k cc="24" lc="1"><l>&#7434;</l><l>0</l></k>
+	<k cc="31" lc="1">O</k>
+	<k cc="31" lc="1">D</k>
+	<k cc="31" lc="1">W</k>
+	<k cc="31" lc="1">K</k>
+	<k cc="31" lc="1">&#8468;&#10;&#230;&#10;&#7435;</k>
+	<k cc="1" lc="31" x="36pt" y="1u">i</k>
+	<k cc="1" lc="31">l</k>
+	<k cc="1" lc="31">y</k>
+	<k cc="1" lc="31">q</k>
+	<k cc="1" lc="31">&#64256;</k>
+	<k cc="24" lc="1"><l>&#42801;</l><l>:</l></k>
+	<k cc="24" lc="1">&#8216;</k>
+	<k cc="24" lc="1">&#8217;</k>
+	<k cc="24" lc="1"><l>&#7431;</l><l>5</l></k>
+	<k cc="24" lc="1"><l>&#7448;</l><l>$</l></k>
+	<k cc="31" lc="1">I</k>
+	<k cc="31" lc="1">L</k>
+	<k cc="31" lc="1">Y</k>
+	<k cc="31" lc="1">Q</k>
+	<k cc="31" lc="1"><l>&#628;</l><l>&amp;</l></k>
+	<k cc="1" lc="31" x="45pt" y="0u">n</k>
+	<k cc="1" lc="31">u</k>
+	<k cc="1" lc="31">p</k>
+	<k cc="1" lc="31">j</k>
+	<k cc="1" lc="31"><l>&#7457;</l><l>&#64259;</l></k>
+	<k cc="24" lc="1">;</k>
+	<k cc="24" lc="1">!</k>
+	<k cc="24" lc="1"><l>&#7439;</l><l>*</l></k>
+	<k cc="24" lc="1"><l>&#42800;</l><l>6</l></k>
+	<k cc="24" lc="1"><l>EM&#10;SPACE</l><l>••&#10;LEADER</l></k>
+	<k cc="31" lc="1">N</k>
+	<k cc="31" lc="1">U</k>
+	<k cc="31" lc="1">P</k>
+	<k cc="31" lc="1">J</k>
+	<k cc="31" lc="1">&#8212;</k>
+	<k x="-1.5u" y="2.5u" shape="1+3u"></k>
+</keyCapLayout>

@@ -434,6 +434,9 @@ This is why we can't have ~~nice things~~ sensible scan codes for the 'print scr
 
 ## Other Commercial Keyboards
 
+### Linotype 90 Channel Text and Display Faces 1
+![](keyboards-svg/Linotype/90%20Channel%20Text%20and%20Display%20Faces%201.svg)
+
 ### MIT LISP Space Cadet Keyboard
 ![](keyboards-svg/MIT/Space%20Cadet.svg)
 
