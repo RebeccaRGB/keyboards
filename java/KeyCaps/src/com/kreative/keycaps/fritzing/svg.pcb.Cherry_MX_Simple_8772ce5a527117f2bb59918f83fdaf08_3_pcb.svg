@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0.654608in" x="0px" enable-background="new 0 0 45.2758 47.1318" y="0px" viewBox="0 0 45.2758 47.1318" id="Layer_1" width="0.628831in" xml:space="preserve" gorn="0"  xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <desc >
+        <referenceFile >Cherry-MX-Keyswitch_pcb.svg</referenceFile>
+    </desc>
+    <g id="copper1" gorn="0.1" >
+        <g id="copper0" gorn="0.1.0" >
+            <circle stroke-linecap="round" cy="15.4899" fill="none" stroke-miterlimit="1" cx="11.8898" r="2.081" stroke-width="1.5" id="connector2pad" stroke="#FFBF00" gorn="0.1.0.0" />
+            <circle stroke-linecap="round" cy="8.3019" fill="none" stroke-miterlimit="1" cx="29.8588" r="2.081" stroke-width="1.5" id="connector4pin" stroke="#FFBF00" gorn="0.1.0.1" />
+            <circle cy="22.6919" cx="22.6798" r="5.7207" stroke-width="0.0" id="noconn4" gorn="0.1.0.2" />
+            <circle cy="22.6919" cx="8.2818" r="2.35" stroke-width="0.0" id="noconn3" gorn="0.1.0.3" />
+            <circle cy="22.6919" cx="37.0338" r="2.35" stroke-width="0.0" id="noconn2" gorn="0.1.0.4" />
+        </g>
+    </g>
+    <g id="silkscreen" gorn="0.2" >
+        <path fill="none" stroke-miterlimit="10" stroke-width="1" stroke="#231F20" d="M41.9797,43.9087H3.3799c-1.052,0-1.9048-0.8528-1.9048-1.9048V3.404c0-1.052,0.8528-1.9048,1.9048-1.9048h38.5999c1.052,0,1.9048,0.8528,1.9048,1.9048v38.5999C43.8846,43.0559,43.0318,43.9087,41.9797,43.9087z" />
+    </g>
+</svg>

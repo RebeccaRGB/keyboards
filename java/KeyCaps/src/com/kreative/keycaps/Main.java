@@ -1,6 +1,7 @@
 package com.kreative.keycaps;
 
 import java.io.IOException;
+import com.kreative.keycaps.fritzing.LayoutToFritzing;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -13,6 +14,8 @@ public class Main {
 				System.err.println(args[i] + ":");
 				help(args[i]);
 			}
+		} else if (eic(args[0], "--LayoutToFritzing", "--toFritzing", "--fritzing", "--fzz", "LayoutToFritzing", "toFritzing", "fritzing", "fzz")) {
+			LayoutToFritzing.main(tail(args));
 		} else if (eic(args[0], "--LayoutToInkbox", "--toInkbox", "--inkbox", "LayoutToInkbox", "toInkbox", "inkbox")) {
 			LayoutToInkbox.main(tail(args));
 		} else if (eic(args[0], "--LayoutToKKCX", "--toKKCX", "--kkcx", "--xml", "LayoutToKKCX", "toKKCX", "kkcx", "xml")) {
@@ -49,6 +52,8 @@ public class Main {
 			help();
 		} else if (eic(what, "--help", "help")) {
 			System.err.println("What yer lookin' at.");
+		} else if (eic(what, "--LayoutToFritzing", "--toFritzing", "--fritzing", "--fzz", "LayoutToFritzing", "toFritzing", "fritzing", "fzz")) {
+			LayoutToFritzing.help();
 		} else if (eic(what, "--LayoutToInkbox", "--toInkbox", "--inkbox", "LayoutToInkbox", "toInkbox", "inkbox")) {
 			LayoutToInkbox.help();
 		} else if (eic(what, "--LayoutToKKCX", "--toKKCX", "--kkcx", "LayoutToKKCX", "toKKCX", "kkcx")) {
@@ -81,6 +86,7 @@ public class Main {
 	}
 	
 	public static void help() {
+		System.err.println("  LayoutToFritzing  Generate Fritzing sketch");
 		System.err.println("  LayoutToInkbox    Generate Inkbox ASK profile");
 		System.err.println("  LayoutToKKCX      Convert text format to KKCX");
 		System.err.println("  LayoutToPNG       Generate PNG of keycap layout");

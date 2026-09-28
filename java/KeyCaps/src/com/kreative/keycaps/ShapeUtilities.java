@@ -179,6 +179,16 @@ public final class ShapeUtilities {
 		}
 	};
 	
+	public static final Comparator<Rectangle2D> LARGEST = new Comparator<Rectangle2D>() {
+		public int compare(Rectangle2D a, Rectangle2D b) {
+			double aArea = a.getWidth() * a.getHeight();
+			double bArea = b.getWidth() * b.getHeight();
+			if (aArea > bArea) return 1;
+			if (aArea < bArea) return -1;
+			return 0;
+		}
+	};
+	
 	public static Rectangle2D getWidestRect(Shape shape, AffineTransform tx) {
 		return getMaxRect(shape, tx, WIDEST);
 	}
@@ -193,6 +203,14 @@ public final class ShapeUtilities {
 	
 	public static Rectangle2D getTallestRect(Shape shape, AffineTransform tx, double flatness) {
 		return getMaxRect(shape, tx, flatness, TALLEST);
+	}
+	
+	public static Rectangle2D getLargestRect(Shape shape, AffineTransform tx) {
+		return getMaxRect(shape, tx, LARGEST);
+	}
+	
+	public static Rectangle2D getLargestRect(Shape shape, AffineTransform tx, double flatness) {
+		return getMaxRect(shape, tx, flatness, LARGEST);
 	}
 	
 	public static Rectangle2D getMaxRect(Shape shape, AffineTransform tx, Comparator<Rectangle2D> cmp) {

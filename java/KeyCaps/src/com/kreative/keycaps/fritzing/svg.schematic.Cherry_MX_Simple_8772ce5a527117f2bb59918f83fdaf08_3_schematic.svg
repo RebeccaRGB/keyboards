@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0.188419in" x="0px" enable-background="new 0 0 33.9319 13.5662" y="0px" viewBox="0 0 33.9319 13.5662" id="svg4668" width="0.471276in" xml:space="preserve" gorn="0"  xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <desc >
+        <referenceFile >MX-Switch-SCHEM.svg</referenceFile>
+    </desc>
+    <line stroke-linecap="round" x2="25.8114" y2="6.7216" stroke-miterlimit="5" fill="none" x1="23.5614" stroke-width="0.9" id="line4673" stroke="#000000" gorn="0.1" y1="6.7216" />
+    <line stroke-linecap="round" x2="23.5614" y2="2.2216" stroke-miterlimit="5" fill="none" x1="7.8113" stroke-width="0.9" id="line4675" stroke="#B50000" gorn="0.2" y1="6.7216" />
+    <g transform="translate(-1.3009648,1.4173079)" >
+        <g >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g >
+                                        <g >
+                                            <g >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <g >
+                                                                    <g >
+                                                                        <g >
+                                                                            <circle cy="5.3043" stroke-miterlimit="5" cx="9.1123" fill="none" r="0.45" stroke-width="1.44" id="circle1" stroke="#000000" gorn="0.3.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0" />
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g transform="translate(-1.3009648,1.4173079)" >
+        <g >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g >
+                                        <g >
+                                            <g >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g >
+                                                                <g >
+                                                                    <g >
+                                                                        <g >
+                                                                            <circle cy="5.3043" stroke-miterlimit="5" cx="27.1124" fill="none" r="0.45" stroke-width="1.44" id="circle2" stroke="#000000" gorn="0.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0" />
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g transform="translate(-1.3009648,1.4173079)" >
+        <g >
+            <g >
+                <g >
+                    <g >
+                        <g >
+                            <g >
+                                <g >
+                                    <g >
+                                        <g >
+                                            <g >
+                                                <g >
+                                                    <g >
+                                                        <g >
+                                                            <g />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <path stroke-linecap="round" stroke-miterlimit="5" fill="none" stroke-width="0.8" id="connector4pin" stroke="#787878" gorn="0.6" d="M25.7207,6.7779h5.9396" />
+    <rect height="0.0016" x="32.0536" fill="none" y="6.7771" stroke-width="0" id="connector4terminal" width="0.0134792" stroke="none" gorn="0.7" />
+    <path stroke-linecap="round" stroke-miterlimit="5" fill="none" stroke-width="0.8" id="connector2pin" stroke="#787878" gorn="0.8" d="M7.2832,6.7779H2.3335" />
+    <rect height="0.0016" x="1.92775" fill="none" y="6.7771" stroke-width="0" id="connector2terminal" width="0.0114994" stroke="none" gorn="0.9" />
+</svg>
