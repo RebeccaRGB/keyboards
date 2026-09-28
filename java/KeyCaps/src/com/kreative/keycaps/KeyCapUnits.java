@@ -7,8 +7,12 @@ public final class KeyCapUnits {
 	public static final float V = 4;
 	public static final float W = 20;
 	public static final float IN = 0.75f;
+	public static final float CM = 1.905f;
 	public static final float MM = 19.05f;
+	public static final float PC = 4.5f;
 	public static final float PT = 54;
+	public static final float PX = 72;
+	public static final float Q = 76.2f;
 	
 	public static float parseUnit(String s, float def) {
 		if (s == null || (s = s.trim()).length() == 0) return def;
@@ -20,8 +24,12 @@ public final class KeyCapUnits {
 		if (s.equalsIgnoreCase("v")) return V;
 		if (s.equalsIgnoreCase("w")) return W;
 		if (s.equalsIgnoreCase("in")) return IN;
+		if (s.equalsIgnoreCase("cm")) return CM;
 		if (s.equalsIgnoreCase("mm")) return MM;
+		if (s.equalsIgnoreCase("pc")) return PC;
 		if (s.equalsIgnoreCase("pt")) return PT;
+		if (s.equalsIgnoreCase("px")) return PX;
+		if (s.equalsIgnoreCase("Q")) return Q;
 		return def;
 	}
 	
@@ -30,8 +38,12 @@ public final class KeyCapUnits {
 		if (oopsAllInt(V, keyCapSize, values)) return V;
 		if (oopsAllInt(W, keyCapSize, values)) return W;
 		if (oopsAllInt(IN, keyCapSize, values)) return IN;
+		if (oopsAllInt(CM, keyCapSize, values)) return CM;
 		if (oopsAllInt(MM, keyCapSize, values)) return MM;
+		if (oopsAllInt(PC, keyCapSize, values)) return PC;
 		if (oopsAllInt(PT, keyCapSize, values)) return PT;
+		if (oopsAllInt(PX, keyCapSize, values)) return PX;
+		if (oopsAllInt(Q, keyCapSize, values)) return Q;
 		return keyCapSize;
 	}
 	
@@ -48,8 +60,12 @@ public final class KeyCapUnits {
 		if (keyCapSize == V) return "v";
 		if (keyCapSize == W) return "w";
 		if (keyCapSize == IN) return "in";
+		if (keyCapSize == CM) return "cm";
 		if (keyCapSize == MM) return "mm";
+		if (keyCapSize == PC) return "pc";
 		if (keyCapSize == PT) return "pt";
+		if (keyCapSize == PX) return "px";
+		if (keyCapSize == Q) return "Q";
 		return "/" + valueToString(keyCapSize);
 	}
 	
