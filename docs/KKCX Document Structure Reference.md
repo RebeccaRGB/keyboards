@@ -67,20 +67,32 @@ A `<p>` element may not contain any child elements.
 
 ## Keyboard Units
 
-The X and Y coordinates of keycaps are expressed using a numeric value followed by a unit, e.g. "1u" (one unit) or "0.75in" (three quarters of an inch). The units supported are:
+The X and Y coordinates of keycaps are expressed using a numeric value followed by a unit, e.g. `1u` (one unit) or `0.75in` (three quarters of an inch). The units supported are:
 
-| Unit | Description                                                                                                                                                     |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `u`  | The standard keyboard unit. 1u = 4v = 20w = 0.75in = 1.905cm = 19.05mm = 4.5pc = 54pt = 72px = 76.2Q. The nominal size of a standard alphanumeric keycap.       |
-| `v`  | One quarter of a standard keyboard unit. 1v = 5w = 0.25u = 0.1875in = 0.47625cm = 4.7625mm = 1.125pc = 13.5pt = 18px = 19.05Q. The minimal unit of the nominal size of a standard keycap. |
-| `w`  | One twentieth of a standard keyboard unit. 1w = 0.2v = 0.05u = 0.0375in = 0.09525cm = 0.9525mm = 0.225pc = 2.7pt = 3.6px = 3.81Q. Equivalent to the units of a Mac OS Classic `KCAP` resource or a pixel within the Key Caps desk accessory. |
-| `in` | Inches.      0.75in = 1.905cm = 19.05mm = 4.5pc = 54pt = 72px = 76.2Q = 1u. 1in = 2.54cm = 25.4mm = 6pc = 72pt = 96px = 101.6Q.                                 |
-| `cm` | Centimeters. 1.905cm = 19.05mm = 0.75in = 4.5pc = 54pt = 72px = 76.2Q = 1u. 2.54cm = 25.4mm = 1in = 6pc = 72pt = 96px = 101.6Q. 1cm = 10mm = 40Q.               |
-| `mm` | Millimeters. 19.05mm = 1.905cm = 0.75in = 4.5pc = 54pt = 72px = 76.2Q = 1u. 25.4mm = 2.54cm = 1in = 6pc = 72pt = 96px = 101.6Q. 10mm = 1cm = 40Q.               |
-| `pc` | Picas.       4.5pc = 54pt = 72px = 0.75in = 1.905cm = 19.05mm = 76.2Q = 1u. 6pc = 72pt = 96px = 1in = 2.54cm = 25.4mm = 101.6Q.                                 |
-| `pt` | Points.      54pt = 72px = 4.5pc = 0.75in = 1.905cm = 19.05mm = 76.2Q = 1u. 72pt = 96px = 6pc = 1in = 2.54cm = 25.4mm = 101.6Q. Equivalent to a pixel at 72dpi. |
-| `px` | CSS pixels.  72px = 54pt = 4.5pc = 0.75in = 1.905cm = 19.05mm = 76.2Q = 1u. 96px = 72pt = 6pc = 1in = 2.54cm = 25.4mm = 101.6Q. Equivalent to a pixel at 96dpi. |
-| `Q`  | Quarter-millimeters. 40Q = 10mm = 1cm. 76.2Q = 19.05mm = 1.905cm = 0.75in = 4.5pc = 54pt = 72px = 1u. 101.6Q = 25.4mm = 2.54cm = 1in = 6pc = 72pt = 96px.       |
+| Unit | Description                                                                                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `u`  | The standard keyboard unit. Defined as `1u` = `0.75in` = `19.05mm`. The nominal width and height of a standard alphanumeric keycap.         |
+| `v`  | One quarter of a standard keyboard unit. Defined as `1v` = `0.25u` = `4.7625mm`. The minimal unit of the nominal size of a standard keycap. |
+| `w`  | One twentieth of a standard keyboard unit. Defined as `1w` = `0.05u` = `0.9525mm`. Equivalent to the units of a Mac OS Classic `KCAP` resource or a pixel within the Key Caps desk accessory. |
+| `in` | Inches. Defined as `1in` = `2.54cm` = `25.4mm`.                                                                                             |
+| `cm` | Centimeters.                                                                                                                                |
+| `mm` | Millimeters.                                                                                                                                |
+| `pc` | Picas. Defined as `1pc` = `12pt` = `1in / 6`.                                                                                               |
+| `pt` | Points. Defined as `1pt` = `1in / 72`. Equivalent to a pixel at 72dpi.                                                                      |
+| `px` | CSS pixels. Defined as `1px` = `1in / 96`. Equivalent to a pixel at 96dpi.                                                                  |
+| `Q`  | Quarter-millimeters. Defined as `1Q` = `1cm / 40` = `0.25mm`.                                                                               |
+
+These units satisfy the following equality relations:
+
+|     u |    v |   w |       in |        cm |       mm |      Q |      pc |     pt |    px |
+| ----- | ---- | --- | -------- | --------- | -------- | ------ | ------- | ------ | ----- |
+|    1u |   4v | 20w |   0.75in |   1.905cm |  19.05mm |  76.2Q |   4.5pc |   54pt |  72px |
+| 0.25u |   1v |  5w | 0.1875in | 0.47625cm | 4.7625mm | 19.05Q | 1.125pc | 13.5pt |  18px |
+| 0.05u | 0.2v |  1w | 0.0375in | 0.09525cm | 0.9525mm |  3.81Q | 0.225pc |  2.7pt | 3.6px |
+|       |      |     |      1in |    2.54cm |   25.4mm | 101.6Q |     6pc |   72pt |  96px |
+|       |      |     |          |       1cm |     10mm |    40Q |         |        |       |
+|       |      |     |          |     0.1cm |      1mm |     4Q |         |        |       |
+|       |      |     |          |   0.025cm |   0.25mm |     1Q |         |        |       |
 
 ## Keycap Shapes
 
