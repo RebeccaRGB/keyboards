@@ -32,9 +32,9 @@ public class Viewer {
 		
 		boolean opened = false;
 		boolean parseOpts = true;
-		KeyCapMold mold = new IconKeyCapMold();
+		KeyCapMold mold = new MaxKeyCapMold();
 		float moldScale = 1;
-		float size = 48;
+		float size = 56;
 		boolean showUSBCodes = false;
 		
 		int argi = 0;
@@ -94,7 +94,7 @@ public class Viewer {
 				if (kbdFile != null) {
 					try {
 						KeyCapLayout layout = KeyCapReader.read(kbdFile);
-						open(mold, moldScale, size, showUSBCodes, layout, kbdDir);
+						open(mold, moldScale, size, showUSBCodes, layout, kbdFile, kbdDir);
 						return;
 					} catch (IOException e) {
 						System.err.println("Could not read from input: " + e);
@@ -104,7 +104,7 @@ public class Viewer {
 			try {
 				InputStream in = Viewer.class.getResourceAsStream("ANSI.kkcx");
 				KeyCapLayout layout = KeyCapReader.read("ANSI.kkcx", in);
-				open(mold, moldScale, size, showUSBCodes, layout, kbdDir);
+				open(mold, moldScale, size, showUSBCodes, layout, null, kbdDir);
 				return;
 			} catch (IOException e) {
 				System.err.println("Could not read from input: " + e);
@@ -112,32 +112,35 @@ public class Viewer {
 		}
 	}
 	
-	public static void open(KeyCapMold mold, float moldScale, float size, boolean showUSBCodes, File input) {
+	private static void open(KeyCapMold mold, float moldScale, float size, boolean showUSBCodes, File input) {
 		try {
 			if (input == null) {
 				KeyCapLayout layout = KeyCapReader.read("input", System.in);
-				open(mold, moldScale, size, showUSBCodes, layout, UIUtilities.getKeyboardDirectory());
+				open(mold, moldScale, size, showUSBCodes, layout, null, UIUtilities.getKeyboardDirectory());
 			} else if (input.isDirectory()) {
 				File file = UIUtilities.getKeyboardFile(input);
 				if (file != null) {
 					KeyCapLayout layout = KeyCapReader.read(file);
-					open(mold, moldScale, size, showUSBCodes, layout, input);
+					open(mold, moldScale, size, showUSBCodes, layout, file, input);
 				} else {
 					throw new IOException("No applicable files found in directory");
 				}
 			} else {
 				KeyCapLayout layout = KeyCapReader.read(input);
-				open(mold, moldScale, size, showUSBCodes, layout, UIUtilities.getKeyboardDirectory());
+				open(mold, moldScale, size, showUSBCodes, layout, input, UIUtilities.getKeyboardDirectory());
 			}
 		} catch (IOException e) {
 			System.err.println("Could not read from input: " + e);
 		}
 	}
 	
-	public static void open(KeyCapMold mold, float moldScale, float size, boolean showUSBCodes, KeyCapLayout layout, File kbdDir) {
+	private static void open(
+		KeyCapMold mold, float moldScale, float size, boolean showUSBCodes,
+		KeyCapLayout layout, File kbdFile, File kbdDir
+	) {
 		AWTRenderer renderer = new AWTRenderer(mold, moldScale, size, null, 0, showUSBCodes);
 		ViewerComponent vc = new ViewerComponent(renderer, layout);
-		ViewerFrame vf = new ViewerFrame(vc, kbdDir);
+		ViewerFrame vf = new ViewerFrame(vc, kbdFile, kbdDir);
 		vf.setVisible(true);
 	}
 	

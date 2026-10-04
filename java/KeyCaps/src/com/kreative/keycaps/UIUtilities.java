@@ -68,6 +68,18 @@ public class UIUtilities {
 		".kkcx", ".xml", ".kkc", ".txt"
 	};
 	
+	public static boolean isKeyboardFile(String name) {
+		if (name.startsWith(".") || name.endsWith("\r")) {
+			return false;
+		}
+		for (String ext : KBD_FILE_EXTENSIONS) {
+			if (name.toLowerCase().endsWith(ext)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	private static File getKeyboardFile(File parent, String name) {
 		if (parent == null) return null;
 		File[] children = parent.listFiles();

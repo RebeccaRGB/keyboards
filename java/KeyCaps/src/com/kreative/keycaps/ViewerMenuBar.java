@@ -5,11 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.IOException;
+import java.io.FileFilter;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 
 public class ViewerMenuBar extends JMenuBar {
@@ -31,6 +30,7 @@ public class ViewerMenuBar extends JMenuBar {
 		
 		JMenu fileMenu = new JMenu("File");
 		fileMenu.add(new OpenMenuItem());
+		fileMenu.add(new RefreshMenuItem());
 		fileMenu.add(new UIUtilities.CloseMenuItem(frame));
 		fileMenu.addSeparator();
 		fileMenu.add(new SaveMenuItem("Save as Text...", 0, 0, ".txt", "txt"));
@@ -52,8 +52,9 @@ public class ViewerMenuBar extends JMenuBar {
 		add(editMenu);
 		
 		if (kbdDir != null) {
+			FileFilter kbdDirFilter = new KeyboardDirectoryFileFilter();
 			ActionListener kbdDirListener = new KeyboardDirectoryListener();
-			JMenu kbdDirMenu = (JMenu)ViewerFileMenuItem.create(kbdDir, kbdDirListener);
+			JMenu kbdDirMenu = (JMenu)ViewerFileMenuItem.create(kbdDir, kbdDirFilter, kbdDirListener);
 			kbdDirMenu.setText("Layout");
 			add(kbdDirMenu);
 		}
@@ -85,6 +86,21 @@ public class ViewerMenuBar extends JMenuBar {
 				public void actionPerformed(ActionEvent e) {
 					File file = UIUtilities.getOpenFile(frame);
 					if (file != null) frame.openFile(file);
+				}
+			});
+		}
+	}
+	
+	private class RefreshMenuItem extends JMenuItem {
+		private static final long serialVersionUID = 1L;
+		public RefreshMenuItem() {
+			super("Refresh");
+			setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, UIUtilities.SHORTCUT_KEY));
+			addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					File file = frame.getKeyboardFile();
+					if (file != null) frame.openFile(file);
+					else Toolkit.getDefaultToolkit().beep();
 				}
 			});
 		}
@@ -123,17 +139,15 @@ public class ViewerMenuBar extends JMenuBar {
 		}
 	}
 	
+	private class KeyboardDirectoryFileFilter implements FileFilter {
+		public boolean accept(File file) {
+			return file.isDirectory() || UIUtilities.isKeyboardFile(file.getName());
+		}
+	}
+	
 	private class KeyboardDirectoryListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			File file = ((ViewerFileMenuItem)e.getSource()).getFile();
-			try {
-				KeyCapLayout layout = KeyCapReader.read(file);
-				frame.getViewerPanel().getViewerComponent().setKeyCapLayout(layout);
-				frame.pack();
-			} catch (IOException ioe) {
-				String msg = "Could not open " + file.getName() + ": " + e.toString();
-				JOptionPane.showMessageDialog(frame, msg, "Open", JOptionPane.ERROR_MESSAGE);
-			}
+			frame.openFile(((ViewerFileMenuItem)e.getSource()).getFile());
 		}
 	}
 	

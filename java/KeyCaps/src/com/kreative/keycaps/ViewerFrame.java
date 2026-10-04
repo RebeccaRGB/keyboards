@@ -10,11 +10,12 @@ public class ViewerFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private final ViewerPanel panel;
+	private File kbdFile;
 	
-	public ViewerFrame(ViewerComponent vc, File kbdDir) {
+	public ViewerFrame(ViewerComponent vc, File kbdFile, File kbdDir) {
 		this.panel = new ViewerPanel(vc);
-		
-		setTitle("Key Caps");
+		this.kbdFile = kbdFile;
+		setTitle(myWindowTitle());
 		setJMenuBar(new ViewerMenuBar(this, kbdDir));
 		setContentPane(this.panel);
 		pack();
@@ -26,11 +27,17 @@ public class ViewerFrame extends JFrame {
 		return this.panel;
 	}
 	
+	public File getKeyboardFile() {
+		return this.kbdFile;
+	}
+	
 	public void openFile(File file) {
 		try {
 			KeyCapLayout layout = KeyCapReader.read(file);
 			this.panel.getViewerComponent().setKeyCapLayout(layout);
 			this.pack();
+			this.kbdFile = file;
+			this.setTitle(myWindowTitle());
 		} catch (IOException e) {
 			String msg = "Could not open " + file.getName() + ": " + e.toString();
 			JOptionPane.showMessageDialog(this, msg, "Open", JOptionPane.ERROR_MESSAGE);
@@ -43,6 +50,8 @@ public class ViewerFrame extends JFrame {
 			KeyCapLayout layout = this.panel.getViewerComponent().getKeyCapLayout();
 			Object obj = UIUtilities.createTransferData(renderer, layout, format);
 			UIUtilities.writeTransferData(obj, format, file);
+			this.kbdFile = file;
+			this.setTitle(myWindowTitle());
 		} catch (IOException e) {
 			String msg = "Could not save " + file.getName() + ": " + e.toString();
 			JOptionPane.showMessageDialog(this, msg, "Save", JOptionPane.ERROR_MESSAGE);
@@ -65,5 +74,18 @@ public class ViewerFrame extends JFrame {
 		int nw = ps.width + fw - vw;
 		int nh = ps.height + fh - vh;
 		this.setSize(nw, nh);
+	}
+	
+	private String myWindowTitle() {
+		KeyCapLayout layout = this.panel.getViewerComponent().getKeyCapLayout();
+		String name = layout.getPropertyMap().getString("name");
+		if (name != null && name.length() > 0) return name;
+		if (kbdFile != null) {
+			name = kbdFile.getName();
+			int o = name.lastIndexOf(".");
+			if (o > 0) name = name.substring(0, o);
+			if (name.length() > 0) return name;
+		}
+		return "Key Caps";
 	}
 }
